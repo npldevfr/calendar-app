@@ -1,8 +1,10 @@
 <template>
   <div class="Home">
-    <Button label="Semaine précédente" @click="currentWeek -= 1"/>
-    <Button label="Semaine suivante" @click="currentWeek += 1"/>
-
+    <div style="display: flex">
+      <Button label="Semaine précédente" @click="currentWeek -= 1"/>
+      <Button label="Semaine suivante" @click="currentWeek += 1"/>
+    </div>
+    current week : {{ currentWeek }}
     <pre> {{ getCurrentWeekOfEDT }}</pre>
   </div>
 </template>

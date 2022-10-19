@@ -22,14 +22,12 @@ export default defineComponent({
 <style lang="scss" scoped>
 .Button {
   box-sizing: border-box;
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 12px 16px;
+  cursor: pointer;
   gap: 8px;
   width: fit-content;
   font-style: normal;
