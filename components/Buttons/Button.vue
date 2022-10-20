@@ -1,11 +1,11 @@
 <template>
-  <div class="Button">
+  <div class="Button" :class="getButtonType">
     {{ label }}
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue";
+import {defineComponent, PropType} from "vue";
 
 export default defineComponent({
   name: "Button",
@@ -14,7 +14,16 @@ export default defineComponent({
       type: String,
       required: true
     },
-
+    type: {
+      type: String as PropType<"Primary" | "Secondary">,
+      default: "Primary",
+      required: false
+    }
+  },
+  computed: {
+    getButtonType() {
+      return `ButtonType${this.type}`;
+    }
   }
 })
 </script>
@@ -31,18 +40,36 @@ export default defineComponent({
   padding: 0 14px;
   gap: 10px;
   height: 32px;
-  background: #575BC7;
-  border: 1px solid #575BC7;
+
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
-  color: #FFFFFF;
 
-  &:hover {
-    background: #474baf;
-    border: 1px solid #474baf;
+  &Type {
+    &Primary {
+
+      background: #575BC7;
+      border: 1px solid #575BC7;
+      color: #FFFFFF;
+
+      &:hover {
+        background: #474baf;
+        border: 1px solid #474baf;
+      }
+    }
+
+    &Secondary {
+      background: #292A35;
+      border: 1px solid #313248;
+      color: #858699;
+
+      &:hover {
+        background: #1f202a;
+        border: 1px solid #36373f;
+      }
+    }
   }
 }
 </style>

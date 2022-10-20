@@ -4,7 +4,7 @@
       {{ dayName }}
     </span>
     <span class="CalendarDayHeaderDayNumber">
-      {{ formatDay }}
+      {{ formatDay }} <span class="CalendarDayHeaderSmall">{{ formatMonthAndYear }}</span>
     </span>
   </div>
 </template>
@@ -31,6 +31,12 @@ export default {
     },
     formatDay() {
       return moment(this.dayNumber, 'DD/MM/YYYY').format('D')
+    },
+    formatMonthAndYear() {
+      const abbreviateMonth = moment(this.dayNumber, 'DD/MM/YYYY').format('MMM')
+      const frenchAbbreviateMonth = abbreviateMonth.replace('Jan', 'Janv').replace('Feb', 'Févr').replace('Mar', 'Mars').replace('Apr', 'Avr').replace('May', 'Mai').replace('Jun', 'Juin').replace('Jul', 'Juil').replace('Aug', 'Août').replace('Sep', 'Sept').replace('Oct', 'Oct').replace('Nov', 'Nov').replace('Dec', 'Déc')
+      return frenchAbbreviateMonth + ' ' + moment(this.dayNumber, 'DD/MM/YYYY').format('YYYY')
+
     }
   }
 }
@@ -52,7 +58,8 @@ export default {
     border-bottom: 1px solid #8566f4;
   }
 
-  &Today > span{
+  &Today > span,
+  &Today > span > span {
     color: #8566f4;
   }
 
@@ -60,7 +67,7 @@ export default {
     &Name {
       font-style: normal;
       font-weight: 500;
-      font-size: 13px;
+      font-size: 16px;
       line-height: 10px;
       display: flex;
       align-items: center;
@@ -70,12 +77,22 @@ export default {
     &Number {
       font-style: normal;
       font-weight: 500;
-      font-size: 13px;
+      font-size: 15px;
+      gap: 3px;
       line-height: 10px;
       display: flex;
       align-items: center;
       color: #4C4F6B;
     }
+  }
+  &Small {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    color: #5c5d7c;
   }
 }
 </style>

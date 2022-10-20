@@ -3,6 +3,7 @@
     <div style="display: flex; gap: 5px;">
       <Button @click="previousWeek" label="Semaine précédente"/>
       <Button @click="nextWeek" label="Semaine suivante"/>
+      <Button @click="goToday" type="Secondary" label="Revenir à aujourd'hui" v-if="!isTodayIsInThisWeek"/>
     </div>
     <div class="Calendar__days">
       <CalendarHeader>
@@ -14,13 +15,13 @@
       </CalendarHeader>
 
     </div>
+    total hours : {{ calcEventTotalHours }}
     <div v-for="(event, idx) in getEventsInThisWeek" :key="idx">
       <div v-for="event in event.event">
         {{ event.title }}
         {{ event.start }}
         {{ event.end }}
       </div>
-
 
 
     </div>
@@ -46,6 +47,9 @@ export default {
     }
   },
   computed: {
+    isTodayIsInThisWeek() {
+      return this.weekStartDay.isBefore(moment()) && this.weekEndDay.isAfter(moment())
+    },
     datesInWeek() {
       const dates = [];
       let current = this.weekStartDay;
@@ -60,6 +64,22 @@ export default {
       return events.filter(event => {
         return moment(event.firstDayOfWeek).isBetween(this.weekStartDay, this.weekEndDay, null, '[]')
       })
+    },
+    calcEventTotalHours() {
+      const events = this.getEventsInThisWeek;
+      let totalHours = 0;
+      let totalMinutes = 0;
+      const blacklist = ['Jour Férié']
+
+      events.forEach(event => {
+        event.event.forEach(event => {
+          if (!blacklist.some(word => event.title.includes(word))) {
+            totalHours += moment(event.end).diff(moment(event.start), 'hours');
+            totalMinutes += moment(event.end).diff(moment(event.start), 'minutes');
+          }
+        })
+      })
+      return `${totalHours}h${totalMinutes % 60 === 0 ? '' : totalMinutes % 60}`
     }
   },
   mounted() {
@@ -69,6 +89,10 @@ export default {
     document.removeEventListener('keydown', this.handleKeyDown);
   },
   methods: {
+    goToday(){
+      this.weekStartDay = moment().startOf('isoWeek');
+      this.weekEndDay = moment().endOf('isoWeek');
+    },
     handleKeyDown(e) {
       if (e.key === 'ArrowLeft') {
         this.previousWeek();
