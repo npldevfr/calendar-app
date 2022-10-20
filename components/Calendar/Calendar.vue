@@ -14,6 +14,16 @@
       </CalendarHeader>
 
     </div>
+    <div v-for="(event, idx) in getEventsInThisWeek" :key="idx">
+      <div v-for="event in event.event">
+        {{ event.title }}
+        {{ event.start }}
+        {{ event.end }}
+      </div>
+
+
+
+    </div>
 
 
   </div>
@@ -23,6 +33,7 @@
 
 import moment from "moment";
 import Button from "~/components/Buttons/Button.vue";
+import useEDT from "~/composables/useEDT";
 
 export default {
   name: 'Calendar',
@@ -44,8 +55,27 @@ export default {
       }
       return dates;
     },
+    getEventsInThisWeek() {
+      const events = useEDT();
+      return events.filter(event => {
+        return moment(event.firstDayOfWeek).isBetween(this.weekStartDay, this.weekEndDay, null, '[]')
+      })
+    }
+  },
+  mounted() {
+    document.addEventListener('keydown', this.handleKeyDown);
+  },
+  beforeDestroy() {
+    document.removeEventListener('keydown', this.handleKeyDown);
   },
   methods: {
+    handleKeyDown(e) {
+      if (e.key === 'ArrowLeft') {
+        this.previousWeek();
+      } else if (e.key === 'ArrowRight') {
+        this.nextWeek();
+      }
+    },
     previousWeek() {
       this.weekStartDay = moment(this.weekStartDay).subtract(1, 'week');
       this.weekEndDay = moment(this.weekEndDay).subtract(1, 'week');

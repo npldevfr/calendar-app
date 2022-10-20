@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     isToday() {
-      if (this.dayNumber === moment().format('DD/MM/YYYY')) return 'CalendarDayHeaderToday'
+      if (this.dayNumber === moment().format('DD/MM/YYYY')) return 'CalendarDayHeaderToday CalendarDayHeaderActive'
     },
     formatDay() {
       return moment(this.dayNumber, 'DD/MM/YYYY').format('D')
@@ -38,18 +38,22 @@ export default {
 
 <style lang="scss" scoped>
 .CalendarDayHeader {
+  transition: all 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px 10px;
+  padding: 0 10px;
   gap: 10px;
+  height: 100%;
   width: 180px;
 
+  &Active {
+    border-bottom: 1px solid #8566f4;
+  }
 
   &Today > span{
     color: #8566f4;
-    font-weight: 800;
   }
 
   &Day {

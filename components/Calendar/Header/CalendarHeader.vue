@@ -13,6 +13,8 @@ export default {
 
 <style lang="scss" scoped>
 .CalendarHeader {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;

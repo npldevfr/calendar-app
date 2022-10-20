@@ -1,132 +1,132 @@
 export default function useEDT() {
     return [{
-        "week": 32,
-        "days": [[{
-            "id": "ae0d64ba-a024-497f-8a3f-3a3bc5b1da94",
+        "firstDayOfWeek": "2022-08-08 08:00:00",
+        "event": [{
+            "id": "2e221260-de6e-4ff8-aaa2-f8e5b746db32",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-08-08 08:00:00",
             "end": "2022-08-08 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "ae2db612-13d2-4cb5-aaeb-4f777a804ba2",
+        }, {
+            "id": "f1988e28-e0f7-4606-a84a-a49e067f4a2e",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-08-09 08:00:00",
             "end": "2022-08-09 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "d68a46a9-babe-4cb4-a2c7-3f47200e140a",
+        }, {
+            "id": "ac623645-39d6-4d47-b3a3-996c226d654d",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-08-10 08:00:00",
             "end": "2022-08-10 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "dc97c6ed-fb40-4de5-8d6d-cc1260052904",
+        }, {
+            "id": "f59c2e54-3180-4b8f-a99c-07d78350fd5c",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-08-11 08:00:00",
             "end": "2022-08-11 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "5726706a-3e1b-4968-9135-fa3dbb5b882f",
+        }, {
+            "id": "93016298-9ee1-4833-91dd-f33362a96659",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-08-12 08:00:00",
             "end": "2022-08-12 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "ad8f4c9d-da10-4ab9-8530-c221f751f3b9",
+        }, {
+            "id": "be33427f-832e-4b1b-969e-0df41366861d",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-08-13 08:00:00",
             "end": "2022-08-13 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }, {
-        "week": 52,
-        "days": [[{
-            "id": "3955a161-d9f0-4125-a1d5-8c2015352902",
+        "firstDayOfWeek": "2022-12-26 09:00:00",
+        "event": [{
+            "id": "9ef6ccf9-7d79-44f6-adce-24628a202865",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-12-26 09:00:00",
             "end": "2022-12-26 21:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "aa0cb608-1207-471b-8158-3069870870f0",
+        }, {
+            "id": "b24377c2-6562-4b4c-9db1-1817fb05da21",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-12-27 09:00:00",
             "end": "2022-12-27 21:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "b3c02b0f-4ad2-4691-906d-3f88dcb4bd34",
+        }, {
+            "id": "903e55a8-782f-4634-ae1d-dc64336649a5",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-12-28 09:00:00",
             "end": "2022-12-28 21:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "c0ce6cbd-dd8d-4086-ba73-45b7e0d4ac29",
+        }, {
+            "id": "130305bc-5628-4d93-aff8-580eda0d0d9c",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-12-29 09:00:00",
             "end": "2022-12-29 21:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "66cfb021-776d-474f-bbe5-2381527731db",
+        }, {
+            "id": "1321d14c-5b1a-4f48-84fd-ebf25bf52b6f",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-12-30 09:00:00",
             "end": "2022-12-30 21:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "72da19bd-7cc9-4629-9604-d2db7a3dd063",
+        }, {
+            "id": "6aaf844b-89cf-4d9d-be14-bcbd7fc43f04",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-12-31 09:00:00",
             "end": "2022-12-31 21:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }, {
-        "week": 1,
-        "days": [[{
-            "id": "2631a620-1f7f-4566-8d49-e86de9cf97bc",
+        "firstDayOfWeek": "2023-01-02 09:00:00",
+        "event": [{
+            "id": "a5492ec5-bd6c-4ce2-b613-884f70e2a773",
             "title": "XXX-Fermeture IUT -",
             "start": "2023-01-02 09:00:00",
             "end": "2023-01-02 21:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }, {
-        "week": 33,
-        "days": [[{
-            "id": "d5e3aab4-e0b5-4db8-958b-ab9c2e828b98",
+        "firstDayOfWeek": "2022-08-15 08:00:00",
+        "event": [{
+            "id": "2c7c6ff3-bd2d-46d9-a950-630d32415b7a",
             "title": "XXX-Jour F\u00e9ri\u00e9 -",
             "start": "2022-08-15 08:00:00",
             "end": "2022-08-15 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "6b229ab8-5999-48d2-a0fd-9bc80109bf50",
+        }, {
+            "id": "79dc3d5b-162a-42c6-b14a-3daf2eba5332",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-08-16 08:00:00",
             "end": "2022-08-16 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "ce796a30-5e72-4ee9-9123-3c99963e085a",
+        }, {
+            "id": "126801bb-8696-4e0f-ab4f-0498dbc33af8",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-08-17 08:00:00",
             "end": "2022-08-17 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }, {
-        "week": 42,
-        "days": [[{
-            "id": "ec40d8bd-afa6-4202-bcb4-49904d561adb",
+        "firstDayOfWeek": "2022-10-17 08:00:00",
+        "event": [{
+            "id": "598ea6d8-1c6b-4d18-9af9-8014926accd3",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
             "start": "2022-10-17 08:00:00",
             "end": "2022-10-17 09:20:00",
@@ -134,10 +134,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : SUNYE Gerson"}
+                "props": []
             }
         }, {
-            "id": "5072acf7-4cb3-4d83-ad77-f8c85d4a535a",
+            "id": "5f2b9723-bf70-4261-a1a4-cdf399760682",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
             "start": "2022-10-17 09:30:00",
             "end": "2022-10-17 10:50:00",
@@ -145,10 +145,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : SUNYE Gerson"}
+                "props": []
             }
         }, {
-            "id": "a0bc7040-4977-499e-8728-a015789ea3ba",
+            "id": "e56109dd-3a6d-4f91-b8c5-f554abb62101",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
             "start": "2022-10-17 11:00:00",
             "end": "2022-10-17 12:20:00",
@@ -156,10 +156,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : SUNYE Gerson"}
+                "props": []
             }
-        }], [{
-            "id": "51aa998a-8344-4fd7-955e-22fe7945355a",
+        }, {
+            "id": "462d18da-297d-4b85-affb-9140c3ae7eca",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-10-19 08:00:00",
             "end": "2022-10-19 09:20:00",
@@ -167,10 +167,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "0ad2af9a-bace-4d51-83a8-358abb86fd56",
+            "id": "0dab67d6-1c6c-4060-a50d-3ec3b8d2c9fe",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-10-19 09:30:00",
             "end": "2022-10-19 10:50:00",
@@ -178,10 +178,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "1f339e21-562b-462f-9bee-e8164af68304",
+            "id": "586278b9-8ff8-4e1a-ad8e-d04d73fbf950",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-10-19 11:00:00",
             "end": "2022-10-19 12:20:00",
@@ -189,10 +189,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "f02d29d7-d1d4-4bf2-aafb-f9f9c77821da",
+            "id": "1d15b52e-c5b2-4330-a6ad-d975bd759324",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
             "start": "2022-10-19 13:30:00",
             "end": "2022-10-19 14:50:00",
@@ -200,10 +200,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : SUNYE Gerson"}
+                "props": []
             }
         }, {
-            "id": "8ba760fd-2640-480f-b549-98ae10e81de0",
+            "id": "2211215a-5faf-41b2-b94e-dc073535ad59",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
             "start": "2022-10-19 15:00:00",
             "end": "2022-10-19 16:20:00",
@@ -211,10 +211,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : SUNYE Gerson"}
+                "props": []
             }
         }, {
-            "id": "94627e52-1386-4446-8eda-8ea186469078",
+            "id": "09b9a1d6-6806-4add-b088-de71b6e25787",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
             "start": "2022-10-19 16:30:00",
             "end": "2022-10-19 17:50:00",
@@ -222,10 +222,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : SUNYE Gerson"}
+                "props": []
             }
-        }], [{
-            "id": "417857f0-0c6e-4553-9207-43cd18a02ac0",
+        }, {
+            "id": "ebf9881b-2c6b-4a77-957f-cbc4c7337c9c",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
             "start": "2022-10-20 08:00:00",
             "end": "2022-10-20 09:20:00",
@@ -233,13 +233,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : ARHALIASS Yacine"
-                }
+                "props": []
             }
         }, {
-            "id": "fcc4dcee-3241-4da5-bd23-095e034d2f6a",
+            "id": "51df06c7-aa1b-4d34-969f-6a022a2cb478",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
             "start": "2022-10-20 09:30:00",
             "end": "2022-10-20 10:50:00",
@@ -247,13 +244,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : ARHALIASS Yacine"
-                }
+                "props": []
             }
         }, {
-            "id": "02c05921-59aa-4524-859c-9da7cd05ee59",
+            "id": "1dfd586e-091e-43d4-aa62-52a70776d8b5",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
             "start": "2022-10-20 11:00:00",
             "end": "2022-10-20 12:20:00",
@@ -261,13 +255,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : ARHALIASS Yacine"
-                }
+                "props": []
             }
         }, {
-            "id": "5ba1f621-a639-45ef-8a34-01c6f6d7db1e",
+            "id": "12224e09-8b65-4ad4-82d8-ff6507352b8f",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-10-20 13:30:00",
             "end": "2022-10-20 14:50:00",
@@ -275,10 +266,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
         }, {
-            "id": "deb5228b-4aaa-407a-9edc-855c81449d8f",
+            "id": "3199a71e-0203-4d25-87ca-b017e1c482d3",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-10-20 15:00:00",
             "end": "2022-10-20 16:20:00",
@@ -286,10 +277,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
         }, {
-            "id": "c2f59d12-ee49-40ce-9e33-4a4fcaacf091",
+            "id": "2907220f-cd1c-4d2c-bb64-91341a9803b6",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-10-20 16:30:00",
             "end": "2022-10-20 17:50:00",
@@ -297,10 +288,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
-        }], [{
-            "id": "16ec3bb4-c5c0-4619-9afa-4540ae8517c0",
+        }, {
+            "id": "6f57a23c-5054-49c2-ad26-cd228089b889",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
             "start": "2022-10-21 08:00:00",
             "end": "2022-10-21 09:20:00",
@@ -308,13 +299,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : ARHALIASS Yacine"
-                }
+                "props": []
             }
         }, {
-            "id": "ecf11b78-3a19-4237-adfd-c0173f8c0b89",
+            "id": "d93a5dd2-1064-4cf2-9ca8-b4165cb50e62",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
             "start": "2022-10-21 09:30:00",
             "end": "2022-10-21 10:50:00",
@@ -322,13 +310,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : ARHALIASS Yacine"
-                }
+                "props": []
             }
         }, {
-            "id": "94eeb04c-506c-4c10-9f98-a2cf87cf4c39",
+            "id": "60a73970-3c74-4e74-8c48-6d6207fe547c",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
             "start": "2022-10-21 11:00:00",
             "end": "2022-10-21 12:20:00",
@@ -336,13 +321,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : ARHALIASS Yacine"
-                }
+                "props": []
             }
         }, {
-            "id": "df35f187-4efb-49c1-816e-679daefc36a4",
+            "id": "a0023449-b17f-4ab9-9b9f-5a444334d728",
             "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
             "start": "2022-10-21 13:30:00",
             "end": "2022-10-21 14:50:00",
@@ -350,10 +332,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/05",
                 "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
-                "props": {"description": "Anglais 1", "teacher": "Personnel : CHARRIAU V\u00e9ronique"}
+                "props": []
             }
         }, {
-            "id": "005d4655-c384-4ba0-9f6f-c32cdfe161a4",
+            "id": "0dbb797f-6004-4ceb-b235-f7f92d066576",
             "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
             "start": "2022-10-21 15:00:00",
             "end": "2022-10-21 16:20:00",
@@ -361,13 +343,13 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/05",
                 "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
-                "props": {"description": "Anglais 1", "teacher": "Personnel : CHARRIAU V\u00e9ronique"}
+                "props": []
             }
-        }]]
+        }]
     }, {
-        "week": 43,
-        "days": [[{
-            "id": "8bf699b6-4365-4ab5-a1e5-4483342af82e",
+        "firstDayOfWeek": "2022-10-24 08:00:00",
+        "event": [{
+            "id": "a664022d-0d05-4f09-9e58-19258ee4dc38",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
             "start": "2022-10-24 08:00:00",
             "end": "2022-10-24 09:20:00",
@@ -375,10 +357,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : FLORAT Bertrand"}
+                "props": []
             }
         }, {
-            "id": "4ac86f22-6d21-4dbc-a784-47fe2d241048",
+            "id": "e3d786cf-7eb6-4a73-a4c1-f7900dfe8128",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
             "start": "2022-10-24 09:30:00",
             "end": "2022-10-24 10:50:00",
@@ -386,10 +368,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : FLORAT Bertrand"}
+                "props": []
             }
         }, {
-            "id": "93b2886b-2275-4df1-9c86-6d49f97f655c",
+            "id": "1de8d9a8-5abb-484f-9611-5ec605a50fbc",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
             "start": "2022-10-24 11:00:00",
             "end": "2022-10-24 12:20:00",
@@ -397,10 +379,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : FLORAT Bertrand"}
+                "props": []
             }
         }, {
-            "id": "42ef3528-9185-42ed-92be-ca09d2971e82",
+            "id": "6141d3db-a61b-4890-8ea5-5154ceb72726",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
             "start": "2022-10-24 13:30:00",
             "end": "2022-10-24 14:50:00",
@@ -408,10 +390,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : PHAM Hoang-Vinh"}
+                "props": []
             }
         }, {
-            "id": "ce6c67e8-6248-4b8c-95c1-dcf6668aaba6",
+            "id": "0e99e21a-5721-4561-99df-12a98e52f5cf",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
             "start": "2022-10-24 15:00:00",
             "end": "2022-10-24 16:20:00",
@@ -419,10 +401,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : PHAM Hoang-Vinh"}
+                "props": []
             }
         }, {
-            "id": "f31bd5a8-16f1-4604-8e51-77ca13b0ff5f",
+            "id": "c461803c-f10d-42a0-a121-6d34a20a7019",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
             "start": "2022-10-24 16:30:00",
             "end": "2022-10-24 17:50:00",
@@ -430,10 +412,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : PHAM Hoang-Vinh"}
+                "props": []
             }
-        }], [{
-            "id": "34ee0c53-d6e0-41c3-99c5-77668feb41d2",
+        }, {
+            "id": "82715dce-e89a-461c-96f1-bdc00859740c",
             "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, BERTEL Natalia",
             "start": "2022-10-25 10:00:00",
             "end": "2022-10-25 12:00:00",
@@ -441,13 +423,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-E2\/22",
                 "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : BERTEL Natalia\nGroupe : LP MiAR Groupe 1\nSalle : J-E2\/22",
-                "props": {
-                    "description": "M\u00e9thodologie de d\u00e9veloppement",
-                    "teacher": "Personnel : BERTEL Natalia"
-                }
+                "props": []
             }
         }, {
-            "id": "d8e381f3-da44-480b-9ef4-1c276268721c",
+            "id": "4b98bb97-0208-4ef3-9cab-ab8f2072a527",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, HERNANDEZ Nicolas",
             "start": "2022-10-25 13:30:00",
             "end": "2022-10-25 14:50:00",
@@ -455,13 +434,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : HERNANDEZ Nicolas"
-                }
+                "props": []
             }
         }, {
-            "id": "cdb31f31-48fd-4b27-af72-e59ca08860ff",
+            "id": "c84bec9a-3d08-4d64-9d4b-8c87b2496bf4",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, HERNANDEZ Nicolas",
             "start": "2022-10-25 15:00:00",
             "end": "2022-10-25 16:20:00",
@@ -469,13 +445,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : HERNANDEZ Nicolas"
-                }
+                "props": []
             }
         }, {
-            "id": "01f32bb6-7aff-4b75-a552-7f21f1556c74",
+            "id": "532e8cf6-dcab-411c-b3d5-47c33691c1c6",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, HERNANDEZ Nicolas",
             "start": "2022-10-25 16:30:00",
             "end": "2022-10-25 17:50:00",
@@ -483,13 +456,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : HERNANDEZ Nicolas"
-                }
+                "props": []
             }
-        }], [{
-            "id": "d4f3e018-1cd8-4cf1-ae6a-f79129595504",
+        }, {
+            "id": "7d56b79a-a11e-48ae-a051-f170c4d952a6",
             "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
             "start": "2022-10-26 09:30:00",
             "end": "2022-10-26 10:50:00",
@@ -497,10 +467,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/05",
                 "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
-                "props": {"description": "Anglais 1", "teacher": "Personnel : CHARRIAU V\u00e9ronique"}
+                "props": []
             }
         }, {
-            "id": "e2271423-8330-49fc-b638-c2205bbd4028",
+            "id": "7598d553-1c00-4912-82d8-dcb9c8e88c2c",
             "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
             "start": "2022-10-26 11:00:00",
             "end": "2022-10-26 12:20:00",
@@ -508,10 +478,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/05",
                 "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
-                "props": {"description": "Anglais 1", "teacher": "Personnel : CHARRIAU V\u00e9ronique"}
+                "props": []
             }
-        }], [{
-            "id": "582c552c-ba15-4a5b-abdc-9444ad11cfd2",
+        }, {
+            "id": "e36aeab5-8a99-43a9-ad3d-ee36511cc25c",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-10-27 13:30:00",
             "end": "2022-10-27 14:50:00",
@@ -519,10 +489,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
         }, {
-            "id": "a5592220-5753-44c0-9db8-697e13716f42",
+            "id": "6fe30e8f-7979-49a2-a842-fba5cf647037",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-10-27 15:00:00",
             "end": "2022-10-27 16:20:00",
@@ -530,10 +500,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
-        }], [{
-            "id": "94e1ff4b-0ebe-49cc-9894-e7358df5d84a",
+        }, {
+            "id": "b50fd17f-8fc8-4c12-bcde-b2627d6de580",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, FAUVEL S\u00e9bastien",
             "start": "2022-10-28 13:30:00",
             "end": "2022-10-28 14:50:00",
@@ -541,13 +511,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : FAUVEL S\u00e9bastien\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Tests et qualit\u00e9 logiciels",
-                    "teacher": "Personnel : FAUVEL S\u00e9bastien"
-                }
+                "props": []
             }
         }, {
-            "id": "2f9d8f8c-ffb3-46fa-a061-9fff542cde29",
+            "id": "b9c8baa5-d646-4c13-9db3-cd4b37d7607d",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, FAUVEL S\u00e9bastien",
             "start": "2022-10-28 15:00:00",
             "end": "2022-10-28 16:20:00",
@@ -555,13 +522,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : FAUVEL S\u00e9bastien\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Tests et qualit\u00e9 logiciels",
-                    "teacher": "Personnel : FAUVEL S\u00e9bastien"
-                }
+                "props": []
             }
         }, {
-            "id": "7570e359-9e05-435b-ac8a-a8a3c64352da",
+            "id": "63d40bd4-f56a-4c66-88f7-e06151f6e9cf",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, FAUVEL S\u00e9bastien",
             "start": "2022-10-28 16:30:00",
             "end": "2022-10-28 17:50:00",
@@ -569,16 +533,13 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : FAUVEL S\u00e9bastien\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Tests et qualit\u00e9 logiciels",
-                    "teacher": "Personnel : FAUVEL S\u00e9bastien"
-                }
+                "props": []
             }
-        }]]
+        }]
     }, {
-        "week": 47,
-        "days": [[{
-            "id": "fe83943f-f228-40ee-be52-2d1ecc92b07f",
+        "firstDayOfWeek": "2022-11-21 09:00:00",
+        "event": [{
+            "id": "925fb426-ef81-4e42-89bc-5ddbc3bc2a7f",
             "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
             "start": "2022-11-21 09:00:00",
             "end": "2022-11-21 10:20:00",
@@ -586,10 +547,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/05",
                 "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
-                "props": {"description": "Anglais 1", "teacher": "Personnel : CHARRIAU V\u00e9ronique"}
+                "props": []
             }
         }, {
-            "id": "20dde67e-70e8-4de8-ab6e-1fe9d8aa1a6b",
+            "id": "10003299-ddde-4228-b638-d7dd1092faac",
             "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
             "start": "2022-11-21 10:30:00",
             "end": "2022-11-21 11:50:00",
@@ -597,10 +558,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/05",
                 "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
-                "props": {"description": "Anglais 1", "teacher": "Personnel : CHARRIAU V\u00e9ronique"}
+                "props": []
             }
         }, {
-            "id": "9c9d9a1b-2ed8-41ac-b4f1-31bc76421ee9",
+            "id": "91b838aa-84df-47a0-917d-c9319f2a3a85",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
             "start": "2022-11-21 14:30:00",
             "end": "2022-11-21 15:50:00",
@@ -608,10 +569,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : PHAM Hoang-Vinh"}
+                "props": []
             }
         }, {
-            "id": "2a822a90-68d0-4353-8bd1-bb37744349dc",
+            "id": "d96199c9-cd3f-43f1-85af-6b2b17c69d4b",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
             "start": "2022-11-21 16:00:00",
             "end": "2022-11-21 17:20:00",
@@ -619,10 +580,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : PHAM Hoang-Vinh"}
+                "props": []
             }
         }, {
-            "id": "69d49578-1b10-4e80-9eb8-df7d6bf37467",
+            "id": "52c76f64-a577-4b71-9d58-d7a0d3240851",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
             "start": "2022-11-21 17:30:00",
             "end": "2022-11-21 18:50:00",
@@ -630,10 +591,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : PHAM Hoang-Vinh"}
+                "props": []
             }
-        }], [{
-            "id": "2383472a-4723-4e25-95d1-205909cc3802",
+        }, {
+            "id": "993cf8da-cc09-410c-a827-2c0542c4e613",
             "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
             "start": "2022-11-22 09:00:00",
             "end": "2022-11-22 10:20:00",
@@ -641,13 +602,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "M\u00e9thodologie de d\u00e9veloppement",
-                    "teacher": "Personnel : TAMZALIT Dalila"
-                }
+                "props": []
             }
         }, {
-            "id": "824b246e-bd66-4cf5-9e62-76cfb2e6e0d1",
+            "id": "c07aebcf-ccf5-48a9-a0c5-4a80d5d0b771",
             "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
             "start": "2022-11-22 10:30:00",
             "end": "2022-11-22 11:50:00",
@@ -655,13 +613,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "M\u00e9thodologie de d\u00e9veloppement",
-                    "teacher": "Personnel : TAMZALIT Dalila"
-                }
+                "props": []
             }
         }, {
-            "id": "ad6c2c99-3cd0-4b96-8364-c19fd5b51bc6",
+            "id": "0be847fb-ba78-4b79-9b28-64ea21ef5fd0",
             "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
             "start": "2022-11-22 12:00:00",
             "end": "2022-11-22 13:20:00",
@@ -669,13 +624,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "M\u00e9thodologie de d\u00e9veloppement",
-                    "teacher": "Personnel : TAMZALIT Dalila"
-                }
+                "props": []
             }
         }, {
-            "id": "b75b8b32-d49d-4cb7-af30-9de64fc30778",
+            "id": "4064f611-2e52-4a03-870e-b19db65425b7",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-11-22 14:30:00",
             "end": "2022-11-22 15:50:00",
@@ -683,10 +635,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "00aba3d5-07c7-441a-9304-522e298d70cd",
+            "id": "cb57d78f-32d2-4747-a8ad-49f9d978a7a6",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-11-22 16:00:00",
             "end": "2022-11-22 17:20:00",
@@ -694,10 +646,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "ab9d84e4-c468-4e4f-8f0b-b0f765ec8007",
+            "id": "90d98674-d37b-4e27-b3d6-869a1a90978c",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-11-22 17:30:00",
             "end": "2022-11-22 18:50:00",
@@ -705,10 +657,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
-        }], [{
-            "id": "e96dcbe4-87e3-49d3-95d8-4bc35fbe8778",
+        }, {
+            "id": "3168e690-c8e7-43b4-bb75-89fb6eddfbe1",
             "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-11-23 09:00:00",
             "end": "2022-11-23 10:20:00",
@@ -716,13 +668,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies Web c\u00f4t\u00e9 serveur",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "0f6f361e-e64b-46b7-a707-10ceb9185b4f",
+            "id": "8fa95408-b2df-4be8-8d67-b10d0aed7b08",
             "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-11-23 10:30:00",
             "end": "2022-11-23 11:50:00",
@@ -730,13 +679,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies Web c\u00f4t\u00e9 serveur",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "4997db79-cdc2-4803-abab-673b3f4095c7",
+            "id": "0c6bed9e-6d08-49ed-9896-f7e42ed26c75",
             "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-11-23 12:00:00",
             "end": "2022-11-23 13:20:00",
@@ -744,13 +690,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies Web c\u00f4t\u00e9 serveur",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "bfe03483-d097-4d92-9071-03ce12fd048a",
+            "id": "e35ea308-d695-429d-8884-ba0dc221bb32",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
             "start": "2022-11-23 14:30:00",
             "end": "2022-11-23 15:50:00",
@@ -758,10 +701,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Technologies  Web c\u00f4t\u00e9 client", "teacher": "LP MiAR Groupe 1"}
+                "props": []
             }
         }, {
-            "id": "16708ac5-78b8-4161-bcc2-26d7edab66df",
+            "id": "47b16b19-f0b6-4c8d-ae76-6a5d4a388543",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
             "start": "2022-11-23 16:00:00",
             "end": "2022-11-23 17:20:00",
@@ -769,10 +712,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Technologies  Web c\u00f4t\u00e9 client", "teacher": "LP MiAR Groupe 1"}
+                "props": []
             }
         }, {
-            "id": "ed1227a3-5ee3-490a-938f-edb99fe9ff53",
+            "id": "df341c34-7998-44d5-8b68-b94fbddcb626",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
             "start": "2022-11-23 17:30:00",
             "end": "2022-11-23 18:50:00",
@@ -780,10 +723,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Technologies  Web c\u00f4t\u00e9 client", "teacher": "LP MiAR Groupe 1"}
+                "props": []
             }
-        }], [{
-            "id": "e45bb102-6215-4619-84dc-5e09238d91d7",
+        }, {
+            "id": "a68309f1-d0a4-4309-9063-ada89ad74db3",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
             "start": "2022-11-24 09:00:00",
             "end": "2022-11-24 10:20:00",
@@ -791,10 +734,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Technologies  Web c\u00f4t\u00e9 client", "teacher": "LP MiAR Groupe 1"}
+                "props": []
             }
         }, {
-            "id": "55de8a78-e52d-40a6-a380-ba5a912a23d9",
+            "id": "8ad32ff3-6bd1-4ca7-a341-be0ba300118e",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
             "start": "2022-11-24 10:30:00",
             "end": "2022-11-24 11:50:00",
@@ -802,10 +745,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Technologies  Web c\u00f4t\u00e9 client", "teacher": "LP MiAR Groupe 1"}
+                "props": []
             }
         }, {
-            "id": "9d20892c-27b2-483f-9394-4886d0acda8f",
+            "id": "fd70bbca-b58e-4da2-9be3-fff9996f24a7",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
             "start": "2022-11-24 12:00:00",
             "end": "2022-11-24 13:20:00",
@@ -813,10 +756,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Technologies  Web c\u00f4t\u00e9 client", "teacher": "LP MiAR Groupe 1"}
+                "props": []
             }
         }, {
-            "id": "8d6978d3-3f19-431c-8137-2ea064ae16c9",
+            "id": "9fd3265f-4467-48fe-9f5d-b75dc37980cf",
             "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-11-24 14:30:00",
             "end": "2022-11-24 15:50:00",
@@ -824,13 +767,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies Web c\u00f4t\u00e9 serveur",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "44bbab00-78f8-43eb-b467-5c29c9a4ac4a",
+            "id": "bd244e55-be22-44f7-9b7d-6689d04c5120",
             "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-11-24 16:00:00",
             "end": "2022-11-24 17:20:00",
@@ -838,13 +778,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies Web c\u00f4t\u00e9 serveur",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "3e2e2cdf-29e8-4862-aed1-baf9df07442d",
+            "id": "a778ceea-3b78-4b94-8d19-226bd054dcbd",
             "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-11-24 17:30:00",
             "end": "2022-11-24 18:50:00",
@@ -852,13 +789,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies Web c\u00f4t\u00e9 serveur",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
-        }], [{
-            "id": "a7495032-3dfa-44b1-8415-512dfdecf104",
+        }, {
+            "id": "b9498e92-ab56-4a0c-9388-2aae8c245a31",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
             "start": "2022-11-25 09:00:00",
             "end": "2022-11-25 10:20:00",
@@ -866,13 +800,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : ARHALIASS Yacine"
-                }
+                "props": []
             }
         }, {
-            "id": "d0872332-7a9f-4ec2-ac85-65ffbb372689",
+            "id": "7e936e30-e4ce-48be-9148-d115167d8a56",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
             "start": "2022-11-25 10:30:00",
             "end": "2022-11-25 11:50:00",
@@ -880,13 +811,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : ARHALIASS Yacine"
-                }
+                "props": []
             }
         }, {
-            "id": "54a14fcf-a1da-41da-8de4-b86999eef81d",
+            "id": "39cdd64e-3e5a-4466-a485-b0423288b31d",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
             "start": "2022-11-25 12:00:00",
             "end": "2022-11-25 13:20:00",
@@ -894,56 +822,53 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : ARHALIASS Yacine"
-                }
+                "props": []
             }
-        }]]
+        }]
     }, {
-        "week": 15,
-        "days": [[{
-            "id": "8438f931-9e74-4584-a670-b05de3fe262d",
+        "firstDayOfWeek": "2023-04-10 08:00:00",
+        "event": [{
+            "id": "d0b01867-2ceb-46f4-99cb-14d62a011a5c",
             "title": "XXX-Jour F\u00e9ri\u00e9 -",
             "start": "2023-04-10 08:00:00",
             "end": "2023-04-10 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }, {
-        "week": 18,
-        "days": [[{
-            "id": "6223a045-b7a4-4a08-a205-298b7689fed1",
+        "firstDayOfWeek": "2023-05-01 08:00:00",
+        "event": [{
+            "id": "b26290f5-9fd1-42d7-ad3e-c227a5a7d345",
             "title": "XXX-Jour F\u00e9ri\u00e9 -",
             "start": "2023-05-01 08:00:00",
             "end": "2023-05-01 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }, {
-        "week": 19,
-        "days": [[{
-            "id": "a3cf6e3b-2524-4352-bea2-3ddf305b05ce",
+        "firstDayOfWeek": "2023-05-08 08:00:00",
+        "event": [{
+            "id": "0b68d938-74b6-413d-82fa-9513507a565c",
             "title": "XXX-Jour F\u00e9ri\u00e9 -",
             "start": "2023-05-08 08:00:00",
             "end": "2023-05-08 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }, {
-        "week": 22,
-        "days": [[{
-            "id": "21f3cd14-7994-49c7-aacc-8e35bcecfa9d",
+        "firstDayOfWeek": "2023-05-29 08:00:00",
+        "event": [{
+            "id": "4efdad74-f8af-407f-bf13-cb450fc5b1b7",
             "title": "XXX-Jour F\u00e9ri\u00e9 -",
             "start": "2023-05-29 08:00:00",
             "end": "2023-05-29 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }, {
-        "week": 23,
-        "days": [[{
-            "id": "4e388eeb-4ed9-4201-ba78-4a9c8fb9997b",
+        "firstDayOfWeek": "2023-06-05 09:00:00",
+        "event": [{
+            "id": "564f38fa-d48b-4840-bc98-5b4fbd725e7e",
             "title": "XXX-TOEIC - LP MiAR Groupe 1, LP MiAR Groupe 2, CHARRIAU V\u00e9ronique, COLEMAN Paul",
             "start": "2023-06-05 09:00:00",
             "end": "2023-06-05 12:00:00",
@@ -951,16 +876,13 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-Amphi 1",
                 "fullDescription": "Personnel : CHARRIAU V\u00e9ronique, COLEMAN Paul\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2\nSalle : J-Amphi 1",
-                "props": {
-                    "description": "Personnel : CHARRIAU V\u00e9ronique, COLEMAN Paul",
-                    "teacher": "LP MiAR Groupe 1, LP MiAR Groupe 2"
-                }
+                "props": []
             }
-        }]]
+        }]
     }, {
-        "week": 38,
-        "days": [[{
-            "id": "432951e4-1219-42c0-8f68-fdf241d95524",
+        "firstDayOfWeek": "2022-09-19 09:10:00",
+        "event": [{
+            "id": "36a92d70-228b-47da-bd32-74fe45d3c125",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-09-19 09:10:00",
             "end": "2022-09-19 10:30:00",
@@ -968,10 +890,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "82fde3c8-390d-4427-bc61-2941d3725f61",
+            "id": "88da4595-9ce3-4f26-9774-27e5ccb71ba5",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-09-19 10:40:00",
             "end": "2022-09-19 12:00:00",
@@ -979,10 +901,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "bbf06b34-d183-4f24-9b1e-6c4034e3f0fe",
+            "id": "72e3f354-545d-48a0-a522-64969d2aa38c",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
             "start": "2022-09-19 13:30:00",
             "end": "2022-09-19 14:50:00",
@@ -990,13 +912,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Outils pour le d\u00e9veloppement",
-                    "teacher": "Personnel : HERNANDEZ Nicolas"
-                }
+                "props": []
             }
         }, {
-            "id": "942a82eb-cae0-4edd-803b-5ffb307458b9",
+            "id": "6ef547b2-8751-4f1f-8d8e-cb1e8001fdea",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
             "start": "2022-09-19 15:00:00",
             "end": "2022-09-19 16:20:00",
@@ -1004,13 +923,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Outils pour le d\u00e9veloppement",
-                    "teacher": "Personnel : HERNANDEZ Nicolas"
-                }
+                "props": []
             }
         }, {
-            "id": "78bcda67-b3bc-4888-9469-45132a01c055",
+            "id": "80f3a92b-f831-49bc-8c30-2199cb2b5200",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
             "start": "2022-09-19 16:30:00",
             "end": "2022-09-19 17:50:00",
@@ -1018,13 +934,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Outils pour le d\u00e9veloppement",
-                    "teacher": "Personnel : HERNANDEZ Nicolas"
-                }
+                "props": []
             }
-        }], [{
-            "id": "a9cc883d-a2e1-4d8a-95e1-9cd1cdbb57cd",
+        }, {
+            "id": "08d252c3-c479-4297-876b-f9b89b54ebf3",
             "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
             "start": "2022-09-20 09:30:00",
             "end": "2022-09-20 10:50:00",
@@ -1032,10 +945,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/05",
                 "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
-                "props": {"description": "Anglais 1", "teacher": "Personnel : CHARRIAU V\u00e9ronique"}
+                "props": []
             }
         }, {
-            "id": "5ffce460-f863-40f2-8afd-e7d23efcce81",
+            "id": "ab3d9a26-7ea5-44c8-916a-b51c99b160eb",
             "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
             "start": "2022-09-20 11:00:00",
             "end": "2022-09-20 12:20:00",
@@ -1043,10 +956,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/05",
                 "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
-                "props": {"description": "Anglais 1", "teacher": "Personnel : CHARRIAU V\u00e9ronique"}
+                "props": []
             }
         }, {
-            "id": "87dd52fc-b4f8-47c4-897b-48412927dc7b",
+            "id": "bab220dd-96fa-45ed-a8ea-de1d96c60ef0",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-20 13:30:00",
             "end": "2022-09-20 14:50:00",
@@ -1054,10 +967,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
         }, {
-            "id": "8df799c9-a656-4c5b-a79a-2ac1c4897269",
+            "id": "319c772f-e58c-4f06-a5f2-4d884386f710",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-20 15:00:00",
             "end": "2022-09-20 16:20:00",
@@ -1065,10 +978,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
         }, {
-            "id": "cf0c67a0-ff48-4a08-b112-91c7b3438ad8",
+            "id": "a7e6f9e2-7728-44d0-be64-4568f164caee",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-20 16:30:00",
             "end": "2022-09-20 17:50:00",
@@ -1076,10 +989,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
-        }], [{
-            "id": "5b4f5c81-e2ca-47c0-9317-059da0f7dca2",
+        }, {
+            "id": "428484d4-66b9-4bb1-9227-40a1ced5ffd3",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
             "start": "2022-09-21 09:30:00",
             "end": "2022-09-21 10:50:00",
@@ -1087,10 +1000,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : FLORAT Bertrand"}
+                "props": []
             }
         }, {
-            "id": "97150a26-132a-4078-8a67-20db57196efd",
+            "id": "666edd92-5543-4e4b-9305-24c396258514",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
             "start": "2022-09-21 11:00:00",
             "end": "2022-09-21 12:20:00",
@@ -1098,10 +1011,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : FLORAT Bertrand"}
+                "props": []
             }
-        }], [{
-            "id": "9bdf195e-226c-476c-b693-1883aa6de573",
+        }, {
+            "id": "8fb2b96d-8b4c-4397-84b3-40b7a9b9cacb",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-09-22 08:00:00",
             "end": "2022-09-22 09:20:00",
@@ -1109,13 +1022,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "9f29d9c9-36f9-444c-b570-1ee6cfa4728d",
+            "id": "7bb58cf3-9989-4e95-acd9-4b8961beff50",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-09-22 09:30:00",
             "end": "2022-09-22 10:50:00",
@@ -1123,13 +1033,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "7e2ad092-f94d-4906-a812-a54ab11fb54b",
+            "id": "626507fb-cf14-433b-a70a-c6cb6c907812",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-09-22 11:00:00",
             "end": "2022-09-22 12:20:00",
@@ -1137,13 +1044,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "55493cb5-ffa9-4b0b-99e2-86c8fca8f24a",
+            "id": "d1bbb571-965b-486b-800f-5d9175518826",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-09-22 13:30:00",
             "end": "2022-09-22 14:50:00",
@@ -1151,13 +1055,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "e0485f5f-cff4-43b6-b140-a50245e56668",
+            "id": "51777841-91bc-4f8c-8e56-0deb9dd4b89d",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-09-22 15:00:00",
             "end": "2022-09-22 16:20:00",
@@ -1165,13 +1066,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "58f56fa8-55dd-41c5-8d09-67a13213b3b4",
+            "id": "5375e195-f23b-4dcb-9818-67490d4f581d",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-09-22 16:30:00",
             "end": "2022-09-22 17:50:00",
@@ -1179,13 +1077,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
-        }], [{
-            "id": "fa430d30-6d42-426d-8d5b-18dfef03ce7c",
+        }, {
+            "id": "8b44c6fc-a9d3-4f1c-a995-6cba7556df43",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-23 08:00:00",
             "end": "2022-09-23 09:20:00",
@@ -1193,10 +1088,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
         }, {
-            "id": "9046636f-b7ba-41de-bd48-2ef0d9a752d5",
+            "id": "601a213a-49db-4ae4-b982-cb81bab11d89",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-23 09:30:00",
             "end": "2022-09-23 10:50:00",
@@ -1204,10 +1099,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
         }, {
-            "id": "53ef9fe5-4c1d-4a1a-a8eb-c58f25b46dea",
+            "id": "a52b9c1f-5d41-4f38-8611-24b493146943",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-23 11:00:00",
             "end": "2022-09-23 12:20:00",
@@ -1215,10 +1110,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
         }, {
-            "id": "94fd62b6-5e14-4b29-9b62-9bb1bc2723d4",
+            "id": "9d23ce37-709d-43c2-830d-50a2586094ef",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-09-23 13:30:00",
             "end": "2022-09-23 14:50:00",
@@ -1226,10 +1121,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "adcdefc6-fc91-4999-8f8a-c151f08823a2",
+            "id": "d011046b-32ea-46b4-a8c8-b20ac9b687e0",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-09-23 15:00:00",
             "end": "2022-09-23 16:20:00",
@@ -1237,13 +1132,13 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
-        }]]
+        }]
     }, {
-        "week": 37,
-        "days": [[{
-            "id": "20b92583-3d72-4a7c-a391-0f5a1c60ff79",
+        "firstDayOfWeek": "2022-09-12 09:30:00",
+        "event": [{
+            "id": "0483ae5c-b647-4491-89b1-6f0e6c6a7e00",
             "title": "XXX-R\u00e9union - LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-12 09:30:00",
             "end": "2022-09-12 10:50:00",
@@ -1251,10 +1146,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Personnel : LANOIX Arnaud", "teacher": "LP MiAR Groupe 1"}
+                "props": []
             }
         }, {
-            "id": "9a4083c2-9294-4d76-a863-164b722db61c",
+            "id": "4057d933-ef3d-4679-a5b9-c67ad7b92f34",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-09-12 11:00:00",
             "end": "2022-09-12 12:20:00",
@@ -1262,10 +1157,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "9b848363-36ac-4df3-ba4e-2a1da1bd48a1",
+            "id": "b2202111-8d82-4a5d-bd82-c3f57f8775a3",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
             "start": "2022-09-12 13:30:00",
             "end": "2022-09-12 14:50:00",
@@ -1273,13 +1168,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Outils pour le d\u00e9veloppement",
-                    "teacher": "Personnel : HERNANDEZ Nicolas"
-                }
+                "props": []
             }
         }, {
-            "id": "49595a0d-79ff-4f00-9a80-954c51f6fc58",
+            "id": "5119a729-6b1d-4bb0-908f-76a0979c3a98",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
             "start": "2022-09-12 15:00:00",
             "end": "2022-09-12 16:20:00",
@@ -1287,13 +1179,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Outils pour le d\u00e9veloppement",
-                    "teacher": "Personnel : HERNANDEZ Nicolas"
-                }
+                "props": []
             }
         }, {
-            "id": "9a849569-5cc7-424b-9e88-8037cd232f60",
+            "id": "c96c0c09-7aa4-4a08-b6f8-d43d0e133552",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
             "start": "2022-09-12 16:30:00",
             "end": "2022-09-12 17:50:00",
@@ -1301,13 +1190,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Outils pour le d\u00e9veloppement",
-                    "teacher": "Personnel : HERNANDEZ Nicolas"
-                }
+                "props": []
             }
-        }], [{
-            "id": "dabc1c4f-ce1d-4257-be4f-4a1a4772fcb8",
+        }, {
+            "id": "0ff722e2-6ecf-4a97-be30-8f1afe0124fb",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, RIZIO Ga\u00ebtan",
             "start": "2022-09-13 08:00:00",
             "end": "2022-09-13 09:20:00",
@@ -1315,13 +1201,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : RIZIO Ga\u00ebtan\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : RIZIO Ga\u00ebtan"
-                }
+                "props": []
             }
         }, {
-            "id": "327367a2-cec2-4fa2-a898-753466e146e0",
+            "id": "4e52fc7b-de71-4a63-b0e6-ff876d2de9fa",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, RIZIO Ga\u00ebtan",
             "start": "2022-09-13 09:30:00",
             "end": "2022-09-13 10:50:00",
@@ -1329,13 +1212,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : RIZIO Ga\u00ebtan\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : RIZIO Ga\u00ebtan"
-                }
+                "props": []
             }
         }, {
-            "id": "5a819c34-366c-4a28-8ede-8fcd8146155a",
+            "id": "4b5e778b-fb9d-4515-88cd-5732ed70fb2c",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, RIZIO Ga\u00ebtan",
             "start": "2022-09-13 11:00:00",
             "end": "2022-09-13 12:20:00",
@@ -1343,13 +1223,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : RIZIO Ga\u00ebtan\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : RIZIO Ga\u00ebtan"
-                }
+                "props": []
             }
         }, {
-            "id": "4a64cbfd-2615-4db1-b407-f7c4e56786fb",
+            "id": "1a121b93-e4d9-484d-b57f-20f374901552",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-09-13 13:30:00",
             "end": "2022-09-13 14:50:00",
@@ -1357,10 +1234,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "14b25264-f100-4a41-a5d3-d0bd1a5b203d",
+            "id": "602e73c5-b349-4223-a8cd-99092a1ffcba",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-09-13 15:00:00",
             "end": "2022-09-13 16:20:00",
@@ -1368,10 +1245,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
-        }], [{
-            "id": "05606cc3-c861-467c-ad68-d56645c71c28",
+        }, {
+            "id": "a9df325e-be6b-4754-8f4e-77914df79272",
             "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
             "start": "2022-09-14 09:30:00",
             "end": "2022-09-14 10:50:00",
@@ -1379,10 +1256,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/05",
                 "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
-                "props": {"description": "Anglais 1", "teacher": "Personnel : CHARRIAU V\u00e9ronique"}
+                "props": []
             }
         }, {
-            "id": "ecd27b28-b925-473a-a65d-7387aec71402",
+            "id": "b1f344e2-2873-4157-8a40-1ccf4a60ae5b",
             "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
             "start": "2022-09-14 11:00:00",
             "end": "2022-09-14 12:20:00",
@@ -1390,10 +1267,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/05",
                 "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
-                "props": {"description": "Anglais 1", "teacher": "Personnel : CHARRIAU V\u00e9ronique"}
+                "props": []
             }
         }, {
-            "id": "353e5473-0b27-4db1-ac49-b69e3d64ba4b",
+            "id": "ebfef938-1f32-4ef8-addb-d60ae5254b67",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-14 13:30:00",
             "end": "2022-09-14 14:50:00",
@@ -1401,10 +1278,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
         }, {
-            "id": "53d361b8-b2a0-48d0-9dbc-43c78348d30d",
+            "id": "1d691d7c-db36-4a65-b5c9-41dbdf9126c2",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-14 15:00:00",
             "end": "2022-09-14 16:20:00",
@@ -1412,10 +1289,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
         }, {
-            "id": "aeffac13-7b2b-4a9a-a8b0-0b7d3fdb7436",
+            "id": "47135bd9-c26a-4349-b942-bfde559cbc13",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-14 16:30:00",
             "end": "2022-09-14 17:50:00",
@@ -1423,10 +1300,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
-        }], [{
-            "id": "a929832a-fce6-4323-a0cc-e97c517cb31c",
+        }, {
+            "id": "794a68a2-53f6-4c02-99bd-1bd178ad38b6",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-09-15 09:30:00",
             "end": "2022-09-15 10:50:00",
@@ -1434,10 +1311,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "5e135bc1-f65e-4b06-9638-689336659cd7",
+            "id": "f2feaab9-3162-44ac-9d3a-45cb934337e0",
             "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-09-15 11:00:00",
             "end": "2022-09-15 12:20:00",
@@ -1445,10 +1322,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Tests et qualit\u00e9 logiciels", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "2528c95c-4fb9-4f76-b758-46643d49af25",
+            "id": "bf9cc23d-f4e2-4da5-84ad-d0add97de2ab",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-09-15 13:30:00",
             "end": "2022-09-15 14:50:00",
@@ -1456,13 +1333,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "61976c0b-d9bf-42b6-8b60-115b21f0b20f",
+            "id": "daadea94-8f51-4a7e-809f-3b2ac7276fc2",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-09-15 15:00:00",
             "end": "2022-09-15 16:20:00",
@@ -1470,13 +1344,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
         }, {
-            "id": "2d862ba6-22b5-41bd-ac2e-0b769ae76de2",
+            "id": "41c6d16a-73df-450c-84d3-ec0609d6ec7c",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
             "start": "2022-09-15 16:30:00",
             "end": "2022-09-15 17:50:00",
@@ -1484,13 +1355,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {
-                    "description": "Technologies  Web c\u00f4t\u00e9 client",
-                    "teacher": "Personnel : BERDJUGIN Jean-Fran\u00e7ois"
-                }
+                "props": []
             }
-        }], [{
-            "id": "f4f4f437-284b-4f52-99fa-0d602c4eec2a",
+        }, {
+            "id": "8f29170c-c387-46a9-8089-b8fc9280f83a",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-16 09:30:00",
             "end": "2022-09-16 10:50:00",
@@ -1498,10 +1366,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
         }, {
-            "id": "036ea4ef-b8b6-49fa-a8c1-b3a6b45c29d6",
+            "id": "e732d1ad-0f69-4621-8616-2ad4964d9b97",
             "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
             "start": "2022-09-16 11:00:00",
             "end": "2022-09-16 12:20:00",
@@ -1509,13 +1377,13 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Programmation objet", "teacher": "Personnel : LANOIX Arnaud"}
+                "props": []
             }
-        }]]
+        }]
     }, {
-        "week": 44,
-        "days": [[{
-            "id": "cb951037-b520-48da-baf4-57a2e871126d",
+        "firstDayOfWeek": "2022-10-31 14:30:00",
+        "event": [{
+            "id": "d9fd2056-d720-453b-9b16-a2ca3906a3be",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-10-31 14:30:00",
             "end": "2022-10-31 15:50:00",
@@ -1523,10 +1391,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "7bfefea7-2378-45d2-b2c2-4058057f771d",
+            "id": "98691ec1-a740-43d4-b8bd-7033448c62e3",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-10-31 16:00:00",
             "end": "2022-10-31 17:20:00",
@@ -1534,10 +1402,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
         }, {
-            "id": "07fdd253-f43e-4eb4-be93-42a9839d5dcb",
+            "id": "2ce12fc0-9fdf-48d5-a65c-8e2871741501",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
             "start": "2022-10-31 17:30:00",
             "end": "2022-10-31 18:50:00",
@@ -1545,17 +1413,17 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-C0\/02",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : MOTTU Jean-Marie"}
+                "props": []
             }
-        }], [{
-            "id": "5b08a69d-2fa9-4f9b-90ac-22df45315697",
+        }, {
+            "id": "aa9f10bb-39a3-4516-a00f-b28cbce96045",
             "title": "XXX-Jour F\u00e9ri\u00e9 -",
             "start": "2022-11-01 09:00:00",
             "end": "2022-11-01 21:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "807e394e-4b9e-4adf-862c-1497d4b2797e",
+        }, {
+            "id": "4ba6e05a-6cef-41b4-b481-37cc92afb376",
             "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
             "start": "2022-11-02 09:00:00",
             "end": "2022-11-02 10:20:00",
@@ -1563,13 +1431,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-E1\/13",
                 "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
-                "props": {
-                    "description": "M\u00e9thodologie de d\u00e9veloppement",
-                    "teacher": "Personnel : TAMZALIT Dalila"
-                }
+                "props": []
             }
         }, {
-            "id": "b5bb472f-6993-4f87-a86d-1133d68c3ae3",
+            "id": "753877bd-a6e3-4024-a211-ba5ba363198b",
             "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
             "start": "2022-11-02 10:30:00",
             "end": "2022-11-02 11:50:00",
@@ -1577,13 +1442,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-E1\/13",
                 "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
-                "props": {
-                    "description": "M\u00e9thodologie de d\u00e9veloppement",
-                    "teacher": "Personnel : TAMZALIT Dalila"
-                }
+                "props": []
             }
         }, {
-            "id": "5bec60f3-093d-4c22-adfe-5b2cd6b59043",
+            "id": "35975e29-c99f-4567-8067-9c0c58758a64",
             "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
             "start": "2022-11-02 12:00:00",
             "end": "2022-11-02 13:20:00",
@@ -1591,13 +1453,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-E1\/13",
                 "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
-                "props": {
-                    "description": "M\u00e9thodologie de d\u00e9veloppement",
-                    "teacher": "Personnel : TAMZALIT Dalila"
-                }
+                "props": []
             }
         }, {
-            "id": "b5a05959-70d8-4917-ac0a-4f008b853c53",
+            "id": "8f102a18-7125-41ea-9dff-63df76d684cc",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
             "start": "2022-11-02 14:30:00",
             "end": "2022-11-02 15:50:00",
@@ -1605,10 +1464,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-E1\/13",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : FLORAT Bertrand"}
+                "props": []
             }
         }, {
-            "id": "c26b5115-35b0-41b0-988d-06387deaec23",
+            "id": "cae093a7-1497-4010-8081-08af0d5cac9b",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
             "start": "2022-11-02 16:00:00",
             "end": "2022-11-02 17:20:00",
@@ -1616,10 +1475,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-E1\/13",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : FLORAT Bertrand"}
+                "props": []
             }
         }, {
-            "id": "ecf55938-fd44-4853-ab68-c07c77e2e994",
+            "id": "b05b4133-6b72-4453-b2a2-bff0cabbfb56",
             "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
             "start": "2022-11-02 17:30:00",
             "end": "2022-11-02 18:50:00",
@@ -1627,10 +1486,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": "J-E1\/13",
                 "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
-                "props": {"description": "Outils pour le d\u00e9veloppement", "teacher": "Personnel : FLORAT Bertrand"}
+                "props": []
             }
-        }], [{
-            "id": "93214f47-0f59-4521-9a5d-cbc16ed2ff22",
+        }, {
+            "id": "301dbe40-bd3f-4c20-985a-a93ca3bad99f",
             "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
             "start": "2022-11-03 09:20:00",
             "end": "2022-11-03 11:20:00",
@@ -1638,10 +1497,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": null,
                 "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
-                "props": {"description": "Personnel : LANOIX Arnaud", "teacher": "LP MiAR Groupe 1, LP MiAR Groupe 2"}
+                "props": []
             }
         }, {
-            "id": "9b9b6cc2-7cb1-4e13-a9bb-5eea57de0e0b",
+            "id": "5a04a995-c266-4e19-a400-e1b2c6fdc4c7",
             "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
             "start": "2022-11-03 11:30:00",
             "end": "2022-11-03 13:30:00",
@@ -1649,10 +1508,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": null,
                 "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
-                "props": {"description": "Personnel : LANOIX Arnaud", "teacher": "LP MiAR Groupe 1, LP MiAR Groupe 2"}
+                "props": []
             }
         }, {
-            "id": "744b3632-642c-4220-a5f0-93025a71a7e8",
+            "id": "31e92d15-2e3e-4da7-a6ba-725a12e3928a",
             "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
             "start": "2022-11-03 14:30:00",
             "end": "2022-11-03 16:30:00",
@@ -1660,10 +1519,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": null,
                 "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
-                "props": {"description": "Personnel : LANOIX Arnaud", "teacher": "LP MiAR Groupe 1, LP MiAR Groupe 2"}
+                "props": []
             }
         }, {
-            "id": "090915eb-0dea-4665-aca7-05785dbb6f5e",
+            "id": "84dffea5-1ab0-494a-8349-08d9f0138a6a",
             "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
             "start": "2022-11-03 16:40:00",
             "end": "2022-11-03 18:40:00",
@@ -1671,10 +1530,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": null,
                 "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
-                "props": {"description": "Personnel : LANOIX Arnaud", "teacher": "LP MiAR Groupe 1, LP MiAR Groupe 2"}
+                "props": []
             }
-        }], [{
-            "id": "9a805bca-ccf3-477b-a883-f20ff2f52a82",
+        }, {
+            "id": "0aa86ea8-a03b-4e1f-95e4-22765716bcf6",
             "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
             "start": "2022-11-04 09:20:00",
             "end": "2022-11-04 11:20:00",
@@ -1682,10 +1541,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": null,
                 "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
-                "props": {"description": "Personnel : LANOIX Arnaud", "teacher": "LP MiAR Groupe 1, LP MiAR Groupe 2"}
+                "props": []
             }
         }, {
-            "id": "54d83f2c-1ece-4301-869d-e3a74948e751",
+            "id": "df8cb2a1-36cb-4e70-8ef2-825cb5cb7f26",
             "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
             "start": "2022-11-04 11:30:00",
             "end": "2022-11-04 13:30:00",
@@ -1693,10 +1552,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": null,
                 "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
-                "props": {"description": "Personnel : LANOIX Arnaud", "teacher": "LP MiAR Groupe 1, LP MiAR Groupe 2"}
+                "props": []
             }
         }, {
-            "id": "c64acec2-ef70-47a0-98ba-47b9026dd36a",
+            "id": "8705ed2f-0083-44b4-a5b7-9145490958f9",
             "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
             "start": "2022-11-04 14:30:00",
             "end": "2022-11-04 16:30:00",
@@ -1704,10 +1563,10 @@ export default function useEDT() {
             "extendedProps": {
                 "location": null,
                 "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
-                "props": {"description": "Personnel : LANOIX Arnaud", "teacher": "LP MiAR Groupe 1, LP MiAR Groupe 2"}
+                "props": []
             }
         }, {
-            "id": "d1b88828-cb3a-4573-8ce4-3f9cd7aabe84",
+            "id": "50305214-f353-4f9c-8354-da67868d5285",
             "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
             "start": "2022-11-04 16:40:00",
             "end": "2022-11-04 18:40:00",
@@ -1715,62 +1574,62 @@ export default function useEDT() {
             "extendedProps": {
                 "location": null,
                 "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
-                "props": {"description": "Personnel : LANOIX Arnaud", "teacher": "LP MiAR Groupe 1, LP MiAR Groupe 2"}
+                "props": []
             }
-        }]]
+        }]
     }, {
-        "week": 20,
-        "days": [[{
-            "id": "f7c5a633-e118-4e40-924a-fd38cbe2629d",
+        "firstDayOfWeek": "2023-05-18 08:00:00",
+        "event": [{
+            "id": "1aabd5f0-6613-4445-90ce-438b9a65370c",
             "title": "XXX-Jour F\u00e9ri\u00e9 -",
             "start": "2023-05-18 08:00:00",
             "end": "2023-05-18 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "0272e313-638f-4c6f-bd00-891f9eeb8313",
+        }, {
+            "id": "459f0dab-03ef-4929-9ec6-92a2981a5664",
             "title": "XXX-Fermeture IUT -",
             "start": "2023-05-19 08:00:00",
             "end": "2023-05-19 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }], [{
-            "id": "8670d768-6682-4053-b66c-fb9ccfe929db",
+        }, {
+            "id": "b66469b5-d753-4399-9632-995de1f8b3f4",
             "title": "XXX-Fermeture IUT -",
             "start": "2023-05-20 08:00:00",
             "end": "2023-05-20 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }, {
-        "week": 45,
-        "days": [[{
-            "id": "cf958cae-ce9a-4759-bd90-d3a224126fcf",
+        "firstDayOfWeek": "2022-11-11 09:00:00",
+        "event": [{
+            "id": "f00541e6-e309-4f20-9e9f-ccb1f423ea9b",
             "title": "XXX-Jour F\u00e9ri\u00e9 -",
             "start": "2022-11-11 09:00:00",
             "end": "2022-11-11 21:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }, {
-        "week": 28,
-        "days": [[{
-            "id": "056d6c97-6200-429c-b0e9-033dd7b91c43",
+        "firstDayOfWeek": "2023-07-14 08:00:00",
+        "event": [{
+            "id": "90d5684f-9862-46d4-876f-0e2d6c53b818",
             "title": "XXX-Jour F\u00e9ri\u00e9 -",
             "start": "2023-07-14 08:00:00",
             "end": "2023-07-14 20:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }, {
-        "week": 51,
-        "days": [[{
-            "id": "f54bf0e1-98bb-404c-9e3f-5a4f6986b7f9",
+        "firstDayOfWeek": "2022-12-24 09:00:00",
+        "event": [{
+            "id": "9ffdb7d8-9170-44a3-bbaa-f2506c3cff59",
             "title": "XXX-Fermeture IUT -",
             "start": "2022-12-24 09:00:00",
             "end": "2022-12-24 21:00:00",
             "allDay": false,
             "extendedProps": {"location": null, "fullDescription": null, "props": []}
-        }]]
+        }]
     }]
 }
