@@ -21,22 +21,28 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .Button {
-  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px 16px;
-  cursor: pointer;
-  gap: 8px;
-  width: fit-content;
-  font-style: normal;
+  padding: 0 14px;
+  gap: 10px;
+  height: 32px;
+  background: #575BC7;
+  border: 1px solid #575BC7;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  color: white;
-  background: #2C666E;
-  border: 1px solid #2C666E;
-  border-radius: 8px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #FFFFFF;
+
+  &:hover {
+    background: #474baf;
+    border: 1px solid #474baf;
+  }
 }
 </style>
