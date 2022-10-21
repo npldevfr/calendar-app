@@ -52,7 +52,7 @@ export default {
   padding: 0 10px;
   gap: 10px;
   height: 100%;
-  width: 180px;
+  width: 150px;
 
   &Active {
     border-bottom: 1px solid #8566f4;

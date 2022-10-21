@@ -2,7 +2,9 @@ export default defineNuxtConfig({
     buildModules: [
         '@nuxtjs/google-fonts'
     ],
-
+    modules: [
+        '@vueuse/nuxt',
+    ],
     /**
      * @CSS
      * CSS Modules
