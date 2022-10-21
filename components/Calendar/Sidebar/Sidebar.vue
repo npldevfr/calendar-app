@@ -60,7 +60,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .Sidebar {
-  z-index: 30;
+  z-index: 9000;
   background: #181922;
   border-left: 1px solid #2C2D3C;
   position: fixed;
