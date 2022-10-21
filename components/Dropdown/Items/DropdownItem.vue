@@ -1,6 +1,6 @@
 <template>
   <div class="DropdownItem">
-    <div v-html="isMatchingValue" />
+    <div v-html="isMatchingValue"/>
   </div>
 </template>
 
@@ -27,7 +27,6 @@ export default defineComponent({
   },
   computed: {
     isMatchingValue() {
-      //return highlight the matching values in the dropdown
       if (this.matchValue.length > 0) {
         const regex = new RegExp(this.matchValue, "gi");
         return this.label.replace(regex, (match) => {

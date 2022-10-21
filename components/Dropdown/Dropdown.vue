@@ -27,7 +27,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 .Dropdown {
   position: absolute;
-  padding: 9px;
   top: 5px;
   border-radius: 4px;
   white-space: nowrap;

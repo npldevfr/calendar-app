@@ -7,7 +7,7 @@
     </template>
 
     <template #right>
-<!--      <SmallButton label="LP Miar Groupe 1" dropdown/>-->
+      <!--      <SmallButton label="LP Miar Groupe 1" dropdown/>-->
       <DropdownContainer>
         <SmallButton label="Chercher par élève" @click="dropdownState = !dropdownState" dropdown>
           <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,12 +18,34 @@
 
         </SmallButton>
         <Dropdown :state="dropdownState">
-          <Input v-model:model-value="searchEngine" placeholder="Chercher par personne, groupe"/>
 
-          <template v-for="(list, idx) in getSeachResults" :key="idx">
-            <DropdownHeader :title="list.category" v-if="list.data.length > 0"/>
-            <DropdownItem v-for="(item, idx) in list.data" :match-value="searchEngine" :key="idx" :label="item.name"/>
-          </template>
+          <DropdownContent>
+            <Input v-model:model-value="searchEngine" placeholder="Chercher par personne, groupe"/>
+
+            <template v-for="(list, idx) in getSeachResults" :key="idx">
+              <DropdownHeader :title="list.category" v-if="list.data.length > 0"/>
+              <DropdownItem v-for="(item, idx) in list.data" :match-value="searchEngine" :key="idx" :label="item.name"/>
+            </template>
+
+
+          </DropdownContent>
+
+
+          <DropdownSeparator/>
+          <DropdownContent>
+            <KbdList>
+              <KbdGroup>
+                <Kbd label="⇧"/>
+                <Kbd label="⇩"/>
+                Selection
+              </KbdGroup>
+
+              <KbdGroup>
+                <Kbd label="ESC"/>
+                Quitter
+              </KbdGroup>
+            </KbdList>
+          </DropdownContent>
         </Dropdown>
       </DropdownContainer>
       <SmallButton label="Test" type="Transparent" dropdown/>
