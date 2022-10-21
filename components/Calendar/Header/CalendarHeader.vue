@@ -13,14 +13,16 @@ export default {
 
 <style lang="scss" scoped>
 .CalendarHeader {
-  position: sticky;
-  top: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  //display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 72px;
-  border-width: 0 1px 1px 0;
+  width: 1200px;
+  margin: 0 auto;
+  border-width: 0 1px 1px 1px;
   border-style: solid;
   border-color: #2C2D3C;
 }

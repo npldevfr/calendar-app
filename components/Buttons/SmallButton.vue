@@ -63,7 +63,7 @@ export default defineComponent({
       color: #D2D3E0;
 
       &:hover {
-        background: #1F2029;
+        background: #424352;
         border: 1px solid #1F2029;
       }
     }

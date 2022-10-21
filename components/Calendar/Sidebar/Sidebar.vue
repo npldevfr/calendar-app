@@ -67,7 +67,7 @@ export default defineComponent({
   top: 0;
   right: 0;
   padding: 20px;
-  width: 400px;
+  width: 300px;
   bottom: 0;
 
   .Sidebar__event {

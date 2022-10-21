@@ -4,6 +4,7 @@
            :autocomplete="autocomplete"
            :placeholder="placeholder"
            :name="name"
+           :ref="ref"
            :type="type"
            :value="modelValue"
            @keydown.enter="$emit('enter')"
@@ -17,6 +18,10 @@ import {defineComponent} from "vue";
 export default defineComponent({
   name: "Input",
   props: {
+    ref: {
+      type: String,
+      required: false,
+    },
     modelValue: {
       type: String,
       required: true

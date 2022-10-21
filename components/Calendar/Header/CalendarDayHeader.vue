@@ -1,9 +1,9 @@
 <template>
   <div class="CalendarDayHeader" :class="isToday">
-    <span class="CalendarDayHeaderDayName">
+    <span class="CalendarDayHeaderDayName" v-if="dayName">
       {{ dayName }}
     </span>
-    <span class="CalendarDayHeaderDayNumber">
+    <span class="CalendarDayHeaderDayNumber" v-if="dayNumber">
       {{ formatDay }} <span class="CalendarDayHeaderSmall">{{ formatMonthAndYear }}</span>
     </span>
   </div>
@@ -44,6 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 .CalendarDayHeader {
+  user-select: none;
   transition: all 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -52,7 +53,13 @@ export default {
   padding: 0 10px;
   gap: 10px;
   height: 100%;
-  width: 150px;
+  //width: 150px;
+  grid-column: span 1 / span 1;
+
+  &:hover {
+    background-color: rgba(133, 102, 244, 0.05);
+    cursor: pointer;
+  }
 
   &Active {
     border-bottom: 1px solid #8566f4;

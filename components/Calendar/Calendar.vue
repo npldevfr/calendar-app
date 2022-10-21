@@ -8,8 +8,8 @@
 
     <template #right>
       <!--      <SmallButton label="LP Miar Groupe 1" dropdown/>-->
-      <DropdownContainer>
-        <SmallButton label="Chercher par élève" @click="dropdownState = !dropdownState" dropdown>
+      <DropdownContainer @close="dropdownState = false">
+        <SmallButton label="{{ GROUP || PERSON }}" @click="dropdownState = !dropdownState" dropdown>
           <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M10.5625 5.78125C10.5625 6.94668 10.1842 8.02324 9.54687 8.89668L12.7613 12.1137C13.0787 12.4311 13.0787 12.9465 12.7613 13.2639C12.4439 13.5813 11.9285 13.5813 11.6111 13.2639L8.39668 10.0469C7.52324 10.6867 6.44668 11.0625 5.28125 11.0625C2.36387 11.0625 0 8.69863 0 5.78125C0 2.86387 2.36387 0.5 5.28125 0.5C8.19863 0.5 10.5625 2.86387 10.5625 5.78125ZM5.28125 9.4375C7.2998 9.4375 8.9375 7.7998 8.9375 5.78125C8.9375 3.7627 7.2998 2.125 5.28125 2.125C3.2627 2.125 1.625 3.7627 1.625 5.78125C1.625 7.7998 3.2627 9.4375 5.28125 9.4375Z"
@@ -20,14 +20,11 @@
         <Dropdown :state="dropdownState">
 
           <DropdownContent>
-            <Input v-model:model-value="searchEngine" placeholder="Chercher par personne, groupe"/>
-
-            <template v-for="(list, idx) in getSeachResults" :key="idx">
+            <Input ref="input" v-model:model-value="searchEngine" placeholder="Chercher par personne, groupe"/>
+            <template v-for="(list, idx) in getSearchResults" :key="idx">
               <DropdownHeader :title="list.category" v-if="list.data.length > 0"/>
               <DropdownItem v-for="(item, idx) in list.data" :match-value="searchEngine" :key="idx" :label="item.name"/>
             </template>
-
-
           </DropdownContent>
 
 
@@ -48,34 +45,46 @@
           </DropdownContent>
         </Dropdown>
       </DropdownContainer>
-      <SmallButton label="Test" type="Transparent" dropdown/>
+      <!--      <SmallButton label="Test" type="Transparent" dropdown/>-->
     </template>
   </MainHeader>
   <div class="Calendar">
-    <div class="Calendar__days">
-      <CalendarHeader>
-        <CalendarDayHeader v-for="dateInWeek in datesInWeek"
-                           :key="dateInWeek"
-                           :day-name="getDayName(dateInWeek)"
-                           :day-number="dateInWeek"
-        />
-      </CalendarHeader>
+    <CalendarHeader>
+      <CalendarDayHeader/>
+      <CalendarDayHeader v-for="dateInWeek in datesInWeek"
+                         :key="dateInWeek"
+                         :day-name="getDayName(dateInWeek)"
+                         :day-number="dateInWeek"
+      />
+    </CalendarHeader>
 
-    </div>
-    total hours : {{ calcEventTotalHours }}
-    <div v-for="(events, idx) in getEventsInThisWeek" :key="idx">
-      <div v-for="event in events.event" @click="currentEventShowing = event; sidebarEventState = true;">
-        <div :class="isActiveCell(event)">
-          {{ event.title }}
-          {{ event.start }}
-          {{ event.end }}
+    <CalendarBody>
+      <CalendarColumn>
+        <CalendarCell v-for="hour in hours" :key="hour">
+          {{ hour }}h
+        </CalendarCell>
+      </CalendarColumn>
+      <CalendarColumn v-for="(day, idx) in filterEventsByDay" :key="idx">
+        <CalendarEvent v-for="(event, idx) in day" :key="idx" :event="event"/>
 
-          <div v-if="useIsNow(event.start, event.end)">NOW</div>
-        </div>
-      </div>
+        <CalendarCell v-for="hour in hours" :key="hour">
+          <!--          <CalendarEvent v-for="event in filterEventsByDay[day][hour]" :key="event.id" :event="event"/>-->
+        </CalendarCell>
+      </CalendarColumn>
+    </CalendarBody>
+
+    <!--    <div v-for="(events, idx) in getEventsInThisWeek" :key="idx">-->
+    <!--      <div v-for="event in events.event" @click="currentEventShowing = event; sidebarEventState = true;">-->
+    <!--        <div :class="isActiveCell(event)">-->
+    <!--          {{ event.title }}-->
+    <!--          {{ event.start }}-->
+    <!--          {{ event.end }}-->
+
+    <!--        </div>-->
+    <!--      </div>-->
 
 
-    </div>
+    <!--    </div>-->
 
     <!--    <Transition appear>-->
     <Sidebar :clicked-event="currentEventShowing" :events="getIncomingEvents"
@@ -96,17 +105,33 @@ import Sidebar from "~/components/Calendar/Sidebar/Sidebar.vue";
 import useIsNow from "~/composables/useIsNow";
 import SmallButton from "~/components/Buttons/SmallButton.vue";
 import MainHeader from "~/components/Header/MainHeader.vue";
+import {ref} from "@vue/runtime-core";
+import {useFocus} from "@vueuse/core";
+import CalendarBody from "~/components/Calendar/Body/CalendarBody.vue";
+import CalendarColumn from "~/components/Calendar/Body/CalendarColumn.vue";
+import CalendarCell from "~/components/Calendar/Body/CalendarCell.vue";
 
 export default {
   name: 'Calendar',
-  components: {MainHeader, SmallButton, Sidebar, Button},
+  components: {CalendarCell, CalendarColumn, CalendarBody, MainHeader, SmallButton, Sidebar, Button},
   props: {},
+  setup() {
+    const input = ref()
+    const {focused} = useFocus(input)
+
+    return {
+      input,
+      focused,
+    }
+  },
   data() {
     return {
       weekStartDay: moment().startOf('isoWeek'),
       weekEndDay: moment().endOf('isoWeek'),
 
       dropdownState: false,
+
+      hours: ['8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
 
       searchEngine: '',
       sidebarEventState: false,
@@ -153,7 +178,24 @@ export default {
     }
   },
   computed: {
-    getSeachResults() {
+    filterEventsByDay() {
+      const eventsThisWeek = this.getEventsInThisWeek[0].event
+      const datesInWeek = this.datesInWeek
+      const eventsByDay = []
+
+      for (let i = 0; i < datesInWeek.length; i++) {
+        const events = []
+        for (let j = 0; j < eventsThisWeek.length; j++) {
+          if (moment(eventsThisWeek[j].start).format('DD/MM/YYYY') === datesInWeek[i]) {
+            events.push(eventsThisWeek[j])
+          }
+        }
+        eventsByDay.push(events)
+      }
+
+      return eventsByDay
+    },
+    getSearchResults() {
       return this.dropdownData.map((category) => {
         return {
           category: category.category,
@@ -224,27 +266,33 @@ export default {
       })
       return `${totalHours}h${totalMinutes % 60 === 0 ? '' : totalMinutes % 60}`
     },
-  },
+  }
+  ,
   mounted() {
     document.addEventListener('keydown', this.handleKeyDown);
-  },
+  }
+  ,
   beforeDestroy() {
     document.removeEventListener('keydown', this.handleKeyDown);
-  },
+  }
+  ,
   methods: {
     isActiveCell(cell) {
       const ces = this.currentEventShowing;
       if (ces.start === cell.start && ces.end === cell.end) {
         return 'CalendarCellActive'
       }
-    },
+    }
+    ,
     tryCloseSidebar() {
       this.sidebarEventState = false;
-    },
+    }
+    ,
     goToday() {
       this.weekStartDay = moment().startOf('isoWeek');
       this.weekEndDay = moment().endOf('isoWeek');
-    },
+    }
+    ,
     handleKeyDown({key}) {
       // this.defaultSelectedEvent();
       // const events = this.getEventsInThisWeek[0].event;
@@ -268,28 +316,34 @@ export default {
           this.sidebarEventState = true;
           break;
       }
-    },
+    }
+    ,
     defaultSelectedEvent() {
       if (this.getEventsInThisWeek.length > 0) {
         return this.currentEventShowing = this.getEventsInThisWeek[0].event[0]
       }
-    },
+    }
+    ,
     previousWeek() {
       this.weekStartDay = moment(this.weekStartDay).subtract(1, 'week');
       this.weekEndDay = moment(this.weekEndDay).subtract(1, 'week');
       this.weekNumber--;
-    },
+    }
+    ,
     nextWeek() {
       this.weekStartDay = moment(this.weekStartDay).add(1, 'week');
       this.weekEndDay = moment(this.weekEndDay).add(1, 'week');
       this.weekNumber++;
-    },
+    }
+    ,
     getDayName(day) {
       const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
       return days[moment(day, 'DD/MM/YYYY').day()];
-    },
+    }
+    ,
     useIsNow
-  },
+  }
+  ,
 
 }
 </script>
@@ -298,7 +352,7 @@ export default {
 .Calendar {
 
   &CellActive {
-    border: 4px solid red;
+    color: red;
   }
 }
 </style>
