@@ -2,7 +2,9 @@
   <Transition name="bounce">
     <div class="DropdownRelative" v-if="state">
       <div class="Dropdown">
-        <slot/>
+        <div class="DropdownContent">
+          <slot/>
+        </div>
       </div>
     </div>
   </Transition>
@@ -26,7 +28,6 @@ export default defineComponent({
 .Dropdown {
   position: absolute;
   padding: 9px;
-  width: fit-content;
   top: 5px;
   border-radius: 4px;
   white-space: nowrap;
@@ -37,6 +38,10 @@ export default defineComponent({
   background: #292A35;
   border: 1px solid #313248;
   color: #D2D3E0;
+
+  &Content {
+    position: relative;
+  }
 
   &Relative {
     position: relative;
