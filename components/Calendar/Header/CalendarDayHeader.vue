@@ -1,5 +1,6 @@
 <template>
   <div class="CalendarDayHeader" :class="isToday">
+    <slot v-if="$slots.default" />
     <span class="CalendarDayHeaderDayName" v-if="dayName">
       {{ dayName }}
     </span>

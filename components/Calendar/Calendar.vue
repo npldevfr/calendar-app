@@ -50,7 +50,9 @@
   </MainHeader>
   <div class="Calendar">
     <CalendarHeader>
-      <CalendarDayHeader/>
+      <CalendarDayHeader>
+        {{ calcEventTotalHours }}
+      </CalendarDayHeader>
       <CalendarDayHeader v-for="dateInWeek in datesInWeek"
                          :key="dateInWeek"
                          :day-name="getDayName(dateInWeek)"
@@ -183,11 +185,30 @@ export default {
       const datesInWeek = this.datesInWeek
       const eventsByDay = []
 
+      // for (let i = 0; i < datesInWeek.length; i++) {
+      //   const events = []
+      //   for (let j = 0; j < eventsThisWeek.length; j++) {
+      //     if (moment(eventsThisWeek[j].start).format('DD/MM/YYYY') === datesInWeek[i]) {
+      //       events.push(eventsThisWeek[j])
+      //     }
+      //   }
+      //   eventsByDay.push(events)
+      // }
+
+      // if events in same day have same name, they will be merged
       for (let i = 0; i < datesInWeek.length; i++) {
         const events = []
         for (let j = 0; j < eventsThisWeek.length; j++) {
           if (moment(eventsThisWeek[j].start).format('DD/MM/YYYY') === datesInWeek[i]) {
-            events.push(eventsThisWeek[j])
+            if (events.length === 0) {
+              events.push(eventsThisWeek[j])
+            } else {
+              if (events[events.length - 1].title === eventsThisWeek[j].title) {
+                events[events.length - 1].end = eventsThisWeek[j].end
+              } else {
+                events.push(eventsThisWeek[j])
+              }
+            }
           }
         }
         eventsByDay.push(events)
