@@ -19,11 +19,11 @@ export default {
   props: {
     dayName: {
       type: String,
-      required: true
+      required: false
     },
     dayNumber: {
       type: String,
-      required: true
+      required: false
     }
   },
   computed: {

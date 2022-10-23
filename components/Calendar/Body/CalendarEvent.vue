@@ -25,15 +25,24 @@ export default {
   },
   computed: {
     getTop() {
+      // const timestamp = moment(this.event.start).format('HH:mm');
+      // const startHour: any = timestamp.split(':')[0];
+      // const startMinutes: any = timestamp.split(':')[1];
+      // return `${(startHour - 8) * this.cellHeight + (startMinutes / 60) * this.cellHeight}px`;
+
       const timestamp = moment(this.event.start).format('HH:mm');
       const startHour: any = timestamp.split(':')[0];
       const startMinutes: any = timestamp.split(':')[1];
+
+      if (startHour === '08' && startMinutes === '00') return '5px';
       return `${(startHour - 8) * this.cellHeight + (startMinutes / 60) * this.cellHeight}px`;
     },
     getBottom() {
       const timestamp = moment(this.event.end).format('HH:mm');
       const endHour: any = timestamp.split(':')[0];
       const endMinutes: any = timestamp.split(':')[1];
+
+      if (endHour >= '21') return '5px';
       return `${((20 - endHour) * this.cellHeight - (endMinutes / 60) * this.cellHeight) + this.cellHeight}px`;
     },
     getBackground() {

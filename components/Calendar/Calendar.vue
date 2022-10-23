@@ -1,5 +1,5 @@
 <template>
-  <MainHeader>
+  <MainHeader v-if="weekStartDay && weekEndDay">
     <template #left>
       <Button @click="previousWeek" label="Semaine précédente"/>
       <Button @click="nextWeek" label="Semaine suivante"/>
@@ -48,7 +48,7 @@
       <!--      <SmallButton label="Test" type="Transparent" dropdown/>-->
     </template>
   </MainHeader>
-  <div class="Calendar">
+  <div class="Calendar" v-if="weekStartDay && weekEndDay">
     <CalendarHeader>
       <CalendarDayHeader>
         {{ calcEventTotalHours }}
@@ -66,13 +66,17 @@
           {{ hour }}h
         </CalendarCell>
       </CalendarColumn>
-      <CalendarColumn v-for="(day, idx) in filterEventsByDay" :key="idx">
-        <CalendarEvent v-for="(event, idx) in day" :key="idx" :event="event"/>
-
+      <CalendarColumn v-for="(dateInWeek, idx) in datesInWeek" :key="idx">
         <CalendarCell v-for="hour in hours" :key="hour">
-          <!--          <CalendarEvent v-for="event in filterEventsByDay[day][hour]" :key="event.id" :event="event"/>-->
         </CalendarCell>
       </CalendarColumn>
+      <!--      <CalendarColumn v-for="(day, idx) in filterEventsByDay" :key="idx">-->
+      <!--        <CalendarEvent v-for="(event, idx) in day" :key="idx" :event="event"/>-->
+
+      <!--        <CalendarCell v-for="hour in hours" :key="hour">-->
+      <!--          &lt;!&ndash;          <CalendarEvent v-for="event in filterEventsByDay[day][hour]" :key="event.id" :event="event"/>&ndash;&gt;-->
+      <!--        </CalendarCell>-->
+      <!--      </CalendarColumn>-->
     </CalendarBody>
 
     <!--    <div v-for="(events, idx) in getEventsInThisWeek" :key="idx">-->
@@ -116,20 +120,10 @@ import CalendarCell from "~/components/Calendar/Body/CalendarCell.vue";
 export default {
   name: 'Calendar',
   components: {CalendarCell, CalendarColumn, CalendarBody, MainHeader, SmallButton, Sidebar, Button},
-  props: {},
-  setup() {
-    const input = ref()
-    const {focused} = useFocus(input)
-
-    return {
-      input,
-      focused,
-    }
-  },
   data() {
     return {
-      weekStartDay: moment().startOf('isoWeek'),
-      weekEndDay: moment().endOf('isoWeek'),
+      weekStartDay: null,
+      weekEndDay: null,
 
       dropdownState: false,
 
@@ -290,6 +284,7 @@ export default {
   }
   ,
   mounted() {
+    this.initCalendar();
     document.addEventListener('keydown', this.handleKeyDown);
   }
   ,
@@ -298,6 +293,21 @@ export default {
   }
   ,
   methods: {
+    initCalendar() {
+      // if today is sunday, set weekStartDay to monday of this week and weekEndDay to saturday of this week in isoWeek$
+      if (moment().day() === 0) {
+        this.weekStartDay = moment().isoWeekday(1);
+        this.weekEndDay = moment().isoWeekday(6);
+      } else {
+        this.weekStartDay = moment().isoWeekday(1).subtract(1, 'week');
+        this.weekEndDay = moment().isoWeekday(6).subtract(1, 'week');
+      }
+
+
+
+      // this.weekStartDay = moment().startOf('isoWeek');
+      // this.weekEndDay = moment().endOf('isoWeek');
+    },
     isActiveCell(cell) {
       const ces = this.currentEventShowing;
       if (ces.start === cell.start && ces.end === cell.end) {
