@@ -322,54 +322,58 @@ export default {
       this.weekEndDay = moment().endOf('isoWeek');
     }
     ,
-    handleKeyDown({key}) {
+    handleKeyDown(event: KeyboardEvent) {
       // this.defaultSelectedEvent();
       // const events = this.getEventsInThisWeek[0].event;
       // const currentEventShowingIndex = events.findIndex(event => event.title === this.currentEventShowing.title);
 
-      switch (key) {
-        case 'ArrowLeft':
+      // if ctrl + key is pressed
+      if (event.ctrlKey) {
+        event.preventDefault();
+        switch (event.key) {
+          case KEY.LETTER_K:
+            this.dropdownState = !this.dropdownState;
+            break;
+        }
+      }
+      switch (event.key) {
+        case KEY.ARROW_LEFT:
           this.previousWeek();
           break;
-        case 'ArrowRight':
+        case KEY.ARROW_RIGHT:
           this.nextWeek();
           break;
-        case 'Backspace':
+        case KEY.BACKSPACE:
           this.goToday();
           break;
-        case 'ArrowUp':
+        case KEY.ARROW_UP:
           break;
-        case 'ArrowDown':
+        case KEY.ARROW_DOWN:
           break;
-        case 'Enter':
+        case KEY.ENTER:
           this.sidebarEventState = true;
           break;
       }
-    }
-    ,
+    },
     defaultSelectedEvent() {
       if (this.getEventsInThisWeek.length > 0) {
         return this.currentEventShowing = this.getEventsInThisWeek[0].event[0]
       }
-    }
-    ,
+    },
     previousWeek() {
       this.weekStartDay = moment(this.weekStartDay).subtract(1, 'week');
       this.weekEndDay = moment(this.weekEndDay).subtract(1, 'week');
       this.weekNumber--;
-    }
-    ,
+    },
     nextWeek() {
       this.weekStartDay = moment(this.weekStartDay).add(1, 'week');
       this.weekEndDay = moment(this.weekEndDay).add(1, 'week');
       this.weekNumber++;
-    }
-    ,
+    },
     getDayName(day) {
       const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
       return days[moment(day, 'DD/MM/YYYY').day()];
-    }
-    ,
+    },
     useIsNow
   }
   ,

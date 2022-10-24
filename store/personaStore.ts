@@ -3,18 +3,20 @@ import {useFetch} from "#imports";
 
 export const usePersonaStore = defineStore('persona', {
     state: () => ({
-        persona: null,
+        personas: null,
         selectedPersona: {} as any,
     }),
     getters: {
-        getPersona: (state) => state.persona,
+        getPersonas: (state) => state.personas,
     },
     actions: {
-        FETCH_PERSONA: (state) => {
-            const {data: content} = useFetch('/api/persona');
+        FETCH_PERSONAS: (state) => {
+            const personaStore = usePersonaStore();
+            const {data: content} = useFetch('/api/personas');
+            personaStore.SET_PERSONAS(content);
         },
-        SET_PERSONA(persona) {
-            this.persona = persona;
+        SET_PERSONAS(personas) {
+            this.personas = personas;
         }
     }
 });

@@ -15,8 +15,19 @@ import {OnClickOutside} from '@vueuse/components'
 export default defineComponent({
   name: "DropdownContainer",
   components: {OnClickOutside},
-
-  props: {}
+  mounted() {
+    document.addEventListener('keydown', this.handleKeydown);
+  },
+  beforeUnmount() {
+    document.removeEventListener('keydown', this.handleKeydown);
+  },
+  methods: {
+    handleKeydown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        this.$emit('close')
+      }
+    }
+  }
 })
 </script>
 
