@@ -332,9 +332,9 @@ export default {
 
       // if ctrl + key is pressed
       if (event.ctrlKey) {
-        event.preventDefault();
         switch (event.key) {
           case KEY.LETTER_K:
+            event.preventDefault();
             this.dropdownState = !this.dropdownState;
             break;
         }
