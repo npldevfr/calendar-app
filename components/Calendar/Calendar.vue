@@ -66,17 +66,17 @@
           {{ hour }}h
         </CalendarCell>
       </CalendarColumn>
-      <CalendarColumn v-for="(dateInWeek, idx) in datesInWeek" :key="idx">
-        <CalendarCell v-for="hour in hours" :key="hour">
-        </CalendarCell>
-      </CalendarColumn>
-      <!--      <CalendarColumn v-for="(day, idx) in filterEventsByDay" :key="idx">-->
-      <!--        <CalendarEvent v-for="(event, idx) in day" :key="idx" :event="event"/>-->
+<!--      <CalendarColumn v-for="(dateInWeek, idx) in datesInWeek" :key="idx">-->
+<!--        <CalendarCell v-for="hour in hours" :key="hour">-->
+<!--        </CalendarCell>-->
+<!--      </CalendarColumn>-->
+            <CalendarColumn v-for="(day, idx) in filterEventsByDay" :key="idx">
+              <CalendarEvent v-for="(event, idx) in day" :key="idx" :event="event"/>
 
-      <!--        <CalendarCell v-for="hour in hours" :key="hour">-->
-      <!--          &lt;!&ndash;          <CalendarEvent v-for="event in filterEventsByDay[day][hour]" :key="event.id" :event="event"/>&ndash;&gt;-->
-      <!--        </CalendarCell>-->
-      <!--      </CalendarColumn>-->
+              <CalendarCell v-for="hour in hours" :key="hour">
+                <!--          <CalendarEvent v-for="event in filterEventsByDay[day][hour]" :key="event.id" :event="event"/>-->
+              </CalendarCell>
+            </CalendarColumn>
     </CalendarBody>
 
     <!--    <div v-for="(events, idx) in getEventsInThisWeek" :key="idx">-->
@@ -122,8 +122,8 @@ export default {
   components: {CalendarCell, CalendarColumn, CalendarBody, MainHeader, SmallButton, Sidebar, Button},
   data() {
     return {
-      weekStartDay: null,
-      weekEndDay: null,
+      weekStartDay: moment().startOf('isoWeek'),
+      weekEndDay: moment().endOf('isoWeek'),
 
       dropdownState: false,
 
@@ -284,7 +284,7 @@ export default {
   }
   ,
   mounted() {
-    this.initCalendar();
+    // this.initCalendar();
     document.addEventListener('keydown', this.handleKeyDown);
   }
   ,
