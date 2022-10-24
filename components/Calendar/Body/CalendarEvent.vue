@@ -140,6 +140,11 @@ export default {
     background: #292A35;
     border: 1px solid #313248;
     color: #D2D3E0;
+
+    &:hover {
+      background: #2f2f3d;
+    }
+
   }
 }
 </style>

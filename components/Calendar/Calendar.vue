@@ -66,17 +66,16 @@
           {{ hour }}h
         </CalendarCell>
       </CalendarColumn>
-<!--      <CalendarColumn v-for="(dateInWeek, idx) in datesInWeek" :key="idx">-->
-<!--        <CalendarCell v-for="hour in hours" :key="hour">-->
-<!--        </CalendarCell>-->
-<!--      </CalendarColumn>-->
-            <CalendarColumn v-for="(day, idx) in filterEventsByDay" :key="idx">
-              <CalendarEvent v-for="(event, idx) in day" :key="idx" :event="event"/>
-
-              <CalendarCell v-for="hour in hours" :key="hour">
-                <!--          <CalendarEvent v-for="event in filterEventsByDay[day][hour]" :key="event.id" :event="event"/>-->
-              </CalendarCell>
-            </CalendarColumn>
+      <!--      <CalendarColumn v-for="(dateInWeek, idx) in datesInWeek" :key="idx">-->
+      <!--        <CalendarCell v-for="hour in hours" :key="hour">-->
+      <!--        </CalendarCell>-->
+      <!--      </CalendarColumn>-->
+      <CalendarColumn v-for="(day, idx) in filterEventsByDay" :key="idx">
+        <CalendarEvent v-for="(event, idx) in day" :key="event.id" :event="event"/>
+        <CalendarCell v-for="hour in hours" :key="hour">
+          <!--          <CalendarEvent v-for="event in filterEventsByDay[day][hour]" :key="event.id" :event="event"/>-->
+        </CalendarCell>
+      </CalendarColumn>
     </CalendarBody>
 
     <!--    <div v-for="(events, idx) in getEventsInThisWeek" :key="idx">-->
@@ -302,7 +301,6 @@ export default {
         this.weekStartDay = moment().isoWeekday(1).subtract(1, 'week');
         this.weekEndDay = moment().isoWeekday(6).subtract(1, 'week');
       }
-
 
 
       // this.weekStartDay = moment().startOf('isoWeek');

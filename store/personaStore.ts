@@ -4,6 +4,7 @@ import {useFetch} from "#imports";
 export const usePersonaStore = defineStore('persona', {
     state: () => ({
         persona: null,
+        selectedPersona: {} as any,
     }),
     getters: {
         getPersona: (state) => state.persona,
