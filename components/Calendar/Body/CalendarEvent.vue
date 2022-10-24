@@ -76,7 +76,7 @@ export default {
     isBlacklisted(): string {
       const blacklist = ['Jour Férié', 'Fermeture IUT']
       return blacklist.some(word => this.event.title.includes(word)) ? 'CalendarEventBlacklisted' : '';
-    }
+    },
   },
   methods: {
     /**

@@ -5,5 +5,7 @@ const KEY = {
     ARROW_RIGHT: 'ArrowRight',
     ENTER: 'Enter',
     BACKSPACE: 'Backspace',
-    LETTER_K: 'a',
+    LETTER_K: 'k',
 }
+
+export default KEY;
