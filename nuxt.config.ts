@@ -17,6 +17,8 @@ export default defineNuxtConfig({
         '~/assets/scss/transitions.scss',
     ],
 
+    buildAssetsDir: "/_iutnantescalendar/",
+
     /**
      * @GoogleFonts
      * @Docs: https://google-fonts.nuxtjs.org/
