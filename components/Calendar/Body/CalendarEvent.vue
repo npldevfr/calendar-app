@@ -93,6 +93,7 @@ export default {
 
 <style lang="scss" scoped>
 .CalendarEvent {
+  user-select: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   position: absolute;
