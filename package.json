@@ -8,10 +8,11 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/vite-builder": "^3.0.0-rc.12",
     "@nuxtjs/google-fonts": "3.0.0-0",
     "@vueuse/core": "^9.3.1",
     "@vueuse/nuxt": "^9.3.1",
-    "nuxt": "3.0.0-rc.11",
+    "nuxt": "^3.0.0-rc.12",
     "sass": "^1.55.0"
   },
   "dependencies": {
