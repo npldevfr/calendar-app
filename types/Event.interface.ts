@@ -1,19 +1,10 @@
-export interface EventInterface {
+import {IExtendedProps} from "~/types/ExtendedProps";
+
+export interface IEvent {
     id: string;
     title: string;
     start: Date | string;
     end: Date | string;
     allDay: boolean;
-    extendedProps: {
-
-        /** @Informations **/
-        location: string;
-        fullDescription: string | null;
-
-        /** @Props **/
-        props: {
-            description: string;
-            teacher: string;
-        }
-    }
+    extendedProps: IExtendedProps;
 }

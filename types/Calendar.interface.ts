@@ -1,5 +1,5 @@
-import {EventInterface} from "~/types/Event.interface";
+import {IEvent} from "~/types/Event.interface";
 
-export interface CalendarInterface {
-    events: EventInterface[];
+export interface ICalendar {
+    events: IEvent[];
 }
