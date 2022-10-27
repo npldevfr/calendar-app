@@ -191,7 +191,6 @@ export default {
       //   eventsByDay.push(events)
       // }
 
-      // if events in same day have same name, they will be merged
       for (let i = 0; i < datesInWeek.length; i++) {
         const events = []
         for (let j = 0; j < eventsThisWeek.length; j++) {
