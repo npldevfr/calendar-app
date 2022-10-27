@@ -323,14 +323,11 @@ export default {
     goToday() {
       this.weekStartDay = moment().startOf('isoWeek');
       this.weekEndDay = moment().endOf('isoWeek');
-    }
-    ,
-    handleKeyDown(event: KeyboardEvent) {
-      // this.defaultSelectedEvent();
-      // const events = this.getEventsInThisWeek[0].event;
-      // const currentEventShowingIndex = events.findIndex(event => event.title === this.currentEventShowing.title);
-
-      // if ctrl + key is pressed
+    },
+    /**
+     * Handle keyboard events (arrow keys) to navigate in calendar
+     * **/
+    handleKeyDown(event: KeyboardEvent) : void {
       if (event.ctrlKey) {
         switch (event.key) {
           case KEY.LETTER_K:

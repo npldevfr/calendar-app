@@ -426,17 +426,6 @@ export default function useEDT() {
                 "props": []
             }
         }, {
-            "id": "4b98bb97-0208-4ef3-9cab-ab8f2072a527",
-            "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, HERNANDEZ Nicolas",
-            "start": "2022-10-25 13:30:00",
-            "end": "2022-10-25 14:50:00",
-            "allDay": false,
-            "extendedProps": {
-                "location": "J-C0\/02",
-                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
-                "props": []
-            }
-        }, {
             "id": "c84bec9a-3d08-4d64-9d4b-8c87b2496bf4",
             "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, HERNANDEZ Nicolas",
             "start": "2022-10-25 15:00:00",
