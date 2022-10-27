@@ -40,8 +40,11 @@ export const useCalendarStore = defineStore('calendar', {
         },
     },
     actions: {
-        FETCH_CALENDAR: (state) => (personaId: string) => {
-            const {data: content} = useFetch('/api/calendar');
+        FETCH_CALENDAR(personaId: string = "") {
+            console.log('FETCH_CALENDAR', personaId)
+            const {data: data} = useFetch('~/data/apicalendar.json');
+            console.log('data', data)
+            this.calendar = data;
         },
         SET_CALENDAR(calendar) {
             this.calendar = calendar;

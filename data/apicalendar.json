@@ -1,0 +1,2951 @@
+{
+  "data": [
+    {
+      "firstDayOfWeek": "2022-08-08 08:00:00",
+      "days": [
+        {
+          "date": "2022-08-08",
+          "events": [
+            {
+              "id": "ba869561-9f43-4257-83e3-35e70dd3e60f",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-08-08 08:00:00",
+              "end": "2022-08-08 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2022-08-09",
+          "events": {
+            "1": {
+              "id": "4ad7d7f7-1bab-4bb0-8d6d-f7c9188a350c",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-08-09 08:00:00",
+              "end": "2022-08-09 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-08-10",
+          "events": {
+            "2": {
+              "id": "dee656ef-9d1e-47f6-b2c9-235f2471afe3",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-08-10 08:00:00",
+              "end": "2022-08-10 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-08-11",
+          "events": {
+            "3": {
+              "id": "38e13342-3a86-4df7-8515-5fd335848984",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-08-11 08:00:00",
+              "end": "2022-08-11 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-08-12",
+          "events": {
+            "4": {
+              "id": "6904529c-7322-490c-8256-400d2dc62be6",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-08-12 08:00:00",
+              "end": "2022-08-12 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2022-12-26 09:00:00",
+      "days": [
+        {
+          "date": "2022-12-26",
+          "events": [
+            {
+              "id": "3afc3d44-1cd3-4dec-84f1-9f96205ac953",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-12-26 09:00:00",
+              "end": "2022-12-26 21:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2022-12-27",
+          "events": {
+            "1": {
+              "id": "b9e4fed0-a3dd-4b53-96ac-405da7bda9c2",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-12-27 09:00:00",
+              "end": "2022-12-27 21:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-12-28",
+          "events": {
+            "2": {
+              "id": "d667f66d-4475-4fbd-8286-e369ab68ded6",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-12-28 09:00:00",
+              "end": "2022-12-28 21:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-12-29",
+          "events": {
+            "3": {
+              "id": "7d6c0da0-8d6f-4dee-93e0-cbfbebf8faf4",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-12-29 09:00:00",
+              "end": "2022-12-29 21:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-12-30",
+          "events": {
+            "4": {
+              "id": "6ab93919-14f7-4d25-86ed-d1da5446a2dc",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-12-30 09:00:00",
+              "end": "2022-12-30 21:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2023-01-02 09:00:00",
+      "days": [
+        {
+          "date": "2023-01-02",
+          "events": [
+            {
+              "id": "a8dbe59e-be48-479d-b836-33b16d3b78b1",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2023-01-02 09:00:00",
+              "end": "2023-01-02 21:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2023-01-03",
+          "events": []
+        },
+        {
+          "date": "2023-01-04",
+          "events": []
+        },
+        {
+          "date": "2023-01-05",
+          "events": []
+        },
+        {
+          "date": "2023-01-06",
+          "events": []
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2022-08-15 08:00:00",
+      "days": [
+        {
+          "date": "2022-08-15",
+          "events": [
+            {
+              "id": "d27d36a3-1cde-4a54-b626-1e5f3d62fd1a",
+              "title": "XXX-Jour F\u00e9ri\u00e9 -",
+              "start": "2022-08-15 08:00:00",
+              "end": "2022-08-15 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2022-08-16",
+          "events": {
+            "1": {
+              "id": "e248abc0-9935-432f-aa5d-d829316289ef",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-08-16 08:00:00",
+              "end": "2022-08-16 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-08-17",
+          "events": {
+            "2": {
+              "id": "596039ea-b07e-4f14-b694-2c0f1b97eff8",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-08-17 08:00:00",
+              "end": "2022-08-17 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-08-18",
+          "events": []
+        },
+        {
+          "date": "2022-08-19",
+          "events": []
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2022-10-17 08:00:00",
+      "days": [
+        {
+          "date": "2022-10-17",
+          "events": [
+            {
+              "id": "2f11cd03-f5f6-4269-a58d-3f885c3cd20a",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
+              "start": "2022-10-17 08:00:00",
+              "end": "2022-10-17 09:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "SUNYE Gerson",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "5bf11980-f404-4b83-a62b-81f2f5645392",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
+              "start": "2022-10-17 09:30:00",
+              "end": "2022-10-17 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "SUNYE Gerson",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "f19678f7-2737-46bb-bab4-0fae93d49c60",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
+              "start": "2022-10-17 11:00:00",
+              "end": "2022-10-17 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "SUNYE Gerson",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "date": "2022-10-18",
+          "events": []
+        },
+        {
+          "date": "2022-10-19",
+          "events": {
+            "3": {
+              "id": "07263875-2cdd-4e1b-b1ba-8fc49c92914b",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-10-19 08:00:00",
+              "end": "2022-10-19 09:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "4": {
+              "id": "83201fb5-3571-4ced-ab91-673806c1784f",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-10-19 09:30:00",
+              "end": "2022-10-19 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "5": {
+              "id": "adcf2e05-2b0e-477c-806e-6f3e497c8f25",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-10-19 11:00:00",
+              "end": "2022-10-19 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "6": {
+              "id": "a16b5042-b533-4391-b932-4ddc6de3409a",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
+              "start": "2022-10-19 13:30:00",
+              "end": "2022-10-19 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "SUNYE Gerson",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "7": {
+              "id": "8bd4195f-b2b5-4315-a9e9-53ec8efeb320",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
+              "start": "2022-10-19 15:00:00",
+              "end": "2022-10-19 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "SUNYE Gerson",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "8": {
+              "id": "d2b88a1f-22cc-4924-b26a-7776b9c6182c",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, SUNYE Gerson",
+              "start": "2022-10-19 16:30:00",
+              "end": "2022-10-19 17:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : SUNYE Gerson\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "SUNYE Gerson",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-10-20",
+          "events": {
+            "9": {
+              "id": "1b878ebb-08a6-40c2-a556-a4364d125d51",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
+              "start": "2022-10-20 08:00:00",
+              "end": "2022-10-20 09:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "ARHALIASS Yacine",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "10": {
+              "id": "ab7499c6-e496-4ea3-82f8-12da5adf0f20",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
+              "start": "2022-10-20 09:30:00",
+              "end": "2022-10-20 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "ARHALIASS Yacine",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "11": {
+              "id": "b59ac03e-e171-4a2e-b7c4-34c4b7974a03",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
+              "start": "2022-10-20 11:00:00",
+              "end": "2022-10-20 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "ARHALIASS Yacine",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "12": {
+              "id": "4b887505-1c08-4a7b-82aa-a8f50dc6444c",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-10-20 13:30:00",
+              "end": "2022-10-20 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "13": {
+              "id": "683ff7ee-11a6-4218-b5f6-c492e94cb702",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-10-20 15:00:00",
+              "end": "2022-10-20 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "14": {
+              "id": "d9cdbb1e-e9e8-400d-8ffd-3ebff702b374",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-10-20 16:30:00",
+              "end": "2022-10-20 17:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-10-21",
+          "events": {
+            "15": {
+              "id": "a5191f96-c75b-4468-9ecb-b9233ff2ef9f",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
+              "start": "2022-10-21 08:00:00",
+              "end": "2022-10-21 09:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "ARHALIASS Yacine",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "16": {
+              "id": "d9422c62-d935-4f4d-b606-ec9b7e629b7a",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
+              "start": "2022-10-21 09:30:00",
+              "end": "2022-10-21 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "ARHALIASS Yacine",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "17": {
+              "id": "ce8af3bb-a043-4d7f-8415-3f783bee15da",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
+              "start": "2022-10-21 11:00:00",
+              "end": "2022-10-21 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "ARHALIASS Yacine",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "18": {
+              "id": "4af8648a-9b24-432e-baa1-f61f58ce482e",
+              "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
+              "start": "2022-10-21 13:30:00",
+              "end": "2022-10-21 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/05",
+                "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
+                "props": {
+                  "Mati\u00e8re": "Anglais 1",
+                  "Personnel": "CHARRIAU V\u00e9ronique",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/05"
+                }
+              }
+            },
+            "19": {
+              "id": "1e21fe31-c992-4a98-9fa0-3abb0e48ccc8",
+              "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
+              "start": "2022-10-21 15:00:00",
+              "end": "2022-10-21 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/05",
+                "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
+                "props": {
+                  "Mati\u00e8re": "Anglais 1",
+                  "Personnel": "CHARRIAU V\u00e9ronique",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/05"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2022-10-24 08:00:00",
+      "days": [
+        {
+          "date": "2022-10-24",
+          "events": [
+            {
+              "id": "986b21a6-1546-401d-9863-6de6c9372429",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
+              "start": "2022-10-24 08:00:00",
+              "end": "2022-10-24 09:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "FLORAT Bertrand",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "2fed5fbc-3517-48a5-8ff5-3aeac981dd06",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
+              "start": "2022-10-24 09:30:00",
+              "end": "2022-10-24 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "FLORAT Bertrand",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "19d2af8a-84ee-4ee4-a76d-a8b78c8b0554",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
+              "start": "2022-10-24 11:00:00",
+              "end": "2022-10-24 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "FLORAT Bertrand",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "de274539-cd4b-4b61-8382-c4678781fa15",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
+              "start": "2022-10-24 13:30:00",
+              "end": "2022-10-24 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "PHAM Hoang-Vinh",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "ffa9e969-04ff-4d5c-a5a8-80118ddcc806",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
+              "start": "2022-10-24 15:00:00",
+              "end": "2022-10-24 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "PHAM Hoang-Vinh",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "9c7ce2a4-cc9c-4ee8-a0ee-728670eaafe5",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
+              "start": "2022-10-24 16:30:00",
+              "end": "2022-10-24 17:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "PHAM Hoang-Vinh",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "date": "2022-10-25",
+          "events": {
+            "6": {
+              "id": "02300e5e-f5b5-429f-ab25-2b2baca28af0",
+              "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, BERTEL Natalia",
+              "start": "2022-10-25 10:00:00",
+              "end": "2022-10-25 12:00:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-E2\/22",
+                "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : BERTEL Natalia\nGroupe : LP MiAR Groupe 1\nSalle : J-E2\/22",
+                "props": {
+                  "Mati\u00e8re": "M\u00e9thodologie de d\u00e9veloppement",
+                  "Personnel": "BERTEL Natalia",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-E2\/22"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-10-26",
+          "events": {
+            "7": {
+              "id": "93db5b77-61a3-4693-b6ce-d01ba4f0b26f",
+              "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
+              "start": "2022-10-26 09:30:00",
+              "end": "2022-10-26 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/05",
+                "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
+                "props": {
+                  "Mati\u00e8re": "Anglais 1",
+                  "Personnel": "CHARRIAU V\u00e9ronique",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/05"
+                }
+              }
+            },
+            "8": {
+              "id": "05ed6fda-bb7d-423b-a370-50d3f341f73f",
+              "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
+              "start": "2022-10-26 11:00:00",
+              "end": "2022-10-26 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/05",
+                "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
+                "props": {
+                  "Mati\u00e8re": "Anglais 1",
+                  "Personnel": "CHARRIAU V\u00e9ronique",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/05"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-10-27",
+          "events": {
+            "9": {
+              "id": "93c535dd-9bf9-485f-b1ad-7b7af0a6442f",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, HERNANDEZ Nicolas",
+              "start": "2022-10-27 08:00:00",
+              "end": "2022-10-27 09:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "HERNANDEZ Nicolas",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "10": {
+              "id": "b3e5f8bc-eddc-4068-9940-6ec9fefce1c5",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, HERNANDEZ Nicolas",
+              "start": "2022-10-27 09:30:00",
+              "end": "2022-10-27 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "HERNANDEZ Nicolas",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "11": {
+              "id": "bdd795d6-cc8e-492c-9eaa-78928a31f4b0",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, HERNANDEZ Nicolas",
+              "start": "2022-10-27 11:00:00",
+              "end": "2022-10-27 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "HERNANDEZ Nicolas",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "12": {
+              "id": "9af66627-2d7b-4283-b96e-c91624d8f3ff",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-10-27 13:30:00",
+              "end": "2022-10-27 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "13": {
+              "id": "8840360a-23cd-4436-8db9-6a3575a83946",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-10-27 15:00:00",
+              "end": "2022-10-27 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-10-28",
+          "events": {
+            "14": {
+              "id": "5b5f9c9f-392b-4113-81ca-efe8d4e6056e",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, FAUVEL S\u00e9bastien",
+              "start": "2022-10-28 13:30:00",
+              "end": "2022-10-28 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : FAUVEL S\u00e9bastien\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "FAUVEL S\u00e9bastien",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "15": {
+              "id": "f6a85371-9086-4b13-b029-09894e53fb41",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, FAUVEL S\u00e9bastien",
+              "start": "2022-10-28 15:00:00",
+              "end": "2022-10-28 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : FAUVEL S\u00e9bastien\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "FAUVEL S\u00e9bastien",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "16": {
+              "id": "ae8df0ab-d63a-413a-9075-f45fda4fce27",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, FAUVEL S\u00e9bastien",
+              "start": "2022-10-28 16:30:00",
+              "end": "2022-10-28 17:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : FAUVEL S\u00e9bastien\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "FAUVEL S\u00e9bastien",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2022-11-21 09:00:00",
+      "days": [
+        {
+          "date": "2022-11-21",
+          "events": [
+            {
+              "id": "a6200d66-a7bf-47e9-92c1-c76330c4f0a8",
+              "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
+              "start": "2022-11-21 09:00:00",
+              "end": "2022-11-21 10:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/05",
+                "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
+                "props": {
+                  "Mati\u00e8re": "Anglais 1",
+                  "Personnel": "CHARRIAU V\u00e9ronique",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/05"
+                }
+              }
+            },
+            {
+              "id": "7acb906f-5c0d-482f-92ee-6a2603881833",
+              "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
+              "start": "2022-11-21 10:30:00",
+              "end": "2022-11-21 11:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/05",
+                "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
+                "props": {
+                  "Mati\u00e8re": "Anglais 1",
+                  "Personnel": "CHARRIAU V\u00e9ronique",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/05"
+                }
+              }
+            },
+            {
+              "id": "3b52fd8c-a2d4-44b0-bcf0-2f36612cd446",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
+              "start": "2022-11-21 14:30:00",
+              "end": "2022-11-21 15:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "PHAM Hoang-Vinh",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "301394e9-ae4e-47e5-9000-169a66542ee2",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
+              "start": "2022-11-21 16:00:00",
+              "end": "2022-11-21 17:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "PHAM Hoang-Vinh",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "065286db-16f2-40ef-84ae-99f6022d6fbc",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, PHAM Hoang-Vinh",
+              "start": "2022-11-21 17:30:00",
+              "end": "2022-11-21 18:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : PHAM Hoang-Vinh\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "PHAM Hoang-Vinh",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "date": "2022-11-22",
+          "events": {
+            "5": {
+              "id": "15b22170-1ccd-4f5a-bf8a-2b77c1c146e6",
+              "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
+              "start": "2022-11-22 09:00:00",
+              "end": "2022-11-22 10:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "M\u00e9thodologie de d\u00e9veloppement",
+                  "Personnel": "TAMZALIT Dalila",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "6": {
+              "id": "731a9cd1-df5d-42fa-a22d-22a120ae838f",
+              "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
+              "start": "2022-11-22 10:30:00",
+              "end": "2022-11-22 11:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "M\u00e9thodologie de d\u00e9veloppement",
+                  "Personnel": "TAMZALIT Dalila",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "7": {
+              "id": "e6be7d72-a41b-4703-9e13-8f93c60bba33",
+              "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
+              "start": "2022-11-22 12:00:00",
+              "end": "2022-11-22 13:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "M\u00e9thodologie de d\u00e9veloppement",
+                  "Personnel": "TAMZALIT Dalila",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "8": {
+              "id": "0fae4798-a8a8-4fff-9572-4e0d04782e9e",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-11-22 14:30:00",
+              "end": "2022-11-22 15:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "9": {
+              "id": "c425acfd-d3fb-4d29-a47c-ed118e03e980",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-11-22 16:00:00",
+              "end": "2022-11-22 17:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "10": {
+              "id": "7e8fbe46-ae47-4895-8735-433534cd5f97",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-11-22 17:30:00",
+              "end": "2022-11-22 18:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-11-23",
+          "events": {
+            "11": {
+              "id": "aee57bb6-3157-4e20-8b41-d8bb28761e14",
+              "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-11-23 09:00:00",
+              "end": "2022-11-23 10:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies Web c\u00f4t\u00e9 serveur",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "12": {
+              "id": "3a948ae8-cbb3-4d28-8029-17737efeaff6",
+              "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-11-23 10:30:00",
+              "end": "2022-11-23 11:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies Web c\u00f4t\u00e9 serveur",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "13": {
+              "id": "8c9928e6-a708-47ed-a384-570b7d6a25c7",
+              "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-11-23 12:00:00",
+              "end": "2022-11-23 13:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies Web c\u00f4t\u00e9 serveur",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "14": {
+              "id": "bf222adb-6c0e-472c-964a-55babf96b8d3",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
+              "start": "2022-11-23 14:30:00",
+              "end": "2022-11-23 15:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "15": {
+              "id": "e9a301c8-d42b-4818-9fcd-745dc9b7a538",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
+              "start": "2022-11-23 16:00:00",
+              "end": "2022-11-23 17:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "16": {
+              "id": "1a6f8751-8197-4a2f-84be-1d7ef5f20f60",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
+              "start": "2022-11-23 17:30:00",
+              "end": "2022-11-23 18:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-11-24",
+          "events": {
+            "17": {
+              "id": "cfde11d5-b151-44ab-a0f7-75798c896514",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
+              "start": "2022-11-24 09:00:00",
+              "end": "2022-11-24 10:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "18": {
+              "id": "cf171566-8981-44e9-bf5a-f9b33c79b0cd",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
+              "start": "2022-11-24 10:30:00",
+              "end": "2022-11-24 11:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "19": {
+              "id": "019e56c3-d8c0-410f-8cb6-baa75240f803",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1",
+              "start": "2022-11-24 12:00:00",
+              "end": "2022-11-24 13:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "20": {
+              "id": "efc29e9e-c795-45f0-91e8-489022d073e6",
+              "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-11-24 14:30:00",
+              "end": "2022-11-24 15:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies Web c\u00f4t\u00e9 serveur",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "21": {
+              "id": "adba3d6e-def5-49c0-9953-907ce4c53d7a",
+              "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-11-24 16:00:00",
+              "end": "2022-11-24 17:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies Web c\u00f4t\u00e9 serveur",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "22": {
+              "id": "5c517f23-031d-46da-a8e8-3e56f096b39c",
+              "title": "TD - Technologies Web c\u00f4t\u00e9 serveur, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-11-24 17:30:00",
+              "end": "2022-11-24 18:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies Web c\u00f4t\u00e9 serveur\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies Web c\u00f4t\u00e9 serveur",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-11-25",
+          "events": {
+            "23": {
+              "id": "8f4f22a4-3266-4629-8abc-783bb6033f3e",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
+              "start": "2022-11-25 09:00:00",
+              "end": "2022-11-25 10:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "ARHALIASS Yacine",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "24": {
+              "id": "3d515b5c-2439-45aa-a729-1562dc0785c5",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
+              "start": "2022-11-25 10:30:00",
+              "end": "2022-11-25 11:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "ARHALIASS Yacine",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "25": {
+              "id": "67567d8c-617f-4c60-9085-8e369584d6a0",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, ARHALIASS Yacine",
+              "start": "2022-11-25 12:00:00",
+              "end": "2022-11-25 13:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : ARHALIASS Yacine\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "ARHALIASS Yacine",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2023-04-10 08:00:00",
+      "days": [
+        {
+          "date": "2023-04-10",
+          "events": [
+            {
+              "id": "1dbfd1f6-3e99-4303-bd08-ed0b5eea0390",
+              "title": "XXX-Jour F\u00e9ri\u00e9 -",
+              "start": "2023-04-10 08:00:00",
+              "end": "2023-04-10 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2023-04-11",
+          "events": []
+        },
+        {
+          "date": "2023-04-12",
+          "events": []
+        },
+        {
+          "date": "2023-04-13",
+          "events": []
+        },
+        {
+          "date": "2023-04-14",
+          "events": []
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2023-05-01 08:00:00",
+      "days": [
+        {
+          "date": "2023-05-01",
+          "events": [
+            {
+              "id": "039ccf3d-daa6-44da-9ffa-87674b7969a0",
+              "title": "XXX-Jour F\u00e9ri\u00e9 -",
+              "start": "2023-05-01 08:00:00",
+              "end": "2023-05-01 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2023-05-02",
+          "events": []
+        },
+        {
+          "date": "2023-05-03",
+          "events": []
+        },
+        {
+          "date": "2023-05-04",
+          "events": []
+        },
+        {
+          "date": "2023-05-05",
+          "events": []
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2023-05-08 08:00:00",
+      "days": [
+        {
+          "date": "2023-05-08",
+          "events": [
+            {
+              "id": "249d2790-f868-4200-acc8-c4ff83d0f904",
+              "title": "XXX-Jour F\u00e9ri\u00e9 -",
+              "start": "2023-05-08 08:00:00",
+              "end": "2023-05-08 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2023-05-09",
+          "events": []
+        },
+        {
+          "date": "2023-05-10",
+          "events": []
+        },
+        {
+          "date": "2023-05-11",
+          "events": []
+        },
+        {
+          "date": "2023-05-12",
+          "events": []
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2023-05-29 08:00:00",
+      "days": [
+        {
+          "date": "2023-05-29",
+          "events": [
+            {
+              "id": "f18ab170-4f20-47b3-98e3-7086ba127313",
+              "title": "XXX-Jour F\u00e9ri\u00e9 -",
+              "start": "2023-05-29 08:00:00",
+              "end": "2023-05-29 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2023-05-30",
+          "events": []
+        },
+        {
+          "date": "2023-05-31",
+          "events": []
+        },
+        {
+          "date": "2023-06-01",
+          "events": []
+        },
+        {
+          "date": "2023-06-02",
+          "events": []
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2023-06-05 09:00:00",
+      "days": [
+        {
+          "date": "2023-06-05",
+          "events": [
+            {
+              "id": "188a4181-357b-4c84-a5de-b12cc0f01c33",
+              "title": "XXX-TOEIC - LP MiAR Groupe 1, LP MiAR Groupe 2, CHARRIAU V\u00e9ronique, COLEMAN Paul",
+              "start": "2023-06-05 09:00:00",
+              "end": "2023-06-05 12:00:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-Amphi 1",
+                "fullDescription": "Personnel : CHARRIAU V\u00e9ronique, COLEMAN Paul\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2\nSalle : J-Amphi 1",
+                "props": {
+                  "Personnel": "CHARRIAU V\u00e9ronique, COLEMAN Paul",
+                  "Groupe": "LP MiAR Groupe 1, LP MiAR Groupe 2",
+                  "Salle": "J-Amphi 1"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "date": "2023-06-06",
+          "events": []
+        },
+        {
+          "date": "2023-06-07",
+          "events": []
+        },
+        {
+          "date": "2023-06-08",
+          "events": []
+        },
+        {
+          "date": "2023-06-09",
+          "events": []
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2022-09-19 09:10:00",
+      "days": [
+        {
+          "date": "2022-09-19",
+          "events": [
+            {
+              "id": "f0ef7d0f-baca-408d-8ed1-9bce1fd89949",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-09-19 09:10:00",
+              "end": "2022-09-19 10:30:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "e8ab9976-3b72-41fc-864b-984909baa765",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-09-19 10:40:00",
+              "end": "2022-09-19 12:00:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "e861743c-b959-4926-8b9e-42d2b04c0261",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
+              "start": "2022-09-19 13:30:00",
+              "end": "2022-09-19 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "HERNANDEZ Nicolas",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "b8870072-110a-42b5-8f11-6f86352d1ae6",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
+              "start": "2022-09-19 15:00:00",
+              "end": "2022-09-19 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "HERNANDEZ Nicolas",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "30b83c98-3598-4a52-8047-1cbac76d4177",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
+              "start": "2022-09-19 16:30:00",
+              "end": "2022-09-19 17:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "HERNANDEZ Nicolas",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "date": "2022-09-20",
+          "events": {
+            "5": {
+              "id": "d6a3ba70-9d1b-4fdb-9add-c2a28411106e",
+              "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
+              "start": "2022-09-20 09:30:00",
+              "end": "2022-09-20 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/05",
+                "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
+                "props": {
+                  "Mati\u00e8re": "Anglais 1",
+                  "Personnel": "CHARRIAU V\u00e9ronique",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/05"
+                }
+              }
+            },
+            "6": {
+              "id": "05d4cfe0-f347-4a6f-a3b9-1d5e2241b6a8",
+              "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
+              "start": "2022-09-20 11:00:00",
+              "end": "2022-09-20 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/05",
+                "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
+                "props": {
+                  "Mati\u00e8re": "Anglais 1",
+                  "Personnel": "CHARRIAU V\u00e9ronique",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/05"
+                }
+              }
+            },
+            "7": {
+              "id": "ec9d1e35-c210-4c4e-a5a4-ab7532a5449a",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-20 13:30:00",
+              "end": "2022-09-20 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "8": {
+              "id": "be8de94c-e1e3-4bd1-8ec2-db0e4204f61a",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-20 15:00:00",
+              "end": "2022-09-20 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "9": {
+              "id": "e482ff3a-ccd9-41b1-83f2-709b196ee6f3",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-20 16:30:00",
+              "end": "2022-09-20 17:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-09-21",
+          "events": {
+            "10": {
+              "id": "180a4819-b4dd-4da1-ab28-a5f2085d8ea3",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
+              "start": "2022-09-21 09:30:00",
+              "end": "2022-09-21 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "FLORAT Bertrand",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "11": {
+              "id": "7d94d5b8-678f-4722-ab49-ce39fe290d6d",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
+              "start": "2022-09-21 11:00:00",
+              "end": "2022-09-21 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "FLORAT Bertrand",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-09-22",
+          "events": {
+            "12": {
+              "id": "5eeecde1-d056-4096-add0-d6f4da83908b",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-09-22 08:00:00",
+              "end": "2022-09-22 09:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "13": {
+              "id": "eb57210f-7bcb-4b9b-9806-794aec5d167b",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-09-22 09:30:00",
+              "end": "2022-09-22 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "14": {
+              "id": "678abcf9-b397-49ca-96e6-b9f2cd46dba9",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-09-22 11:00:00",
+              "end": "2022-09-22 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "15": {
+              "id": "d73ceb62-e934-4e74-b250-d6f643b5c2dc",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-09-22 13:30:00",
+              "end": "2022-09-22 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "16": {
+              "id": "2aeb30f7-bcf7-4324-afa8-e5acd1acd124",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-09-22 15:00:00",
+              "end": "2022-09-22 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "17": {
+              "id": "682570a4-9b70-4552-923b-1a756ef5a0b8",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-09-22 16:30:00",
+              "end": "2022-09-22 17:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-09-23",
+          "events": {
+            "18": {
+              "id": "b75ecb56-f722-4182-bc27-86c041b85122",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-23 08:00:00",
+              "end": "2022-09-23 09:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "19": {
+              "id": "b119b454-501a-4d04-9e6c-a63842d05f0d",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-23 09:30:00",
+              "end": "2022-09-23 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "20": {
+              "id": "e114ff68-9e69-42b1-bb8c-fc3dba2c0958",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-23 11:00:00",
+              "end": "2022-09-23 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "21": {
+              "id": "21e204f1-48b8-4a73-9900-53dd2a2b4124",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-09-23 13:30:00",
+              "end": "2022-09-23 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "22": {
+              "id": "21cd7fdb-f750-4147-b677-bff3292934c1",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-09-23 15:00:00",
+              "end": "2022-09-23 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2022-09-12 09:30:00",
+      "days": [
+        {
+          "date": "2022-09-12",
+          "events": [
+            {
+              "id": "23b70393-a32c-4ca7-b919-af67f374bdfb",
+              "title": "XXX-R\u00e9union - LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-12 09:30:00",
+              "end": "2022-09-12 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "e96b7a31-035b-4a45-98c7-470315cdbddb",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-09-12 11:00:00",
+              "end": "2022-09-12 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "4891538f-e57f-4179-8c22-513c4394381e",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
+              "start": "2022-09-12 13:30:00",
+              "end": "2022-09-12 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "HERNANDEZ Nicolas",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "20b54903-93dd-422b-92d9-b56bffc17795",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
+              "start": "2022-09-12 15:00:00",
+              "end": "2022-09-12 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "HERNANDEZ Nicolas",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            {
+              "id": "b30a7411-50eb-4d3a-950e-08d5ad965498",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, HERNANDEZ Nicolas",
+              "start": "2022-09-12 16:30:00",
+              "end": "2022-09-12 17:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : HERNANDEZ Nicolas\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "HERNANDEZ Nicolas",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "date": "2022-09-13",
+          "events": {
+            "5": {
+              "id": "217b4970-d0cb-4320-a970-6fda64cc7074",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, RIZIO Ga\u00ebtan",
+              "start": "2022-09-13 08:00:00",
+              "end": "2022-09-13 09:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : RIZIO Ga\u00ebtan\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "RIZIO Ga\u00ebtan",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "6": {
+              "id": "8992b9f7-c978-4770-9473-c991858a6e7e",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, RIZIO Ga\u00ebtan",
+              "start": "2022-09-13 09:30:00",
+              "end": "2022-09-13 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : RIZIO Ga\u00ebtan\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "RIZIO Ga\u00ebtan",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "7": {
+              "id": "970c869f-15ae-4fed-ac29-e4ca655f3380",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, RIZIO Ga\u00ebtan",
+              "start": "2022-09-13 11:00:00",
+              "end": "2022-09-13 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : RIZIO Ga\u00ebtan\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "RIZIO Ga\u00ebtan",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "8": {
+              "id": "672a8800-5663-4406-950d-38d850e8ec23",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-09-13 13:30:00",
+              "end": "2022-09-13 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "9": {
+              "id": "7fac7c58-eaa8-44bf-8bc3-50d7a24b5897",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-09-13 15:00:00",
+              "end": "2022-09-13 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-09-14",
+          "events": {
+            "10": {
+              "id": "112a89a8-68c5-4111-b507-5e792f6a6bdd",
+              "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
+              "start": "2022-09-14 09:30:00",
+              "end": "2022-09-14 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/05",
+                "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
+                "props": {
+                  "Mati\u00e8re": "Anglais 1",
+                  "Personnel": "CHARRIAU V\u00e9ronique",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/05"
+                }
+              }
+            },
+            "11": {
+              "id": "cf9ba1ce-257b-48ec-9dad-35ff00bb24e0",
+              "title": "TD - Anglais 1, LP MiAR Groupe 1, CHARRIAU V\u00e9ronique",
+              "start": "2022-09-14 11:00:00",
+              "end": "2022-09-14 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/05",
+                "fullDescription": "Mati\u00e8re : Anglais 1\nPersonnel : CHARRIAU V\u00e9ronique\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/05",
+                "props": {
+                  "Mati\u00e8re": "Anglais 1",
+                  "Personnel": "CHARRIAU V\u00e9ronique",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/05"
+                }
+              }
+            },
+            "12": {
+              "id": "dbe8e7d0-52b3-42bf-999f-c747909116b4",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-14 13:30:00",
+              "end": "2022-09-14 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "13": {
+              "id": "4329366e-39ae-4463-a4f8-fbbbf3909296",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-14 15:00:00",
+              "end": "2022-09-14 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "14": {
+              "id": "8cc73200-3212-4f03-b127-939a11312f24",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-14 16:30:00",
+              "end": "2022-09-14 17:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-09-15",
+          "events": {
+            "15": {
+              "id": "899ea990-350f-4664-bda1-1090cc7bedf6",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-09-15 09:30:00",
+              "end": "2022-09-15 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "16": {
+              "id": "9846f77c-8635-490d-b62f-78576461f8fe",
+              "title": "TD - Tests et qualit\u00e9 logiciels, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-09-15 11:00:00",
+              "end": "2022-09-15 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Tests et qualit\u00e9 logiciels\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Tests et qualit\u00e9 logiciels",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "17": {
+              "id": "c19f62eb-fce6-4c26-8689-2c9c56ae97a7",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-09-15 13:30:00",
+              "end": "2022-09-15 14:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "18": {
+              "id": "d10b30cf-d6f4-4b35-95e6-972ec0e700a6",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-09-15 15:00:00",
+              "end": "2022-09-15 16:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "19": {
+              "id": "3db7cd6c-0173-404e-95c7-49f0184c42d6",
+              "title": "TD - Technologies  Web c\u00f4t\u00e9 client, LP MiAR Groupe 1, BERDJUGIN Jean-Fran\u00e7ois",
+              "start": "2022-09-15 16:30:00",
+              "end": "2022-09-15 17:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Technologies  Web c\u00f4t\u00e9 client\nPersonnel : BERDJUGIN Jean-Fran\u00e7ois\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Technologies  Web c\u00f4t\u00e9 client",
+                  "Personnel": "BERDJUGIN Jean-Fran\u00e7ois",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-09-16",
+          "events": {
+            "20": {
+              "id": "22ea0059-b2d0-4a62-9aff-ab4bbb2a4d9d",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-16 09:30:00",
+              "end": "2022-09-16 10:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            },
+            "21": {
+              "id": "302be2d4-6f1f-4493-9e90-47a2d68ca356",
+              "title": "TD - Programmation objet, LP MiAR Groupe 1, LANOIX Arnaud",
+              "start": "2022-09-16 11:00:00",
+              "end": "2022-09-16 12:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-C0\/02",
+                "fullDescription": "Mati\u00e8re : Programmation objet\nPersonnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1\nSalle : J-C0\/02",
+                "props": {
+                  "Mati\u00e8re": "Programmation objet",
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-C0\/02"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2022-10-31 14:30:00",
+      "days": [
+        {
+          "date": "2022-10-31",
+          "events": [
+            {
+              "id": "ceeb01a2-571f-4ba7-bc33-7f9f9dca2098",
+              "title": "DS=TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-10-31 14:30:00",
+              "end": "2022-10-31 15:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-E1\/13",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-E1\/13"
+                }
+              }
+            },
+            {
+              "id": "cbf03b3f-423b-4324-ba25-f89137ef687c",
+              "title": "DS=TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-10-31 16:00:00",
+              "end": "2022-10-31 17:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-E1\/13",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-E1\/13"
+                }
+              }
+            },
+            {
+              "id": "dea4282b-2cfa-46dc-a113-b05551457596",
+              "title": "DS=TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, MOTTU Jean-Marie",
+              "start": "2022-10-31 17:30:00",
+              "end": "2022-10-31 18:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-E1\/13",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : MOTTU Jean-Marie\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "MOTTU Jean-Marie",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-E1\/13"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "date": "2022-11-01",
+          "events": {
+            "3": {
+              "id": "bdcf3a69-858c-4c71-85bb-041913160ce6",
+              "title": "XXX-Jour F\u00e9ri\u00e9 -",
+              "start": "2022-11-01 09:00:00",
+              "end": "2022-11-01 21:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-11-02",
+          "events": {
+            "4": {
+              "id": "4017364c-e4b0-449c-815e-0e7039b11e27",
+              "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
+              "start": "2022-11-02 09:00:00",
+              "end": "2022-11-02 10:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-E1\/13",
+                "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
+                "props": {
+                  "Mati\u00e8re": "M\u00e9thodologie de d\u00e9veloppement",
+                  "Personnel": "TAMZALIT Dalila",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-E1\/13"
+                }
+              }
+            },
+            "5": {
+              "id": "1b6b0a03-a4d0-4538-a48d-3b2f9e43da92",
+              "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
+              "start": "2022-11-02 10:30:00",
+              "end": "2022-11-02 11:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-E1\/13",
+                "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
+                "props": {
+                  "Mati\u00e8re": "M\u00e9thodologie de d\u00e9veloppement",
+                  "Personnel": "TAMZALIT Dalila",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-E1\/13"
+                }
+              }
+            },
+            "6": {
+              "id": "80a4426e-5926-4e46-ba0d-ec45eaf88f6c",
+              "title": "TD - M\u00e9thodologie de d\u00e9veloppement, LP MiAR Groupe 1, TAMZALIT Dalila",
+              "start": "2022-11-02 12:00:00",
+              "end": "2022-11-02 13:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-E1\/13",
+                "fullDescription": "Mati\u00e8re : M\u00e9thodologie de d\u00e9veloppement\nPersonnel : TAMZALIT Dalila\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
+                "props": {
+                  "Mati\u00e8re": "M\u00e9thodologie de d\u00e9veloppement",
+                  "Personnel": "TAMZALIT Dalila",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-E1\/13"
+                }
+              }
+            },
+            "7": {
+              "id": "77c619ab-a140-4835-a1ef-19745f644140",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
+              "start": "2022-11-02 14:30:00",
+              "end": "2022-11-02 15:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-E1\/13",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "FLORAT Bertrand",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-E1\/13"
+                }
+              }
+            },
+            "8": {
+              "id": "12dd8dd2-2859-45d5-90d5-b37451d31a1e",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
+              "start": "2022-11-02 16:00:00",
+              "end": "2022-11-02 17:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-E1\/13",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "FLORAT Bertrand",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-E1\/13"
+                }
+              }
+            },
+            "9": {
+              "id": "a3c32285-b257-4290-9159-3a7536d540ac",
+              "title": "TD - Outils pour le d\u00e9veloppement, LP MiAR Groupe 1, FLORAT Bertrand",
+              "start": "2022-11-02 17:30:00",
+              "end": "2022-11-02 18:50:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": "J-E1\/13",
+                "fullDescription": "Mati\u00e8re : Outils pour le d\u00e9veloppement\nPersonnel : FLORAT Bertrand\nGroupe : LP MiAR Groupe 1\nSalle : J-E1\/13",
+                "props": {
+                  "Mati\u00e8re": "Outils pour le d\u00e9veloppement",
+                  "Personnel": "FLORAT Bertrand",
+                  "Groupe": "LP MiAR Groupe 1",
+                  "Salle": "J-E1\/13"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-11-03",
+          "events": {
+            "10": {
+              "id": "15ddeff8-8178-4338-b4b7-9a0fdba6665f",
+              "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
+              "start": "2022-11-03 09:20:00",
+              "end": "2022-11-03 11:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
+                "props": {
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1, LP MiAR Groupe 2"
+                }
+              }
+            },
+            "11": {
+              "id": "44dfadad-90f7-49fa-a56f-5cf2580011e5",
+              "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
+              "start": "2022-11-03 11:30:00",
+              "end": "2022-11-03 13:30:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
+                "props": {
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1, LP MiAR Groupe 2"
+                }
+              }
+            },
+            "12": {
+              "id": "ed3957ba-fd1c-4f8d-96a3-c238c366a9b9",
+              "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
+              "start": "2022-11-03 14:30:00",
+              "end": "2022-11-03 16:30:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
+                "props": {
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1, LP MiAR Groupe 2"
+                }
+              }
+            },
+            "13": {
+              "id": "8195087e-5aa6-4d31-b607-e8449bc3460e",
+              "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
+              "start": "2022-11-03 16:40:00",
+              "end": "2022-11-03 18:40:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
+                "props": {
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1, LP MiAR Groupe 2"
+                }
+              }
+            }
+          }
+        },
+        {
+          "date": "2022-11-04",
+          "events": {
+            "14": {
+              "id": "e4e6e602-cff3-4594-972d-0a75e8e6e2c8",
+              "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
+              "start": "2022-11-04 09:20:00",
+              "end": "2022-11-04 11:20:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
+                "props": {
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1, LP MiAR Groupe 2"
+                }
+              }
+            },
+            "15": {
+              "id": "8323933b-d4e0-4d84-aefb-e5716c4531c7",
+              "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
+              "start": "2022-11-04 11:30:00",
+              "end": "2022-11-04 13:30:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
+                "props": {
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1, LP MiAR Groupe 2"
+                }
+              }
+            },
+            "16": {
+              "id": "0e6f37c0-6a4a-4c5c-9a52-f08d0ad030dd",
+              "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
+              "start": "2022-11-04 14:30:00",
+              "end": "2022-11-04 16:30:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
+                "props": {
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1, LP MiAR Groupe 2"
+                }
+              }
+            },
+            "17": {
+              "id": "f34229ba-a91a-481e-b0ef-559cbc69a732",
+              "title": "XXX-Conf\u00e9rence - LP MiAR Groupe 1, LP MiAR Groupe 2, LANOIX Arnaud",
+              "start": "2022-11-04 16:40:00",
+              "end": "2022-11-04 18:40:00",
+              "allDay": false,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": "Personnel : LANOIX Arnaud\nGroupe : LP MiAR Groupe 1, LP MiAR Groupe 2",
+                "props": {
+                  "Personnel": "LANOIX Arnaud",
+                  "Groupe": "LP MiAR Groupe 1, LP MiAR Groupe 2"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2023-05-18 08:00:00",
+      "days": [
+        {
+          "date": "2023-05-18",
+          "events": [
+            {
+              "id": "7f71bc38-c390-47b7-b703-8cd0e0e5d706",
+              "title": "XXX-Jour F\u00e9ri\u00e9 -",
+              "start": "2023-05-18 08:00:00",
+              "end": "2023-05-18 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2023-05-19",
+          "events": {
+            "1": {
+              "id": "9fd64e51-2a5e-4e48-ab97-464fedd15969",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2023-05-19 08:00:00",
+              "end": "2023-05-19 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        },
+        {
+          "date": "2023-05-20",
+          "events": {
+            "2": {
+              "id": "6b4ddb67-c606-4596-b2f8-20189a2aae3d",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2023-05-20 08:00:00",
+              "end": "2023-05-20 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          }
+        },
+        {
+          "date": "2023-05-21",
+          "events": []
+        },
+        {
+          "date": "2023-05-22",
+          "events": []
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2022-11-11 09:00:00",
+      "days": [
+        {
+          "date": "2022-11-11",
+          "events": [
+            {
+              "id": "a9d60462-573a-4b94-baa8-7b1840525689",
+              "title": "XXX-Jour F\u00e9ri\u00e9 -",
+              "start": "2022-11-11 09:00:00",
+              "end": "2022-11-11 21:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2022-11-12",
+          "events": []
+        },
+        {
+          "date": "2022-11-13",
+          "events": []
+        },
+        {
+          "date": "2022-11-14",
+          "events": []
+        },
+        {
+          "date": "2022-11-15",
+          "events": []
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2023-07-14 08:00:00",
+      "days": [
+        {
+          "date": "2023-07-14",
+          "events": [
+            {
+              "id": "600c6dff-654f-478d-b5c8-722de0679c90",
+              "title": "XXX-Jour F\u00e9ri\u00e9 -",
+              "start": "2023-07-14 08:00:00",
+              "end": "2023-07-14 20:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2023-07-15",
+          "events": []
+        },
+        {
+          "date": "2023-07-16",
+          "events": []
+        },
+        {
+          "date": "2023-07-17",
+          "events": []
+        },
+        {
+          "date": "2023-07-18",
+          "events": []
+        }
+      ]
+    },
+    {
+      "firstDayOfWeek": "2022-12-24 09:00:00",
+      "days": [
+        {
+          "date": "2022-12-24",
+          "events": [
+            {
+              "id": "303d7652-26c9-4d69-9372-ff21f49e40d5",
+              "title": "XXX-Fermeture IUT -",
+              "start": "2022-12-24 09:00:00",
+              "end": "2022-12-24 21:00:00",
+              "allDay": true,
+              "extendedProps": {
+                "location": null,
+                "fullDescription": null,
+                "props": []
+              }
+            }
+          ]
+        },
+        {
+          "date": "2022-12-25",
+          "events": []
+        },
+        {
+          "date": "2022-12-26",
+          "events": []
+        },
+        {
+          "date": "2022-12-27",
+          "events": []
+        },
+        {
+          "date": "2022-12-28",
+          "events": []
+        }
+      ]
+    }
+  ]
+}

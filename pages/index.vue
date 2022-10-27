@@ -1,12 +1,6 @@
 <template>
   <div class="Home">
-    <div style="display: flex">
-      <!--      <Button label="Semaine précédente" @click="currentWeek&#45;&#45;"/>-->
-      <!--      <Button label="Semaine suivante" @click="currentWeek++"/>-->
-    </div>
-<!--    current week : {{ currentWeek }}-->
     <Calendar/>
-    <!--    <pre> {{ getCurrentWeekOfEDT }}</pre>-->
   </div>
 </template>
 
@@ -14,11 +8,18 @@
 
 import Button from "~/components/Buttons/Button.vue";
 import Calendar from "~/components/Calendar/Calendar.vue";
+import {mapActions, mapState} from "pinia";
+import {useCalendarStore} from "~/store/calendarStore";
 
 export default {
   name: "Home",
   components: {Calendar, Button},
-  props: {},
+  methods: {
+    ...mapActions(useCalendarStore,  ['FETCH_CALENDAR']),
+  },
+  mounted() {
+    this.FETCH_CALENDAR('2021-01-01', '2021-12-31');
+  }
 };
 </script>
 
