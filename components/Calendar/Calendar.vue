@@ -3,11 +3,10 @@
     <template #left>
       <Button @click="previousWeek" label="Semaine précédente"/>
       <Button @click="nextWeek" label="Semaine suivante"/>
-      <Button @click="goToday" type="Secondary" label="Revenir à aujourd'hui" v-if="!isTodayIsInThisWeek"/>
+      <Button @click="GO_BACK_TO_TODAY" type="Secondary" label="Revenir à aujourd'hui" v-if="!isTodayIsInThisWeek"/>
     </template>
 
     <template #right>
-      <!--      <SmallButton label="LP Miar Groupe 1" dropdown/>-->
       <DropdownContainer @close="dropdownState = false">
         <SmallButton label="{{ GROUP || PERSON }}" @click="dropdownState = !dropdownState" dropdown>
           <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,39 +68,20 @@
     <CalendarBody>
       <CalendarColumn>
         <CalendarCell v-for="hour in hours" :key="hour">
-          {{ hour }}h
+          {{ hour }}
         </CalendarCell>
       </CalendarColumn>
-      <!--      <CalendarColumn v-for="(dateInWeek, idx) in datesInWeek" :key="idx">-->
-      <!--        <CalendarCell v-for="hour in hours" :key="hour">-->
-      <!--        </CalendarCell>-->
-      <!--      </CalendarColumn>-->
+
       <CalendarColumn v-for="(day, idx) in filterEventsByDay" :key="idx">
         <CalendarEvent v-for="(event, idx) in day" :key="event.id" :event="event"/>
         <CalendarCell v-for="hour in hours" :key="hour">
-          <!--          <CalendarEvent v-for="event in filterEventsByDay[day][hour]" :key="event.id" :event="event"/>-->
         </CalendarCell>
       </CalendarColumn>
     </CalendarBody>
 
-    <!--    <div v-for="(events, idx) in getEventsInThisWeek" :key="idx">-->
-    <!--      <div v-for="event in events.event" @click="currentEventShowing = event; sidebarEventState = true;">-->
-    <!--        <div :class="isActiveCell(event)">-->
-    <!--          {{ event.title }}-->
-    <!--          {{ event.start }}-->
-    <!--          {{ event.end }}-->
-
-    <!--        </div>-->
-    <!--      </div>-->
-
-
-    <!--    </div>-->
-
-    <!--    <Transition appear>-->
     <Sidebar :clicked-event="currentEventShowing" :events="getIncomingEvents"
              v-if="sidebarEventState"
              @close="tryCloseSidebar"/>
-    <!--    </Transition>-->
 
 
   </div>
@@ -120,6 +100,8 @@ import CalendarBody from "~/components/Calendar/Body/CalendarBody.vue";
 import CalendarColumn from "~/components/Calendar/Body/CalendarColumn.vue";
 import CalendarCell from "~/components/Calendar/Body/CalendarCell.vue";
 import KEY from "~/composables/useCalendarKeyboard";
+import {mapActions} from "pinia";
+import {useCalendarStore} from "~/store/calendarStore";
 
 export default {
   name: 'Calendar',
@@ -296,31 +278,10 @@ export default {
   }
   ,
   methods: {
-    initCalendar() {
-      // if today is sunday, set weekStartDay to monday of this week and weekEndDay to saturday of this week in isoWeek$
-      if (moment().day() === 0) {
-        this.weekStartDay = moment().isoWeekday(1);
-        this.weekEndDay = moment().isoWeekday(6);
-      } else {
-        this.weekStartDay = moment().isoWeekday(1).subtract(1, 'week');
-        this.weekEndDay = moment().isoWeekday(6).subtract(1, 'week');
-      }
-
-
-      // this.weekStartDay = moment().startOf('isoWeek');
-      // this.weekEndDay = moment().endOf('isoWeek');
-    },
-    isActiveCell(cell) {
-      const ces = this.currentEventShowing;
-      if (ces.start === cell.start && ces.end === cell.end) {
-        return 'CalendarCellActive'
-      }
-    }
-    ,
+    ...mapActions(useCalendarStore, ['FETCH_CALENDAR', 'GO_BACK_TO_TODAY']),
     tryCloseSidebar() {
       this.sidebarEventState = false;
-    }
-    ,
+    },
     goToday() {
       this.weekStartDay = moment().startOf('isoWeek');
       this.weekEndDay = moment().endOf('isoWeek');
@@ -345,7 +306,7 @@ export default {
           this.nextWeek();
           break;
         case KEY.BACKSPACE:
-          this.goToday();
+          this.GO_BACK_TO_TODAY();
           break;
         case KEY.ARROW_UP:
           break;

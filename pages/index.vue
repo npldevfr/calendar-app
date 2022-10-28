@@ -1,6 +1,6 @@
 <template>
   <div class="Home">
-    <Calendar/>
+    <!--    <Calendar/>-->
   </div>
 </template>
 
@@ -8,17 +8,20 @@
 
 import Button from "~/components/Buttons/Button.vue";
 import Calendar from "~/components/Calendar/Calendar.vue";
-import {mapActions, mapState} from "pinia";
+import {mapActions, mapState, mapStores} from "pinia";
 import {useCalendarStore} from "~/store/calendarStore";
 
 export default {
   name: "Home",
   components: {Calendar, Button},
+  computed: {
+    ...mapState(useCalendarStore, ['getEventsForWeek'])
+  },
   methods: {
-    ...mapActions(useCalendarStore,  ['FETCH_CALENDAR']),
+    ...mapActions(useCalendarStore, ['FETCH_CALENDAR']),
   },
   mounted() {
-    this.FETCH_CALENDAR('2021-01-01', '2021-12-31');
+    this.FETCH_CALENDAR();
   }
 };
 </script>
