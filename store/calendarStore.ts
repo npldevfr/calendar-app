@@ -1,5 +1,5 @@
 import {defineStore} from "pinia";
-import {useFetch} from "#imports";
+import data from "~/data/apicalendar.json"
 import {IEvent} from "~/types/Event.interface";
 import {ICalendar} from "~/types/Calendar.interface";
 import moment from "moment/moment";
@@ -41,10 +41,8 @@ export const useCalendarStore = defineStore('calendar', {
     },
     actions: {
         FETCH_CALENDAR(personaId: string = "") {
-            console.log('FETCH_CALENDAR', personaId)
-            const {data: data} = useFetch('~/data/apicalendar.json');
-            console.log('data', data)
-            this.calendar = data;
+            const { data: fetchedCalendar } = data;
+            console.log(fetchedCalendar);
         },
         SET_CALENDAR(calendar) {
             this.calendar = calendar;
