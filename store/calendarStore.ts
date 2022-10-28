@@ -58,6 +58,18 @@ export const useCalendarStore = defineStore('calendar', {
                 end: moment().endOf('isoWeek')
             }
         },
+        PREVIOUS_WEEK(): void {
+            this.weekInterval = {
+                start: this.weekInterval.start.subtract(1, 'week'),
+                end: this.weekInterval.end.subtract(1, 'week')
+            }
+        },
+        NEXT_WEEK(): void {
+            this.weekInterval = {
+                start: this.weekInterval.start.add(1, 'week'),
+                end: this.weekInterval.end.add(1, 'week')
+            }
+        },
         FETCH_CALENDAR(personaId: string = ""): void {
             const {data: fetchedCalendar} = data;
             this.calendar = fetchedCalendar;
