@@ -1,5 +1,10 @@
 <template>
   <div class="Home">
+    {{ getWeekInterval }}
+    <div style="display: flex">
+      <Button label="Semaine précédente" @click="PREVIOUS_WEEK"/>
+      <Button label="Semaine suivante" @click="NEXT_WEEK"/>
+    </div>
     <!--    <Calendar/>-->
   </div>
 </template>
@@ -15,10 +20,10 @@ export default {
   name: "Home",
   components: {Calendar, Button},
   computed: {
-    ...mapState(useCalendarStore, ['getEventsForWeek'])
+    ...mapState(useCalendarStore, ['getEventsForWeek', 'getWeekInterval'])
   },
   methods: {
-    ...mapActions(useCalendarStore, ['FETCH_CALENDAR']),
+    ...mapActions(useCalendarStore, ['FETCH_CALENDAR', 'NEXT_WEEK', 'PREVIOUS_WEEK']),
   },
   mounted() {
     this.FETCH_CALENDAR();

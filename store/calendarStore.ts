@@ -4,15 +4,17 @@ import {IEvent} from "~/types/Event.interface";
 import moment from "moment/moment";
 import {EVENT_BLACKLIST_WORDS} from "~/global.config";
 import {IWeek} from "~/types/Week.interface";
+import {useWeekInterval} from "~/composables/useWeekInterval";
+import {IWeekInterval} from "~/types/WeekInterval.interface";
 
 export const useCalendarStore = defineStore('calendar', {
     state: () => ({
-        weekInterval: {start: moment().startOf('isoWeek'), end: moment().endOf('isoWeek') as moment.Moment},
+        weekInterval: {start: moment().startOf('isoWeek'), end: moment().endOf('isoWeek')} as IWeekInterval,
         calendar: [] as IWeek[],
         selectedEvent: {} as IEvent,
     }),
     getters: {
-        getWeekInterval: (state): { start: moment.Moment, end: moment.Moment } => {
+        getWeekInterval: (state): IWeekInterval => {
             return state.weekInterval
         },
         getSelectedEvent: (state): IEvent => state.selectedEvent,
@@ -53,22 +55,13 @@ export const useCalendarStore = defineStore('calendar', {
     },
     actions: {
         GO_BACK_TO_TODAY(): void {
-            this.weekInterval = {
-                start: moment().startOf('isoWeek'),
-                end: moment().endOf('isoWeek')
-            }
+            this.weekInterval = useWeekInterval();
         },
         PREVIOUS_WEEK(): void {
-            this.weekInterval = {
-                start: this.weekInterval.start.subtract(1, 'week'),
-                end: this.weekInterval.end.subtract(1, 'week')
-            }
+            this.weekInterval = useWeekInterval('previous', this.weekInterval);
         },
         NEXT_WEEK(): void {
-            this.weekInterval = {
-                start: this.weekInterval.start.add(1, 'week'),
-                end: this.weekInterval.end.add(1, 'week')
-            }
+            this.weekInterval = useWeekInterval('next', this.weekInterval);
         },
         FETCH_CALENDAR(personaId: string = ""): void {
             const {data: fetchedCalendar} = data;
@@ -76,9 +69,6 @@ export const useCalendarStore = defineStore('calendar', {
         },
         SET_SELECTED_EVENT(event: IEvent): void {
             this.selectedEvent = event;
-        },
-        SET_WEEK_INTERVAL(start: moment.Moment, end: moment.Moment): void {
-            this.weekInterval = {start, end};
         },
     },
 });
