@@ -1,6 +1,9 @@
 <template>
   <div class="CalendarHeader">
     <slot />
+    <div class="CalendarHeaderHours">
+      <slot name="hours" />
+    </div>
   </div>
 </template>
 
@@ -20,10 +23,16 @@ export default {
   justify-content: center;
   align-items: center;
   height: 72px;
-  width: 1200px;
+  width: 1300px;
   margin: 0 auto;
   border-width: 0 1px 1px 1px;
   border-style: solid;
   border-color: #2C2D3C;
+
+  &Hours {
+    grid-column: span 6 / span 6;
+    display: flex;
+    height: 100%;
+  }
 }
 </style>

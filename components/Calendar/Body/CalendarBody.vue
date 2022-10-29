@@ -13,7 +13,7 @@ export default {
 
 <style lang="scss" scoped>
 .CalendarBody {
-  width: 1200px;
+  width: 1300px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));

@@ -1,9 +1,9 @@
 <template>
-  <MainHeader v-if="weekStartDay && weekEndDay">
+  <MainHeader>
     <template #left>
-      <Button @click="previousWeek" label="Semaine précédente"/>
-      <Button @click="nextWeek" label="Semaine suivante"/>
-      <Button @click="GO_BACK_TO_TODAY" type="Secondary" label="Revenir à aujourd'hui" v-if="!isTodayIsInThisWeek"/>
+      <Button @click="PREVIOUS_WEEK" label="Semaine précédente"/>
+      <Button @click="NEXT_WEEK" label="Semaine suivante"/>
+      <Button @click="GO_BACK_TO_TODAY" type="Secondary" label="Revenir à aujourd'hui"/>
     </template>
 
     <template #right>
@@ -53,30 +53,31 @@
       </SmallButton>
     </template>
   </MainHeader>
-  <div class="Calendar" v-if="weekStartDay && weekEndDay">
+  <div class="Calendar">
     <CalendarHeader>
       <CalendarDayHeader>
-        {{ calcEventTotalHours }}
+        {{ getTotalHoursForWeek }}
       </CalendarDayHeader>
-      <CalendarDayHeader v-for="dateInWeek in datesInWeek"
-                         :key="dateInWeek"
-                         :day-name="getDayName(dateInWeek)"
-                         :day-number="dateInWeek"
-      />
+      <template #hours>
+        <CalendarDayHeader v-for="date in getDatesInWeek"
+                           :key="date"
+                           :day-number="date"
+        />
+      </template>
     </CalendarHeader>
 
     <CalendarBody>
       <CalendarColumn>
-        <CalendarCell v-for="hour in hours" :key="hour">
-          {{ hour }}
+        <CalendarCell v-for="hour in getCalendarHours" :key="hour">
+          {{ hour }}h
         </CalendarCell>
       </CalendarColumn>
 
-      <CalendarColumn v-for="(day, idx) in filterEventsByDay" :key="idx">
-        <CalendarEvent v-for="(event, idx) in day" :key="event.id" :event="event"/>
-        <CalendarCell v-for="hour in hours" :key="hour">
-        </CalendarCell>
-      </CalendarColumn>
+      <!--      <CalendarColumn v-for="(day, idx) in filterEventsByDay" :key="idx">-->
+      <!--        <CalendarEvent v-for="(event, idx) in day" :key="event.id" :event="event"/>-->
+      <!--        <CalendarCell v-for="hour in getCalendarHours" :key="hour">-->
+      <!--        </CalendarCell>-->
+      <!--      </CalendarColumn>-->
     </CalendarBody>
 
     <Sidebar :clicked-event="currentEventShowing" :events="getIncomingEvents"
@@ -91,7 +92,6 @@
 
 import moment from "moment";
 import Button from "~/components/Buttons/Button.vue";
-import useEDT from "~/composables/useEDT";
 import Sidebar from "~/components/Calendar/Sidebar/Sidebar.vue";
 import useIsNow from "~/composables/useIsNow";
 import SmallButton from "~/components/Buttons/SmallButton.vue";
@@ -100,7 +100,7 @@ import CalendarBody from "~/components/Calendar/Body/CalendarBody.vue";
 import CalendarColumn from "~/components/Calendar/Body/CalendarColumn.vue";
 import CalendarCell from "~/components/Calendar/Body/CalendarCell.vue";
 import KEY from "~/composables/useCalendarKeyboard";
-import {mapActions} from "pinia";
+import {mapActions, mapState} from "pinia";
 import {useCalendarStore} from "~/store/calendarStore";
 
 export default {
@@ -108,12 +108,7 @@ export default {
   components: {CalendarCell, CalendarColumn, CalendarBody, MainHeader, SmallButton, Sidebar, Button},
   data() {
     return {
-      weekStartDay: moment().startOf('isoWeek'),
-      weekEndDay: moment().endOf('isoWeek'),
-
       dropdownState: false,
-
-      hours: ['8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'],
 
       searchEngine: '',
       sidebarEventState: false,
@@ -160,31 +155,35 @@ export default {
     }
   },
   computed: {
-    filterEventsByDay() {
-      const eventsThisWeek = this.getEventsInThisWeek[0].event
-      const datesInWeek = this.datesInWeek
-      const eventsByDay = []
-
-      for (let i = 0; i < datesInWeek.length; i++) {
-        const events = []
-        for (let j = 0; j < eventsThisWeek.length; j++) {
-          if (moment(eventsThisWeek[j].start).format('DD/MM/YYYY') === datesInWeek[i]) {
-            if (events.length === 0) {
-              events.push(eventsThisWeek[j])
-            } else {
-              if (events[events.length - 1].title === eventsThisWeek[j].title) {
-                events[events.length - 1].end = eventsThisWeek[j].end
-              } else {
-                events.push(eventsThisWeek[j])
-              }
-            }
-          }
-        }
-        eventsByDay.push(events)
-      }
-
-      return eventsByDay
-    },
+    ...mapState(useCalendarStore, [
+      'getDatesInWeek', 'getEventsForWeek', 'getWeekInterval',
+      'getFollowingEvents', 'getTotalHoursForWeek', 'getCalendarHours'
+    ]),
+    // filterEventsByDay() {
+    //   const eventsThisWeek = this.getEventsInThisWeek[0].event
+    //   const datesInWeek = this.datesInWeek
+    //   const eventsByDay = []
+    //
+    //   for (let i = 0; i < datesInWeek.length; i++) {
+    //     const events = []
+    //     for (let j = 0; j < eventsThisWeek.length; j++) {
+    //       if (moment(eventsThisWeek[j].start).format('DD/MM/YYYY') === datesInWeek[i]) {
+    //         if (events.length === 0) {
+    //           events.push(eventsThisWeek[j])
+    //         } else {
+    //           if (events[events.length - 1].title === eventsThisWeek[j].title) {
+    //             events[events.length - 1].end = eventsThisWeek[j].end
+    //           } else {
+    //             events.push(eventsThisWeek[j])
+    //           }
+    //         }
+    //       }
+    //     }
+    //     eventsByDay.push(events)
+    //   }
+    //
+    //   return eventsByDay
+    // },
     getSearchResults() {
       return this.dropdownData.map((category) => {
         return {
@@ -195,86 +194,29 @@ export default {
         }
       })
     },
-    getIncomingEvents() {
-      const events = useEDT();
-      const eventNameToFind = this.currentEventShowing;
-      //get event where id = currentEventShowingTitle
-      const incomingEvents = [];
-      events.forEach((event) => {
-        event.event.forEach((event) => {
-          if (event.title === eventNameToFind.title && moment(event.start).isAfter(moment())) {
-            incomingEvents.push(event);
-          }
-        })
-      });
-
-      return incomingEvents;
-
-    },
-    isTodayIsInThisWeek() {
-      return this.weekStartDay.isBefore(moment()) && this.weekEndDay.isAfter(moment())
-    },
-    /**
-     * @return [...moment]
-     * Retourne un tableau de moment contenant les dates de la semaine en cours (du lundi au samedi)
-     */
-    datesInWeek(): moment.Moment[] {
-      const dates = [];
-      let current = this.weekStartDay;
-      while (current <= this.weekEndDay) {
-        if (current.day() !== 0) {
-          dates.push(current.format('DD/MM/YYYY'));
-        }
-        current = current.clone().add(1, 'd');
-      }
-      return dates;
-    },
-    getEventsInThisWeek(): any {
-      const events = useEDT();
-      return events.filter(event => {
-        return moment(event.firstDayOfWeek).isBetween(this.weekStartDay, this.weekEndDay, null, '[]')
-      })
-    },
-    /**
-     * Calcule le nombre d'heures de cours de la semaine
-     * [!] Possède un bug, si un cours dure plus d'une journée, il ne sera pas compté
-     * [!] Ajouter des mots dans blacklist pour ne pas compter les heures
-     */
-    calcEventTotalHours() {
-      const events = this.getEventsInThisWeek;
-      let totalHours = 0;
-      let totalMinutes = 0;
-      const blacklist = ['Jour Férié', 'Fermeture IUT']
-
-      events.forEach(event => {
-        event.event.forEach(event => {
-          if (!blacklist.some(word => event.title.includes(word))) {
-            totalHours += moment(event.end).diff(moment(event.start), 'hours');
-            totalMinutes += moment(event.end).diff(moment(event.start), 'minutes');
-          }
-        })
-      })
-      return `${totalHours}h${totalMinutes % 60 === 0 ? '' : totalMinutes % 60}`
-    },
-  }
-  ,
+    // datesInWeek(): moment.Moment[] {
+    //   const dates = [];
+    //   let current = this.weekStartDay;
+    //   while (current <= this.weekEndDay) {
+    //     if (current.day() !== 0) {
+    //       dates.push(current.format('DD/MM/YYYY'));
+    //     }
+    //     current = current.clone().add(1, 'd');
+    //   }
+    //   return dates;
+    // },
+  },
   mounted() {
-    // this.initCalendar();
+    this.FETCH_CALENDAR();
     document.addEventListener('keydown', this.handleKeyDown);
-  }
-  ,
+  },
   beforeDestroy() {
     document.removeEventListener('keydown', this.handleKeyDown);
-  }
-  ,
+  },
   methods: {
-    ...mapActions(useCalendarStore, ['FETCH_CALENDAR', 'GO_BACK_TO_TODAY']),
+    ...mapActions(useCalendarStore, ['FETCH_CALENDAR', 'NEXT_WEEK', 'PREVIOUS_WEEK', 'GO_BACK_TO_TODAY']),
     tryCloseSidebar() {
       this.sidebarEventState = false;
-    },
-    goToday() {
-      this.weekStartDay = moment().startOf('isoWeek');
-      this.weekEndDay = moment().endOf('isoWeek');
     },
     /**
      * Handle keyboard events (arrow keys) to navigate in calendar
@@ -290,10 +232,10 @@ export default {
       }
       switch (event.key) {
         case KEY.ARROW_LEFT:
-          this.previousWeek();
+          this.PREVIOUS_WEEK();
           break;
         case KEY.ARROW_RIGHT:
-          this.nextWeek();
+          this.NEXT_WEEK();
           break;
         case KEY.BACKSPACE:
           this.GO_BACK_TO_TODAY();
@@ -307,29 +249,8 @@ export default {
           break;
       }
     },
-    defaultSelectedEvent() {
-      if (this.getEventsInThisWeek.length > 0) {
-        return this.currentEventShowing = this.getEventsInThisWeek[0].event[0]
-      }
-    },
-    previousWeek() {
-      this.weekStartDay = moment(this.weekStartDay).subtract(1, 'week');
-      this.weekEndDay = moment(this.weekEndDay).subtract(1, 'week');
-      this.weekNumber--;
-    },
-    nextWeek() {
-      this.weekStartDay = moment(this.weekStartDay).add(1, 'week');
-      this.weekEndDay = moment(this.weekEndDay).add(1, 'week');
-      this.weekNumber++;
-    },
-    getDayName(day) {
-      const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
-      return days[moment(day, 'DD/MM/YYYY').day()];
-    },
     useIsNow
-  }
-  ,
-
+  },
 }
 </script>
 

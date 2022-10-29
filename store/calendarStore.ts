@@ -51,6 +51,15 @@ export const useCalendarStore = defineStore('calendar', {
         getCalendarHours: (): string[] => {
             return HOURS;
         },
+        getDatesInWeek: (state: CalendarStoreState) => {
+            const {start, end} = state.weekInterval;
+            const dates = [];
+            // get dates between start and end
+            for (let m = moment(start); m.isBefore(end); m.add(1, 'days')) {
+                dates.push(m.format('YYYY-MM-DD'));
+            }
+            return dates;
+        },
         /** Retourne le temps total de la semaine selectionnée **/
         getTotalHoursForWeek: (): string => {
             const events = useCalendarStore().getEventsForWeek;
@@ -71,7 +80,7 @@ export const useCalendarStore = defineStore('calendar', {
             totalHours += Math.floor(totalMinutes / 60);
             totalMinutes = totalMinutes % 60;
 
-            return `${totalHours}h${totalMinutes ? ` ${totalMinutes}min` : ''}`
+            return `${totalHours}h${totalMinutes ? `${totalMinutes}min` : ''}`
         },
     },
     actions: {
