@@ -24,6 +24,9 @@ export const useCalendarStore = defineStore('calendar', {
         getWeekInterval: (state: CalendarStoreState): IWeekInterval => {
             return state.weekInterval
         },
+        getCalendar: (state: CalendarStoreState): IWeek[] => {
+            return state.calendar
+        },
         getSelectedEvent: (state: CalendarStoreState) => state.selectedEvent,
         getEventById: (state: CalendarStoreState) => (id: string): IEvent => {
             if (!id) return {} as IEvent

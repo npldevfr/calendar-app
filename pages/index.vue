@@ -1,5 +1,8 @@
 <template>
   <div class="Home">
+    <Transition>
+      <LoadingScreen v-if="getCalendar.length === 0"/>
+    </Transition>
     <Calendar/>
   </div>
 </template>
@@ -10,19 +13,14 @@ import Button from "~/components/Buttons/Button.vue";
 import Calendar from "~/components/Calendar/Calendar.vue";
 import {mapActions, mapState, mapStores} from "pinia";
 import {useCalendarStore} from "~/store/calendarStore";
+import LoadingScreen from "~/components/Loader/LoadingScreen.vue";
 
 export default {
   name: "Home",
-  components: {Calendar, Button},
+  components: {LoadingScreen, Calendar, Button},
   computed: {
-    // ...mapState(useCalendarStore, ['getEventsForWeek', 'getWeekInterval', 'getFollowingEvents', 'getTotalHoursForWeek'])
+    ...mapState(useCalendarStore, ['getCalendar'])
   },
-  methods: {
-    // ...mapActions(useCalendarStore, ['FETCH_CALENDAR', 'NEXT_WEEK', 'PREVIOUS_WEEK', 'GO_BACK_TO_TODAY']),
-  },
-  mounted() {
-    // this.FETCH_CALENDAR();
-  }
 };
 </script>
 
