@@ -15,15 +15,14 @@ export const useWeekInterval = (action: 'previous' | 'next' | 'now' = 'now', wee
         end: moment().endOf('isoWeek')
     };
 
-    console.log(start, end)
     switch (action) {
         case 'previous':
-            start = start.subtract(1, 'week');
-            end = end.subtract(1, 'week');
+            start = moment(start).subtract(1, 'week');
+            end = moment(end).subtract(1, 'week');
             break;
         case 'next':
-            start = start.add(1, 'week');
-            end = end.add(1, 'week');
+            start = moment(start).add(1, 'week');
+            end = moment(end).add(1, 'week');
             break;
         default:
         case 'now':

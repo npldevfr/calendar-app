@@ -2,10 +2,10 @@ import {defineStore} from "pinia";
 import data from "~/data/apicalendar.json"
 import {IEvent} from "~/types/Event.interface";
 import moment from "moment/moment";
-import {EVENT_BLACKLIST_WORDS} from "~/global.config";
 import {IWeek} from "~/types/Week.interface";
 import {useWeekInterval} from "~/composables/useWeekInterval";
 import {IWeekInterval} from "~/types/WeekInterval.interface";
+import {IDay} from "~/types/Day.interface";
 
 export const useCalendarStore = defineStore('calendar', {
     state: () => ({
@@ -22,9 +22,10 @@ export const useCalendarStore = defineStore('calendar', {
             return {} as IEvent
             // return state.calendar?.find((week: IWeek) => week.events.find((event: IEvent) => event.id === id))?.events.find((event: IEvent) => event.id === id) as IEvent
         },
-        getFollowingEvents: (state) => (id: string) => {
-            const weeks = state.calendar;
-            return true;
+        getFollowingEvents: (state) => {
+            // if(!id) return []
+            const id = '15b22170-1ccd-4f5a-bf8a-2b77c1c146e6';
+            return state.calendar?.find((week: IWeek) => week.days.find((day: IDay) => day.events.find((event: IEvent) => event.id === id)))?.days.find((day: IDay) => day.events.find((event: IEvent) => event.id === id))?.events.filter((event: IEvent) => event.id !== id) as IEvent[]
         },
         getEventsForWeek: (state): IWeek[] => {
             const weeks = state.calendar;
