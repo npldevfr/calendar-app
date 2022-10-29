@@ -1,5 +1,10 @@
 <template>
   <div class="Home">
+    {{ getTotalHoursForWeek }}
+    <hr />
+    <pre>
+    {{ getEventsForWeek }}
+      </pre>
     <!--    <Calendar/>-->
   </div>
 </template>
@@ -15,7 +20,7 @@ export default {
   name: "Home",
   components: {Calendar, Button},
   computed: {
-    ...mapState(useCalendarStore, ['getEventsForWeek', 'getWeekInterval', 'getFollowingEvents'])
+    ...mapState(useCalendarStore, ['getEventsForWeek', 'getWeekInterval', 'getFollowingEvents', 'getTotalHoursForWeek'])
   },
   methods: {
     ...mapActions(useCalendarStore, ['FETCH_CALENDAR', 'NEXT_WEEK', 'PREVIOUS_WEEK', 'GO_BACK_TO_TODAY']),

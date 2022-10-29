@@ -165,16 +165,6 @@ export default {
       const datesInWeek = this.datesInWeek
       const eventsByDay = []
 
-      // for (let i = 0; i < datesInWeek.length; i++) {
-      //   const events = []
-      //   for (let j = 0; j < eventsThisWeek.length; j++) {
-      //     if (moment(eventsThisWeek[j].start).format('DD/MM/YYYY') === datesInWeek[i]) {
-      //       events.push(eventsThisWeek[j])
-      //     }
-      //   }
-      //   eventsByDay.push(events)
-      // }
-
       for (let i = 0; i < datesInWeek.length; i++) {
         const events = []
         for (let j = 0; j < eventsThisWeek.length; j++) {

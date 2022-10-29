@@ -6,56 +6,72 @@ import {IWeek} from "~/types/Week.interface";
 import {useWeekInterval} from "~/composables/useWeekInterval";
 import {IWeekInterval} from "~/types/WeekInterval.interface";
 import {IDay} from "~/types/Day.interface";
+import {EVENT_BLACKLIST_WORDS, HOURS} from "~/global.config";
+
+interface CalendarStoreState {
+    weekInterval: IWeekInterval;
+    calendar: any;
+    selectedEvent: IEvent | {};
+}
 
 export const useCalendarStore = defineStore('calendar', {
-    state: () => ({
+    state: (): CalendarStoreState => ({
         weekInterval: {start: moment().startOf('isoWeek'), end: moment().endOf('isoWeek')} as IWeekInterval,
         calendar: [] as IWeek[],
         selectedEvent: {} as IEvent,
     }),
     getters: {
-        getWeekInterval: (state): IWeekInterval => {
+        getWeekInterval: (state: CalendarStoreState): IWeekInterval => {
             return state.weekInterval
         },
-        getSelectedEvent: (state): IEvent => state.selectedEvent,
-        getEventById: (state) => (id: string): IEvent => {
+        getSelectedEvent: (state: CalendarStoreState) => state.selectedEvent,
+        getEventById: (state: CalendarStoreState) => (id: string): IEvent => {
             if (!id) return {} as IEvent
             return state.calendar.flatMap((week: IWeek) => week.days).flatMap((day: IDay) => day.events).find((event: IEvent) => event.id === id)
         },
-        getFollowingEvents: (state) => {
-            const eventById = useCalendarStore().getEventById('ed8762ba-f1ae-4ab0-bb32-45b4246988c7');
+        /** Retourne la liste des événements à venir **/
+        getFollowingEvents: (state: CalendarStoreState) => (uuid: string): IEvent[] => {
+            if (!uuid) return []
+            const eventById = useCalendarStore().getEventById(uuid);
             if (!eventById) return [];
-            // get only events that are after now and where title is same as eventById
             return state.calendar.flatMap((week: IWeek) => week.days).flatMap((day: IDay) => day.events).filter((event: IEvent) => {
                 return moment(event.start).isAfter(moment()) && event.title === eventById.title
             });
-
         },
-        getEventsForWeek: (state): IWeek[] => {
+        /** Retourne la liste des événements pour la semaine selectionnée **/
+        getEventsForWeek: (state: CalendarStoreState) => {
             const weeks = state.calendar;
             const {start, end} = state.weekInterval;
             if (!weeks) return [];
 
             return weeks.filter((week: IWeek) => {
                 return moment(week.firstDayOfWeek).isBetween(start, end, null, '[]')
+            })[0]
+        },
+        getCalendarHours: (): string[] => {
+            return HOURS;
+        },
+        /** Retourne le temps total de la semaine selectionnée **/
+        getTotalHoursForWeek: (): string => {
+            const events = useCalendarStore().getEventsForWeek;
+            if (!events) return '0h';
+
+            let totalHours = 0;
+            let totalMinutes = 0;
+
+            events.days.forEach((day: IDay) => {
+                day.events.forEach((event: IEvent) => {
+                    if (EVENT_BLACKLIST_WORDS.some((word: string) => event.title.includes(word))) return;
+                    totalHours += moment(event.end).diff(moment(event.start), 'hours');
+                    totalMinutes += moment(event.end).diff(moment(event.start), 'minutes') % 60;
+                })
             })
 
-        },
-        getTotalHoursForWeek: (state): string => {
-            return '999h'
-            // const events = useCalendarStore();
-            // let totalHours = 0;
-            // let totalMinutes = 0;
-            //
-            // events.getEventsForWeek().forEach(event => {
-            //     event.event.forEach(event => {
-            //         if (!EVENT_BLACKLIST_WORDS.some(word => event.title.includes(word))) {
-            //             totalHours += moment(event.end).diff(moment(event.start), 'hours');
-            //             totalMinutes += moment(event.end).diff(moment(event.start), 'minutes');
-            //         }
-            //     })
-            // })
-            // return `${totalHours}h${totalMinutes % 60 === 0 ? '' : totalMinutes % 60}`
+
+            totalHours += Math.floor(totalMinutes / 60);
+            totalMinutes = totalMinutes % 60;
+
+            return `${totalHours}h${totalMinutes ? ` ${totalMinutes}min` : ''}`
         },
     },
     actions: {
