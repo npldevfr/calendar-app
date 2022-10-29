@@ -19,13 +19,17 @@ export const useCalendarStore = defineStore('calendar', {
         },
         getSelectedEvent: (state): IEvent => state.selectedEvent,
         getEventById: (state) => (id: string): IEvent => {
-            return {} as IEvent
-            // return state.calendar?.find((week: IWeek) => week.events.find((event: IEvent) => event.id === id))?.events.find((event: IEvent) => event.id === id) as IEvent
+            if (!id) return {} as IEvent
+            return state.calendar.flatMap((week: IWeek) => week.days).flatMap((day: IDay) => day.events).find((event: IEvent) => event.id === id)
         },
         getFollowingEvents: (state) => {
-            // if(!id) return []
-            const id = '15b22170-1ccd-4f5a-bf8a-2b77c1c146e6';
-            return state.calendar?.find((week: IWeek) => week.days.find((day: IDay) => day.events.find((event: IEvent) => event.id === id)))?.days.find((day: IDay) => day.events.find((event: IEvent) => event.id === id))?.events.filter((event: IEvent) => event.id !== id) as IEvent[]
+            const eventById = useCalendarStore().getEventById('ed8762ba-f1ae-4ab0-bb32-45b4246988c7');
+            if (!eventById) return [];
+            // get only events that are after now and where title is same as eventById
+            return state.calendar.flatMap((week: IWeek) => week.days).flatMap((day: IDay) => day.events).filter((event: IEvent) => {
+                return moment(event.start).isAfter(moment()) && event.title === eventById.title
+            });
+
         },
         getEventsForWeek: (state): IWeek[] => {
             const weeks = state.calendar;

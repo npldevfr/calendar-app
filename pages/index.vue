@@ -1,7 +1,5 @@
 <template>
   <div class="Home">
-    {{ getFollowingEvents }}
-
     <!--    <Calendar/>-->
   </div>
 </template>
