@@ -1,20 +1,15 @@
 <template>
   <OnClickOutside class="Sidebar" @trigger="close">
-    Cours :
-    <div class="Sidebar__event">
-      <div class="Sidebar__isnow" v-if="useIsNow(clickedEvent.start, clickedEvent.end)">NOW</div>
-      Cours en cours
-      {{ clickedEvent.title }}
-      {{ clickedEvent.start }}
-      {{ clickedEvent.end }}
-    </div>
+    {{ getSelectedEvent.title }}
     <hr/>
-    Cours à venir : <br/>
-    <div class="SidebarIncomingEvents" v-if="events.length">
-      <EventCard :event="event" v-for="(event, idx) in events" :key="idx"/>
+    Événements à venir : <br/>
+    <div v-if="getFollowingEvents(getSelectedEvent.id).length === 0">
+      Aucun événement à venir
     </div>
     <div v-else>
-      Aucun cours à venir
+      <div v-for="event in getFollowingEvents(getSelectedEvent.id)" :key="event.id">
+        {{ event.start }} - {{ event.end }}
+      </div>
     </div>
   </OnClickOutside>
 </template>
@@ -24,29 +19,24 @@ import {defineComponent} from "vue";
 import {OnClickOutside} from '@vueuse/components'
 import moment from "moment";
 import useIsNow from "~/composables/useIsNow";
+import {mapState} from "pinia";
+import {useCalendarStore} from "~/store/calendarStore";
 
 export default defineComponent({
   name: "Sidebar",
   components: {OnClickOutside},
-  props: {
-    clickedEvent: {
-      type: Object,
-      required: true
-    },
-    events: {
-      type: Array,
-      required: true,
-    },
-  },
-  mounted(){
+  mounted() {
     document.addEventListener('keydown', this.handleEsc);
   },
-  beforeUnmount(){
+  beforeUnmount() {
     document.removeEventListener('keydown', this.handleEsc);
   },
+  computed: {
+    ...mapState(useCalendarStore, ['getSelectedEvent', 'getFollowingEvents']),
+  },
   methods: {
-    handleEsc(e: KeyboardEvent){
-      if(e.key === 'Escape'){
+    handleEsc(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
         this.close();
       }
     },
@@ -67,7 +57,7 @@ export default defineComponent({
   top: 0;
   right: 0;
   padding: 20px;
-  width: 300px;
+  width: 286px;
   bottom: 0;
 
   .Sidebar__event {

@@ -40,7 +40,7 @@ export default defineComponent({
     align-items: center;
     padding: 0;
     gap: 10px;
-    width: 1300px;
+    width: 100%;
   }
 
   &List {

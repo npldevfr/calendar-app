@@ -3,6 +3,8 @@
     <template #left>
       <Button @click="PREVIOUS_WEEK" label="Semaine précédente"/>
       <Button @click="NEXT_WEEK" label="Semaine suivante"/>
+      <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" label="Jour précédent"/>
+      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" label="Jour suivant"/>
       <Button @click="GO_BACK_TO_TODAY" type="Secondary" label="Revenir à aujourd'hui"/>
     </template>
 
@@ -59,7 +61,7 @@
         {{ getTotalHoursForWeek }}
       </CalendarDayHeader>
       <template #hours>
-        <CalendarDayHeader v-for="date in getDatesInWeek"
+        <CalendarDayHeader v-for="date in limitShowDays"
                            :key="date"
                            :day-number="date"
         />
@@ -74,43 +76,39 @@
       </CalendarColumn>
 
       <template #events>
-
-        <CalendarColumn v-for="(day, idx) in getFormatEventByWeek" :key="idx">
-          <CalendarEvent v-for="(event, idx) in day.events" :key="event.id" :event="event"/>
-          <CalendarCell v-for="hour in getCalendarHours" :key="hour" />
+        <CalendarColumn v-for="(day, idx) in limitShowDaysEvents" :key="idx">
+          <CalendarEvent v-for="event in day.events" :key="event.id" :event="event"
+                         @click="sidebarEventState = true; SET_SELECTED_EVENT(event)"/>
+          <CalendarCell v-for="hour in getCalendarHours" :key="hour"/>
         </CalendarColumn>
       </template>
     </CalendarBody>
 
-    <Sidebar :clicked-event="currentEventShowing" :events="getIncomingEvents"
-             v-if="sidebarEventState"
-             @close="tryCloseSidebar"/>
-
+    <Sidebar v-if="sidebarEventState" @close="tryCloseSidebar"/>
 
   </div>
 </template>
 
 <script lang="ts">
 
-import moment from "moment";
-import Button from "~/components/Buttons/Button.vue";
-import Sidebar from "~/components/Calendar/Sidebar/Sidebar.vue";
-import useIsNow from "~/composables/useIsNow";
-import SmallButton from "~/components/Buttons/SmallButton.vue";
-import MainHeader from "~/components/Header/MainHeader.vue";
-import CalendarBody from "~/components/Calendar/Body/CalendarBody.vue";
-import CalendarColumn from "~/components/Calendar/Body/CalendarColumn.vue";
-import CalendarCell from "~/components/Calendar/Body/CalendarCell.vue";
 import KEY from "~/composables/useCalendarKeyboard";
 import {mapActions, mapState} from "pinia";
 import {useCalendarStore} from "~/store/calendarStore";
+import Sidebar from "~/components/Calendar/Sidebar/Sidebar.vue";
+import SmallButton from "~/components/Buttons/SmallButton.vue";
+import MainHeader from "~/components/Header/MainHeader.vue";
+import Button from "~/components/Buttons/Button.vue";
 
 export default {
   name: 'Calendar',
-  components: {CalendarCell, CalendarColumn, CalendarBody, MainHeader, SmallButton, Sidebar, Button},
+  components: {Button, MainHeader, SmallButton, Sidebar},
   data() {
     return {
       dropdownState: false,
+
+      mobileView: window.innerWidth < 600,
+      limitShowDays: 1,
+      showDayIndex: 0,
 
       searchEngine: '',
       sidebarEventState: false,
@@ -162,31 +160,18 @@ export default {
       'getFollowingEvents', 'getTotalHoursForWeek', 'getCalendarHours',
       'getFormatEventByWeek'
     ]),
-    // filterEventsByDay() {
-    //   const eventsThisWeek = this.getEventsInThisWeek[0].event
-    //   const datesInWeek = this.datesInWeek
-    //   const eventsByDay = []
-    //
-    //   for (let i = 0; i < datesInWeek.length; i++) {
-    //     const events = []
-    //     for (let j = 0; j < eventsThisWeek.length; j++) {
-    //       if (moment(eventsThisWeek[j].start).format('DD/MM/YYYY') === datesInWeek[i]) {
-    //         if (events.length === 0) {
-    //           events.push(eventsThisWeek[j])
-    //         } else {
-    //           if (events[events.length - 1].title === eventsThisWeek[j].title) {
-    //             events[events.length - 1].end = eventsThisWeek[j].end
-    //           } else {
-    //             events.push(eventsThisWeek[j])
-    //           }
-    //         }
-    //       }
-    //     }
-    //     eventsByDay.push(events)
-    //   }
-    //
-    //   return eventsByDay
-    // },
+    limitShowDays() {
+      if (!this.mobileView) {
+        return this.getDatesInWeek.slice(0, 5);
+      }
+      return this.getDatesInWeek.slice(this.showDayIndex, this.showDayIndex + 1);
+    },
+    limitShowDaysEvents() {
+      if (!this.mobileView) {
+        return this.getFormatEventByWeek.slice(0, 5);
+      }
+      return this.getFormatEventByWeek.slice(this.showDayIndex, this.showDayIndex + 1);
+    },
     getSearchResults() {
       return this.dropdownData.map((category) => {
         return {
@@ -197,17 +182,6 @@ export default {
         }
       })
     },
-    // datesInWeek(): moment.Moment[] {
-    //   const dates = [];
-    //   let current = this.weekStartDay;
-    //   while (current <= this.weekEndDay) {
-    //     if (current.day() !== 0) {
-    //       dates.push(current.format('DD/MM/YYYY'));
-    //     }
-    //     current = current.clone().add(1, 'd');
-    //   }
-    //   return dates;
-    // },
   },
   mounted() {
     this.FETCH_CALENDAR();
@@ -217,7 +191,23 @@ export default {
     document.removeEventListener('keydown', this.handleKeyDown);
   },
   methods: {
-    ...mapActions(useCalendarStore, ['FETCH_CALENDAR', 'NEXT_WEEK', 'PREVIOUS_WEEK', 'GO_BACK_TO_TODAY']),
+    SHOW_NEXT_DAY() {
+      if (this.showDayIndex < 4) {
+        this.showDayIndex++;
+      } else {
+        this.showDayIndex = 0;
+        this.NEXT_WEEK();
+      }
+    },
+    SHOW_PREVIOUS_DAY() {
+      if (this.showDayIndex > 0) {
+        this.showDayIndex--;
+      } else {
+        this.showDayIndex = 4;
+        this.PREVIOUS_WEEK();
+      }
+    },
+    ...mapActions(useCalendarStore, ['FETCH_CALENDAR', 'NEXT_WEEK', 'PREVIOUS_WEEK', 'GO_BACK_TO_TODAY', 'SET_SELECTED_EVENT']),
     tryCloseSidebar() {
       this.sidebarEventState = false;
     },
@@ -252,7 +242,6 @@ export default {
           break;
       }
     },
-    useIsNow
   },
 }
 </script>
