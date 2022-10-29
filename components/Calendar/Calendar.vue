@@ -73,11 +73,13 @@
         </CalendarCell>
       </CalendarColumn>
 
-      <!--      <CalendarColumn v-for="(day, idx) in filterEventsByDay" :key="idx">-->
-      <!--        <CalendarEvent v-for="(event, idx) in day" :key="event.id" :event="event"/>-->
-      <!--        <CalendarCell v-for="hour in getCalendarHours" :key="hour">-->
-      <!--        </CalendarCell>-->
-      <!--      </CalendarColumn>-->
+      <template #events>
+
+        <CalendarColumn v-for="(day, idx) in getFormatEventByWeek" :key="idx">
+          <CalendarEvent v-for="(event, idx) in day.events" :key="event.id" :event="event"/>
+          <CalendarCell v-for="hour in getCalendarHours" :key="hour" />
+        </CalendarColumn>
+      </template>
     </CalendarBody>
 
     <Sidebar :clicked-event="currentEventShowing" :events="getIncomingEvents"
@@ -157,7 +159,8 @@ export default {
   computed: {
     ...mapState(useCalendarStore, [
       'getDatesInWeek', 'getEventsForWeek', 'getWeekInterval',
-      'getFollowingEvents', 'getTotalHoursForWeek', 'getCalendarHours'
+      'getFollowingEvents', 'getTotalHoursForWeek', 'getCalendarHours',
+      'getFormatEventByWeek'
     ]),
     // filterEventsByDay() {
     //   const eventsThisWeek = this.getEventsInThisWeek[0].event

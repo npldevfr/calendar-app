@@ -60,27 +60,56 @@ export const useCalendarStore = defineStore('calendar', {
             }
             return dates;
         },
+        getFormatEventByWeek: () => {
+            const events = useCalendarStore().getEventsForWeek;
+            const dates = useCalendarStore().getDatesInWeek;
+
+            if (!events) {
+                return dates.map((date: string) => {
+                    return {
+                        date,
+                        events: []
+                    }
+                })
+            } else {
+
+
+                const groupedEventsByDates = dates.map((date: string) => {
+                    return {
+                        date,
+                        events: events.days.find((day: IDay) => day.date === date)?.events || []
+                    }
+                })
+
+                const mergedEvents = groupedEventsByDates.map((day: IDay) => {
+                    const mergedEvents = day.events.reduce((acc: IEvent[], event: IEvent) => {
+                        const lastEvent = acc[acc.length - 1];
+                        if (lastEvent && lastEvent.title === event.title && moment(event.start).diff(moment(lastEvent.end), 'hours') < 1) {
+                            lastEvent.end = event.end;
+                            return acc;
+                        }
+                        return [...acc, event];
+                    }, []);
+                    return {...day, events: mergedEvents}
+                })
+
+                return mergedEvents;
+            }
+        },
         /** Retourne le temps total de la semaine selectionnée **/
         getTotalHoursForWeek: (): string => {
             const events = useCalendarStore().getEventsForWeek;
             if (!events) return '0h';
 
-            let totalHours = 0;
-            let totalMinutes = 0;
-
-            events.days.forEach((day: IDay) => {
-                day.events.forEach((event: IEvent) => {
-                    if (EVENT_BLACKLIST_WORDS.some((word: string) => event.title.includes(word))) return;
-                    totalHours += moment(event.end).diff(moment(event.start), 'hours');
-                    totalMinutes += moment(event.end).diff(moment(event.start), 'minutes') % 60;
-                })
+            //count hours and minutes of all events and if name is near to a blacklisted word, don't count it
+            const totalHours = events.days.flatMap((day: IDay) => day.events).reduce((acc: number, event: IEvent) => {
+                if (EVENT_BLACKLIST_WORDS.some((word: string) => event.title.includes(word))) return acc;
+                return acc + moment(event.end).diff(moment(event.start), 'hours', true);
             })
 
+            return `${Math.floor(totalHours)}h${Math.round((totalHours % 1) * 60)}`
 
-            totalHours += Math.floor(totalMinutes / 60);
-            totalMinutes = totalMinutes % 60;
 
-            return `${totalHours}h${totalMinutes ? `${totalMinutes}min` : ''}`
         },
     },
     actions: {

@@ -12,6 +12,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.CalendarBodyEvents .CalendarColumn {
+  width: 100%;
+}
+
 .CalendarColumn {
   position: relative;
   grid-column: span 1 / span 1;
