@@ -61,7 +61,7 @@
         {{ getTotalHoursForWeek }}
       </CalendarDayHeader>
       <template #hours>
-        <CalendarDayHeader v-for="date in limitShowDays"
+        <CalendarDayHeader v-for="date in limitShowDaysCpt"
                            :key="date"
                            :day-number="date"
         />
@@ -160,7 +160,7 @@ export default {
       'getFollowingEvents', 'getTotalHoursForWeek', 'getCalendarHours',
       'getFormatEventByWeek'
     ]),
-    limitShowDays() {
+    limitShowDaysCpt() {
       if (!this.mobileView) {
         return this.getDatesInWeek.slice(0, 5);
       }
@@ -186,11 +186,6 @@ export default {
   mounted() {
     this.FETCH_CALENDAR();
     document.addEventListener('keydown', this.handleKeyDown);
-    if (typeof window !== "undefined") {
-      if (window.innerWidth < 750) {
-        this.mobileView = true;
-      }
-    }
   },
   beforeDestroy() {
     document.removeEventListener('keydown', this.handleKeyDown);
@@ -257,6 +252,13 @@ export default {
 
   &CellActive {
     color: red;
+  }
+}
+
+@media (min-width: 1250px) {
+  .Calendar {
+    width: 1200px;
+    margin: auto;
   }
 }
 </style>
