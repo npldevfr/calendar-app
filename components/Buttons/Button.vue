@@ -1,7 +1,7 @@
 <template>
-  <div class="Button" :class="getButtonType">
+  <button class="Button" :class="getButtonType">
     {{ label }}
-  </div>
+  </button>
 </template>
 
 <script lang="ts">
@@ -46,6 +46,10 @@ export default defineComponent({
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
+
+  &:focus {
+    outline: none;
+  }
 
   &Type {
     &Primary {

@@ -1,12 +1,12 @@
 <template>
-  <div class="SmallButton" :class="getButtonType">
+  <button class="SmallButton" :class="getButtonType">
     <slot />
     {{ label }}
     <svg v-if="dropdown" width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0.8225 0L3.5 2.47439L6.1775 0L7 0.765499L3.5 4L0 0.765499L0.8225 0Z" fill="#858699"/>
     </svg>
 
-  </div>
+  </button>
 </template>
 
 <script lang="ts">
@@ -56,6 +56,11 @@ export default defineComponent({
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
+  &:focus {
+    outline: none;
+  }
+
+
   &Type {
     &Secondary {
       background: #292A35;
@@ -69,7 +74,7 @@ export default defineComponent({
     }
 
     &Transparent {
-      border: 1px dashed #313248;
+      border: 1px dashed #v;
       background: transparent;
       color: #D2D3E0;
     }

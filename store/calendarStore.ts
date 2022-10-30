@@ -1,37 +1,136 @@
 import {defineStore} from "pinia";
-import {useFetch} from "#imports";
-import {EventInterface} from "~/types/Event.interface";
-import {CalendarInterface} from "~/types/Calendar.interface";
+import data from "~/data/apicalendar.json"
+import {IEvent} from "~/types/Event.interface";
+import moment from "moment/moment";
+import {IWeek} from "~/types/Week.interface";
+import {useWeekInterval} from "~/composables/useWeekInterval";
+import {IWeekInterval} from "~/types/WeekInterval.interface";
+import {IDay} from "~/types/Day.interface";
+import {EVENT_BLACKLIST_WORDS, HOURS} from "~/global.config";
+
+interface CalendarStoreState {
+    weekInterval: IWeekInterval;
+    calendar: any;
+    selectedEvent: IEvent | {};
+}
 
 export const useCalendarStore = defineStore('calendar', {
-    state: () => ({
-        weekInterval: { start: new Date(), end: new Date() },
-
-        calendar: null,
-        selectedEvent: {} as any,
+    state: (): CalendarStoreState => ({
+        weekInterval: {start: moment().startOf('isoWeek'), end: moment().endOf('isoWeek')} as IWeekInterval,
+        calendar: [] as IWeek[],
+        selectedEvent: {} as IEvent,
     }),
     getters: {
-        getCalendar: (state): CalendarInterface => state.calendar,
-        getSelectedEvent: (state): EventInterface => state.selectedEvent,
-        getEventById: (state) => (id: string): EventInterface => {
-            return state.calendar?.events.find((event) => event.id === id)
+        getWeekInterval: (state: CalendarStoreState): IWeekInterval => {
+            return state.weekInterval
         },
-        getFollowingEvents: (state) => (id: string) => {},
-        getEventsForWeek: (state) => (id: string) => {},
-        getTotalHoursForWeek: (state) => (id: string) => {},
+        getCalendar: (state: CalendarStoreState): IWeek[] => {
+            return state.calendar
+        },
+        getSelectedEvent: (state: CalendarStoreState) => state.selectedEvent,
+        getEventById: (state: CalendarStoreState) => (id: string): IEvent => {
+            if (!id) return {} as IEvent
+            return state.calendar.flatMap((week: IWeek) => week.days).flatMap((day: IDay) => day.events).find((event: IEvent) => event.id === id)
+        },
+        /** Retourne la liste des événements à venir **/
+        getFollowingEvents: (state: CalendarStoreState) => (uuid: string): IEvent[] => {
+            if (!uuid) return []
+            const eventById = useCalendarStore().getEventById(uuid);
+            if (!eventById) return [];
+            return state.calendar.flatMap((week: IWeek) => week.days).flatMap((day: IDay) => day.events).filter((event: IEvent) => {
+                return moment(event.start).isAfter(moment()) && event.title === eventById.title
+            });
+        },
+        /** Retourne la liste des événements pour la semaine selectionnée **/
+        getEventsForWeek: (state: CalendarStoreState) => {
+            const weeks = state.calendar;
+            const {start, end} = state.weekInterval;
+            if (!weeks) return [];
+
+            return weeks.filter((week: IWeek) => {
+                return moment(week.firstDayOfWeek).isBetween(start, end, null, '[]')
+            })[0]
+        },
+        getCalendarHours: (): string[] => {
+            return HOURS;
+        },
+        getDatesInWeek: (state: CalendarStoreState) => {
+            const {start, end} = state.weekInterval;
+            const dates = [];
+            // get dates between start and end
+            for (let m = moment(start); m.isBefore(end); m.add(1, 'days')) {
+                dates.push(m.format('YYYY-MM-DD'));
+            }
+            return dates;
+        },
+        getFormatEventByWeek: () => {
+            const events = useCalendarStore().getEventsForWeek;
+            const dates = useCalendarStore().getDatesInWeek;
+
+            if (!events) {
+                return dates.map((date: string) => {
+                    return {
+                        date,
+                        events: []
+                    }
+                })
+            } else {
+
+
+                const groupedEventsByDates = dates.map((date: string) => {
+                    return {
+                        date,
+                        events: events.days.find((day: IDay) => day.date === date)?.events || []
+                    }
+                })
+
+                const mergedEvents = groupedEventsByDates.map((day: IDay) => {
+                    const mergedEvents = day.events.reduce((acc: IEvent[], event: IEvent) => {
+                        const lastEvent = acc[acc.length - 1];
+                        if (lastEvent && lastEvent.title === event.title && moment(event.start).diff(moment(lastEvent.end), 'hours') < 1) {
+                            lastEvent.end = event.end;
+                            return acc;
+                        }
+                        return [...acc, event];
+                    }, []);
+                    return {...day, events: mergedEvents}
+                })
+
+                return mergedEvents;
+            }
+        },
+        /** Retourne le temps total de la semaine selectionnée **/
+        getTotalHoursForWeek: (): string => {
+            const events = useCalendarStore().getEventsForWeek;
+            if (!events) return '0h';
+
+            //count hours and minutes of all events and if name is near to a blacklisted word, don't count it
+            const totalHours = events.days.flatMap((day: IDay) => day.events).reduce((acc: number, event: IEvent) => {
+                if (EVENT_BLACKLIST_WORDS.some((word: string) => event.title.includes(word))) return acc;
+                return acc + moment(event.end).diff(moment(event.start), 'hours', true);
+            })
+
+            return `${Math.floor(totalHours)}h${Math.round((totalHours % 1) * 60)}`
+
+
+        },
     },
     actions: {
-        FETCH_CALENDAR: (state) => (personaId: string) => {
-            const {data: content} = useFetch('/api/calendar');
+        GO_BACK_TO_TODAY(): void {
+            this.weekInterval = useWeekInterval();
         },
-        SET_CALENDAR(calendar) {
-            this.calendar = calendar;
+        PREVIOUS_WEEK(): void {
+            this.weekInterval = useWeekInterval('previous', this.weekInterval);
         },
-        SET_SELECTED_EVENT(event) {
+        NEXT_WEEK(): void {
+            this.weekInterval = useWeekInterval('next', this.weekInterval);
+        },
+        FETCH_CALENDAR(personaId: string = ""): void {
+            const {data: fetchedCalendar} = data;
+            this.calendar = fetchedCalendar;
+        },
+        SET_SELECTED_EVENT(event: IEvent): void {
             this.selectedEvent = event;
-        },
-        SET_WEEK_INTERVAL(start, end) {
-            this.weekInterval = {start, end};
         },
     },
 });

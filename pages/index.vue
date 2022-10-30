@@ -1,12 +1,9 @@
 <template>
   <div class="Home">
-    <div style="display: flex">
-      <!--      <Button label="Semaine précédente" @click="currentWeek&#45;&#45;"/>-->
-      <!--      <Button label="Semaine suivante" @click="currentWeek++"/>-->
-    </div>
-<!--    current week : {{ currentWeek }}-->
+    <Transition>
+      <LoadingScreen v-if="getCalendar.length === 0"/>
+    </Transition>
     <Calendar/>
-    <!--    <pre> {{ getCurrentWeekOfEDT }}</pre>-->
   </div>
 </template>
 
@@ -14,11 +11,16 @@
 
 import Button from "~/components/Buttons/Button.vue";
 import Calendar from "~/components/Calendar/Calendar.vue";
+import {mapActions, mapState, mapStores} from "pinia";
+import {useCalendarStore} from "~/store/calendarStore";
+import LoadingScreen from "~/components/Loader/LoadingScreen.vue";
 
 export default {
   name: "Home",
-  components: {Calendar, Button},
-  props: {},
+  components: {LoadingScreen, Calendar, Button},
+  computed: {
+    ...mapState(useCalendarStore, ['getCalendar'])
+  },
 };
 </script>
 
