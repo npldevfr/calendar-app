@@ -28,6 +28,7 @@ export default {
   border-width: 0 1px 1px 1px;
   border-style: solid;
   border-color: #2C2D3C;
+  box-sizing: border-box;
 
   &Hours {
     grid-column: span 6 / span 6;

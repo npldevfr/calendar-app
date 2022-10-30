@@ -22,15 +22,18 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .MainHeader {
+
+
   box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 20px 30px;
   gap: 10px;
   width: 100%;
-  height: 60px;
+  min-height: 60px;
   border-bottom: 1px solid #2C2D3C;
 
   &Content {
