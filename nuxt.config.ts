@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-    devServerHandlers: [],
     buildModules: [
         '@nuxtjs/google-fonts'
     ],
