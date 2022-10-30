@@ -106,7 +106,7 @@ export default {
     return {
       dropdownState: false,
 
-      mobileView: window.innerWidth < 600,
+      mobileView: false ,
       limitShowDays: 1,
       showDayIndex: 0,
 
