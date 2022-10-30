@@ -248,6 +248,7 @@ export default {
 
 <style lang="scss" scoped>
 .Calendar {
+  width: 100%;
 
   &CellActive {
     color: red;

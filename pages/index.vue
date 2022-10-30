@@ -26,6 +26,7 @@ export default {
 
 <style lang="scss" scoped>
 .Home {
+  width: 100%;
   color: white;
 }
 </style>
