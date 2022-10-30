@@ -106,7 +106,7 @@ export default {
     return {
       dropdownState: false,
 
-      mobileView: window.innerWidth < 600,
+      mobileView: false,
       limitShowDays: 1,
       showDayIndex: 0,
 
@@ -186,6 +186,11 @@ export default {
   mounted() {
     this.FETCH_CALENDAR();
     document.addEventListener('keydown', this.handleKeyDown);
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 750) {
+        this.mobileView = true;
+      }
+    }
   },
   beforeDestroy() {
     document.removeEventListener('keydown', this.handleKeyDown);
