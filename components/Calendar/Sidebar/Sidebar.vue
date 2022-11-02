@@ -2,7 +2,7 @@
   <OnClickOutside class="Sidebar" @trigger="close">
     <SidebarContent>
       <div class="SidebarHeader">
-        <div class="SidebarTitle">Détail du cours</div>
+        <div class="SidebarTitle">Détail</div>
         <SmallButton type="Secondary" label="Fermer" @click="close"/>
       </div>
 
@@ -22,6 +22,9 @@
       </div>
     </SidebarContent>
     <SidebarDivider/>
+    <SidebarContent>
+      <div class="SidebarTitle">Prochains événements</div>
+    </SidebarContent>
     <!--    <div v-if="getFollowingEvents(getEvent.id).length === 0">-->
     <!--      Aucun événement à venir-->
     <!--    </div>-->

@@ -121,23 +121,24 @@ export default {
   right: 5px;
   z-index: 30;
   left: 5px;
-  border: 1px solid #3e2c80;
-  background: #3e2c80;
+  border: 1px solid var(--primary);
+  background: var(--primary);
   border-radius: 3px;
   display: flex;
+  color: var(--primary-color);
   justify-content: center;
   flex-direction: column;
   align-items: center;
 
   &:hover {
-    background: #4e3c90;
+    background: var(--primary-hover);
   }
 
   &Now {
     position: absolute;
     top: 5px;
     right: 5px;
-    background: red;
+    background: #292A35;
     color: white;
     font-size: 12px;
     font-weight: 500;
@@ -154,7 +155,6 @@ export default {
     text-align: center;
     padding: 0 10px;
     height: 100%;
-    color: white;
     font-size: 12px;
   }
 
@@ -171,8 +171,7 @@ export default {
   }
 
   &Selected {
-    //border: 2px solid red !important;
-    bottom: 0;
+    border: 1px solid cyan !important;
   }
 
   &Special {
