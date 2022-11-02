@@ -1,16 +1,33 @@
 <template>
   <OnClickOutside class="Sidebar" @trigger="close">
-    {{ getSelectedEvent.title }}
-    <hr/>
-    Événements à venir : <br/>
-    <div v-if="getFollowingEvents(getSelectedEvent.id).length === 0">
-      Aucun événement à venir
-    </div>
-    <div v-else>
-      <div v-for="event in getFollowingEvents(getSelectedEvent.id)" :key="event.id">
-        {{ event.start }} - {{ event.end }}
+    <SidebarContent>
+      <div class="SidebarHeader">
+        <div class="SidebarTitle">Détail du cours</div>
+        <SmallButton type="Secondary" label="Fermer" @click="close"/>
       </div>
-    </div>
+
+      <div class="SidebarLiveStatus" v-if="useIsNow(getEvent.start, getEvent.end)">
+        <NowBadge/>
+        <p>{{ getTimeLeft }} restantes</p>
+      </div>
+      <div class="SidebarEventTitle">
+        {{
+          getEvent.extendedProps.props['Matière'] ? getEvent.extendedProps.props['Matière'] : getEvent.title.replace('-', ' ')
+        }}
+      </div>
+      <div class="SidebarEventTime">
+        <TimeSpanText :hour="getEvent.start.toString()"/>
+        ➔
+        <TimeSpanText :hour="getEvent.end.toString()"/>
+      </div>
+    </SidebarContent>
+    <SidebarDivider/>
+    <!--    <div v-if="getFollowingEvents(getEvent.id).length === 0">-->
+    <!--      Aucun événement à venir-->
+    <!--    </div>-->
+    <!--    <div class="SidebarFollowingEvents" v-else>-->
+    <!--      <EventCard v-for="event in getFollowingEvents(getEvent.id)" :key="event.id" :event="event"/>-->
+    <!--    </div>-->
   </OnClickOutside>
 </template>
 
@@ -19,12 +36,19 @@ import {defineComponent} from "vue";
 import {OnClickOutside} from '@vueuse/components'
 import moment from "moment";
 import useIsNow from "~/composables/useIsNow";
-import {mapState} from "pinia";
+import {mapActions, mapState} from "pinia";
 import {useCalendarStore} from "~/store/calendarStore";
+import {IEvent} from "~/types/Event.interface";
+import Button from "~/components/Buttons/Button.vue";
+import SmallButton from "~/components/Buttons/SmallButton.vue";
+import SidebarDivider from "~/components/Calendar/Sidebar/SidebarDivider.vue";
+import NowBadge from "~/components/Utils/NowBadge.vue";
+import SidebarContent from "~/components/Calendar/Sidebar/SidebarContent.vue";
+import TimeSpanText from "~/components/Utils/TimeSpanText.vue";
 
 export default defineComponent({
   name: "Sidebar",
-  components: {OnClickOutside},
+  components: {TimeSpanText, SidebarContent, NowBadge, SidebarDivider, SmallButton, Button, OnClickOutside},
   mounted() {
     document.addEventListener('keydown', this.handleEsc);
   },
@@ -33,8 +57,21 @@ export default defineComponent({
   },
   computed: {
     ...mapState(useCalendarStore, ['getSelectedEvent', 'getFollowingEvents']),
+    getEvent(): IEvent {
+      return this.getSelectedEvent;
+    },
+    getTimeLeft(): string {
+      const start = moment(this.getEvent.start);
+      const end = moment(this.getEvent.end);
+      const now = moment();
+      const duration = moment.duration(end.diff(now));
+      const hours = duration.hours();
+      const minutes = duration.minutes();
+      return hours > 0 ? `${hours}h${minutes}min` : `${minutes}min`;
+    },
   },
   methods: {
+    ...mapActions(useCalendarStore, ['SET_SELECTED_EVENT']),
     handleEsc(e: KeyboardEvent) {
       if (e.key === 'Escape') {
         this.close();
@@ -42,7 +79,8 @@ export default defineComponent({
     },
     useIsNow,
     close() {
-      this.$emit('close')
+      this.$emit('close');
+      this.SET_SELECTED_EVENT();
     }
   }
 })
@@ -50,15 +88,78 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .Sidebar {
-  z-index: 9000;
+  overflow-y: auto;
+  z-index: 300;
   background: #181922;
   border-left: 1px solid #2C2D3C;
   position: fixed;
-  top: 0;
+  top: 73px;
   right: 0;
-  padding: 20px;
-  width: 286px;
+  width: 326px;
   bottom: 0;
+
+  &Header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &FollowingEvents {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 5px;
+  }
+
+  &Event {
+    &Title {
+
+      font-size: 16px;
+      font-weight: 500;
+      width: 100%;
+    }
+
+    &Time {
+
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 15px;
+      color: #A0A0A0;
+      gap: 10px;
+      width: 100%;
+    }
+  }
+
+  &LiveStatus {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 10px;
+      color: #858699;
+    }
+  }
+
+
+  &Title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    color: #858699;
+  }
 
   .Sidebar__event {
     display: flex;

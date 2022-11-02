@@ -1,10 +1,10 @@
 <template>
-  <div class="CalendarEvent" :class="[isOutdated, isBlacklisted]" :style="{top: getTop, bottom: getBottom }">
+  <div class="CalendarEvent" :class="[isBlacklisted, isSpecial, isOutdated, isSelected]" :style="{top: getTop, bottom: getBottom }">
     <div class="CalendarEventNow" v-if="isNow">EN COURS</div>
     <div class="CalendarEventContent">
       <div class="CalendarEventBody">
         {{ event.title }}
-        <br/>
+        <br />
         ({{ formatHour(event.start) }} - {{ formatHour(event.end) }})
       </div>
     </div>
@@ -14,12 +14,17 @@
 <script lang="ts">
 
 import moment, {Moment} from "moment";
+import {PropType} from "vue";
+import {IEvent} from "~/types/Event.interface";
+import {EVENT_BLACKLIST_WORDS, EVENT_SPECIAL_WORDS} from "~/global.config";
+import {mapState} from "pinia";
+import {useCalendarStore} from "~/store/calendarStore";
 
 export default {
   name: 'CalendarEvent',
   props: {
     event: {
-      type: Object,
+      type: Object as PropType<IEvent>,
       required: true
     }
   },
@@ -29,6 +34,17 @@ export default {
     }
   },
   computed: {
+    ...mapState(useCalendarStore, ['getSelectedEvent']),
+    getTimeRemaining() {
+
+      // get remaining time in minutes from now to event end
+      const now = moment();
+      const end = moment(this.event.end);
+      const duration = moment.duration(end.diff(now));
+      const minutes = duration.asMinutes();
+
+      return minutes;
+    },
     /**
      * Get if event is currently running
      * @returns {boolean}
@@ -74,9 +90,14 @@ export default {
      * @returns {string}
      */
     isBlacklisted(): string {
-      const blacklist = ['Jour Férié', 'Fermeture IUT']
-      return blacklist.some(word => this.event.title.includes(word)) ? 'CalendarEventBlacklisted' : '';
+      return EVENT_BLACKLIST_WORDS.some(word => this.event.title.toLowerCase().includes(word)) ? 'CalendarEventBlacklisted' : '';
     },
+    isSpecial(): string {
+      return EVENT_SPECIAL_WORDS.some(word => this.event.title.toLowerCase().includes(word)) ? 'CalendarEventSpecial' : '';
+    },
+    isSelected() {
+      return this.getSelectedEvent?.id === this.event.id ? 'CalendarEventSelected' : '';
+    }
   },
   methods: {
     /**
@@ -100,6 +121,7 @@ export default {
   right: 5px;
   z-index: 30;
   left: 5px;
+  border: 1px solid #3e2c80;
   background: #3e2c80;
   border-radius: 3px;
   display: flex;
@@ -146,6 +168,20 @@ export default {
       background: #2f2f3d;
     }
 
+  }
+
+  &Selected {
+    border: 1px solid white !important;
+  }
+
+  &Special {
+    background: #11382f;
+    border: 1px solid #144439;
+    color: #D2D3E0;
+
+    &:hover {
+      background: #144439;
+    }
   }
 }
 </style>
