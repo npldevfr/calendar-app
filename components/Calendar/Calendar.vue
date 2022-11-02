@@ -3,14 +3,14 @@
     <template #left>
       <Button @click="PREVIOUS_WEEK" label="Semaine précédente"/>
       <Button @click="NEXT_WEEK" label="Semaine suivante"/>
-      <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" label="Jour précédent"/>
-      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" label="Jour suivant"/>
+      <!--      <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" label="Jour précédent"/>-->
+      <!--      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" label="Jour suivant"/>-->
       <Button @click="GO_BACK_TO_TODAY" type="Secondary" label="Revenir à aujourd'hui"/>
     </template>
 
     <template #right>
       <DropdownContainer @close="dropdownState = false">
-        <SmallButton label="{{ GROUP || PERSON }}" @click="dropdownState = !dropdownState" dropdown>
+        <SmallButton label="GUILLET Nathan" @click="dropdownState = !dropdownState" dropdown>
           <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M10.5625 5.78125C10.5625 6.94668 10.1842 8.02324 9.54687 8.89668L12.7613 12.1137C13.0787 12.4311 13.0787 12.9465 12.7613 13.2639C12.4439 13.5813 11.9285 13.5813 11.6111 13.2639L8.39668 10.0469C7.52324 10.6867 6.44668 11.0625 5.28125 11.0625C2.36387 11.0625 0 8.69863 0 5.78125C0 2.86387 2.36387 0.5 5.28125 0.5C8.19863 0.5 10.5625 2.86387 10.5625 5.78125ZM5.28125 9.4375C7.2998 9.4375 8.9375 7.7998 8.9375 5.78125C8.9375 3.7627 7.2998 2.125 5.28125 2.125C3.2627 2.125 1.625 3.7627 1.625 5.78125C1.625 7.7998 3.2627 9.4375 5.28125 9.4375Z"
@@ -84,8 +84,9 @@
       </template>
     </CalendarBody>
 
-    <Sidebar v-if="sidebarEventState" @close="tryCloseSidebar"/>
-
+    <Transition>
+      <Sidebar v-if="sidebarEventState" @close="tryCloseSidebar"/>
+    </Transition>
   </div>
 </template>
 

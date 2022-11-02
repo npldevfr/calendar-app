@@ -134,8 +134,8 @@ export const useCalendarStore = defineStore('calendar', {
             const {data: fetchedCalendar} = data;
             this.calendar = fetchedCalendar;
         },
-        SET_SELECTED_EVENT(event: IEvent): void {
-            this.selectedEvent = event;
+        SET_SELECTED_EVENT(event?: IEvent): void {
+            this.selectedEvent = event || {};
         },
     },
 });

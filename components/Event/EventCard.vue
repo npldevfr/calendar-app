@@ -37,15 +37,14 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .EventCard {
-  background: #575BC7;
-  border: 1px solid #575BC7;
+  background: #3e2c80;
+  border: 1px solid #3e2c80;
   border-radius: 4px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  margin-bottom: 10px;
   transition: all 0.2s ease-in-out;
 
   &__time {
