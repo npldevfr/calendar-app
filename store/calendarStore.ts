@@ -33,7 +33,7 @@ export const useCalendarStore = defineStore('calendar', {
             return state.calendar.flatMap((week: IWeek) => week.days).flatMap((day: IDay) => day.events).find((event: IEvent) => event.id === id)
         },
         /** Retourne la liste des événements à venir **/
-        getFollowingEvents: (state: CalendarStoreState) => (uuid: string): IEvent[] => {
+        getFollowingEvents: (state: CalendarStoreState) => (uuid: string) => {
             if (!uuid) return []
             const eventById = useCalendarStore().getEventById(uuid);
             if (!eventById) return [];
@@ -41,10 +41,23 @@ export const useCalendarStore = defineStore('calendar', {
                 return moment(event.start).isAfter(moment()) && event.title === eventById.title
             });
 
-            // On trie les événements par date
-            return followingEvents.sort((a: IEvent, b: IEvent) => {
-                return moment(a.start).isAfter(moment(b.start)) ? 1 : -1
-            });
+            //group by date and sort by start time asc
+            const groupedEvents = followingEvents.reduce((acc, event) => {
+                const date = moment(event.start).format('YYYY-MM-DD');
+                if (!acc[date]) {
+                    acc[date] = [];
+                }
+                acc[date].push(event);
+                return acc;
+            }, {});
+
+            return Object.keys(groupedEvents).map((date) => {
+                return {
+                    date: date,
+                    events: groupedEvents[date].sort((a, b) => moment(a.start).diff(moment(b.start)))
+                }
+            }).sort((a, b) => moment(a.date).diff(moment(b.date)))
+
         },
         /** Retourne la liste des événements pour la semaine selectionnée **/
         getEventsForWeek: (state: CalendarStoreState) => {
@@ -62,7 +75,6 @@ export const useCalendarStore = defineStore('calendar', {
         getDatesInWeek: (state: CalendarStoreState) => {
             const {start, end} = state.weekInterval;
             const dates = [];
-            // get dates between start and end
             for (let m = moment(start); m.isBefore(end); m.add(1, 'days')) {
                 dates.push(m.format('YYYY-MM-DD'));
             }

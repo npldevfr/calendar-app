@@ -3,8 +3,8 @@
     <template #left>
       <Button @click="PREVIOUS_WEEK" label="Semaine précédente"/>
       <Button @click="NEXT_WEEK" label="Semaine suivante"/>
-      <!--      <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" label="Jour précédent"/>-->
-      <!--      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" label="Jour suivant"/>-->
+            <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" label="Jour précédent"/>
+            <Button @click="SHOW_NEXT_DAY" v-if="mobileView" label="Jour suivant"/>
       <Button @click="GO_BACK_TO_TODAY" type="Secondary" label="Revenir à aujourd'hui"/>
     </template>
 

@@ -24,13 +24,18 @@
     <SidebarDivider/>
     <SidebarContent>
       <div class="SidebarTitle">Prochains événements</div>
+
+      <pre>
+        {{ getFollowingEvents(getEvent.id) }}
+      </pre>
+<!--      <div v-if="getFollowingEvents(getEvent.id).length === 0">-->
+<!--        Aucun événement à venir-->
+<!--      </div>-->
+<!--      <div class="SidebarFollowingEvents" v-else>-->
+<!--        <EventCard v-for="event in getFollowingEvents(getEvent.id)" :key="event.id" :event="event"/>-->
+<!--      </div>-->
     </SidebarContent>
-    <!--    <div v-if="getFollowingEvents(getEvent.id).length === 0">-->
-    <!--      Aucun événement à venir-->
-    <!--    </div>-->
-    <!--    <div class="SidebarFollowingEvents" v-else>-->
-    <!--      <EventCard v-for="event in getFollowingEvents(getEvent.id)" :key="event.id" :event="event"/>-->
-    <!--    </div>-->
+
   </OnClickOutside>
 </template>
 

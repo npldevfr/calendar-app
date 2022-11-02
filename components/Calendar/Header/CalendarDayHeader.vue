@@ -61,17 +61,17 @@ export default {
   grid-column: span 1 / span 1;
 
   &:hover {
-    background-color: rgba(133, 102, 244, 0.05);
+    background-color: rgba(143, 193, 253, 0.06);
     cursor: pointer;
   }
 
   &Active {
-    border-bottom: 1px solid #8566f4;
+    border-bottom: 1px solid var(--primary);
   }
 
   &Today > span,
   &Today > span > span {
-    color: #8566f4;
+    color: var(--primary);
   }
 
   &Day {

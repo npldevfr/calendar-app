@@ -138,8 +138,8 @@ export default {
     position: absolute;
     top: 5px;
     right: 5px;
-    background: #292A35;
-    color: white;
+    background: transparent;
+    color: transparent;
     font-size: 12px;
     font-weight: 500;
     padding: 2px 5px;
@@ -171,7 +171,7 @@ export default {
   }
 
   &Selected {
-    border: 1px solid cyan !important;
+    border: 8px dashed red !important;
   }
 
   &Special {

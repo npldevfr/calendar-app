@@ -37,8 +37,9 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .EventCard {
-  background: #3e2c80;
-  border: 1px solid #3e2c80;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--primary-color);
   border-radius: 4px;
   padding: 10px;
   display: flex;
