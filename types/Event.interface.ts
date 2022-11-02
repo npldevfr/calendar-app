@@ -5,6 +5,5 @@ export interface IEvent {
     title: string;
     start: Date | string;
     end: Date | string;
-    allDay: boolean;
     extendedProps: IExtendedProps;
 }

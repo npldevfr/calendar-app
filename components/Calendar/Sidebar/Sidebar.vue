@@ -1,15 +1,16 @@
 <template>
   <OnClickOutside class="Sidebar" @trigger="close">
     {{ getSelectedEvent.title }}
+    <div v-if="useIsNow(getSelectedEvent.start, getSelectedEvent.end)">
+      EN COURS
+    </div>
     <hr/>
     Événements à venir : <br/>
     <div v-if="getFollowingEvents(getSelectedEvent.id).length === 0">
       Aucun événement à venir
     </div>
     <div v-else>
-      <div v-for="event in getFollowingEvents(getSelectedEvent.id)" :key="event.id">
-        {{ event.start }} - {{ event.end }}
-      </div>
+      <EventCard v-for="event in getFollowingEvents(getSelectedEvent.id)" :key="event.id" :event="event"/>
     </div>
   </OnClickOutside>
 </template>
@@ -50,11 +51,12 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .Sidebar {
+  overflow-y: auto;
   z-index: 9000;
   background: #181922;
   border-left: 1px solid #2C2D3C;
   position: fixed;
-  top: 0;
+  top: 73px;
   right: 0;
   padding: 20px;
   width: 286px;

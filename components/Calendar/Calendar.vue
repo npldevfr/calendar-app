@@ -207,7 +207,10 @@ export default {
         this.PREVIOUS_WEEK();
       }
     },
-    ...mapActions(useCalendarStore, ['FETCH_CALENDAR', 'NEXT_WEEK', 'PREVIOUS_WEEK', 'GO_BACK_TO_TODAY', 'SET_SELECTED_EVENT']),
+    ...mapActions(useCalendarStore, [
+      'FETCH_CALENDAR', 'NEXT_WEEK', 'PREVIOUS_WEEK',
+      'GO_BACK_TO_TODAY', 'SET_SELECTED_EVENT'
+    ]),
     tryCloseSidebar() {
       this.sidebarEventState = false;
     },
@@ -248,17 +251,27 @@ export default {
 
 <style lang="scss" scoped>
 .Calendar {
-  width: 100%;
+  width: 1200px;
+  margin: auto;
 
   &CellActive {
     color: red;
   }
 }
 
-@media (min-width: 1250px) {
+.MobileHidden {
+  display: flex;
+}
+
+@media (max-width: 1250px) {
   .Calendar {
-    width: 1200px;
-    margin: auto;
+    width: 100%;
+
+  }
+
+  .MobileHidden {
+    display: none !important;
   }
 }
+
 </style>

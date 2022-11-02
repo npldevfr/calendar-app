@@ -4,7 +4,7 @@
     <div class="CalendarEventContent">
       <div class="CalendarEventBody">
         {{ event.title }}
-        <br/>
+        <br />
         ({{ formatHour(event.start) }} - {{ formatHour(event.end) }})
       </div>
     </div>
@@ -14,12 +14,14 @@
 <script lang="ts">
 
 import moment, {Moment} from "moment";
+import {PropType} from "vue";
+import {IEvent} from "~/types/Event.interface";
 
 export default {
   name: 'CalendarEvent',
   props: {
     event: {
-      type: Object,
+      type: Object as PropType<IEvent>,
       required: true
     }
   },
@@ -29,6 +31,16 @@ export default {
     }
   },
   computed: {
+    getTimeRemaining() {
+
+      // get remaining time in minutes from now to event end
+      const now = moment();
+      const end = moment(this.event.end);
+      const duration = moment.duration(end.diff(now));
+      const minutes = duration.asMinutes();
+
+      return minutes;
+    },
     /**
      * Get if event is currently running
      * @returns {boolean}

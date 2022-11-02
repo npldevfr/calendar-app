@@ -37,8 +37,13 @@ export const useCalendarStore = defineStore('calendar', {
             if (!uuid) return []
             const eventById = useCalendarStore().getEventById(uuid);
             if (!eventById) return [];
-            return state.calendar.flatMap((week: IWeek) => week.days).flatMap((day: IDay) => day.events).filter((event: IEvent) => {
+            const followingEvents = state.calendar.flatMap((week: IWeek) => week.days).flatMap((day: IDay) => day.events).filter((event: IEvent) => {
                 return moment(event.start).isAfter(moment()) && event.title === eventById.title
+            });
+
+            // On trie les événements par date
+            return followingEvents.sort((a: IEvent, b: IEvent) => {
+                return moment(a.start).isAfter(moment(b.start)) ? 1 : -1
             });
         },
         /** Retourne la liste des événements pour la semaine selectionnée **/
