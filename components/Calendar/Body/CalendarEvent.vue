@@ -160,8 +160,8 @@ export default {
 
   &Blacklisted,
   &Outdated {
-    background: #292A35;
-    border: 1px solid #313248;
+    background: #292A35 !important;
+    border: 1px solid #313248 !important;
     color: #D2D3E0;
 
     &:hover {
@@ -171,7 +171,8 @@ export default {
   }
 
   &Selected {
-    border: 1px solid white !important;
+    //border: 2px solid red !important;
+    bottom: 0;
   }
 
   &Special {
