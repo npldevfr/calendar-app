@@ -16,8 +16,12 @@ html {
 
 @media screen and (max-width: 1200px) {
 
+  .Calendar .CalendarBody > .CalendarColumn .CalendarCell {
+    border-left: none !important;
+  }
+
   .CalendarHeader {
-    border-width: 0 0 1px 0  !important;
+    border-width: 0 0 1px 0 !important;
   }
 
 

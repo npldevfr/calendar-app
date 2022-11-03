@@ -29,6 +29,10 @@ export default defineNuxtConfig({
         prefetch: true,
     },
 
+    meta: {
+        viewport: 'width=device-width, initial-scale=1, user-scalable=no',
+    },
+
 
     pwa: {
         meta: {
