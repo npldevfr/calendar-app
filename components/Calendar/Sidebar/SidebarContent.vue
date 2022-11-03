@@ -1,16 +1,26 @@
 <template>
-  <div class="SidebarContent">
-    <slot />
+  <div class="SidebarContent" :class="isSticky">
+    <slot/>
   </div>
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue";
 
-export default defineComponent({
+
+export default {
   name: "SidebarContent",
-  props: {}
-})
+  props: {
+    sticky: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    isSticky() {
+      return this.sticky ? "SidebarContentSticky" : "";
+    },
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -19,5 +29,11 @@ export default defineComponent({
   box-sizing: border-box;
   padding: 20px;
 
+  &Sticky {
+    position: sticky;
+    top: 0;
+    background: #181922;
+    z-index: 1;
+  }
 }
 </style>

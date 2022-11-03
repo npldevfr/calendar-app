@@ -53,7 +53,7 @@
       </SmallButton>
     </template>
   </MainHeader>
-  <div class="Calendar">
+  <div class="Calendar" v-touch:swipe.left="SHOW_NEXT_DAY" v-touch:swipe.right="SHOW_PREVIOUS_DAY">
     <CalendarHeader>
       <CalendarDayHeader :is-a-day="false">
         {{ getTotalHoursForWeek }}
@@ -82,15 +82,15 @@
       </template>
     </CalendarBody>
 
-    <div class="CalendarBottomActions">
-      <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" type="Secondary" label="Jour précédent"/>
-      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" type="Secondary" label="Jour suivant"/>
-    </div>
+<!--    <div class="CalendarBottomActions">-->
+<!--      <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" type="Secondary" label="Jour précédent"/>-->
+<!--      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" type="Secondary" label="Jour suivant"/>-->
+<!--    </div>-->
 
 
-    <Transition>
+<!--    <Transition>-->
       <Sidebar v-if="sidebarEventState" @close="tryCloseSidebar"/>
-    </Transition>
+<!--    </Transition>-->
   </div>
 </template>
 

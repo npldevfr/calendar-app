@@ -18,6 +18,9 @@ export default defineNuxtConfig({
         '~/assets/scss/transitions.scss',
     ],
 
+    plugins: [
+        '~/plugins/swipe.client.ts',
+    ],
     /**
      * @GoogleFonts
      * @Docs: https://google-fonts.nuxtjs.org/

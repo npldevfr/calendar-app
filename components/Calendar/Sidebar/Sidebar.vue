@@ -1,6 +1,7 @@
 <template>
+  <SidebarBackdrop @click="close"/>
   <OnClickOutside class="Sidebar" @trigger="close">
-    <SidebarContent>
+    <SidebarContent sticky>
       <div class="SidebarHeader">
         <div class="SidebarTitle">Détail</div>
         <SmallButton type="Secondary" label="Fermer" @click="close"/>
@@ -40,7 +41,6 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue";
 import {OnClickOutside} from '@vueuse/components'
 import moment from "moment";
 import useIsNow from "~/composables/useIsNow";
@@ -53,10 +53,13 @@ import SidebarDivider from "~/components/Calendar/Sidebar/SidebarDivider.vue";
 import NowBadge from "~/components/Utils/NowBadge.vue";
 import SidebarContent from "~/components/Calendar/Sidebar/SidebarContent.vue";
 import TimeSpanText from "~/components/Utils/TimeSpanText.vue";
+import SidebarBackdrop from "~/components/Calendar/Sidebar/SidebarBackdrop.vue";
 
-export default defineComponent({
+export default {
   name: "Sidebar",
-  components: {TimeSpanText, SidebarContent, NowBadge, SidebarDivider, SmallButton, Button, OnClickOutside},
+  components: {
+    SidebarBackdrop,
+    TimeSpanText, SidebarContent, NowBadge, SidebarDivider, SmallButton, Button, OnClickOutside},
   mounted() {
     document.addEventListener('keydown', this.handleEsc);
   },
@@ -69,7 +72,6 @@ export default defineComponent({
       return this.getSelectedEvent;
     },
     getTimeLeft(): string {
-      const start = moment(this.getEvent.start);
       const end = moment(this.getEvent.end);
       const now = moment();
       const duration = moment.duration(end.diff(now));
@@ -91,14 +93,14 @@ export default defineComponent({
       this.SET_SELECTED_EVENT();
     }
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>
 
 .Sidebar {
   overflow-y: auto;
-  z-index: 300;
+  z-index: 800;
   background: #181922;
   border-left: 1px solid #2C2D3C;
   position: fixed;
@@ -197,9 +199,14 @@ export default defineComponent({
 
 @media screen and (max-width: 1200px) {
   .Sidebar {
+    border-top: 1px solid #2C2D3C;
+    border-left: none;
     position: fixed;
-    top: 0;
-    height: 100% !important;
+    top: unset;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 500px !important;
     width: 100% !important;
     box-sizing: border-box;
   }
