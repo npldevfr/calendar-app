@@ -1,5 +1,5 @@
 <template>
-  <div class="KeyboardKey">{{ label }}</div>
+  <div class="KeyboardKey">{{ label }}<slot v-if="$slots.default"/> </div>
 </template>
 
 <script lang="ts">
@@ -31,6 +31,7 @@ export default {
   line-height: 18px;
   user-select: none;
   color: #A0A3A6;
+  fill: #A0A3A6;
   background: #1b1c25;
   border: 1px solid #313248;
   border-radius: 4px;

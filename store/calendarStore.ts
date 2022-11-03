@@ -1,5 +1,4 @@
 import {defineStore} from "pinia";
-import data from "~/data/apicalendar.json"
 import {IEvent} from "~/types/Event.interface";
 import moment from "moment/moment";
 import {IWeek} from "~/types/Week.interface";
@@ -7,6 +6,7 @@ import {useWeekInterval} from "~/composables/useWeekInterval";
 import {IWeekInterval} from "~/types/WeekInterval.interface";
 import {IDay} from "~/types/Day.interface";
 import {EVENT_BLACKLIST_WORDS, HOURS} from "~/global.config";
+import data from "~/store/apicalendar";
 
 interface CalendarStoreState {
     weekInterval: IWeekInterval;
@@ -141,8 +141,8 @@ export const useCalendarStore = defineStore('calendar', {
         NEXT_WEEK(): void {
             this.weekInterval = useWeekInterval('next', this.weekInterval);
         },
-        FETCH_CALENDAR(personaId: string = ""): void {
-            const {data: fetchedCalendar} = data;
+        async FETCH_CALENDAR(personaId?: string): Promise<void> {
+            const fetchedCalendar = data;
             this.calendar = fetchedCalendar;
         },
         SET_SELECTED_EVENT(event?: IEvent): void {
