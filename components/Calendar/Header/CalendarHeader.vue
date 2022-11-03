@@ -17,6 +17,10 @@ export default {
 <style lang="scss" scoped>
 .CalendarHeader {
   display: grid;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: #181922;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   //display: flex;
   flex-direction: row;

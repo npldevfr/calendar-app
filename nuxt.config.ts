@@ -32,12 +32,10 @@ export default defineNuxtConfig({
 
     pwa: {
         meta: {
+            description: 'EDT Non officiel de l\'Université de Nantes',
             theme_color: '#181922',
             mobileAppIOS: true,
             mobileApp: true,
-        },
-        workbox: {
-            enabled: true,
         },
     },
 })
