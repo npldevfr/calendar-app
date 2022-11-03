@@ -28,7 +28,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .Button {
   transition: all 0.2s ease-in-out;
   user-select: none;
@@ -76,4 +76,15 @@ export default defineComponent({
     }
   }
 }
+
+
+@media screen and (max-width: 1200px) {
+
+  .Button {
+    padding: 20px 20px !important;
+    width: 100% !important;
+  }
+
+}
+
 </style>

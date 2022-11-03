@@ -4,7 +4,7 @@
       <div class="MainHeaderList">
         <slot name="left"/>
       </div>
-      <div class="MainHeaderList MobileHidden">
+      <div class="MainHeaderList MainHeaderRight">
         <slot name="right"/>
       </div>
     </div>
