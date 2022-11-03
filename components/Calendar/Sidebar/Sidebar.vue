@@ -95,6 +95,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+
 .Sidebar {
   overflow-y: auto;
   z-index: 300;
@@ -192,4 +193,16 @@ export default defineComponent({
     gap: 5px;
   }
 }
+
+
+@media screen and (max-width: 1200px) {
+  .Sidebar {
+    position: fixed;
+    top: 0;
+    height: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}
+
 </style>

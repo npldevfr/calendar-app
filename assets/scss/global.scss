@@ -1,8 +1,53 @@
 * {
   font-family: "Inter", sans-serif;
   font-weight: 300;
+  scroll-behavior: smooth;
 }
 
 html {
   background: #181922;
+}
+
+@media screen and (min-width: 1200px) {
+  .CalendarBottomActions {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .Calendar .CalendarBody > .CalendarColumn .CalendarCell {
+    border-left: none !important;
+  }
+
+  .CalendarHeader {
+    border-width: 0 0 1px 0 !important;
+  }
+
+
+  .MainHeader {
+    padding: 10px !important;
+  }
+
+  .MainHeaderContent .MainHeaderList {
+    width: 100% !important;
+  }
+
+  .MainHeaderRight {
+    display: none !important;
+  }
+
+  .CalendarHeader:first-child .CalendarDayHeaderNot {
+    display: none;
+  }
+
+  .CalendarHeaderHours {
+
+    grid-column: span 7/span 7 !important;
+
+    .CalendarDayHeader {
+
+      width: 100%;
+    }
+  }
 }

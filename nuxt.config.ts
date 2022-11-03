@@ -29,13 +29,24 @@ export default defineNuxtConfig({
         prefetch: true,
     },
 
+    meta: {
+        viewport: 'width=device-width, initial-scale=1, user-scalable=no',
+    },
+
 
     pwa: {
-        meta: {
-            mobileAppIOS: true,
+        manifest: {
+            name: 'EDT IUT Nantes',
+            background_color: '#181922',
+            theme_color: '#181922',
+            lang: 'fr',
         },
-        workbox: {
-            enabled: true,
+        meta: {
+            author: 'GUILLET Nathan',
+            description: 'EDT Non officiel de l\'Université de Nantes',
+            theme_color: '#181922',
+            mobileAppIOS: true,
+            mobileApp: true,
         },
     },
 })

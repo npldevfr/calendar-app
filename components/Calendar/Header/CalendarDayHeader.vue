@@ -1,5 +1,5 @@
 <template>
-  <div class="CalendarDayHeader" :class="isToday">
+  <div class="CalendarDayHeader" :class="[isToday, isNotADay]">
     <slot v-if="$slots.default"/>
     <span class="CalendarDayHeaderDayName" v-if="dayNumber">
       {{ formatDayName }}
@@ -20,6 +20,11 @@ export default {
     dayNumber: {
       type: String,
       required: false
+    },
+    isADay: {
+      type: Boolean,
+      required: false,
+      default: true,
     }
   },
   computed: {
@@ -29,6 +34,9 @@ export default {
     },
     isToday() {
       if (this.dayNumber === moment().format('YYYY-MM-DD')) return 'CalendarDayHeaderToday CalendarDayHeaderActive'
+    },
+    isNotADay() {
+      if (!this.isADay) return 'CalendarDayHeaderNot'
     },
     formatDay() {
       return moment(this.dayNumber, 'YYYY-MM-DD').format('D')
@@ -61,8 +69,7 @@ export default {
   grid-column: span 1 / span 1;
 
   &:hover {
-    background-color: rgba(143, 193, 253, 0.06);
-    cursor: pointer;
+      cursor: pointer;
   }
 
   &Active {

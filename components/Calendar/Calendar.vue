@@ -2,10 +2,8 @@
   <MainHeader>
     <template #left>
       <Button @click="PREVIOUS_WEEK" label="Semaine précédente"/>
+      <Button @click="GO_BACK_TO_TODAY" v-if="!isTodayIsInInterval" type="Secondary" label="Revenir à aujourd'hui"/>
       <Button @click="NEXT_WEEK" label="Semaine suivante"/>
-            <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" label="Jour précédent"/>
-            <Button @click="SHOW_NEXT_DAY" v-if="mobileView" label="Jour suivant"/>
-      <Button @click="GO_BACK_TO_TODAY" type="Secondary" label="Revenir à aujourd'hui"/>
     </template>
 
     <template #right>
@@ -57,7 +55,7 @@
   </MainHeader>
   <div class="Calendar">
     <CalendarHeader>
-      <CalendarDayHeader>
+      <CalendarDayHeader :is-a-day="false">
         {{ getTotalHoursForWeek }}
       </CalendarDayHeader>
       <template #hours>
@@ -83,6 +81,12 @@
         </CalendarColumn>
       </template>
     </CalendarBody>
+
+    <div class="CalendarBottomActions">
+      <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" type="Secondary" label="Jour précédent"/>
+      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" type="Secondary" label="Jour suivant"/>
+    </div>
+
 
     <Transition>
       <Sidebar v-if="sidebarEventState" @close="tryCloseSidebar"/>
@@ -161,6 +165,9 @@ export default {
       'getFollowingEvents', 'getTotalHoursForWeek', 'getCalendarHours',
       'getFormatEventByWeek'
     ]),
+    isTodayIsInInterval() {
+      return this.getDatesInWeek.includes(new Date().toISOString().split('T')[0]);
+    },
     limitShowDaysCpt() {
       if (!this.mobileView) {
         return this.getDatesInWeek.slice(0, 5);
@@ -184,12 +191,19 @@ export default {
       })
     },
   },
+  //watch for screen size
+
   mounted() {
-    this.FETCH_CALENDAR();
-    document.addEventListener('keydown', this.handleKeyDown);
+    this.$nextTick(() => {
+      this.FETCH_CALENDAR();
+      document.addEventListener('keydown', this.handleKeyDown);
+      if (typeof window !== 'undefined') window.addEventListener('resize', this.handleResize);
+      this.handleResize();
+    });
   },
   beforeDestroy() {
     document.removeEventListener('keydown', this.handleKeyDown);
+    if (typeof window !== 'undefined') window.removeEventListener('resize', this.handleResize);
   },
   methods: {
     SHOW_NEXT_DAY() {
@@ -246,6 +260,9 @@ export default {
           break;
       }
     },
+    handleResize() {
+      this.mobileView = window.innerWidth < 1200;
+    },
   },
 }
 </script>
@@ -255,13 +272,20 @@ export default {
   width: 1200px;
   margin: auto;
 
+  &BottomActions {
+    position: fixed;
+    bottom: 10px;
+    z-index: 500;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
   &CellActive {
     color: red;
   }
-}
-
-.MobileHidden {
-  display: flex;
 }
 
 @media (max-width: 1250px) {
@@ -270,9 +294,6 @@ export default {
 
   }
 
-  .MobileHidden {
-    display: none !important;
-  }
 }
 
 </style>
