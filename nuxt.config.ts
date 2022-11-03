@@ -35,7 +35,14 @@ export default defineNuxtConfig({
 
 
     pwa: {
+        manifest: {
+            name: 'EDT IUT Nantes',
+            background_color: '#181922',
+            theme_color: '#181922',
+            lang: 'fr',
+        },
         meta: {
+            author: 'GUILLET Nathan',
             description: 'EDT Non officiel de l\'Université de Nantes',
             theme_color: '#181922',
             mobileAppIOS: true,
