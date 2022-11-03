@@ -84,7 +84,7 @@
 
     <div class="CalendarBottomActions">
       <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" type="Secondary" label="Jour précédent"/>
-      <Button @click="SHOW_NEXT_DAY" v-if="mobileView"  type="Secondary" label="Jour suivant"/>
+      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" type="Secondary" label="Jour suivant"/>
     </div>
 
 
@@ -191,15 +191,19 @@ export default {
       })
     },
   },
+  //watch for screen size
+
   mounted() {
-    this.FETCH_CALENDAR();
-    document.addEventListener('keydown', this.handleKeyDown);
-    if (typeof window !== 'undefined') {
-      this.mobileView = window.innerWidth < 768;
-    }
+    this.$nextTick(() => {
+      this.FETCH_CALENDAR();
+      document.addEventListener('keydown', this.handleKeyDown);
+      if (typeof window !== 'undefined') window.addEventListener('resize', this.handleResize);
+      this.handleResize();
+    });
   },
   beforeDestroy() {
     document.removeEventListener('keydown', this.handleKeyDown);
+    if (typeof window !== 'undefined') window.removeEventListener('resize', this.handleResize);
   },
   methods: {
     SHOW_NEXT_DAY() {
@@ -255,6 +259,9 @@ export default {
           this.sidebarEventState = true;
           break;
       }
+    },
+    handleResize() {
+      this.mobileView = window.innerWidth < 1200;
     },
   },
 }
