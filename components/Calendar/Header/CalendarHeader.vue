@@ -19,7 +19,7 @@ export default {
   display: grid;
   position: sticky;
   top: 0;
-  z-index: 30;
+  z-index: 150;
   background: #181922;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   //display: flex;
@@ -35,6 +35,7 @@ export default {
   box-sizing: border-box;
 
   &Hours {
+    z-index: 150;
     grid-column: span 6 / span 6;
     display: flex;
     height: 100%;

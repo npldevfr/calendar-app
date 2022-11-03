@@ -3,7 +3,7 @@
     <MainHeader>
       <template #left>
         <Button @click="PREVIOUS_WEEK" label="Semaine précédente"/>
-        <Button @click="GO_BACK_TO_TODAY" v-if="!isTodayIsInInterval" type="Secondary" label="Revenir à aujourd'hui"/>
+        <Button @click="GO_BACK_TO_TODAY" v-if="!isTodayIsInInterval" type="Secondary" label="Semaine actuelle"/>
         <Button @click="NEXT_WEEK" label="Semaine suivante"/>
       </template>
 
