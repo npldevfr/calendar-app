@@ -53,7 +53,7 @@
       </SmallButton>
     </template>
   </MainHeader>
-  <div class="Calendar">
+  <div class="Calendar" v-touch:swipe.left="SHOW_NEXT_DAY" v-touch:swipe.right="SHOW_PREVIOUS_DAY">
     <CalendarHeader>
       <CalendarDayHeader :is-a-day="false">
         {{ getTotalHoursForWeek }}
@@ -75,22 +75,24 @@
 
       <template #events>
         <CalendarColumn v-for="(day, idx) in limitShowDaysEvents" :key="idx">
-          <CalendarEvent v-for="event in day.events" :key="event.id" :event="event"
-                         @click="sidebarEventState = true; SET_SELECTED_EVENT(event)"/>
+          <TransitionGroup :name="computedTransition" mode="out-in">
+            <CalendarEvent v-for="event in day.events" :key="event.id" :event="event"
+                           @click="sidebarEventState = true; SET_SELECTED_EVENT(event)"/>
+          </TransitionGroup>
           <CalendarCell v-for="hour in getCalendarHours" :key="hour"/>
         </CalendarColumn>
       </template>
     </CalendarBody>
 
-    <div class="CalendarBottomActions">
-      <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" type="Secondary" label="Jour précédent"/>
-      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" type="Secondary" label="Jour suivant"/>
-    </div>
+    <!--    <div class="CalendarBottomActions">-->
+    <!--      <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" type="Secondary" label="Jour précédent"/>-->
+    <!--      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" type="Secondary" label="Jour suivant"/>-->
+    <!--    </div>-->
 
 
-    <Transition>
-      <Sidebar v-if="sidebarEventState" @close="tryCloseSidebar"/>
-    </Transition>
+    <!--    <Transition>-->
+    <Sidebar v-if="sidebarEventState" @close="tryCloseSidebar"/>
+    <!--    </Transition>-->
   </div>
 </template>
 
@@ -190,15 +192,17 @@ export default {
         }
       })
     },
+    computedTransition() {
+      return this.mobileView ? 'slide-fade' : 'fade';
+    }
   },
-  //watch for screen size
-
   mounted() {
     this.$nextTick(() => {
       this.FETCH_CALENDAR();
       document.addEventListener('keydown', this.handleKeyDown);
       if (typeof window !== 'undefined') window.addEventListener('resize', this.handleResize);
       this.handleResize();
+      this.initDayIndex();
     });
   },
   beforeDestroy() {
@@ -228,6 +232,11 @@ export default {
     ]),
     tryCloseSidebar() {
       this.sidebarEventState = false;
+    },
+    initDayIndex() {
+      if (this.isTodayIsInInterval) {
+        this.showDayIndex = this.getDatesInWeek.indexOf(new Date().toISOString().split('T')[0]);
+      }
     },
     /**
      * Handle keyboard events (arrow keys) to navigate in calendar

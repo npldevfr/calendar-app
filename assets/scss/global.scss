@@ -4,14 +4,16 @@
   scroll-behavior: smooth;
 }
 
-html {
-  background: #181922;
-}
+
 
 @media screen and (min-width: 1200px) {
   .CalendarBottomActions {
     display: none;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -22,6 +24,11 @@ html {
 
   .CalendarHeader {
     border-width: 0 0 1px 0 !important;
+  }
+
+  .CalendarEvent {
+    right: 15px !important;
+    left: 15px !important;
   }
 
 

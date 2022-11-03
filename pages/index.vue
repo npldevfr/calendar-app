@@ -24,7 +24,11 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+html {
+  background: #181922;
+}
+
 .Home {
   width: 100%;
   color: white;
