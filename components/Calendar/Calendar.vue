@@ -206,6 +206,7 @@ export default {
       if (typeof window !== 'undefined') window.addEventListener('resize', this.handleResize);
       this.handleResize();
       this.initDayIndex();
+      this.GO_BACK_TO_TODAY();
     });
   },
   beforeDestroy() {
