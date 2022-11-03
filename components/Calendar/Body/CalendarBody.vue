@@ -16,6 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 .CalendarBody {
+  overflow: hidden;
   width: 100%;
   margin: 0 auto;
   display: grid;

@@ -14,6 +14,9 @@ export default {
 <style lang="scss" scoped>
 .CalendarBody .CalendarColumn:first-child .CalendarCell {
   border-left: 1px dashed #2C2D3C;
+}
+
+.Calendar .CalendarBody > .CalendarColumn .CalendarCell {
   border-right: 0;
 }
 
