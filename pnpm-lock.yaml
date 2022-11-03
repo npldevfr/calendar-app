@@ -13,6 +13,7 @@ specifiers:
   nuxt: 3.0.0-rc.12
   pinia: ^2.0.23
   sass: ^1.55.0
+  vue3-touch-events: 4.1.0
 
 dependencies:
   '@nuxtjs/composition-api': 0.33.1_nuxt@3.0.0-rc.12
@@ -20,6 +21,7 @@ dependencies:
   '@vueuse/components': 9.4.0
   moment: 2.29.4
   pinia: 2.0.23
+  vue3-touch-events: 4.1.0
 
 devDependencies:
   '@kevinmarrec/nuxt-pwa': 0.9.1
@@ -4702,6 +4704,10 @@ packages:
       '@vue/server-renderer': 3.2.41_vue@3.2.41
       '@vue/shared': 3.2.41
     dev: true
+
+  /vue3-touch-events/4.1.0:
+    resolution: {integrity: sha512-fZKusOiBJzDPsY34tXYl/Wo9c2ONzBuQmF0+oHqVWr+TDbf90CgMWLHZsTv1KaShXjt+oeLow7BDVBpXW6lfXQ==}
+    dev: false
 
   /wcwidth/1.0.1:
     resolution: {integrity: sha512-XHPEwS0q6TaxcvG85+8EYkbiCux2XtWG2mkc47Ng2A77BQu9+DqIOJldST4HgPkuea7dvKSj5VgX3P1d4rW8Tg==}

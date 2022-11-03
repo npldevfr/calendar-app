@@ -17,6 +17,7 @@
     "sass": "^1.55.0"
   },
   "dependencies": {
+    "vue3-touch-events": "4.1.0",
     "@nuxtjs/composition-api": "^0.33.1",
     "@pinia/nuxt": "^0.4.3",
     "@vueuse/components": "^9.3.1",

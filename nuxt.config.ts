@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     ],
 
     plugins: [
-        '~/plugins/swipe.client.ts',
+        '~/plugins/swipe.ts',
     ],
     /**
      * @GoogleFonts
