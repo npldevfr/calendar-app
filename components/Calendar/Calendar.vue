@@ -75,22 +75,24 @@
 
       <template #events>
         <CalendarColumn v-for="(day, idx) in limitShowDaysEvents" :key="idx">
-          <CalendarEvent v-for="event in day.events" :key="event.id" :event="event"
-                         @click="sidebarEventState = true; SET_SELECTED_EVENT(event)"/>
+          <TransitionGroup :name="computedTransition" mode="out-in">
+            <CalendarEvent v-for="event in day.events" :key="event.id" :event="event"
+                           @click="sidebarEventState = true; SET_SELECTED_EVENT(event)"/>
+          </TransitionGroup>
           <CalendarCell v-for="hour in getCalendarHours" :key="hour"/>
         </CalendarColumn>
       </template>
     </CalendarBody>
 
-<!--    <div class="CalendarBottomActions">-->
-<!--      <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" type="Secondary" label="Jour précédent"/>-->
-<!--      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" type="Secondary" label="Jour suivant"/>-->
-<!--    </div>-->
+    <!--    <div class="CalendarBottomActions">-->
+    <!--      <Button @click="SHOW_PREVIOUS_DAY" v-if="mobileView" type="Secondary" label="Jour précédent"/>-->
+    <!--      <Button @click="SHOW_NEXT_DAY" v-if="mobileView" type="Secondary" label="Jour suivant"/>-->
+    <!--    </div>-->
 
 
-<!--    <Transition>-->
-      <Sidebar v-if="sidebarEventState" @close="tryCloseSidebar"/>
-<!--    </Transition>-->
+    <!--    <Transition>-->
+    <Sidebar v-if="sidebarEventState" @close="tryCloseSidebar"/>
+    <!--    </Transition>-->
   </div>
 </template>
 
@@ -190,6 +192,9 @@ export default {
         }
       })
     },
+    computedTransition() {
+      return this.mobileView ? 'slide-fade' : 'fade';
+    }
   },
   mounted() {
     this.$nextTick(() => {
