@@ -121,24 +121,25 @@ export default {
   right: 5px;
   z-index: 30;
   left: 5px;
-  border: 1px solid #3e2c80;
-  background: #3e2c80;
+  border: 1px solid var(--primary);
+  background: var(--primary);
   border-radius: 3px;
   display: flex;
+  color: var(--primary-color);
   justify-content: center;
   flex-direction: column;
   align-items: center;
 
   &:hover {
-    background: #4e3c90;
+    background: var(--primary-hover);
   }
 
   &Now {
     position: absolute;
     top: 5px;
     right: 5px;
-    background: red;
-    color: white;
+    background: transparent;
+    color: transparent;
     font-size: 12px;
     font-weight: 500;
     padding: 2px 5px;
@@ -154,18 +155,17 @@ export default {
     text-align: center;
     padding: 0 10px;
     height: 100%;
-    color: white;
     font-size: 12px;
   }
 
   &Blacklisted,
   &Outdated {
-    background: #292A35;
-    border: 1px solid #313248;
+    background: #292A35 !important;
+    border: 1px solid #313248 !important;
     color: #D2D3E0;
 
     &:hover {
-      background: #2f2f3d;
+      background: #2f2f3d !important;
     }
 
   }

@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     ],
     modules: [
         '@vueuse/nuxt',
-        '@pinia/nuxt'
+        '@pinia/nuxt',
+        '@kevinmarrec/nuxt-pwa'
     ],
     /**
      * @CSS
@@ -26,5 +27,15 @@ export default defineNuxtConfig({
             'Inter': [300, 400, 500, 600, 700],
         },
         prefetch: true,
-    }
+    },
+
+
+    pwa: {
+        meta: {
+            mobileAppIOS: true,
+        },
+        workbox: {
+            enabled: true,
+        },
+    },
 })

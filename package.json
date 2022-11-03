@@ -8,6 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@kevinmarrec/nuxt-pwa": "^0.9.1",
     "@nuxt/vite-builder": "^3.0.0-rc.12",
     "@nuxtjs/google-fonts": "3.0.0-0",
     "@vueuse/core": "^9.3.1",

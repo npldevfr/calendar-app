@@ -51,12 +51,12 @@ export default defineComponent({
 
 
   &:hover {
-    background: #575BC7;
-    color: white;
+    background: var(--primary);
+    color: var(--primary-color);
   }
 
   &Choosen {
-    background: #575BC7;
+    background: var(--primary);
   }
 }
 </style>

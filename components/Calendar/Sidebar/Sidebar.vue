@@ -2,7 +2,7 @@
   <OnClickOutside class="Sidebar" @trigger="close">
     <SidebarContent>
       <div class="SidebarHeader">
-        <div class="SidebarTitle">Détail du cours</div>
+        <div class="SidebarTitle">Détail</div>
         <SmallButton type="Secondary" label="Fermer" @click="close"/>
       </div>
 
@@ -22,12 +22,20 @@
       </div>
     </SidebarContent>
     <SidebarDivider/>
-    <!--    <div v-if="getFollowingEvents(getEvent.id).length === 0">-->
-    <!--      Aucun événement à venir-->
-    <!--    </div>-->
-    <!--    <div class="SidebarFollowingEvents" v-else>-->
-    <!--      <EventCard v-for="event in getFollowingEvents(getEvent.id)" :key="event.id" :event="event"/>-->
-    <!--    </div>-->
+    <SidebarContent>
+      <div class="SidebarTitle">Prochains événements</div>
+
+
+      <div v-if="getFollowingEvents(getEvent.id).length === 0">
+        Aucun événement à venir
+      </div>
+      <div class="SidebarFollowingEvents" v-else>
+        <div v-for="(eventsForDay, idx) in getFollowingEvents(getEvent.id)" :key="idx">
+          <EventCard v-for="event in eventsForDay.events" :key="event.id" :event="event"/>
+        </div>
+      </div>
+    </SidebarContent>
+
   </OnClickOutside>
 </template>
 

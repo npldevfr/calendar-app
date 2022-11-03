@@ -54,13 +54,13 @@ export default defineComponent({
   &Type {
     &Primary {
 
-      background: #575BC7;
-      border: 1px solid #575BC7;
-      color: #FFFFFF;
+      background: var(--primary);
+      border: 1px solid var(--primary);
+      color: var(--primary-color);
 
       &:hover {
-        background: #474baf;
-        border: 1px solid #474baf;
+        background: var(--primary-hover);
+        border: 1px solid var(--primary-hover);
       }
     }
 
