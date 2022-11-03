@@ -268,6 +268,7 @@ export default {
   &BottomActions {
     position: fixed;
     bottom: 10px;
+    z-index: 500;
     left: 10px;
     right: 10px;
     display: flex;
