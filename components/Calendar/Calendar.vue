@@ -191,14 +191,13 @@ export default {
       })
     },
   },
-  //watch for screen size
-
   mounted() {
     this.$nextTick(() => {
       this.FETCH_CALENDAR();
       document.addEventListener('keydown', this.handleKeyDown);
       if (typeof window !== 'undefined') window.addEventListener('resize', this.handleResize);
       this.handleResize();
+      this.initDayIndex();
     });
   },
   beforeDestroy() {
@@ -228,6 +227,11 @@ export default {
     ]),
     tryCloseSidebar() {
       this.sidebarEventState = false;
+    },
+    initDayIndex() {
+      if (this.isTodayIsInInterval) {
+        this.showDayIndex = this.getDatesInWeek.indexOf(new Date().toISOString().split('T')[0]);
+      }
     },
     /**
      * Handle keyboard events (arrow keys) to navigate in calendar

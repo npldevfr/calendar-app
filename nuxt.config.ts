@@ -31,15 +31,15 @@ export default defineNuxtConfig({
 
     meta: {
         viewport: 'width=device-width, initial-scale=1, user-scalable=no',
+        htmlAttrs: {
+            lang: 'fr',
+        }
     },
 
 
     pwa: {
         manifest: {
-            name: 'EDT IUT Nantes',
-            background_color: '#181922',
-            theme_color: '#181922',
-            lang: 'fr',
+            name: 'EDT Nantes',
         },
         meta: {
             author: 'GUILLET Nathan',
