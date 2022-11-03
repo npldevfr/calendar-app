@@ -32,7 +32,9 @@ export default defineNuxtConfig({
 
     pwa: {
         meta: {
+            theme_color: '#181922',
             mobileAppIOS: true,
+            mobileApp: true,
         },
         workbox: {
             enabled: true,
