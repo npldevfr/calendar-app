@@ -1,6 +1,7 @@
 <template>
   <button class="Button" :class="getButtonType">
     {{ label }}
+    <slot />
   </button>
 </template>
 

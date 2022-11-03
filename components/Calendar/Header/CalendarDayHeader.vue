@@ -73,12 +73,13 @@ export default {
   }
 
   &Active {
-    border-bottom: 1px solid var(--primary);
+    border-bottom: 1px solid #0593c0;
+    box-shadow: 0px 15px 10px -15px rgba(5, 147, 192, 0.50);
   }
 
   &Today > span,
   &Today > span > span {
-    color: var(--primary);
+    color: #0593c0;
   }
 
   &Day {

@@ -5,8 +5,8 @@
       <div class="SidebarHeader">
         <div class="SidebarTitle">Détail</div>
         <div class="SidebarTitleActions">
-          <SmallButton type="Secondary" label="Fermer" @click="close" />
-          <Kbd label="ESC" />
+          <SmallButton type="Secondary" label="Fermer" @click="close"/>
+          <Kbd label="ESC"/>
         </div>
       </div>
 
@@ -27,17 +27,28 @@
     </SidebarContent>
     <SidebarDivider/>
     <SidebarContent>
-      <div class="SidebarTitle">Prochains événements</div>
 
 
-      <div v-if="getFollowingEvents(getEvent.id).length === 0">
-        Aucun événement à venir
+      <div class="SidebarEmptyEvents" v-if="getFollowingEvents(getEvent.id).length === 0">
+
+        <svg width="48" height="64" viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+              d="M24 0C18.775 0 14.325 3.3375 12.6875 8H8C3.5875 8 0 11.5875 0 16V56C0 60.4125 3.5875 64 8 64H40C44.4125 64 48 60.4125 48 56V16C48 11.5875 44.4125 8 40 8H35.3125C33.675 3.3375 29.225 0 24 0ZM24 16C21.7875 16 20 14.2125 20 12C20 9.7875 21.7875 8 24 8C26.2125 8 28 9.7875 28 12C28 14.2125 26.2125 16 24 16ZM13.225 28.6625C14.2125 25.875 16.8625 24 19.825 24H27.1125C31.475 24 35 27.5375 35 31.8875C35 34.7125 33.4875 37.325 31.0375 38.7375L27 41.05C26.975 42.675 25.6375 44 24 44C22.3375 44 21 42.6625 21 41V39.3125C21 38.2375 21.575 37.25 22.5125 36.7125L28.05 33.5375C28.6375 33.2 29 32.575 29 31.9C29 30.85 28.15 30.0125 27.1125 30.0125H19.825C19.4 30.0125 19.025 30.275 18.8875 30.675L18.8375 30.825C18.2875 32.3875 16.5625 33.2 15.0125 32.65C13.4625 32.1 12.6375 30.375 13.1875 28.825L13.2375 28.675L13.225 28.6625ZM28 52C28 54.2125 26.2125 56 24 56C21.7875 56 20 54.2125 20 52C20 49.7875 21.7875 48 24 48C26.2125 48 28 49.7875 28 52Z"
+              fill="#858699" fill-opacity="0.25"/>
+        </svg>
+
+        Aucun événement à venir..
+
+
       </div>
-      <div class="SidebarFollowingEvents" v-else>
-        <div v-for="(eventsForDay, idx) in getFollowingEvents(getEvent.id)" :key="idx">
-          <EventCard v-for="event in eventsForDay.events" :key="event.id" :event="event"/>
+      <template v-else>
+        <div class="SidebarTitle">Prochains événements</div>
+        <div class="SidebarFollowingEvents">
+          <div v-for="(eventsForDay, idx) in getFollowingEvents(getEvent.id)" :key="idx">
+            <EventCard v-for="event in eventsForDay.events" :key="event.id" :event="event"/>
+          </div>
         </div>
-      </div>
+      </template>
     </SidebarContent>
   </OnClickOutside>
 </template>
@@ -114,6 +125,21 @@ export default {
 
   &Body {
     z-index: 600;
+  }
+
+  &EmptyEvents {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 50px;
+    flex-direction: column;
+    gap: 20px;
+    color: rgba(133, 134, 153, 0.5);
+    font-size: 16px;
+    font-weight: 500;
   }
 
   &Header {
