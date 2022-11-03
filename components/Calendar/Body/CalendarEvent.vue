@@ -138,8 +138,8 @@ export default {
     position: absolute;
     top: 5px;
     right: 5px;
-    background: transparent;
-    color: transparent;
+    background: red;
+    color: white;
     font-size: 12px;
     font-weight: 500;
     padding: 2px 5px;
