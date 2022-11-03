@@ -41,7 +41,6 @@ export const useCalendarStore = defineStore('calendar', {
                 return moment(event.start).isAfter(moment()) && event.title === eventById.title
             });
 
-            //group by date and sort by start time asc
             const groupedEvents = followingEvents.reduce((acc, event) => {
                 const date = moment(event.start).format('YYYY-MM-DD');
                 if (!acc[date]) {

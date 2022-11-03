@@ -25,15 +25,15 @@
     <SidebarContent>
       <div class="SidebarTitle">Prochains événements</div>
 
-      <pre>
-        {{ getFollowingEvents(getEvent.id) }}
-      </pre>
-<!--      <div v-if="getFollowingEvents(getEvent.id).length === 0">-->
-<!--        Aucun événement à venir-->
-<!--      </div>-->
-<!--      <div class="SidebarFollowingEvents" v-else>-->
-<!--        <EventCard v-for="event in getFollowingEvents(getEvent.id)" :key="event.id" :event="event"/>-->
-<!--      </div>-->
+
+      <div v-if="getFollowingEvents(getEvent.id).length === 0">
+        Aucun événement à venir
+      </div>
+      <div class="SidebarFollowingEvents" v-else>
+        <div v-for="(eventsForDay, idx) in getFollowingEvents(getEvent.id)" :key="idx">
+          <EventCard v-for="event in eventsForDay.events" :key="event.id" :event="event"/>
+        </div>
+      </div>
     </SidebarContent>
 
   </OnClickOutside>

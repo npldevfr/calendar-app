@@ -165,13 +165,13 @@ export default {
     color: #D2D3E0;
 
     &:hover {
-      background: #2f2f3d;
+      background: #2f2f3d !important;
     }
 
   }
 
   &Selected {
-    border: 8px dashed red !important;
+    border: 1px solid white !important;
   }
 
   &Special {
