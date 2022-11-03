@@ -1,10 +1,11 @@
 <template>
   <button class="SmallButton" :class="getButtonType">
-    <slot />
+    <slot/>
     {{ label }}
     <svg v-if="dropdown" width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0.8225 0L3.5 2.47439L6.1775 0L7 0.765499L3.5 4L0 0.765499L0.8225 0Z" fill="#858699"/>
     </svg>
+    <slot name="right"/>
 
   </button>
 </template>
