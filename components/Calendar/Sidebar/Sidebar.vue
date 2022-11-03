@@ -1,10 +1,13 @@
 <template>
-  <SidebarBackdrop @click="close"/>
+
   <OnClickOutside class="Sidebar" @trigger="close">
     <SidebarContent sticky>
       <div class="SidebarHeader">
         <div class="SidebarTitle">Détail</div>
-        <SmallButton type="Secondary" label="Fermer" @click="close"/>
+        <div class="SidebarTitleActions">
+          <SmallButton type="Secondary" label="Fermer" @click="close" />
+          <Kbd label="ESC" />
+        </div>
       </div>
 
       <div class="SidebarLiveStatus" v-if="useIsNow(getEvent.start, getEvent.end)">
@@ -36,7 +39,6 @@
         </div>
       </div>
     </SidebarContent>
-
   </OnClickOutside>
 </template>
 
@@ -59,7 +61,8 @@ export default {
   name: "Sidebar",
   components: {
     SidebarBackdrop,
-    TimeSpanText, SidebarContent, NowBadge, SidebarDivider, SmallButton, Button, OnClickOutside},
+    TimeSpanText, SidebarContent, NowBadge, SidebarDivider, SmallButton, Button, OnClickOutside
+  },
   mounted() {
     document.addEventListener('keydown', this.handleEsc);
   },
@@ -104,10 +107,14 @@ export default {
   background: #181922;
   border-left: 1px solid #2C2D3C;
   position: fixed;
-  top: 73px;
+  top: 0;
   right: 0;
   width: 326px;
   bottom: 0;
+
+  &Body {
+    z-index: 600;
+  }
 
   &Header {
     width: 100%;
@@ -170,6 +177,12 @@ export default {
     display: flex;
     align-items: center;
     color: #858699;
+
+    &Actions {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
   }
 
   .Sidebar__event {

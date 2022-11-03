@@ -50,3 +50,19 @@
   transform: translateX(20px);
   opacity: 0;
 }
+
+
+/** Slide fade top **/
+.slide-top-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-top-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-top-enter-from,
+.slide-top-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}

@@ -33,6 +33,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .DropdownContainer {
-  z-index: 2000;
+  z-index: 200;
 }
 </style>

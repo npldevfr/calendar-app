@@ -35,4 +35,10 @@ export default {
   border: 1px solid #313248;
   border-radius: 4px;
 }
+
+@media screen and (max-width: 1200px) {
+  .KeyboardKey {
+    display: none;
+  }
+}
 </style>
