@@ -42,7 +42,6 @@ export default defineNuxtConfig({
         title: 'EDT Nantes',
     },
 
-
     pwa: {
         icon: {
             // @ts-ignore
