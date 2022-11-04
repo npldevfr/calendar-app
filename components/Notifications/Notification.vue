@@ -1,7 +1,5 @@
 <template>
-  <div class="Notification">
-    {{ label }}
-  </div>
+  <div class="Notification" v-html="label" />
 </template>
 
 <script lang="ts">

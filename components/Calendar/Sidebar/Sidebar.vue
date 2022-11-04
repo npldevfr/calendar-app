@@ -108,7 +108,7 @@ export default {
       // emit the dayIndex to the parent
       this.$emit('dayIndex', moment(date, 'YYYY-MM-DD').day());
       this.SET_WEEK_INTERVAL(weekInterval);
-      this.ADD_NOTIFICATION(`Vous avez été redirigé vers la semaine du ${moment(date, 'YYYY-MM-DD').format(DATE_FORMAT)}`);
+      this.ADD_NOTIFICATION(`Vous avez été redirigé à la date du <strong style="color: var(--primary)">${this.formatDayName(date)}</strong>`);
       this.close();
     },
     formatDayName(date: any): string {
