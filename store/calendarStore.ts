@@ -5,7 +5,7 @@ import {IWeek} from "~/types/Week.interface";
 import {useWeekInterval} from "~/composables/useWeekInterval";
 import {IWeekInterval} from "~/types/WeekInterval.interface";
 import {IDay} from "~/types/Day.interface";
-import {EVENT_BLACKLIST_WORDS, HOURS} from "~/global.config";
+import {DATE_FORMAT, EVENT_BLACKLIST_WORDS, HOURS} from "~/global.config";
 import data from "~/store/apicalendar";
 
 interface CalendarStoreState {
@@ -30,7 +30,15 @@ export const useCalendarStore = defineStore('calendar', {
         getSelectedEvent: (state: CalendarStoreState) => state.selectedEvent,
         getEventById: (state: CalendarStoreState) => (id: string): IEvent => {
             if (!id) return {} as IEvent
-            return state.calendar.flatMap((week: IWeek) => week.days).flatMap((day: IDay) => day.events).find((event: IEvent) => event.id === id)
+
+            const event = state.calendar
+                .map((week: IWeek) => week.days)
+                .flat()
+                .map((day: IDay) => day.events)
+                .flat()
+                .find((event: IEvent) => event.id === id)
+
+            return (event || {}) as IEvent
         },
         /** Retourne la liste des événements à venir **/
         getFollowingEvents: (state: CalendarStoreState) => (uuid: string) => {
@@ -42,7 +50,7 @@ export const useCalendarStore = defineStore('calendar', {
             });
 
             const groupedEvents = followingEvents.reduce((acc, event) => {
-                const date = moment(event.start).format('YYYY-MM-DD');
+                const date = moment(event.start, DATE_FORMAT).format('YYYY-MM-DD');
                 if (!acc[date]) {
                     acc[date] = [];
                 }
@@ -127,8 +135,6 @@ export const useCalendarStore = defineStore('calendar', {
             })
 
             return `${Math.floor(totalHours)}h${Math.round((totalHours % 1) * 60)}`
-
-
         },
     },
     actions: {
@@ -144,6 +150,9 @@ export const useCalendarStore = defineStore('calendar', {
         async FETCH_CALENDAR(personaId?: string): Promise<void> {
             const fetchedCalendar = data;
             this.calendar = fetchedCalendar;
+        },
+        SET_WEEK_INTERVAL(weekInterval: IWeekInterval): void {
+            this.weekInterval = weekInterval;
         },
         SET_SELECTED_EVENT(event?: IEvent): void {
             this.selectedEvent = event || {};

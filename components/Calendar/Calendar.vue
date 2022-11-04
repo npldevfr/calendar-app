@@ -93,7 +93,7 @@
       <!--    </div>-->
       <TransitionGroup>
         <SidebarBackdrop @click="tryCloseSidebar" v-if="sidebarEventState"/>
-        <Sidebar @close="tryCloseSidebar" v-if="sidebarEventState"/>
+        <Sidebar @dayIndex="showDayIndex = $event - 1" @close="tryCloseSidebar" v-if="sidebarEventState"/>
       </TransitionGroup>
     </div>
   </ClientOnly>

@@ -44,9 +44,11 @@
       <template v-else>
         <div class="SidebarTitle">Prochains événements</div>
         <div class="SidebarFollowingEvents">
-          <div v-for="(eventsForDay, idx) in getFollowingEvents(getEvent.id)" :key="idx">
-            <EventCard v-for="event in eventsForDay.events" :key="event.id" :event="event"/>
-          </div>
+          <EventCardGroup :title="formatDayName(eventsByDay.date)" :key="eventsByDay.date.toString()"
+                          @click="REDIRECT_TO_DAY(eventsByDay.date)"
+                          v-for="eventsByDay in getFollowingEvents(getEvent.id)">
+            <EventCard v-for="event in  eventsByDay.events" :key="event.id" :event="event"/>
+          </EventCardGroup>
         </div>
       </template>
     </SidebarContent>
@@ -67,6 +69,9 @@ import NowBadge from "~/components/Utils/NowBadge.vue";
 import SidebarContent from "~/components/Calendar/Sidebar/SidebarContent.vue";
 import TimeSpanText from "~/components/Utils/TimeSpanText.vue";
 import SidebarBackdrop from "~/components/Calendar/Sidebar/SidebarBackdrop.vue";
+import {IWeekInterval} from "~/types/WeekInterval.interface";
+import {useFindWeekInterval} from "~/composables/useFindWeekInterval";
+import {DATE_FORMAT} from "~/global.config";
 
 export default {
   name: "Sidebar",
@@ -95,7 +100,19 @@ export default {
     },
   },
   methods: {
-    ...mapActions(useCalendarStore, ['SET_SELECTED_EVENT']),
+    ...mapActions(useCalendarStore, ['SET_SELECTED_EVENT', 'SET_WEEK_INTERVAL']),
+    REDIRECT_TO_DAY(date): void {
+      const weekInterval: IWeekInterval = useFindWeekInterval(moment(date, 'YYYY-MM-DD'));
+      // emit the dayIndex to the parent
+      this.$emit('dayIndex', moment(date, 'YYYY-MM-DD').day());
+      this.SET_WEEK_INTERVAL(weekInterval);
+      this.close();
+    },
+    formatDayName(date: any): string {
+      const frenchDays = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+      const frenchMonths = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+      return moment(date).format('dddd DD MMMM YYYY').replace(/\b\w/g, l => l.toUpperCase()).replace(/(January|February|March|April|May|June|July|August|September|October|November|December)/g, (match) => frenchMonths[moment().month(match).month()]).replace(/(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)/g, (match) => frenchDays[moment().day(match).day()]);
+    },
     handleEsc(e: KeyboardEvent) {
       if (e.key === 'Escape') {
         this.close();
