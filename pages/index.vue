@@ -14,10 +14,12 @@ import Calendar from "~/components/Calendar/Calendar.vue";
 import {mapActions, mapState, mapStores} from "pinia";
 import {useCalendarStore} from "~/store/calendarStore";
 import LoadingScreen from "~/components/Loader/LoadingScreen.vue";
+import NotificationGroup from "~/components/Notifications/NotificationGroup.vue";
+import Notification from "~/components/Notifications/Notification.vue";
 
 export default {
   name: "Home",
-  components: {LoadingScreen, Calendar, Button},
+  components: {Notification, NotificationGroup, LoadingScreen, Calendar, Button},
   computed: {
     ...mapState(useCalendarStore, ['getCalendar'])
   },
