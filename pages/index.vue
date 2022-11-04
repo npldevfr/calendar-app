@@ -1,6 +1,6 @@
 <template>
   <div>
-    <svg width="814" height="657" viewBox="0 0 814 657" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg style="opacity: 0.2" width="814" height="657" viewBox="0 0 814 657" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
           d="M201.358 506.731C201.902 506.377 202.057 505.65 201.704 505.105C201.35 504.561 200.623 504.406 200.078 504.759C199.534 505.113 199.379 505.84 199.732 506.385C200.086 506.929 200.813 507.084 201.358 506.731Z"
           fill="white"/>
