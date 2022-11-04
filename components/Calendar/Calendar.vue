@@ -2,8 +2,9 @@
   <ClientOnly>
     <MainHeader>
       <template #left>
-        <Button @click="PREVIOUS_WEEK(); this.showDayIndex = 0" label="Semaine précédente" />
-        <Button @click="GO_BACK_TO_TODAY(); this.initDayIndex()" v-if="!isTodayIsInInterval" type="Secondary" label="Semaine actuelle"/>
+        <Button @click="PREVIOUS_WEEK(); this.showDayIndex = 0" label="Semaine précédente"/>
+        <Button @click="GO_BACK_TO_TODAY(); this.initDayIndex()" v-if="!isTodayIsInInterval" type="Secondary"
+                label="Semaine actuelle"/>
         <Button @click="NEXT_WEEK(); this.showDayIndex = 0" label="Semaine suivante"/>
       </template>
 
@@ -92,7 +93,7 @@
       <!--    </div>-->
       <TransitionGroup>
         <SidebarBackdrop @click="tryCloseSidebar" v-if="sidebarEventState"/>
-        <Sidebar @close="tryCloseSidebar" v-if="sidebarEventState"/>
+        <Sidebar @dayIndex="showDayIndex = $event - 1" @close="tryCloseSidebar" v-if="sidebarEventState"/>
       </TransitionGroup>
     </div>
   </ClientOnly>
@@ -256,13 +257,22 @@ export default {
       }
       switch (event.key) {
         case KEY.ARROW_LEFT:
-          this.PREVIOUS_WEEK();
+          if (this.mobileView) {
+            this.SHOW_PREVIOUS_DAY();
+          } else {
+            this.PREVIOUS_WEEK();
+          }
           break;
         case KEY.ARROW_RIGHT:
-          this.NEXT_WEEK();
+          if (this.mobileView) {
+            this.SHOW_NEXT_DAY();
+          } else {
+            this.NEXT_WEEK();
+          }
           break;
         case KEY.BACKSPACE:
           this.GO_BACK_TO_TODAY();
+          this.initDayIndex();
           break;
         case KEY.ARROW_UP:
           break;

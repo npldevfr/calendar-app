@@ -28,6 +28,7 @@ export default {
   width: 100%;
   box-sizing: border-box;
   padding: 20px;
+  overflow: auto;
 
   &Sticky {
     position: sticky;
