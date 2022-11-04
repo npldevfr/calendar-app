@@ -1,4 +1,8 @@
 <template>
+  <Head>
+    <Html lang="fr" />
+    <title></title>
+  </Head>
   <div class="app">
     <NuxtPage/>
     <NotificationGroup>
