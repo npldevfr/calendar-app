@@ -47,7 +47,7 @@ export default defineNuxtConfig({
         icon: {
             // @ts-ignore
             splash: {
-                backgroundColor: '#181922',,
+                backgroundColor: '#181922',
             }
         },
         manifest: {
