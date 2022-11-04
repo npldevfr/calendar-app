@@ -1,4 +1,6 @@
+// @ts-ignore
 export default defineNuxtConfig({
+    globals: undefined,
     buildModules: [
         '@nuxtjs/google-fonts'
     ],
@@ -42,7 +44,14 @@ export default defineNuxtConfig({
 
 
     pwa: {
+        icon: {
+            // @ts-ignore
+            splash: {
+                backgroundColor: '#181922',,
+            }
+        },
         manifest: {
+            background_color: '#181922',
             name: 'EDT Nantes',
         },
         meta: {
@@ -52,5 +61,5 @@ export default defineNuxtConfig({
             mobileAppIOS: true,
             mobileApp: true,
         },
-    },
+    }
 })
