@@ -39,6 +39,12 @@ export default defineNuxtConfig({
         }
     },
 
+    head: {
+        title: 'EDT Nantes',
+        lang: 'fr',
+        translate: 'no',
+    },
+
 
     pwa: {
         manifest: {
