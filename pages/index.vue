@@ -1,9 +1,9 @@
 <template>
   <div class="Login">
     <EDTLogo />
-    <div class="LoginActions">
-      test
-    </div>
+<!--    <div class="LoginActions">-->
+<!--      test-->
+<!--    </div>-->
   </div>
 </template>
 
@@ -17,6 +17,11 @@ export default {
 </script>
 
 <style lang="scss">
+
+html {
+  background: #181922;
+}
+
 .Login {
   display: flex;
   justify-content: center;
