@@ -1,10 +1,11 @@
 <template>
-  <div class="CalendarEvent" :class="[isBlacklisted, isSpecial, isOutdated, isSelected]" :style="{top: getTop, bottom: getBottom }">
+  <div class="CalendarEvent" :class="[isBlacklisted, isSpecial, isOutdated, isSelected]"
+       :style="{top: getTop, bottom: getBottom }">
     <div class="CalendarEventNow" v-if="isNow">EN COURS</div>
     <div class="CalendarEventContent">
       <div class="CalendarEventBody">
         {{ event.title }}
-        <br />
+        <br/>
         ({{ formatHour(event.start) }} - {{ formatHour(event.end) }})
       </div>
     </div>
@@ -171,7 +172,7 @@ export default {
   }
 
   &Selected {
-    border: 1px solid white !important;
+    background: var(--primary-hover) !important;
   }
 
   &Special {
