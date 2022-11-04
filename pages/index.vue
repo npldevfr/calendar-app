@@ -510,7 +510,6 @@
       <EDTLogo/>
       <div class="LoginActions">
         <Button type="Secondary" label="{{ SELECT GROUP }}" @click="$router.push({name: 'edt'})"/>
-        <Button type="Primary" label="Suivant" @click="$router.push({name: 'edt'})"/>
       </div>
     </div>
   </div>
@@ -556,7 +555,8 @@ html {
   gap: 100px;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#181922 0%, rgba(49, 50, 72, 0.34) 100%);
+  background: radial-gradient(ellipse at 50% 80%, rgba(0, 102, 255, 0.15),rgba(255,255,255,0));
+  //background: linear-gradient(#181922 0%, rgba(49, 50, 72, 0.34) 100%);
 
 
   &Actions {
