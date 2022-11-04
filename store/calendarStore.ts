@@ -143,7 +143,6 @@ export const useCalendarStore = defineStore('calendar', {
         },
         async FETCH_CALENDAR(personaId?: string): Promise<void> {
             const fetchedCalendar = data;
-            console.log(fetchedCalendar);
             this.calendar = fetchedCalendar;
         },
         SET_SELECTED_EVENT(event?: IEvent): void {
