@@ -3,6 +3,7 @@
     <Html lang="fr" />
     <title></title>
     <Link rel="apple-touch-icon" href="@/assets/icons/apple-touch-icon.png" />
+    <Link rel="shortcut icon" href="@/assets/icons/apple-touch-icon.png" />
   </Head>
   <div class="app">
     <NuxtPage/>
