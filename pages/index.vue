@@ -1,38 +1,42 @@
 <template>
-  <div class="Home">
-    <Transition>
-      <LoadingScreen v-if="getCalendar.length === 0"/>
-    </Transition>
-    <Calendar/>
+  <div class="Login">
+    <EDTLogo />
+    <div class="LoginActions">
+      test
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 
-import Button from "~/components/Buttons/Button.vue";
-import Calendar from "~/components/Calendar/Calendar.vue";
-import {mapActions, mapState, mapStores} from "pinia";
-import {useCalendarStore} from "~/store/calendarStore";
-import LoadingScreen from "~/components/Loader/LoadingScreen.vue";
-import NotificationGroup from "~/components/Notifications/NotificationGroup.vue";
-import Notification from "~/components/Notifications/Notification.vue";
-
+import EDTLogo from "~/components/Logo/EDTLogo.vue";
 export default {
-  name: "Home",
-  components: {Notification, NotificationGroup, LoadingScreen, Calendar, Button},
-  computed: {
-    ...mapState(useCalendarStore, ['getCalendar'])
-  },
-};
+  name: "index",
+  components: {EDTLogo},
+}
 </script>
 
 <style lang="scss">
-html {
-  background: #181922;
-}
-
-.Home {
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
   width: 100%;
-  color: white;
+  height: 100%;
+  background: radial-gradient(ellipse at 50% 80%, rgba(0, 102, 255, 0.15),rgba(255,255,255,0));
+
+
+  &Actions {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    padding: 50px 35px;
+    height: 300px;
+    left: 0;
+    right: 0;
+    background: red;
+  }
 }
 </style>
