@@ -11,7 +11,6 @@ import {defineComponent} from "vue";
 
 export default defineComponent({
   name: "NotificationGroup",
-  props: {}
 })
 </script>
 
@@ -23,9 +22,9 @@ export default defineComponent({
   padding: 15px;
   display: flex;
   z-index: 1000;
-  flex-direction: column;
   gap: 5px;
   bottom: 20px;
+  flex-direction: column-reverse;
 
 }
 </style>
