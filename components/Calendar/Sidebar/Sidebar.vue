@@ -72,6 +72,7 @@ import SidebarBackdrop from "~/components/Calendar/Sidebar/SidebarBackdrop.vue";
 import {IWeekInterval} from "~/types/WeekInterval.interface";
 import {useFindWeekInterval} from "~/composables/useFindWeekInterval";
 import {DATE_FORMAT} from "~/global.config";
+import {useNotificationStore} from "~/store/notificationStore";
 
 export default {
   name: "Sidebar",
@@ -101,11 +102,13 @@ export default {
   },
   methods: {
     ...mapActions(useCalendarStore, ['SET_SELECTED_EVENT', 'SET_WEEK_INTERVAL']),
+    ...mapActions(useNotificationStore, ['ADD_NOTIFICATION']),
     REDIRECT_TO_DAY(date): void {
       const weekInterval: IWeekInterval = useFindWeekInterval(moment(date, 'YYYY-MM-DD'));
       // emit the dayIndex to the parent
       this.$emit('dayIndex', moment(date, 'YYYY-MM-DD').day());
       this.SET_WEEK_INTERVAL(weekInterval);
+      this.ADD_NOTIFICATION(`Vous avez été redirigé à la date du <strong style="color: var(--primary)">${this.formatDayName(date)}</strong>`);
       this.close();
     },
     formatDayName(date: any): string {

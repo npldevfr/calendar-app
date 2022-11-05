@@ -36,7 +36,7 @@ export default defineComponent({
   &Title {
     font-size: 16px;
     font-weight: 500;
-    color: #A0A0A0;
+    color: #858699;
     margin-bottom: 20px;
   }
 

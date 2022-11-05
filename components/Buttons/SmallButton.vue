@@ -75,7 +75,7 @@ export default defineComponent({
     }
 
     &Transparent {
-      border: 1px dashed #v;
+      border: 1px dashed #313248;
       background: transparent;
       color: #D2D3E0;
     }

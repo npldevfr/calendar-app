@@ -108,7 +108,7 @@ export const useCalendarStore = defineStore('calendar', {
                     }
                 })
 
-                const mergedEvents = groupedEventsByDates.map((day: IDay) => {
+                return groupedEventsByDates.map((day: IDay) => {
                     const mergedEvents = day.events.reduce((acc: IEvent[], event: IEvent) => {
                         const lastEvent = acc[acc.length - 1];
                         if (lastEvent && lastEvent.title === event.title && moment(event.start).diff(moment(lastEvent.end), 'hours') < 1) {
@@ -118,9 +118,7 @@ export const useCalendarStore = defineStore('calendar', {
                         return [...acc, event];
                     }, []);
                     return {...day, events: mergedEvents}
-                })
-
-                return mergedEvents;
+                });
             }
         },
         /** Retourne le temps total de la semaine selectionnée **/
@@ -147,7 +145,7 @@ export const useCalendarStore = defineStore('calendar', {
         NEXT_WEEK(): void {
             this.weekInterval = useWeekInterval('next', this.weekInterval);
         },
-        async FETCH_CALENDAR(personaId?: string): Promise<void> {
+        FETCH_CALENDAR(personaId: string = ""): void {
             const fetchedCalendar = data;
             this.calendar = fetchedCalendar;
         },

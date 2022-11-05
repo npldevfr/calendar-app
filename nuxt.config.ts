@@ -1,4 +1,6 @@
+// @ts-ignore
 export default defineNuxtConfig({
+    globals: undefined,
     buildModules: [
         '@nuxtjs/google-fonts'
     ],
@@ -36,12 +38,19 @@ export default defineNuxtConfig({
         viewport: 'width=device-width, initial-scale=1, user-scalable=no',
         htmlAttrs: {
             lang: 'fr',
-        }
+        },
+        title: 'EDT Nantes',
     },
 
-
     pwa: {
+        icon: {
+            // @ts-ignore
+            splash: {
+                backgroundColor: '#181922',
+            }
+        },
         manifest: {
+            background_color: '#181922',
             name: 'EDT Nantes',
         },
         meta: {
@@ -51,5 +60,5 @@ export default defineNuxtConfig({
             mobileAppIOS: true,
             mobileApp: true,
         },
-    },
+    }
 })
