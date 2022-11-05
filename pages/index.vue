@@ -143,7 +143,8 @@ html {
     text-align: center;
     justify-content: center;
     right: 0;
-    padding: 25px;
+    z-index: 40;
+    padding: 35px 25px;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
