@@ -256,7 +256,7 @@ export default {
       }
     },
     /**
-     * Handle keyboard events (arrow keys) to navigate in edt
+     * Handle keyboard events (arrow keys) to navigate in @
      * **/
     handleKeyDown(event: KeyboardEvent): void {
       if (event.ctrlKey) {

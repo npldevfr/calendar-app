@@ -17,7 +17,7 @@
       <h1>Bienvenue</h1>
       <h3>Sélectionnez votre groupe pour accéder à l'emploi du temps</h3>
       <div class="LoginContent">
-        <Button type="Secondary" label="{{ SELECT GROUP }}" @click="$router.push({name: 'edt'})"/>
+        <Button type="Secondary" label="{{ SELECT GROUP }}" @click="$router.push({name: '@'})"/>
 
       </div>
       <div class="LoginActions">
@@ -38,9 +38,9 @@ export default {
   components: {Button, EDTLogo},
   mounted() {
     if (window !== undefined) window.addEventListener("resize", this.onResize);
-    // check if localstorage has value groupId and redirect to edt page
+    // check if localstorage has value groupId and redirect to @ page
     if (localStorage.getItem('groupId') && localStorage.getItem('groupId') !== 'null') {
-      this.$router.push({name: 'edt'})
+      this.$router.push({name: '@'});
     }
   },
   beforeUnmount() {
@@ -57,7 +57,7 @@ export default {
   methods: {
     onResize() {
       if (window.innerWidth > 1200) {
-        this.$router.push({name: "edt"});
+        this.$router.push({name: '@'});
       }
     },
   }
@@ -96,7 +96,7 @@ html {
   }
 
   a {
-    color: white  ;
+    color: white;
     text-decoration: none;
   }
 
