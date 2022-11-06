@@ -137,44 +137,6 @@ export default {
       sidebarEventState: false,
       currentEventShowing: {},
 
-      dropdownData: [
-        {
-          "category": "Personnes",
-          "data": [
-            {
-              "id": 1,
-              "name": "Jean Dupont"
-            },
-            {
-              "id": 2,
-              "name": "Marie Durand"
-            },
-            {
-              "id": 3,
-              "name": "Pierre Martin"
-            },
-          ]
-        },
-        {
-          "category": "Groupes",
-          "data": [
-            {
-              "id": 4,
-              "name": "LP MiAR Groupe 1"
-            },
-            {
-              "id": 5,
-              "name": "LP MiAR Groupe 2"
-            },
-            {
-              "id": 6,
-              "name": "Groupe Duran"
-            }
-          ]
-        }
-      ]
-
-
     }
   },
   computed: {

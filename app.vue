@@ -16,15 +16,22 @@
 <script lang="ts">
 
 import {useNotificationStore} from "~/store/notificationStore";
-import {mapState} from "pinia";
+import {mapActions, mapState} from "pinia";
 import NotificationGroup from "~/components/Notifications/NotificationGroup.vue";
 import Notification from "~/components/Notifications/Notification.vue";
+import {usePersonaStore} from "~/store/personaStore";
 
 export default {
   name: "app",
   components: {Notification, NotificationGroup},
   computed: {
     ...mapState(useNotificationStore, ['getNotifications'])
+  },
+  mounted() {
+    this.FETCH_PERSONAS();
+  },
+  methods: {
+    ...mapActions(usePersonaStore, ['FETCH_PERSONAS'])
   }
 }
 </script>
