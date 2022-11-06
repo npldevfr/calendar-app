@@ -37,7 +37,10 @@ export default {
   name: "index",
   components: {Button, EDTLogo},
   mounted() {
-    if (window !== undefined) window.addEventListener("resize", this.onResize);
+    if (window !== undefined) {
+      window.addEventListener("resize", this.onResize);
+      this.onResize();
+    }
     // check if localstorage has value groupId and redirect to edt page
     if (localStorage.getItem('groupId') && localStorage.getItem('groupId') !== 'null') {
       this.$router.push({name: 'edt'})
