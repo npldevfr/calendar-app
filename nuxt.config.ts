@@ -9,6 +9,10 @@ export default defineNuxtConfig({
         '@pinia/nuxt',
         '@kevinmarrec/nuxt-pwa'
     ],
+
+    publicRuntimeConfig: {
+        API_BASE_URL: process.env.API_BASE_URL
+    },
     /**
      * @CSS
      * CSS Modules
