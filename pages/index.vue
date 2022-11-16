@@ -17,7 +17,11 @@
       <h1>Bienvenue</h1>
       <h3>Sélectionnez votre groupe pour accéder à l'emploi du temps</h3>
       <div class="LoginContent">
-        <Button type="Secondary" label="{{ SELECT GROUP }}" @click="$router.push({name: '@'})"/>
+        <Button type="Secondary" label="Sélectionner mon groupe" @click="$router.push({name: '@'})">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.55556 0C1.143 0 0.747335 0.163889 0.455612 0.455612C0.163889 0.747335 0 1.143 0 1.55556V12.4444C0 12.857 0.163889 13.2527 0.455612 13.5444C0.747335 13.8361 1.143 14 1.55556 14H12.4444C12.857 14 13.2527 13.8361 13.5444 13.5444C13.8361 13.2527 14 12.857 14 12.4444V1.55556C14 1.143 13.8361 0.747335 13.5444 0.455612C13.2527 0.163889 12.857 0 12.4444 0H1.55556ZM7 10.8889V7.77778L3.11111 7.77778V6.22222L7 6.22222L7 3.11111L10.8889 7L7 10.8889Z" fill="#858699"/>
+          </svg>
+        </Button>
 
       </div>
       <div class="LoginActions">
@@ -37,8 +41,11 @@ export default {
   name: "index",
   components: {Button, EDTLogo},
   mounted() {
-    if (window !== undefined) window.addEventListener("resize", this.onResize);
-    // check if localstorage has value groupId and redirect to @ page
+    if (window !== undefined) {
+      window.addEventListener("resize", this.onResize);
+      this.onResize();
+    }
+    // check if localstorage has value groupId and redirect to edt page
     if (localStorage.getItem('groupId') && localStorage.getItem('groupId') !== 'null') {
       this.$router.push({name: '@'});
     }
@@ -143,7 +150,8 @@ html {
     text-align: center;
     justify-content: center;
     right: 0;
-    padding: 25px;
+    z-index: 40;
+    padding: 35px 25px;
     display: flex;
     flex-direction: row;
     box-sizing: border-box;
