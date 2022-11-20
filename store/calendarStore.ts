@@ -10,7 +10,7 @@ import data from "~/store/apicalendar";
 
 interface CalendarStoreState {
     weekInterval: IWeekInterval;
-    calendar: any;
+    calendar: IWeek[];
     selectedEvent: IEvent | {};
 }
 

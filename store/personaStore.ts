@@ -1,29 +1,31 @@
 import {defineStore} from "pinia";
 import {useFetch} from "#imports";
-import {useRuntimeConfig} from "#app";
+import {useNuxtApp, useRuntimeConfig} from "#app";
+import {IPersona} from "~/types/Persona.interface";
+import {IGroupe} from "~/types/Group";
 
 export const usePersonaStore = defineStore('persona', {
     state: () => ({
-        personas: null,
+        personas: [] as IGroupe[],
         selectedPersona: {} as any,
     }),
     getters: {
         getPersonas: (state) => state.personas,
     },
     actions: {
-        FETCH_PERSONAS: (state) => {
+        FETCH_PERSONAS: async () => {
             const personaStore = usePersonaStore();
-            const {data: content} = useFetch(useRuntimeConfig().API_BASE_URL + '/groups', {
+            const {data: groups} = await useFetch(useRuntimeConfig().public.apiBaseUrl + '/groups', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': '*',
                 }
-            });
-            console.log(content);
-            personaStore.SET_PERSONAS(content);
+            })
+
+            personaStore.SET_PERSONAS(groups.value);
         },
-        SET_PERSONAS(personas) {
+        SET_PERSONAS(personas: IGroupe[]) {
             this.personas = personas;
         }
     }

@@ -1,4 +1,3 @@
-// @ts-ignore
 export default defineNuxtConfig({
     globals: undefined,
     buildModules: [
@@ -10,8 +9,10 @@ export default defineNuxtConfig({
         '@kevinmarrec/nuxt-pwa'
     ],
 
-    publicRuntimeConfig: {
-        API_BASE_URL: process.env.API_BASE_URL
+    runtimeConfig: {
+        public: {
+            apiBaseUrl: process.env.API_BASE_URL || 'http://localhost:3000'
+        }
     },
     /**
      * @CSS
@@ -33,9 +34,11 @@ export default defineNuxtConfig({
      */
     googleFonts: {
         families: {
-            'Inter': [300, 400, 500, 600, 700],
+            'Inter': [100, 200, 300, 400, 500, 600, 700, 800, 900],
         },
-        prefetch: true,
+        display: 'swap',
+        download: true,
+
     },
 
     meta: {
