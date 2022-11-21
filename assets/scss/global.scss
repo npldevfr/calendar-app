@@ -6,7 +6,7 @@
 
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 800px) {
   .CalendarBottomActions {
     display: none;
   }
@@ -16,7 +16,7 @@
   display: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .Calendar .CalendarBody > .CalendarColumn .CalendarCell {
     border-left: none !important;
   }

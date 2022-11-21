@@ -4,7 +4,7 @@
     <div class="CalendarEventNow" v-if="isNow">EN COURS</div>
     <div class="CalendarEventContent">
       <div class="CalendarEventBody">
-        {{ event.title }}
+        {{ formatEventTitle(event.title) }}
         <br/>
         ({{ formatHour(event.start) }} - {{ formatHour(event.end) }})
       </div>
@@ -109,6 +109,13 @@ export default {
     formatHour(timestamp: Date | Moment | string): string {
       return moment(timestamp).format('HH:mm')
     },
+    formatEventTitle(title: string): string {
+      const STR_LENGTH = 70;
+      if (title.length > STR_LENGTH) {
+        return title.substring(0, STR_LENGTH) + '...';
+      }
+      return title;
+    }
   }
 }
 </script>
@@ -139,6 +146,7 @@ export default {
     position: absolute;
     top: 5px;
     right: 5px;
+    z-index: 500;
     background: red;
     color: white;
     font-size: 12px;

@@ -1,36 +1,42 @@
 import {IPersona} from "~/types/Persona.interface";
 
-const useFavoritesPersonas = ({
-                                  action = 'get',
-                                  persona
-                              }: { action: 'add' | 'remove' | 'get', persona: IPersona }): IPersona[] => {
+const useFavoritesPersonas = (action: 'add' | 'remove' | 'get' | 'initialize', persona?: IPersona): IPersona[] => {
 
     const getFavorites: IPersona[] = JSON.parse(localStorage.getItem('favorites') || '[]');
 
-    const addFavorite = (persona: IPersona) => {
+    const addFavorite = (persona: IPersona): void => {
         const favorites = getFavorites;
         favorites.push(persona);
         localStorage.setItem('favorites', JSON.stringify(favorites));
     }
 
-    const removeFavorite = (persona: IPersona) => {
+    const removeFavorite = (persona: IPersona): void => {
         const favorites = getFavorites;
         const index = favorites.findIndex((p) => p.id === persona.id);
         favorites.splice(index, 1);
         localStorage.setItem('favorites', JSON.stringify(favorites));
     }
 
-    const resetFavorites = () => {
+    const initializeFavorites = (): IPersona[] => {
+        const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+        return favorites.length ? favorites : [];
+    }
+
+    const resetFavorites = (): void => {
         localStorage.removeItem('favorites');
     }
 
     if (!(getFavorites instanceof Error)) {
         switch (action) {
             case 'add':
-                addFavorite(persona);
+                if (!!persona) addFavorite(persona);
                 break;
             case 'remove':
-                removeFavorite(persona);
+                if (!!persona) removeFavorite(persona);
+                break;
+            case "initialize":
+                console.log('initialize');
+                initializeFavorites();
                 break;
             case 'get':
             default:

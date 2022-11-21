@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     onResize() {
-      if (window.innerWidth > 1200) {
+      if (window.innerWidth > 800) {
         this.$router.push({name: '@'});
       }
     },

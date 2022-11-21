@@ -79,7 +79,7 @@ export default defineComponent({
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
 
   .Button {
     padding: 20px 20px !important;
