@@ -41,13 +41,16 @@ export default defineNuxtConfig({
 
     },
 
-    meta: {
-        viewport: 'width=device-width, initial-scale=1, user-scalable=no',
-        htmlAttrs: {
-            lang: 'fr',
-        },
-        title: 'EDT Nantes',
+    app: {
+        head: {
+            viewport: 'width=device-width, initial-scale=1, user-scalable=no',
+            htmlAttrs: {
+                lang: 'fr',
+            },
+            title: 'EDT Nantes',
+        }
     },
+
 
     pwa: {
         icon: {

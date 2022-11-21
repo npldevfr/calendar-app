@@ -285,7 +285,7 @@ export default {
 
 <style lang="scss" scoped>
 .Calendar {
-  width: 800px;
+  width: 1200px;
   margin: auto;
 
   &BottomActions {
