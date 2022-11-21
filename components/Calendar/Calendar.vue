@@ -43,7 +43,8 @@
               <Input ref="input" v-model:model-value="searchEngine" placeholder="Chercher par personne, groupe"/>
               <template v-for="(list, idx) in getSearchResults" :key="idx">
                 <DropdownHeader :title="list.category" v-if="list.data.length > 0"/>
-                <DropdownItem v-for="(item, idx) in list.data" :match-value="searchEngine" :key="idx"
+                <DropdownItem v-for="(item, idx) in list.data.slice(0, 5)" :match-value="searchEngine" :key="idx"
+                              @click="setCurrentPersona(item)"
                               :label="item.name"/>
               </template>
             </DropdownContent>
@@ -121,6 +122,8 @@ import SmallButton from "~/components/Buttons/SmallButton.vue";
 import MainHeader from "~/components/Header/MainHeader.vue";
 import Button from "~/components/Buttons/Button.vue";
 import SidebarBackdrop from "~/components/Calendar/Sidebar/SidebarBackdrop.vue";
+import {usePersonaStore} from "~/store/personaStore";
+import {IGroupe} from "~/types/Group.interface";
 
 export default {
   name: 'Calendar',
@@ -143,25 +146,26 @@ export default {
     ...mapState(useCalendarStore, [
       'getDatesInWeek', 'getEventsForWeek', 'getWeekInterval',
       'getFollowingEvents', 'getTotalHoursForWeek', 'getCalendarHours',
-      'getFormatEventByWeek'
+      'getFormatEventByWeek',
     ]),
-    isTodayIsInInterval() {
+    ...mapState(usePersonaStore, ['getPersonas']),
+    isTodayIsInInterval() : any {
       return this.getDatesInWeek.includes(new Date().toISOString().split('T')[0]);
     },
-    limitShowDaysCpt() {
+    limitShowDaysCpt() : any[] {
       if (!this.mobileView) {
         return this.getDatesInWeek.slice(0, 5);
       }
       return this.getDatesInWeek.slice(this.showDayIndex, this.showDayIndex + 1);
     },
-    limitShowDaysEvents() {
+    limitShowDaysEvents() : any {
       if (!this.mobileView) {
         return this.getFormatEventByWeek.slice(0, 5);
       }
       return this.getFormatEventByWeek.slice(this.showDayIndex, this.showDayIndex + 1);
     },
     getSearchResults() {
-      return this.dropdownData.map((category) => {
+      return this.getPersonas.map((category: IGroupe) => {
         return {
           category: category.category,
           data: category.data.filter((item) => {
@@ -189,6 +193,9 @@ export default {
     if (typeof window !== 'undefined') window.removeEventListener('resize', this.handleResize);
   },
   methods: {
+    setCurrentPersona(persona) {
+      console.log(persona);
+    },
     SHOW_NEXT_DAY() {
       if (this.showDayIndex < 4) {
         this.showDayIndex++;
