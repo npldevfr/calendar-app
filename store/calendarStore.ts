@@ -10,6 +10,7 @@ import data from "~/store/apicalendar";
 import {useFetch} from "#imports";
 import {useRuntimeConfig} from "#app";
 import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
+import useLastUpdate from "~/composables/useLastUpdate";
 
 interface CalendarStoreState {
     weekInterval: IWeekInterval;
@@ -150,7 +151,7 @@ export const useCalendarStore = defineStore('calendar', {
         },
         async FETCH_CALENDAR(): Promise<void> {
             this.calendar = [] as IWeek[];
-            const { group_id } = useCurrentPersona('get');
+            const {group_id} = useCurrentPersona('get');
             if (!group_id) return;
             const {data: events} = await useFetch(useRuntimeConfig().public.API_BASE_URL + `/events-by-group/${group_id}`, {
                 method: 'GET',
@@ -159,7 +160,8 @@ export const useCalendarStore = defineStore('calendar', {
                     'Access-Control-Allow-Origin': '*',
                 }
             })
-            const { data } = events.value;
+            useLastUpdate('update');
+            const {data} = events.value;
             this.calendar = data;
         },
         SET_WEEK_INTERVAL(weekInterval: IWeekInterval): void {

@@ -2,18 +2,18 @@ import {IPersona} from "~/types/Persona.interface";
 
 const useCurrentPersona = (action: 'get' | 'reset' | 'set' | 'initialize', persona?: IPersona) => {
 
-    const currentPersona: IPersona = JSON.parse(localStorage.getItem('currentPersona') || '{}');
+    const currentPersona: IPersona = JSON.parse(localStorage.getItem('edtCurrentPersona') || '{}');
 
     const setCurrentPersona = (persona: IPersona) => {
-        localStorage.setItem('currentPersona', JSON.stringify(persona));
+        localStorage.setItem('edtCurrentPersona', JSON.stringify(persona));
     }
 
     const resetCurrentPersona = () => {
-        localStorage.removeItem('currentPersona');
+        localStorage.removeItem('edtCurrentPersona');
     }
 
     const initializeCurrentPersona = () => {
-        const currentPersona = JSON.parse(localStorage.getItem('currentPersona') || '{}');
+        const currentPersona = JSON.parse(localStorage.getItem('edtCurrentPersona') || '{}');
         console.log('initializeCurrentPersona', currentPersona);
         return currentPersona.id ? currentPersona : {};
     }

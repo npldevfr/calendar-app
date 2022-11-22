@@ -6,6 +6,7 @@ const useFavoritesPersonas = (action: 'add' | 'remove' | 'get' | 'initialize', p
 
     const addFavorite = (persona: IPersona): void => {
         const favorites = getFavorites;
+        if (favorites.some((favorite: IPersona) => favorite.id === persona.id)) return;
         favorites.push(persona);
         localStorage.setItem('favorites', JSON.stringify(favorites));
     }

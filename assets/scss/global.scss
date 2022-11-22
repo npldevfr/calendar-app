@@ -4,7 +4,10 @@
   scroll-behavior: smooth;
 }
 
-
+html {
+  background: var(--bg-color);
+  transition: background 0.5s ease;
+}
 
 @media screen and (min-width: 800px) {
   .CalendarBottomActions {

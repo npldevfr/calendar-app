@@ -5,7 +5,7 @@
   <ClientOnly>
     <MobileHeader>
       <template #left>
-        <SmallButton type="Transparent" label="LP MiAR Groupe 1"/>
+        <SmallButton type="Transparent" :label="currentPersona"/>
       </template>
       <template #right>
         <SmallButton label="Paramètres">
@@ -48,6 +48,7 @@
               <template v-for="(list, idx) in getSearchResults" :key="idx">
                 <DropdownHeader :title="list.category" v-if="list.data.length > 0"/>
                 <DropdownItem v-for="(item, idx) in list.data.slice(0, 5)" :match-value="searchEngine" :key="idx"
+                              :persona="item"
                               @click="setCurrentPersona(item)"
                               :label="item.name"/>
               </template>
@@ -130,6 +131,7 @@ import {usePersonaStore} from "~/store/personaStore";
 import {IGroupe} from "~/types/Group.interface";
 import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
 import {IPersona} from "~/types/Persona.interface";
+import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
 
 export default {
   name: 'Calendar',
@@ -171,11 +173,27 @@ export default {
       }
       return this.getFormatEventByWeek.slice(this.showDayIndex, this.showDayIndex + 1);
     },
+    getFavoritesResults() {
+      const favoritePersonas = useFavoritesPersonas('get');
+      const currentPersona = useCurrentPersona('get');
+      return favoritePersonas.map((persona: IPersona) => {
+        return {
+          group_id: persona.group_id,
+          name: persona.name,
+          id: persona.id,
+        }
+      })
+    },
     getSearchResults() {
       const currentPersona = useCurrentPersona('get');
-      if (!currentPersona) return [];
+      let personas = this.getPersonas;
+      // if (currentPersona) {
+      //   personas = personas.map((group: IGroupe) => {
+      //     group.data = group.data.filter((persona: IPersona) => persona.id !== currentPersona.id);
+      //     return group;
+      //   });
+      // }
 
-      const personas = this.getPersonas.filter((persona: IPersona) => persona.id !== currentPersona.id);
 
       return personas.map((category: IGroupe) => {
         return {

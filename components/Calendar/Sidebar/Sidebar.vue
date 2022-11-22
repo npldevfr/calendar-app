@@ -1,5 +1,4 @@
 <template>
-
   <OnClickOutside class="Sidebar" @trigger="close">
     <SidebarContent sticky>
       <div class="SidebarHeader">
@@ -88,9 +87,11 @@ export default {
   },
   mounted() {
     document.addEventListener('keydown', this.handleEsc);
+    document.body.style.overflow = 'hidden';
   },
   beforeUnmount() {
     document.removeEventListener('keydown', this.handleEsc);
+    document.body.style.overflow = 'auto';
   },
   computed: {
     ...mapState(useCalendarStore, ['getSelectedEvent', 'getFollowingEvents']),
