@@ -58,6 +58,7 @@ export default defineComponent({
       background: var(--primary);
       border: 1px solid var(--primary);
       color: var(--primary-color);
+      fill: var(--primary-color);
 
       &:hover {
         background: var(--primary-hover);
@@ -66,20 +67,21 @@ export default defineComponent({
     }
 
     &Secondary {
-      background: #292A35;
-      border: 1px solid #313248;
-      color: #858699;
+      background: var(--secondary);
+      border: 1px solid var(--secondary-border);
+      color: var(--secondary-color);
+      fill: var(--secondary-color);
 
       &:hover {
-        background: #1f202a;
-        border: 1px solid #36373f;
+        background: var(--secondary-hover);
+        border: 1px solid var(--secondary-hover);
       }
     }
   }
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
 
   .Button {
     padding: 20px 20px !important;

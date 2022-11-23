@@ -37,7 +37,7 @@ export default {
   border-radius: 4px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .KeyboardKey {
     display: none;
   }

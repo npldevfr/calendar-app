@@ -1,8 +1,11 @@
 <template>
+  <Head>
+    <Title>EDT ({{ currentPersona }})</Title>
+  </Head>
   <ClientOnly>
     <MobileHeader>
       <template #left>
-        <SmallButton type="Transparent" label="LP MiAR Groupe 1" />
+        <SmallButton type="Transparent" :label="currentPersona"/>
       </template>
       <template #right>
         <SmallButton label="Paramètres">
@@ -29,7 +32,7 @@
 
       <template #right>
         <DropdownContainer @close="dropdownState = false">
-          <SmallButton label="GUILLET Nathan" @click="dropdownState = !dropdownState" dropdown>
+          <SmallButton :label="currentPersona" @click="dropdownState = !dropdownState" dropdown>
             <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                   d="M10.5625 5.78125C10.5625 6.94668 10.1842 8.02324 9.54687 8.89668L12.7613 12.1137C13.0787 12.4311 13.0787 12.9465 12.7613 13.2639C12.4439 13.5813 11.9285 13.5813 11.6111 13.2639L8.39668 10.0469C7.52324 10.6867 6.44668 11.0625 5.28125 11.0625C2.36387 11.0625 0 8.69863 0 5.78125C0 2.86387 2.36387 0.5 5.28125 0.5C8.19863 0.5 10.5625 2.86387 10.5625 5.78125ZM5.28125 9.4375C7.2998 9.4375 8.9375 7.7998 8.9375 5.78125C8.9375 3.7627 7.2998 2.125 5.28125 2.125C3.2627 2.125 1.625 3.7627 1.625 5.78125C1.625 7.7998 3.2627 9.4375 5.28125 9.4375Z"
@@ -41,9 +44,11 @@
 
             <DropdownContent>
               <Input ref="input" v-model:model-value="searchEngine" placeholder="Chercher par personne, groupe"/>
+              <DropdownHeader title="Favoris"/>
               <template v-for="(list, idx) in getSearchResults" :key="idx">
                 <DropdownHeader :title="list.category" v-if="list.data.length > 0"/>
                 <DropdownItem v-for="(item, idx) in list.data.slice(0, 5)" :match-value="searchEngine" :key="idx"
+                              :persona="item"
                               @click="setCurrentPersona(item)"
                               :label="item.name"/>
               </template>
@@ -124,6 +129,9 @@ import Button from "~/components/Buttons/Button.vue";
 import SidebarBackdrop from "~/components/Calendar/Sidebar/SidebarBackdrop.vue";
 import {usePersonaStore} from "~/store/personaStore";
 import {IGroupe} from "~/types/Group.interface";
+import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
+import {IPersona} from "~/types/Persona.interface";
+import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
 
 export default {
   name: 'Calendar',
@@ -140,6 +148,7 @@ export default {
       sidebarEventState: false,
       currentEventShowing: {},
 
+      currentPersona: useCurrentPersona('get').name || 'Aucune',
     }
   },
   computed: {
@@ -149,23 +158,44 @@ export default {
       'getFormatEventByWeek',
     ]),
     ...mapState(usePersonaStore, ['getPersonas']),
-    isTodayIsInInterval() : any {
+    isTodayIsInInterval(): any {
       return this.getDatesInWeek.includes(new Date().toISOString().split('T')[0]);
     },
-    limitShowDaysCpt() : any[] {
+    limitShowDaysCpt(): any[] {
       if (!this.mobileView) {
         return this.getDatesInWeek.slice(0, 5);
       }
       return this.getDatesInWeek.slice(this.showDayIndex, this.showDayIndex + 1);
     },
-    limitShowDaysEvents() : any {
+    limitShowDaysEvents(): any {
       if (!this.mobileView) {
         return this.getFormatEventByWeek.slice(0, 5);
       }
       return this.getFormatEventByWeek.slice(this.showDayIndex, this.showDayIndex + 1);
     },
+    getFavoritesResults() {
+      const favoritePersonas = useFavoritesPersonas('get');
+      const currentPersona = useCurrentPersona('get');
+      return favoritePersonas.map((persona: IPersona) => {
+        return {
+          group_id: persona.group_id,
+          name: persona.name,
+          id: persona.id,
+        }
+      })
+    },
     getSearchResults() {
-      return this.getPersonas.map((category: IGroupe) => {
+      const currentPersona = useCurrentPersona('get');
+      let personas = this.getPersonas;
+      // if (currentPersona) {
+      //   personas = personas.map((group: IGroupe) => {
+      //     group.data = group.data.filter((persona: IPersona) => persona.id !== currentPersona.id);
+      //     return group;
+      //   });
+      // }
+
+
+      return personas.map((category: IGroupe) => {
         return {
           category: category.category,
           data: category.data.filter((item) => {
@@ -180,7 +210,6 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      this.FETCH_CALENDAR();
       document.addEventListener('keydown', this.handleKeyDown);
       if (typeof window !== 'undefined') window.addEventListener('resize', this.handleResize);
       this.handleResize();
@@ -193,8 +222,10 @@ export default {
     if (typeof window !== 'undefined') window.removeEventListener('resize', this.handleResize);
   },
   methods: {
-    setCurrentPersona(persona) {
-      console.log(persona);
+    setCurrentPersona(persona: IPersona) {
+      this.currentPersona = persona.name;
+      useCurrentPersona('set', persona);
+      this.FETCH_CALENDAR();
     },
     SHOW_NEXT_DAY() {
       if (this.showDayIndex < 4) {
@@ -265,7 +296,7 @@ export default {
       }
     },
     handleResize() {
-      this.mobileView = window.innerWidth < 1200;
+      this.mobileView = window.innerWidth < 800;
     },
   },
 }

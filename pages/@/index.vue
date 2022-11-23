@@ -1,7 +1,7 @@
 <template>
   <div class="Home">
     <Transition>
-      <LoadingScreen v-if="getCalendar.length === 0"/>
+      <LoadingScreen v-if="getCalendar.length === 0 && havePersona"/>
     </Transition>
     <Calendar/>
   </div>
@@ -16,23 +16,31 @@ import {useCalendarStore} from "~/store/calendarStore";
 import LoadingScreen from "~/components/Loader/LoadingScreen.vue";
 import NotificationGroup from "~/components/Notifications/NotificationGroup.vue";
 import Notification from "~/components/Notifications/Notification.vue";
+import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
 
 export default {
   name: "edt",
   components: {Notification, NotificationGroup, LoadingScreen, Calendar, Button},
+  mounted() {
+    this.FETCH_CALENDAR();
+  },
+  methods: {
+    ...mapActions(useCalendarStore, ['FETCH_CALENDAR'])
+  },
   computed: {
-    ...mapState(useCalendarStore, ['getCalendar'])
+    ...mapState(useCalendarStore, ['getCalendar']),
+    havePersona(){
+      return useCurrentPersona('get') === {}
+    }
   },
 };
 </script>
 
 <style lang="scss">
-html {
-  background: #181922;
-}
+
 
 .Home {
   width: 100%;
-  color: white;
+  color: var(--primary-color);
 }
 </style>

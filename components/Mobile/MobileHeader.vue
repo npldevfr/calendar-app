@@ -31,7 +31,7 @@ export default defineComponent({
   border-bottom: 1px solid #2C2D3C;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 800px) {
   .MobileHeader {
     display: none;
   }
