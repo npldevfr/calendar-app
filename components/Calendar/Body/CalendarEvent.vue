@@ -180,7 +180,7 @@ export default {
   }
 
   &Selected {
-    background: var(--primary-hover) !important;
+    border: 10px solid white;
   }
 
   &Special {

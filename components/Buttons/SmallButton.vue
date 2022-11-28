@@ -21,7 +21,7 @@ export default defineComponent({
       required: false,
     },
     type: {
-      type: String as PropType<"Secondary" | "Transparent">,
+      type: String as PropType<"Secondary" | "Transparent" | "Primary">,
       default: "Secondary",
       required: false,
     },
@@ -63,6 +63,19 @@ export default defineComponent({
 
 
   &Type {
+
+    &Primary {
+
+      background: var(--primary);
+      border: 1px solid var(--primary);
+      color: var(--primary-color);
+
+      &:hover {
+        background: var(--primary-hover);
+        border: 1px solid var(--primary-hover);
+      }
+    }
+
     &Secondary {
       background: #292A35;
       border: 1px solid #313248;
