@@ -180,7 +180,7 @@ export default {
   }
 
   &Selected {
-    border: 10px solid white;
+    //border: 10px solid white;
   }
 
   &Special {

@@ -5,7 +5,7 @@
         <div class="ModalBackdrop">
           <Transition appear name="bounce">
             <OnClickOutside class="Modal" @trigger="close">
-              <div class="ModalHeader ModalPadding" v-if="$slots.header">
+              <div class="ModalHeader" v-if="$slots.header">
                 <slot name="header"/>
               </div>
               <ModalSeparator v-if="$slots.header && $slots.body"/>
@@ -62,7 +62,10 @@ export default defineComponent({
   },
   watch: {
     show: function (state: boolean) {
-      state ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
+      state ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
+    },
+    forceShow: function (state: boolean) {
+      state ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
     }
   },
   methods: {
@@ -161,7 +164,7 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0;
+    padding: 20px 10px;
   }
 
   &Backdrop {

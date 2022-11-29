@@ -32,14 +32,15 @@ export default defineComponent({
   },
   computed: {
     isNameMatchingValue() {
-      if (this.matchValue.length > 0) {
-        const regex = new RegExp(this.matchValue, "gi");
-        return this.label.replace(regex, (match) => {
-          return `<span style="font-weight: 700; color: cyan">${match}</span>`;
-        });
-      } else {
-        return this.label;
-      }
+      return this.label;
+      // if (this.matchValue.length > 0) {
+      //   const regex = new RegExp(this.matchValue, "gi");
+      //   return this.label.replace(regex, (match) => {
+      //     return `<span style="font-weight: 700; color: cyan">${match}</span>`;
+      //   });
+      // } else {
+      //   return this.label;
+      // }
     },
   }
 })
