@@ -5,6 +5,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "test": "vitest",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
@@ -14,7 +15,8 @@
     "@vueuse/core": "^9.3.1",
     "@vueuse/nuxt": "^9.3.1",
     "nuxt": "3.0.0",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "vitest": "^0.25.3"
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.33.1",
