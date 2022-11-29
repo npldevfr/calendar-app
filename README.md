@@ -1,4 +1,4 @@
-[![CI](https://github.com/npldevfr/calendar-app/actions/workflows/node.js.yml/badge.svg?branch=production&event=discussion)](https://github.com/npldevfr/calendar-app/actions/workflows/node.js.yml)
+[![CI](https://github.com/npldevfr/calendar-app/actions/workflows/node.js.yml/badge.svg?branch=production)](https://github.com/npldevfr/calendar-app/actions/workflows/node.js.yml)
 
 
 # EDT IUT Nantes
