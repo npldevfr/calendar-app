@@ -1,6 +1,6 @@
 import {defineStore} from "pinia";
 import {useFetch} from "#imports";
-import {useNuxtApp, useRuntimeConfig} from "#app";
+import {useRuntimeConfig} from "#app";
 import {IGroupe} from "~/types/Group.interface";
 
 export const usePersonaStore = defineStore('persona', {

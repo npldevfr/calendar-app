@@ -1,12 +1,12 @@
 <template>
   <div class="DropdownItem">
     <div v-html="isMatchingValue"/>
-    <div @click.stop="setFavorite" v-if="!isFavorite">
-      <Favorite />
-    </div>
-    <div @click.stop="removeFavorite" v-else>
-      <Favorite is-favorite/>
-    </div>
+<!--    <div @click.stop="setFavorite" v-if="!isFavorite">-->
+<!--      <Favorite />-->
+<!--    </div>-->
+<!--    <div @click.stop="removeFavorite" v-else>-->
+<!--      <Favorite is-favorite/>-->
+<!--    </div>-->
   </div>
 </template>
 

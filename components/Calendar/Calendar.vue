@@ -156,8 +156,9 @@ import {IGroupe} from "~/types/Group.interface";
 import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
 import {IPersona} from "~/types/Persona.interface";
 import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
+import {defineComponent} from "#imports";
 
-export default {
+export default defineComponent({
   name: 'Calendar',
   components: {SidebarBackdrop, Button, MainHeader, SmallButton, Sidebar},
   data() {
@@ -210,15 +211,7 @@ export default {
       })
     },
     getSearchResults() {
-      const currentPersona = useCurrentPersona('get');
       let personas = this.getPersonas;
-      // if (currentPersona) {
-      //   personas = personas.map((group: IGroupe) => {
-      //     group.data = group.data.filter((persona: IPersona) => persona.id !== currentPersona.id);
-      //     return group;
-      //   });
-      // }
-
 
       return personas.map((category: IGroupe) => {
         return {
@@ -247,13 +240,13 @@ export default {
     if (typeof window !== 'undefined') window.removeEventListener('resize', this.handleResize);
   },
   methods: {
-    setCurrentPersona(persona: IPersona) {
+    setCurrentPersona(persona: IPersona): void {
       this.currentPersona = persona.name;
       this.modalPersonaState = false;
       useCurrentPersona('set', persona);
       this.FETCH_CALENDAR();
     },
-    SHOW_NEXT_DAY() {
+    SHOW_NEXT_DAY(): void {
       if (this.showDayIndex < 4) {
         this.showDayIndex++;
       } else {
@@ -261,7 +254,7 @@ export default {
         this.NEXT_WEEK();
       }
     },
-    SHOW_PREVIOUS_DAY() {
+    SHOW_PREVIOUS_DAY(): void {
       if (this.showDayIndex > 0) {
         this.showDayIndex--;
       } else {
@@ -273,10 +266,10 @@ export default {
       'FETCH_CALENDAR', 'NEXT_WEEK', 'PREVIOUS_WEEK',
       'GO_BACK_TO_TODAY', 'SET_SELECTED_EVENT'
     ]),
-    tryCloseSidebar() {
+    tryCloseSidebar(): void {
       this.sidebarEventState = false;
     },
-    initDayIndex() {
+    initDayIndex(): void {
       if (this.isTodayIsInInterval) {
         this.showDayIndex = this.getDatesInWeek.indexOf(new Date().toISOString().split('T')[0]);
       }
@@ -321,11 +314,11 @@ export default {
           break;
       }
     },
-    handleResize() {
+    handleResize(): void {
       this.mobileView = window.innerWidth < 800;
     },
   },
-}
+});
 </script>
 
 <style lang="scss" scoped>
