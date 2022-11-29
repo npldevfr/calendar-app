@@ -16,15 +16,21 @@ jobs:
         node-version: [16.x]
 
     steps:
-    - name: Install pnpm
-      uses: pnpm/action-setup@v2.2.4
-      
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Install Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
+       node-version: 16
+
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 7
+        run_install: false
+
     - run: pnpm install
     - run: pnpm run build
     - run: pnpm run test
