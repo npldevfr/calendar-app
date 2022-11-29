@@ -1,5 +1,35 @@
 <template>
   <div>
+
+    <Modal :show="modalPersonaState"
+           keyboard-key="k"
+           title="title"
+           @close="modalPersonaState = false">
+      <template v-slot:header>
+        <Input ref="input" v-model:model-value="searchEngine" placeholder="Chercher par personne, groupe"/>
+      </template>
+
+      <template v-slot:body>
+        <ModalGroup v-for="(list, idx) in getSearchResults" :key="idx" v-if="getSearchResults.length">
+          <ModalCategory :label="list.category" v-if="list.data.length > 0"/>
+          <ModalItem v-for="(item, idx) in list.data.slice(0, 5)"
+                     :match-value="searchEngine"
+                     :key="idx"
+                     :label="item.name"
+                     :persona="item"
+                     @click="setCurrentPersona(item)"/>
+          <ModalMoreResult :more-results="list.data.length - 5" v-if="list.data.length > 5"/>
+        </ModalGroup>
+        <template v-else>
+          <ModalCategory label="Aucun résultat"/>
+        </template>
+      </template>
+
+      <template v-slot:footer>
+        <Button type="Secondary" label="Fermer" @click="modalPersonaState = false" />
+      </template>
+    </Modal>
+
     <div class="LoginHeader">
       <EDTLogo/>
 
@@ -17,15 +47,17 @@
       <h1>Bienvenue</h1>
       <h3>Sélectionnez votre groupe pour accéder à l'emploi du temps</h3>
       <div class="LoginContent">
-        <Button type="Secondary" label="Sélectionner mon groupe">
+        <Button type="Secondary" label="Sélectionner mon groupe" @click="modalPersonaState = true">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="fillCurrent" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.55556 0C1.143 0 0.747335 0.163889 0.455612 0.455612C0.163889 0.747335 0 1.143 0 1.55556V12.4444C0 12.857 0.163889 13.2527 0.455612 13.5444C0.747335 13.8361 1.143 14 1.55556 14H12.4444C12.857 14 13.2527 13.8361 13.5444 13.5444C13.8361 13.2527 14 12.857 14 12.4444V1.55556C14 1.143 13.8361 0.747335 13.5444 0.455612C13.2527 0.163889 12.857 0 12.4444 0H1.55556ZM7 10.8889V7.77778L3.11111 7.77778V6.22222L7 6.22222L7 3.11111L10.8889 7L7 10.8889Z" fill="fillCurrent"/>
           </svg>
+
+          <SmallButton label="BETA" type="Secondary" />
         </Button>
 
       </div>
       <div class="LoginActions">
-        v{{ version }}-{{ getYear }} &mdash; Made with ❤️ by <a href="https://instagram.com/n.gllt__" target="_blank">@n.gllt__</a>
+        v{{ version }}-{{ getYear }}  &mdash; BETA TEST &mdash; Made by <a href="https://instagram.com/n.gllt__" target="_blank">@n.gllt__</a>
       </div>
     </div>
   </div>
@@ -36,10 +68,22 @@
 import EDTLogo from "~/components/Logo/EDTLogo.vue";
 import Button from "~/components/Buttons/Button.vue";
 import {version} from '../package.json'
+import SmallButton from "~/components/Buttons/SmallButton.vue";
+import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
+import {IPersona} from "~/types/Persona.interface";
+import {mapState} from "pinia";
+import {usePersonaStore} from "~/store/personaStore";
+import {IGroupe} from "~/types/Group.interface";
 
 export default {
   name: "index",
-  components: {Button, EDTLogo},
+  components: {SmallButton, Button, EDTLogo},
+  data(){
+    return {
+      modalPersonaState: false,
+      searchEngine: '',
+    }
+  },
   mounted() {
     if (window !== undefined) {
       window.addEventListener("resize", this.onResize);
@@ -54,6 +98,19 @@ export default {
     if (window !== undefined) window.removeEventListener("resize", this.onResize);
   },
   computed: {
+    ...mapState(usePersonaStore, ["getPersonas"]),
+    getSearchResults() {
+      let personas = this.getPersonas;
+
+      return personas.map((category: IGroupe) => {
+        return {
+          category: category.category,
+          data: category.data.filter((item) => {
+            return item.name.toLowerCase().includes(this.searchEngine.toLowerCase())
+          })
+        }
+      })
+    },
     version() {
       return version;
     },
@@ -66,6 +123,10 @@ export default {
       if (window.innerWidth > 800) {
         this.$router.push({name: '@'});
       }
+    },
+    setCurrentPersona(persona: IPersona) {
+      useCurrentPersona("set", persona);
+      this.$router.push({name: '@'});
     },
   }
 }

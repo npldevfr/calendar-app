@@ -75,10 +75,14 @@ export default defineComponent({
 
     transition: all 0.2s ease-in-out;
     padding: 10px;
-    border: 1px solid #313248;
+    width: 100%;
+    border: 1px solid transparent;
     border-radius: 4px;
-    background: #1b1c25;
+    background: var(--secondary-border);
     color: #D2D3E0;
+    &::placeholder {
+      color: #D2D3E0;
+    }
 
     &:focus {
       outline: none;

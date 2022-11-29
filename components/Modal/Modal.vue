@@ -1,17 +1,19 @@
 <template>
   <Teleport to="body">
     <Transition appear>
-      <template v-if="show">
+      <template v-if="show || forceShow">
         <div class="ModalBackdrop">
           <Transition appear name="bounce">
             <OnClickOutside class="Modal" @trigger="close">
-              <div class="ModalHeader ModalPadding" v-if="$slots.header">
-                <slot name="header" />
+              <div class="ModalHeader" v-if="$slots.header">
+                <slot name="header"/>
               </div>
+              <ModalSeparator v-if="$slots.header && $slots.body"/>
               <div class="ModalContent" v-if="$slots.body">
                 <slot name="body"/>
               </div>
-              <div class="ModalFooter" v-if="$slots.footer" :validate="validate" :close="close">
+              <ModalSeparator v-if="$slots.body && $slots.footer"/>
+              <div class="ModalFooter" v-if="$slots.footer">
                 <slot name="footer" />
               </div>
             </OnClickOutside>
@@ -29,7 +31,7 @@ import {OnClickOutside} from '@vueuse/components'
 export default defineComponent({
   name: "Modal",
   components: {OnClickOutside},
-  emits: ["close", "validate"],
+  emits: ["close", "validate", "opened"],
   props: {
     show: {
       type: Boolean,
@@ -40,6 +42,16 @@ export default defineComponent({
       type: String,
       required: true,
       default: ''
+    },
+    keyboardKey: {
+      type: String,
+      required: false,
+      default: ''
+    }
+  },
+  data() {
+    return {
+      forceShow: false
     }
   },
   mounted() {
@@ -50,7 +62,10 @@ export default defineComponent({
   },
   watch: {
     show: function (state: boolean) {
-      state ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
+      state ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
+    },
+    forceShow: function (state: boolean) {
+      state ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
     }
   },
   methods: {
@@ -58,11 +73,17 @@ export default defineComponent({
       if (event.key === 'Escape') {
         this.close();
       }
+
+      if (this.keyboardKey && event.ctrlKey && event.key === this.keyboardKey) {
+        this.forceShow ? this.close() : this.forceShow = true;
+      }
     },
     close() {
+      this.forceShow = false;
       this.$emit('close')
     },
     validate() {
+      this.forceShow = false;
       this.$emit('validate')
     }
   }
@@ -72,7 +93,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 
 .Modal {
-  background: var(--secondary);
+  background: var(--bg-color);
   height: auto;
   border: 1px solid var(--secondary-border);
   z-index: 1000;
@@ -133,8 +154,8 @@ export default defineComponent({
   &Footer {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
     gap: 10px;
   }
@@ -143,11 +164,11 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0;
+    padding: 20px 10px;
   }
 
   &Backdrop {
-    position: fixed;
+    position: absolute;
     display: flex;
     padding: 5% 0;
     align-items: self-start;
@@ -156,31 +177,27 @@ export default defineComponent({
     z-index: 500;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.20);
+    background: rgba(0, 0, 0, 0.40);
     backdrop-filter: blur(2px);
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .Modal {
     border-radius: 0;
     inset: 0;
-    top: 0;
     height: 100%;
   }
-
-  .ModalBackdrop {
-    padding: 0;
-  }
 }
-
 
 .bounce-enter-active {
   animation: bounce-in 0.25s;
 }
+
 .bounce-leave-active {
   animation: bounce-in 0.10s reverse;
 }
+
 @keyframes bounce-in {
   0% {
     transform: scale(0.9);

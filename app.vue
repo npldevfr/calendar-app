@@ -5,13 +5,14 @@
         <Html lang="fr"/>
         <title></title>
       </Head>
-      <ColorScheme placeholder="..." tag="span">
-        <select v-model="$colorMode.preference" style="position: fixed; z-index: 9999">
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-          <option value="system">System</option>
-        </select>
-      </ColorScheme>
+
+<!--      <ColorScheme placeholder="..." tag="span">-->
+<!--        <select v-model="$colorMode.preference" style="position: fixed; z-index: 9999">-->
+<!--          <option value="light">Light</option>-->
+<!--          <option value="dark">Dark</option>-->
+<!--          <option value="system">System</option>-->
+<!--        </select>-->
+<!--      </ColorScheme>-->
       <NuxtPage/>
       <NotificationGroup v-if="getNotifications.length">
         <Notification v-for="(notification, idx) in getNotifications" :key="idx" :label="notification"/>
