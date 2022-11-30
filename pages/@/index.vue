@@ -1,5 +1,5 @@
 <template>
-  <div class="Home">
+  <div class="Home" id="calendar">
     <Transition>
       <LoadingScreen v-if="getCalendar.length === 0 && havePersona"/>
     </Transition>
