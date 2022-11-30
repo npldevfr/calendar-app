@@ -13,8 +13,8 @@ export default defineNuxtConfig({
     colorMode: {
         classSuffix: '-mode',
         classPrefix: '',
-        fallback: 'light',
-        preference: 'system',
+        fallback: 'black',
+        preference: 'black',
         storageKey: 'edtColorMode'
     },
 
