@@ -9,6 +9,8 @@
            :value="modelValue"
            @keydown.enter="$emit('enter')"
            @input="updateInput" />
+
+    <Icon name="material-symbols:close" @click="resetInput" v-if="modelValue.length > 0" />
   </div>
 </template>
 
@@ -53,6 +55,9 @@ export default defineComponent({
     }
   },
   methods: {
+    resetInput() {
+      this.$emit("update:modelValue", "");
+    },
     updateInput(event: any) {
       // if (this.maxLength > 0 && event.target.value.length > this.maxLength) {
       //   event.target.value = event.target.value.substring(0, this.maxLength);
@@ -69,17 +74,27 @@ export default defineComponent({
 <style lang="scss" scoped>
 .Input {
 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
+  background: var(--secondary-border);
+  color: #D2D3E0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 0 10px 0 0;
+
 
   input {
+    color: #D2D3E0;
 
+    background: var(--secondary-border);
     transition: all 0.2s ease-in-out;
+    border: 1px solid transparent;
+    margin-right: 10px;
+    border-radius: 4px;
     padding: 10px;
     width: 100%;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background: var(--secondary-border);
-    color: #D2D3E0;
     &::placeholder {
       color: #D2D3E0;
     }

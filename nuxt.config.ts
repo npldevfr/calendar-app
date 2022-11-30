@@ -7,7 +7,8 @@ export default defineNuxtConfig({
         '@vueuse/nuxt',
         '@pinia/nuxt',
         '@kevinmarrec/nuxt-pwa',
-        '@nuxtjs/color-mode'
+        '@nuxtjs/color-mode',
+        'nuxt-icon'
     ],
 
     colorMode: {

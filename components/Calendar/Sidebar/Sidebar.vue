@@ -24,6 +24,10 @@
         </svg>
         <div>{{ getEvent.extendedProps.props['Personnel'] }}</div>
       </div>
+      <div class="SidebarEventPersonal">
+        <Icon name="ic:baseline-location-on" />
+        <div>{{ getEvent.extendedProps.location }}</div>
+      </div>
       <div class="SidebarEventTime">
         <TimeSpanText :hour="getEvent.start.toString()"/>
         ➔

@@ -15,6 +15,7 @@
     "@vueuse/core": "^9.3.1",
     "@vueuse/nuxt": "^9.3.1",
     "nuxt": "3.0.0",
+    "nuxt-icon": "^0.1.7",
     "sass": "^1.55.0",
     "vitest": "^0.25.3"
   },

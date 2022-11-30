@@ -13,6 +13,7 @@ specifiers:
   moment: ^2.29.4
   moment-timezone: ^0.5.39
   nuxt: 3.0.0
+  nuxt-icon: ^0.1.7
   pinia: ^2.0.23
   sass: ^1.55.0
   vitest: ^0.25.3
@@ -35,6 +36,7 @@ devDependencies:
   '@vueuse/core': 9.5.0
   '@vueuse/nuxt': 9.5.0_nuxt@3.0.0
   nuxt: 3.0.0_sass@1.56.1
+  nuxt-icon: 0.1.7
   sass: 1.56.1
   vitest: 0.25.3_jsdom@20.0.3+sass@1.56.1
 
@@ -325,6 +327,18 @@ packages:
     os: [linux]
     requiresBuild: true
     optional: true
+
+  /@iconify/types/2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+    dev: true
+
+  /@iconify/vue/4.0.1:
+    resolution: {integrity: sha512-k4VwcSQpGqJpoyqENRRviFuXlVcquLvQ6BKLNJ6o2amZo7u+3HyALSO79Xyz7Sg68szQGstOk6weaKUF0DJbog==}
+    peerDependencies:
+      vue: '>=3'
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@ioredis/commands/1.2.0:
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
@@ -3188,6 +3202,17 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
+
+  /nuxt-icon/0.1.7:
+    resolution: {integrity: sha512-JQ2OKKulcDAUMiPY3Q4YaXncL5de9fiVdrgXKnNZU3Cs2VbR//RAR9xt90+hpmVzDSdEB5UXIJLnWc5uBxm/hw==}
+    dependencies:
+      '@iconify/vue': 4.0.1
+      '@nuxt/kit': 3.0.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - vue
+    dev: true
 
   /nuxt/3.0.0_sass@1.56.1:
     resolution: {integrity: sha512-RNlD78uv04ZiXWmlx9f1tnJfrqsYAWHU+4gbgOTQpIBmQzHWPWiox+fm/1m93iKfEd5sJi9TJUoXX5yBObVZYw==}
