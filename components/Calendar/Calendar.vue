@@ -158,7 +158,6 @@ import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
 import {IPersona} from "~/types/Persona.interface";
 import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
 import {defineComponent} from "#imports";
-import {SwipeDirection, useSwipe} from "@vueuse/core";
 
 export default defineComponent({
   name: 'Calendar',
@@ -240,27 +239,6 @@ export default defineComponent({
   beforeDestroy() {
     document.removeEventListener('keydown', this.handleKeyDown);
     if (typeof window !== 'undefined') window.removeEventListener('resize', this.handleResize);
-  },
-  setup() {
-    const el = document.querySelector('#calendar');
-    const {isSwiping, direction} = useSwipe(el, {
-      threshold: 100,
-      onSwipe: (e) => {
-        console.log(e)
-      },
-      onSwipeEnd: (e, direction: SwipeDirection) => {
-        if (direction === 'LEFT') {
-          this.SHOW_PREVIOUS_DAY();
-        } else if (direction === 'RIGHT') {
-          this.SHOW_NEXT_DAY();
-        }
-      },
-    })
-
-    return {
-      isSwiping,
-      direction,
-    }
   },
   methods: {
     setCurrentPersona(persona: IPersona): void {
