@@ -93,10 +93,10 @@
     </MobileHeader>
     <MainHeader>
       <template #left>
-        <Button @click="PREVIOUS_WEEK(); this.showDayIndex = 0" label="Semaine précédente"/>
+        <Button @click="PREVIOUS_WEEK(); this.showDayIndex = 0" type="Secondary" label="Semaine précédente"/>
         <Button @click="GO_BACK_TO_TODAY(); this.initDayIndex()" v-if="!isTodayIsInInterval" type="Secondary"
                 label="Semaine actuelle"/>
-        <Button @click="NEXT_WEEK(); this.showDayIndex = 0" label="Semaine suivante"/>
+        <Button @click="NEXT_WEEK(); this.showDayIndex = 0" type="Secondary" label="Semaine suivante"/>
       </template>
 
       <template #right>
