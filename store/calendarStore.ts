@@ -149,11 +149,11 @@ export const useCalendarStore = defineStore('calendar', {
         NEXT_WEEK(): void {
             this.weekInterval = useWeekInterval('next', this.weekInterval);
         },
-        async FETCH_CALENDAR(): Promise<void> {
+        async FETCH_CALENDAR(groupId: string): Promise<void> {
             this.calendar = [] as IWeek[];
-            const {group_id} = useCurrentPersona('get');
-            if (!group_id) return;
-            const {data: events} = await useFetch(useRuntimeConfig().public.API_BASE_URL + `/events-by-group/${group_id}`, {
+            // const {group_id} = useCurrentPersona('get');
+            if (!groupId) return;
+            const {data: events} = await useFetch(useRuntimeConfig().public.API_BASE_URL + `/events-by-group/${groupId}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

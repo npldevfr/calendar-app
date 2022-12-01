@@ -10,6 +10,13 @@
       </template>
 
       <template v-slot:body>
+        <ModalGroup v-if="hasFavorites">
+          <ModalCategory label="Favoris"/>
+          <ModalItem v-for="(persona, idx) in getFavorites" :key="idx"
+                     :persona="persona"
+                     :label="persona.name"
+                     @click="setCurrentPersona(persona)"/>
+        </ModalGroup>
         <ModalGroup v-for="(list, idx) in getSearchResults" :key="idx" v-if="getSearchResults.length">
           <ModalCategory :label="list.category" v-if="list.data.length > 0"/>
           <ModalItem v-for="(item, idx) in list.data.slice(0, 5)"
@@ -26,7 +33,7 @@
       </template>
 
       <template v-slot:footer>
-        <Button type="Secondary" label="Fermer" @click="modalPersonaState = false" />
+        <Button type="Secondary" label="Fermer" @click="modalPersonaState = false"/>
       </template>
     </Modal>
 
@@ -49,15 +56,18 @@
       <div class="LoginContent">
         <Button type="Secondary" label="Sélectionner mon groupe" @click="modalPersonaState = true">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="fillCurrent" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.55556 0C1.143 0 0.747335 0.163889 0.455612 0.455612C0.163889 0.747335 0 1.143 0 1.55556V12.4444C0 12.857 0.163889 13.2527 0.455612 13.5444C0.747335 13.8361 1.143 14 1.55556 14H12.4444C12.857 14 13.2527 13.8361 13.5444 13.5444C13.8361 13.2527 14 12.857 14 12.4444V1.55556C14 1.143 13.8361 0.747335 13.5444 0.455612C13.2527 0.163889 12.857 0 12.4444 0H1.55556ZM7 10.8889V7.77778L3.11111 7.77778V6.22222L7 6.22222L7 3.11111L10.8889 7L7 10.8889Z" fill="fillCurrent"/>
+            <path
+                d="M1.55556 0C1.143 0 0.747335 0.163889 0.455612 0.455612C0.163889 0.747335 0 1.143 0 1.55556V12.4444C0 12.857 0.163889 13.2527 0.455612 13.5444C0.747335 13.8361 1.143 14 1.55556 14H12.4444C12.857 14 13.2527 13.8361 13.5444 13.5444C13.8361 13.2527 14 12.857 14 12.4444V1.55556C14 1.143 13.8361 0.747335 13.5444 0.455612C13.2527 0.163889 12.857 0 12.4444 0H1.55556ZM7 10.8889V7.77778L3.11111 7.77778V6.22222L7 6.22222L7 3.11111L10.8889 7L7 10.8889Z"
+                fill="fillCurrent"/>
           </svg>
 
-          <SmallButton label="BETA" type="Secondary" />
+          <SmallButton label="BETA" type="Secondary"/>
         </Button>
 
       </div>
       <div class="LoginActions">
-        v{{ version }}-{{ getYear }}  &mdash; BETA TEST &mdash; Made by <a href="https://instagram.com/n.gllt__" target="_blank">@n.gllt__</a>
+        v{{ version }}-{{ getYear }} &mdash; BETA TEST &mdash; Made by <a href="https://instagram.com/n.gllt__"
+                                                                          target="_blank">@n.gllt__</a>
       </div>
     </div>
   </div>
@@ -74,28 +84,16 @@ import {IPersona} from "~/types/Persona.interface";
 import {mapState} from "pinia";
 import {usePersonaStore} from "~/store/personaStore";
 import {IGroupe} from "~/types/Group.interface";
+import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
 
 export default {
   name: "index",
   components: {SmallButton, Button, EDTLogo},
-  data(){
+  data() {
     return {
       modalPersonaState: false,
       searchEngine: '',
     }
-  },
-  mounted() {
-    if (window !== undefined) {
-      window.addEventListener("resize", this.onResize);
-      this.onResize();
-    }
-    // check if localstorage has value groupId and redirect to edt page
-    if (localStorage.getItem('groupId') && localStorage.getItem('groupId') !== 'null') {
-      this.$router.push({name: '@'});
-    }
-  },
-  beforeUnmount() {
-    if (window !== undefined) window.removeEventListener("resize", this.onResize);
   },
   computed: {
     ...mapState(usePersonaStore, ["getPersonas"]),
@@ -118,15 +116,26 @@ export default {
       return new Date().getFullYear();
     },
   },
+  setup() {
+    const favoritesPersonas = useFavoritePersonaStore()
+
+    const hasFavorites = computed(() => favoritesPersonas.getFavoritePersona.length > 0)
+    const getFavorites = computed(() => favoritesPersonas.getFavoritePersona)
+
+    return {
+      hasFavorites,
+      getFavorites,
+    }
+  },
   methods: {
-    onResize() {
-      if (window.innerWidth > 800) {
-        this.$router.push({name: '@'});
-      }
-    },
+    // onResize() {
+    //   if (window.innerWidth > 800) {
+    //     // this.$router.push({name: ''});
+    //   }
+    // },
     setCurrentPersona(persona: IPersona) {
       useCurrentPersona("set", persona);
-      this.$router.push({name: '@'});
+      this.$router.push({name: '@-groupId', params: {groupId: persona.group_id}});
     },
   }
 }
@@ -135,12 +144,11 @@ export default {
 <style lang="scss">
 
 
-
 .Login {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-  align-items: self-start;
+  align-items: center;
   justify-content: center;
   position: fixed;
   padding: 100px 35px;

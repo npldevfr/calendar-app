@@ -10,6 +10,7 @@ export const usePersonaStore = defineStore('persona', {
     }),
     getters: {
         getPersonas: (state) => state.personas,
+        getPersonaById: (state) => (id: string) => state.personas.flatMap((persona) => persona.data).find((group) => group.group_id === id),
     },
     actions: {
         FETCH_PERSONAS: async () => {

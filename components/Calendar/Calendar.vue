@@ -3,6 +3,21 @@
     <Title>EDT ({{ currentPersona }})</Title>
   </Head>
   <ClientOnly>
+    <Modal :show="modalShareState" @close="modalShareState = false">
+      <template v-slot:header>
+        <ModalTitle label="Partager"/>
+      </template>
+      <template v-slot:body>
+        <ModalContainer>
+          <img :src="qrcode" alt="qrcode" style="border-radius: 10px;"/>
+        </ModalContainer>
+      </template>
+      <template v-slot:footer>
+        <Button type="Secondary" label="Fermer" @click="modalShareState = false"/>
+      </template>
+    </Modal>
+
+
     <Modal :show="modalPersonaState"
            keyboard-key="k"
            title="title"
@@ -40,10 +55,14 @@
     </Modal>
     <MobileHeader>
       <template #left>
-        <SmallButton type="Transparent" :label="currentPersona" dropdown
+        <SmallButton type="Secondary" :label="currentPersona" dropdown
                      @click="modalPersonaState = !modalPersonaState"/>
       </template>
       <template #right>
+        <SmallButton type="Transparent" @click="modalShareState = !modalShareState">
+          <!-- icon share -->
+          <Icon name="ri:share-fill"/>
+        </SmallButton>
         <!--        <SmallButton label="Paramètres">-->
         <!--          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">-->
         <!--            <path-->
@@ -166,6 +185,7 @@ import {IPersona} from "~/types/Persona.interface";
 import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
 import {defineComponent} from "#imports";
 import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
+import {useQRCode} from '@vueuse/integrations/useQRCode'
 
 export default defineComponent({
   name: 'Calendar',
@@ -174,6 +194,7 @@ export default defineComponent({
     return {
       dropdownState: false,
       modalPersonaState: false,
+      modalShareState: false,
 
       mobileView: false,
       limitShowDays: 1,
@@ -192,7 +213,13 @@ export default defineComponent({
     const hasFavorites = computed(() => favoritesPersonas.getFavoritePersona.length > 0)
     const getFavorites = computed(() => favoritesPersonas.getFavoritePersona)
 
+
+    const windowUrl = window.location.href
+    const qrcode = useQRCode(windowUrl)
+
+
     return {
+      qrcode,
       hasFavorites,
       getFavorites,
     }
@@ -264,7 +291,7 @@ export default defineComponent({
       this.currentPersona = persona.name;
       this.modalPersonaState = false;
       useCurrentPersona('set', persona);
-      this.FETCH_CALENDAR();
+      this.$router.push({name: '@-groupId', params: {groupId: persona.group_id}});
     },
     SHOW_NEXT_DAY(): void {
       if (this.showDayIndex < 4) {

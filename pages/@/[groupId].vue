@@ -17,18 +17,24 @@ import LoadingScreen from "~/components/Loader/LoadingScreen.vue";
 import NotificationGroup from "~/components/Notifications/NotificationGroup.vue";
 import Notification from "~/components/Notifications/Notification.vue";
 import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
+import {usePersonaStore} from "~/store/personaStore";
 
 export default {
   name: "edt",
   components: {Notification, NotificationGroup, LoadingScreen, Calendar, Button},
   mounted() {
-    this.FETCH_CALENDAR();
+    if (this.$route.params.groupId) {
+      this.FETCH_CALENDAR(this.$route.params.groupId);
+    } else {
+      this.$router.push({name: 'index'});
+    }
   },
   methods: {
-    ...mapActions(useCalendarStore, ['FETCH_CALENDAR'])
+    ...mapActions(useCalendarStore, ['FETCH_CALENDAR']),
   },
   computed: {
     ...mapState(useCalendarStore, ['getCalendar']),
+    ...mapState(usePersonaStore, ['getPersonaById']),
     havePersona(){
       return useCurrentPersona('get') === {}
     }

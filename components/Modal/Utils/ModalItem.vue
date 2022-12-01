@@ -58,12 +58,10 @@ export default defineComponent({
     const favoritePersonaStore = useFavoritePersonaStore();
 
     const addFavorite = () => {
-      console.log('addFavorite')
       favoritePersonaStore.ADD_FAVORITE_PERSONA(props.persona);
     }
 
     const removeFavorite = () => {
-      console.log('removeFavorite')
       favoritePersonaStore.REMOVE_FAVORITE_PERSONA(props.persona);
     }
 

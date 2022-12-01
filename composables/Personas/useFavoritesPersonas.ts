@@ -36,7 +36,6 @@ const useFavoritesPersonas = (action: 'add' | 'remove' | 'get' | 'initialize', p
                 if (!!persona) removeFavorite(persona);
                 break;
             case "initialize":
-                console.log('initialize');
                 initializeFavorites();
                 break;
             case 'get':

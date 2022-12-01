@@ -28,7 +28,15 @@ html {
   //  display: none;
   //}
 
+  .Login {
+    align-items: flex-start !important;
+  }
+
+
   .ModalBackdrop {
+
+    position: fixed;
+    inset: 0;
     padding: 0 !important;
 
 
@@ -40,6 +48,7 @@ html {
         max-height: 80% !important;
 
       }
+
       .ModalFooter {
         background: var(--bg-color);
         position: absolute;

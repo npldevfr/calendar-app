@@ -31,6 +31,7 @@ import {usePersonaStore} from "~/store/personaStore";
 import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
 import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
 import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
+import {IPersona} from "~/types/Persona.interface";
 
 export default {
   name: "app",
@@ -39,20 +40,18 @@ export default {
     ...mapState(useNotificationStore, ['getNotifications'])
   },
   mounted() {
-    this.FETCH_PERSONAS();
     useFavoritesPersonas('initialize')
     useCurrentPersona('initialize')
 
-    const persona = useCurrentPersona('get');
-    if (persona) this.$router.push({name: '@'});
-  },
-  methods: {
-    ...mapActions(usePersonaStore, ['FETCH_PERSONAS'])
+    const persona: IPersona = useCurrentPersona('get');
+    if (persona.group_id) this.$router.push({name: '@-groupId', params: {groupId: persona.group_id}})
   },
   setup() {
     const favoritePersonaStore = useFavoritePersonaStore();
+    const personaStore = usePersonaStore();
     onMounted(() => {
       favoritePersonaStore.REFRESH_FAVORITE_PERSONAS();
+      personaStore.FETCH_PERSONAS();
     });
   }
 }
