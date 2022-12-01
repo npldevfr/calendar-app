@@ -30,6 +30,7 @@ import Notification from "~/components/Notifications/Notification.vue";
 import {usePersonaStore} from "~/store/personaStore";
 import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
 import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
+import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
 
 export default {
   name: "app",
@@ -47,6 +48,12 @@ export default {
   },
   methods: {
     ...mapActions(usePersonaStore, ['FETCH_PERSONAS'])
+  },
+  setup() {
+    const favoritePersonaStore = useFavoritePersonaStore();
+    onMounted(() => {
+      favoritePersonaStore.REFRESH_FAVORITE_PERSONAS();
+    });
   }
 }
 </script>

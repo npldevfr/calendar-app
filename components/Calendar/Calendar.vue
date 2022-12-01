@@ -12,6 +12,13 @@
       </template>
 
       <template v-slot:body>
+        <ModalGroup v-if="hasFavorites">
+          <ModalCategory label="Favoris"/>
+          <ModalItem v-for="(persona, idx) in getFavorites" :key="idx"
+                     :persona="persona"
+                     :label="persona.name"
+                     @click="setCurrentPersona(persona)"/>
+        </ModalGroup>
         <ModalGroup v-for="(list, idx) in getSearchResults" :key="idx" v-if="getSearchResults.length">
           <ModalCategory :label="list.category" v-if="list.data.length > 0"/>
           <ModalItem v-for="(item, idx) in list.data.slice(0, 5)"
@@ -158,6 +165,7 @@ import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
 import {IPersona} from "~/types/Persona.interface";
 import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
 import {defineComponent} from "#imports";
+import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
 
 export default defineComponent({
   name: 'Calendar',
@@ -176,6 +184,17 @@ export default defineComponent({
       currentEventShowing: {},
 
       currentPersona: useCurrentPersona('get').name || 'Aucune',
+    }
+  },
+  setup() {
+    const favoritesPersonas = useFavoritePersonaStore()
+
+    const hasFavorites = computed(() => favoritesPersonas.getFavoritePersona.length > 0)
+    const getFavorites = computed(() => favoritesPersonas.getFavoritePersona)
+
+    return {
+      hasFavorites,
+      getFavorites,
     }
   },
   computed: {
