@@ -25,8 +25,12 @@
         <ModalTitle label="Paramètres de l'application"/>
       </template>
       <template v-slot:body>
-        <ModalContainer alignement="row">
+        <ModalContainer alignement="column">
           <SelectionTheme />
+        </ModalContainer>
+        <ModalSeparator />
+        <ModalContainer alignement="row">
+          <SelectionEventTheme />
         </ModalContainer>
       </template>
       <template v-slot:footer>
@@ -177,10 +181,11 @@ import {defineComponent} from "#imports";
 import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
 import {useQRCode} from '@vueuse/integrations/useQRCode'
 import SelectionTheme from "~/components/Theme/SelectionTheme.vue";
+import SelectionEventTheme from "~/components/Theme/SelectionEventTheme.vue";
 
 export default defineComponent({
   name: 'Calendar',
-  components: {SelectionTheme, SidebarBackdrop, Button, MainHeader, SmallButton, Sidebar},
+  components: {SelectionEventTheme, SelectionTheme, SidebarBackdrop, Button, MainHeader, SmallButton, Sidebar},
   data() {
     return {
       modalSettingsState: false,

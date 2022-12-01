@@ -1,6 +1,6 @@
 <template>
   <div class="CalendarEvent" :class="[isBlacklisted, isSpecial, isOutdated, isSelected]"
-       :style="{top: getTop, bottom: getBottom }">
+       :style="{top: getTop, bottom: getBottom, background: getColor, borderColor: getColor}">
     <div class="CalendarEventNow" v-if="isNow">EN COURS</div>
     <div class="CalendarEventContent">
       <div class="CalendarEventBody">
@@ -20,6 +20,7 @@ import {IEvent} from "~/types/Event.interface";
 import {EVENT_BLACKLIST_WORDS, EVENT_SPECIAL_WORDS} from "~/global.config";
 import {mapState} from "pinia";
 import {useCalendarStore} from "~/store/calendarStore";
+import {useThemeStore} from "~/store/themeStore";
 
 export default {
   name: 'CalendarEvent',
@@ -116,6 +117,18 @@ export default {
       }
       return title;
     }
+  },
+  setup(){
+    const theme = useThemeStore();
+
+    const getColor = computed(() => {
+      return theme.getEventColor;
+    });
+
+    return {
+      getColor
+    }
+
   }
 }
 </script>
@@ -129,8 +142,6 @@ export default {
   right: 5px;
   z-index: 30;
   left: 5px;
-  border: 1px solid var(--primary);
-  background: var(--primary);
   border-radius: 3px;
   display: flex;
   color: var(--primary-color);
@@ -138,9 +149,6 @@ export default {
   flex-direction: column;
   align-items: center;
 
-  &:hover {
-    background: var(--primary-hover);
-  }
 
   &Now {
     position: absolute;

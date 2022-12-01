@@ -25,6 +25,7 @@ import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
 import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
 import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
 import {IPersona} from "~/types/Persona.interface";
+import {useThemeStore} from "~/store/themeStore";
 
 export default {
   name: "app",
@@ -42,9 +43,11 @@ export default {
   setup() {
     const favoritePersonaStore = useFavoritePersonaStore();
     const personaStore = usePersonaStore();
+    const theme = useThemeStore();
     onMounted(() => {
       favoritePersonaStore.REFRESH_FAVORITE_PERSONAS();
       personaStore.FETCH_PERSONAS();
+      theme.REFRESH_EVENT_COLOR();
     });
   }
 }

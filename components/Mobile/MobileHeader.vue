@@ -28,7 +28,7 @@ export default defineComponent({
   padding: 10px;
   gap: 10px;
   width: 100%;
-  border-bottom: 1px solid #2C2D3C;
+  border-bottom: 1px solid var(--secondary-border);
 
   &Side {
     display: flex;
