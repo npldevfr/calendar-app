@@ -1,5 +1,5 @@
 <template>
-  <div class="ModalContainer">
+  <div class="ModalContainer" :style="{flexDirection: alignement}">
     <slot />
   </div>
 </template>
@@ -9,7 +9,13 @@ import {defineComponent} from "vue";
 
 export default defineComponent({
   name: "ModalContainer",
-  props: {}
+  props: {
+    alignement: {
+      type: String as () => 'column' | 'row',
+      required: false,
+      default: 'column'
+    }
+  }
 })
 </script>
 
@@ -17,8 +23,7 @@ export default defineComponent({
 .ModalContainer {
   padding: 1rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 </style>

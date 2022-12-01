@@ -90,7 +90,7 @@ export default defineComponent({
   transition: all 0.2s ease-in-out;
   background: var(--secondary-hover);
   border: 1px solid var(--secondary-hover);
-  color: #D2D3E0;
+  color: var(--secondary-text);
   border-radius: 4px;
   padding: 12px 10px;
   width: 100%;
@@ -107,7 +107,7 @@ export default defineComponent({
     font-size: 15px;
     font-weight: 500;
     letter-spacing: -0.10px;
-    color: #D2D3E0;
+    color: var(--secondary-text);
 
     &Favorite {
       width: 35px;

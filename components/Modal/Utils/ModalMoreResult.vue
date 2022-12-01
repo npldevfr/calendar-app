@@ -25,6 +25,6 @@ export default {
   width: 100%;
   letter-spacing: -0.10px;
   margin-top: 5px;
-  color: white;
+  color: var(--secondary-color);
 }
 </style>

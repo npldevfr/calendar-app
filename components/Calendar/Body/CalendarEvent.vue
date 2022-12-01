@@ -169,12 +169,12 @@ export default {
 
   &Blacklisted,
   &Outdated {
-    background: #292A35 !important;
-    border: 1px solid #313248 !important;
-    color: #D2D3E0;
+    background: var(--secondary) !important;
+    border: 1px solid var(--secondary-border) !important;
+    color: var(--secondary-text);
 
     &:hover {
-      background: #2f2f3d !important;
+      background: var(--secondary-hover) !important;
     }
 
   }

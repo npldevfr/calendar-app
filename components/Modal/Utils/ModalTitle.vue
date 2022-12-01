@@ -21,8 +21,9 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .ModalTitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  padding: 0 15px;
   font-weight: 500;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 </style>

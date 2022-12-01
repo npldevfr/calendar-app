@@ -20,7 +20,7 @@ export default {
   position: sticky;
   top: 0;
   z-index: 150;
-  background: #181922;
+  background: var(--bg-color);
   grid-template-columns: repeat(7, minmax(0, 1fr));
   //display: flex;
   flex-direction: row;
@@ -31,7 +31,7 @@ export default {
   margin: 0 auto;
   border-width: 0 1px 1px 1px;
   border-style: solid;
-  border-color: #2C2D3C;
+  border-color: var(--secondary-border);
   box-sizing: border-box;
 
   &Hours {

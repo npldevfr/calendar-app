@@ -9,7 +9,7 @@
 
 html {
   background: var(--bg-color);
-  transition: background 0.5s ease;
+  transition: background, background-color 0.5s ease;
 }
 
 @media screen and (min-width: 800px) {
@@ -66,6 +66,10 @@ html {
   //::-webkit-scrollbar {
   //  display: none;
   //}
+
+  .CardThemeContainer {
+    width: 100% !important;
+  }
 
   .Login {
     align-items: flex-start !important;

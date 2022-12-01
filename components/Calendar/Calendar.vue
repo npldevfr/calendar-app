@@ -25,7 +25,9 @@
         <ModalTitle label="Paramètres de l'application"/>
       </template>
       <template v-slot:body>
-        paramètres
+        <ModalContainer alignement="row">
+          <SelectionTheme />
+        </ModalContainer>
       </template>
       <template v-slot:footer>
         <Button type="Secondary" label="Fermer" @click="modalSettingsState = false"/>
@@ -174,10 +176,11 @@ import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
 import {defineComponent} from "#imports";
 import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
 import {useQRCode} from '@vueuse/integrations/useQRCode'
+import SelectionTheme from "~/components/Theme/SelectionTheme.vue";
 
 export default defineComponent({
   name: 'Calendar',
-  components: {SidebarBackdrop, Button, MainHeader, SmallButton, Sidebar},
+  components: {SelectionTheme, SidebarBackdrop, Button, MainHeader, SmallButton, Sidebar},
   data() {
     return {
       modalSettingsState: false,

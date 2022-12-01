@@ -77,20 +77,20 @@ export default defineComponent({
     }
 
     &Secondary {
-      background: #292A35;
-      border: 1px solid #313248;
-      color: #D2D3E0;
+      background: var(--secondary);
+      border: 1px solid var(--secondary-border);
+      color: var(--secondary-text);
 
       &:hover {
-        background: #424352;
-        border: 1px solid #1F2029;
+        background: var(--secondary-hover);
+        border: 1px solid var(--secondary-border);
       }
     }
 
     &Transparent {
-      border: 1px dashed #313248;
+      border: 1px dashed var(--secondary-border);
       background: transparent;
-      color: #D2D3E0;
+      color: var(--secondary-text);
     }
   }
 }
