@@ -106,6 +106,7 @@ export default defineComponent({
   }
 
   &Content {
+    overflow: auto;
     max-height: 500px;
     margin: 15px 0;
   }
