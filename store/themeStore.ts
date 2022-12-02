@@ -4,7 +4,7 @@ const EVENT_STORAGE_KEY = 'edtEventColor';
 
 export const useThemeStore = defineStore('theme', {
     state: () => ({
-        eventColor: '#162f9d',
+        eventColor: '#7846b5',
     }),
     getters: {
         getEventColor: (state) => state.eventColor,

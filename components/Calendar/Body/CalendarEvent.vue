@@ -175,6 +175,22 @@ export default {
     font-size: 12px;
   }
 
+
+  &Selected {
+    //border: 10px solid white;
+  }
+
+  &Special {
+    background: #11382f !important;
+    border: 1px solid #144439 !important;
+    color: #D2D3E0 !important;
+
+    &:hover {
+      background: #144439 !important;
+    }
+  }
+
+
   &Blacklisted,
   &Outdated {
     background: var(--secondary) !important;
@@ -185,20 +201,6 @@ export default {
       background: var(--secondary-hover) !important;
     }
 
-  }
-
-  &Selected {
-    //border: 10px solid white;
-  }
-
-  &Special {
-    background: #11382f;
-    border: 1px solid #144439;
-    color: #D2D3E0;
-
-    &:hover {
-      background: #144439;
-    }
   }
 }
 </style>

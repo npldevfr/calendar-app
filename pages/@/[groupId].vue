@@ -36,7 +36,7 @@ export default {
     ...mapState(useCalendarStore, ['getCalendar']),
     ...mapState(usePersonaStore, ['getPersonaById']),
     havePersona(){
-      return useCurrentPersona('get') === {}
+      return useCurrentPersona('get') !== null;
     }
   },
 };

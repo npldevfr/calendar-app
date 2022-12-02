@@ -127,16 +127,25 @@ export const useCalendarStore = defineStore('calendar', {
         },
         /** Retourne le temps total de la semaine selectionnée **/
         getTotalHoursForWeek: (): string => {
-            const events = useCalendarStore().getEventsForWeek;
+            const events = useCalendarStore().getFormatEventByWeek;
             if (!events) return '0h';
 
-            //count hours and minutes of all events and if name is near to a blacklisted word, don't count it
-            const totalHours = events.days.flatMap((day: IDay) => day.events).reduce((acc: number, event: IEvent) => {
-                if (EVENT_BLACKLIST_WORDS.some((word: string) => event.title.includes(word))) return acc;
-                return acc + moment(event.end).diff(moment(event.start), 'hours', true);
-            })
+            let totalMinutes = 0;
+            const blackList = EVENT_BLACKLIST_WORDS;
 
-            return `${Math.floor(totalHours)}h${Math.round((totalHours % 1) * 60)}`
+            events.forEach((day: IDay) => {
+                day.events.forEach((event: IEvent) => {
+                    if (!blackList.some((word: string) => event.title.toLowerCase().includes(word.toLowerCase()))) {
+                        totalMinutes += moment(event.end).diff(moment(event.start), 'minutes');
+                    }
+                })
+            });
+
+
+            const hours = Math.floor(totalMinutes / 60);
+            const minutes = totalMinutes % 60;
+            return `${hours}h${minutes ? minutes : ''}`;
+
         },
     },
     actions: {
