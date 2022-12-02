@@ -75,6 +75,9 @@ export default defineNuxtConfig({
         },
         meta: {
             author: 'GUILLET Nathan',
+            ogTitle: 'EDT Nantes',
+            name: 'EDT Nantes',
+            ogSiteName: 'EDT Nantes',
             description: 'EDT Non officiel de l\'Université de Nantes',
             theme_color: '#181922',
             mobileAppIOS: true,
