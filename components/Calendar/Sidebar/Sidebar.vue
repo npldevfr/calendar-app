@@ -53,9 +53,9 @@
       <template v-else>
         <div class="SidebarTitle">Prochains événements</div>
         <div class="SidebarFollowingEvents">
-          <EventCardGroup :title="formatDayName(eventsByDay.date)" :key="eventsByDay.date.toString()"
+          <EventCardGroup :title="formatDayName(eventsByDay.date)" :key="idx"
                           @click="REDIRECT_TO_DAY(eventsByDay.date)"
-                          v-for="eventsByDay in getFollowingEvents(getEvent.id)">
+                          v-for="(eventsByDay, idx) in getFollowingEvents(getEvent.id)">
             <EventCard v-for="event in  eventsByDay.events" :key="event.id" :event="event"/>
           </EventCardGroup>
         </div>

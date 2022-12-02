@@ -49,25 +49,47 @@ export const useCalendarStore = defineStore('calendar', {
             if (!uuid) return []
             const eventById = useCalendarStore().getEventById(uuid);
             if (!eventById) return [];
-            const followingEvents = state.calendar.flatMap((week: IWeek) => week.days).flatMap((day: IDay) => day.events).filter((event: IEvent) => {
-                return moment(event.start).isAfter(moment()) && event.title === eventById.title
-            });
 
-            const groupedEvents = followingEvents.reduce((acc, event) => {
-                const date = moment(event.start, DATE_FORMAT).format('YYYY-MM-DD');
-                if (!acc[date]) {
-                    acc[date] = [];
-                }
-                acc[date].push(event);
-                return acc;
-            }, {});
 
-            return Object.keys(groupedEvents).map((date) => {
+            const followingEvents = useCalendarStore().getCalendar
+                .map((week: IWeek) => week.days)
+                .flat()
+                .map((day: IDay) => day.events)
+                .flat()
+                .filter((event: IEvent) => {
+                    const isSameTitle = event.title === eventById.title;
+                    const isAfter = moment(event.start).isAfter(moment());
+                    return isSameTitle && isAfter;
+                })
+
+
+            const newFollows = followingEvents.map((event: IEvent) => {
                 return {
-                    date: date,
-                    events: groupedEvents[date].sort((a, b) => moment(a.start).diff(moment(b.start)))
+                    ...event,
+                    startDay: moment(event.start).format('DD/MM/YYYY'),
+                    endDay: moment(event.end).format('DD/MM/YYYY'),
                 }
-            }).sort((a, b) => moment(a.date).diff(moment(b.date)))
+            })
+
+            const groupBy = (array: any[], key: string) => {
+                return array.reduce((result: any, currentValue: any) => {
+                    (result[currentValue[key]] = result[currentValue[key]] || []).push(
+                        currentValue
+                    );
+                    return result;
+                }, {});
+            }
+
+            const groupedByDay = groupBy(newFollows, 'startDay');
+
+            return Object.keys(groupedByDay).map((day: string) => {
+                return {
+                    day,
+                    events: groupedByDay[day]
+                }
+            }, [])
+
+
 
         },
         /** Retourne la liste des événements pour la semaine selectionnée **/
@@ -112,17 +134,26 @@ export const useCalendarStore = defineStore('calendar', {
                     }
                 })
 
-                return groupedEventsByDates.map((day: IDay) => {
-                    const mergedEvents = day.events.reduce((acc: IEvent[], event: IEvent) => {
-                        const lastEvent = acc[acc.length - 1];
-                        if (lastEvent && lastEvent.title === event.title && moment(event.start).diff(moment(lastEvent.end), 'hours') < 1) {
-                            lastEvent.end = event.end;
+                // merge events with same title with end and start date < 30 minutes
+                const mergedEvents = groupedEventsByDates.map((day: IDay) => {
+                    const events = day.events;
+                    const mergedEvents = events.reduce((acc: IEvent[], current: IEvent) => {
+                        const last = acc[acc.length - 1];
+                        if (last && last.title === current.title && moment(last.end).diff(moment(current.start), 'minutes') < 30) {
+                            last.end = current.end;
                             return acc;
+                        } else {
+                            return acc.concat([current]);
                         }
-                        return [...acc, event];
                     }, []);
-                    return {...day, events: mergedEvents}
-                });
+
+                    return {
+                        ...day,
+                        events: mergedEvents
+                    }
+                })
+
+                return mergedEvents;
             }
         },
         /** Retourne le temps total de la semaine selectionnée **/
