@@ -379,6 +379,9 @@ export default defineComponent({
     },
     handleResize(): void {
       this.mobileView = window.innerWidth < 800;
+      if (this.mobileView) {
+        this.view = 'day';
+      }
     },
   },
 });
