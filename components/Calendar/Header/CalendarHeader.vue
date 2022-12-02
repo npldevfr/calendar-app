@@ -1,9 +1,9 @@
 <template>
   <div class="CalendarHeader">
 
-    <div class="CalendarHeaderHours">
+
       <slot />
-    </div>
+
   </div>
 </template>
 

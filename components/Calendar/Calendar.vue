@@ -112,6 +112,9 @@
 
         </SmallButton>
 
+        <SmallButton type="Transparent" :label="formatViewMode  " @click="changeViewMode"/>
+
+
         <SmallButton type="Transparent" label="Paramètres" dropdown @click="modalSettingsState = !modalSettingsState">
           <Icon name="ph:sliders-bold"/>
         </SmallButton>
@@ -123,19 +126,20 @@
     </MainHeader>
     <div class="Calendar" v-touch:swipe.left="SHOW_NEXT_DAY" v-touch:swipe.right="SHOW_PREVIOUS_DAY">
       <CalendarHeader>
-        <CalendarDayHeader :is-a-day="false">
+        <CalendarDayHeader :is-a-day="false" view="hour">
           {{ getTotalHoursForWeek }}
         </CalendarDayHeader>
 
         <CalendarDayHeader v-for="date in limitShowDaysCpt"
                            :key="date"
+                           :view="view"
                            :day-number="date"
         />
 
       </CalendarHeader>
 
       <CalendarBody>
-        <CalendarColumn>
+        <CalendarColumn view="hour">
           <CalendarCell v-for="hour in getCalendarHours" :key="hour">
             {{ hour }}h
           </CalendarCell>
@@ -143,10 +147,10 @@
         </CalendarColumn>
 
 
-        <CalendarColumn v-for="(day, idx) in limitShowDaysEvents" :key="idx">
+        <CalendarColumn v-for="(day, idx) in limitShowDaysEvents" :key="idx" :view="view">
           <TransitionGroup :name="computedTransition" mode="out-in">
             <CalendarEvent v-for="event in day.events" :key="event.id" :event="event"
-                           @click="sidebarEventState = true; SET_SELECTED_EVENT(event)"/>
+                           @click="sidebarEventState = true; SET_SELECTED_EVENT(event)" :view="view"/>
           </TransitionGroup>
           <CalendarCell v-for="hour in getCalendarHours" :key="hour"/>
         </CalendarColumn>
@@ -250,7 +254,7 @@ export default defineComponent({
       return this.getDatesInWeek.slice(this.showDayIndex, this.showDayIndex + 1);
     },
     limitShowDaysEvents(): any {
-      if (!this.view === 'week') {
+      if (this.view === 'week') {
         return this.getFormatEventByWeek.slice(0, 5);
       }
       return this.getFormatEventByWeek.slice(this.showDayIndex, this.showDayIndex + 1);
@@ -279,7 +283,7 @@ export default defineComponent({
       })
     },
     computedTransition() {
-      return this.mobileView ? 'slide-fade' : 'fade';
+      return this.view === 'day' ? 'slide-fade' : 'fade';
     },
   },
   mounted() {

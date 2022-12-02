@@ -1,8 +1,6 @@
 <template>
-  <div class="CalendarBody">
-    <div class="CalendarBodyEvents">
-      <slot />
-    </div>
+  <div class="CalendarBody" >
+    <slot/>
   </div>
 </template>
 
@@ -14,6 +12,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
+
 .CalendarBody {
   overflow: hidden;
   width: 100%;
@@ -28,4 +29,8 @@ export default {
     height: 100%;
   }
 }
+
+/** If .CalendarBody has 2 children make the first child 0.5fr and the second child 5.5fr **/
+
+
 </style>

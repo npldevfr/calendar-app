@@ -1,5 +1,5 @@
 <template>
-  <div class="CalendarDayHeader" :class="[isToday, isNotADay]">
+  <div class="CalendarDayHeader" :class="[isToday, isNotADay, {'CalendarDayHeaderFW': view === 'day'}]">
     <slot v-if="$slots.default"/>
     <span class="CalendarDayHeaderDayName" v-if="dayNumber">
       {{ isMobile ? formatDayName.slice(0, 3) : formatDayName }}
@@ -27,6 +27,11 @@ export default {
       type: Boolean,
       required: false,
       default: true,
+    },
+    view: {
+      type: String,
+      required: true,
+      default: 'day'
     }
   },
   computed: {
@@ -80,9 +85,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.CalendarHeaderHours .CalendarDayHeader {
-  width: 100%;
-}
+
+
+
+
 
 .CalendarDayHeader {
   user-select: none;
@@ -96,6 +102,10 @@ export default {
   height: 100%;
   //width: 150px;
   grid-column: span 1 / span 1;
+
+  &FW {
+    grid-column: span 5 / span 5;
+  }
 
   &:hover {
       cursor: pointer;

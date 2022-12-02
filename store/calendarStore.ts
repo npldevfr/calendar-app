@@ -134,26 +134,17 @@ export const useCalendarStore = defineStore('calendar', {
                     }
                 })
 
-                // merge events with same title with end and start date < 30 minutes
-                const mergedEvents = groupedEventsByDates.map((day: IDay) => {
-                    const events = day.events;
-                    const mergedEvents = events.reduce((acc: IEvent[], current: IEvent) => {
-                        const last = acc[acc.length - 1];
-                        if (last && last.title === current.title && moment(last.end).diff(moment(current.start), 'minutes') < 30) {
-                            last.end = current.end;
+                return groupedEventsByDates.map((day: IDay) => {
+                    const mergedEvents = day.events.reduce((acc: IEvent[], event: IEvent) => {
+                        const lastEvent = acc[acc.length - 1];
+                        if (lastEvent && lastEvent.title === event.title && moment(event.start).diff(moment(lastEvent.end), 'hours') < 1) {
+                            lastEvent.end = event.end;
                             return acc;
-                        } else {
-                            return acc.concat([current]);
                         }
+                        return [...acc, event];
                     }, []);
-
-                    return {
-                        ...day,
-                        events: mergedEvents
-                    }
-                })
-
-                return mergedEvents;
+                    return {...day, events: mergedEvents}
+                });
             }
         },
         /** Retourne le temps total de la semaine selectionnée **/

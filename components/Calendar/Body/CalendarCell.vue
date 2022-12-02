@@ -16,9 +16,7 @@ export default {
   border-left: 1px dashed var(--secondary-border);
 }
 
-.Calendar .CalendarBody > .CalendarColumn .CalendarCell {
-  border-right: 0;
-}
+
 
 .CalendarCell {
   position: relative;

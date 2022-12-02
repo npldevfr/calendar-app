@@ -1,9 +1,9 @@
 <template>
   <div class="CalendarEvent" :class="[isBlacklisted, isSpecial, isOutdated, isSelected]"
        :style="{top: getTop, bottom: getBottom, background: getColor, borderColor: getColor}">
-    <div class="CalendarEventNow" v-if="isNow && !isMobile">EN COURS</div>
+    <div class="CalendarEventNow" v-if="isNow && (!isMobile || isMobile && view === 'day')">EN COURS</div>
     <div class="CalendarEventContent">
-      <div class="CalendarEventBody" v-if="!isMobile">
+      <div class="CalendarEventBody" v-if="!isMobile || isMobile && view === 'day'">
         {{ formatEventTitle(event.title) }}
         <br/>
         ({{ formatHour(event.start) }} - {{ formatHour(event.end) }})
@@ -32,6 +32,11 @@ export default {
     event: {
       type: Object as PropType<IEvent>,
       required: true
+    },
+    view: {
+      type: String,
+      required: false,
+      default: 'none'
     }
   },
   data() {
