@@ -1,6 +1,6 @@
 <template>
   <div class="SelectionEventTheme">
-    <EventTheme v-for="(color, idx) in colors" :color="color" key="idx" />
+    <EventTheme v-for="(color, idx) in colors" :color="color" key="idx"/>
   </div>
 </template>
 
@@ -11,9 +11,10 @@ import EventTheme from "~/components/Theme/EventTheme.vue";
 export default defineComponent({
   name: "SelectionEventTheme",
   components: {EventTheme},
-  data(){
+  data() {
     return {
-      colors: ['#305afe', '#00b578', '#ffaa01', '#fe7831', '#7846b5', '#fb3245', '#12bcb5', '#ff3d79']
+      colors: ['#162f9d', '#1a6b4d', '#c58511', '#c45d25',
+        '#7846b5', '#9b1a28', '#147a76', '#912549']
     }
   }
 })

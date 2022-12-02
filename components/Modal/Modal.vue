@@ -70,6 +70,7 @@ export default defineComponent({
   },
   methods: {
     handleKeyEscape(event: KeyboardEvent) {
+      event.preventDefault();
       if (event.key === 'Escape') {
         this.close();
       }
