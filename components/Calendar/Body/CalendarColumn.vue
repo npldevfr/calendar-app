@@ -18,6 +18,7 @@ export default {
 
 .CalendarColumn {
   position: relative;
+  overflow: hidden;
   grid-column: span 1 / span 1;
   height: 100%;
 

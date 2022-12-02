@@ -137,6 +137,7 @@
           <CalendarCell v-for="hour in getCalendarHours" :key="hour">
             {{ hour }}h
           </CalendarCell>
+          <CalendarLiveBar />
         </CalendarColumn>
 
         <template #events>

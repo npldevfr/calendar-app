@@ -70,12 +70,12 @@ export default defineComponent({
   },
   methods: {
     handleKeyEscape(event: KeyboardEvent) {
-      event.preventDefault();
       if (event.key === 'Escape') {
         this.close();
       }
 
       if (this.keyboardKey && event.ctrlKey && event.key === this.keyboardKey) {
+        event.preventDefault();
         this.forceShow ? this.close() : this.forceShow = true;
       }
     },

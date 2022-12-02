@@ -9,7 +9,7 @@
 
 html {
   background: var(--bg-color);
-  transition: background, background-color 0.5s ease;
+  transition: background, color, background-color .3s linear;
 }
 
 @media screen and (min-width: 800px) {

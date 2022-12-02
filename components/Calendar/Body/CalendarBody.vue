@@ -20,6 +20,7 @@ export default {
   width: 100%;
   margin: 0 auto;
   display: grid;
+  //grid-template-columns: 0.5fr repeat(6, minmax(0, 1fr));
   grid-template-columns: repeat(7, minmax(0, 1fr));
 
   &Events {

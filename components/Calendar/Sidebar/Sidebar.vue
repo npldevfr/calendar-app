@@ -18,13 +18,13 @@
           getEvent.extendedProps.props['Matière'] ? getEvent.extendedProps.props['Matière'] : getEvent.title.replace('-', ' ')
         }}
       </div>
-      <div class="SidebarEventPersonal">
+      <div class="SidebarEventPersonal" v-if="getEvent.extendedProps.props['Personnel']">
         <svg class="SidebarEventPersonalIcon" width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M6.375 7.125H4.125C1.84688 7.125 0 8.97188 0 11.25C0 11.6641 0.335859 12 0.75 12H9.75C10.1641 12 10.5 11.6641 10.5 11.25C10.5 8.97188 8.65312 7.125 6.375 7.125ZM1.1482 10.875C1.33336 9.39609 2.59688 8.25 4.125 8.25H6.375C7.90219 8.25 9.16641 9.39727 9.35156 10.875H1.1482ZM5.25 6C6.9068 6 8.25 4.6568 8.25 3C8.25 1.3432 6.9068 0 5.25 0C3.5932 0 2.25 1.3432 2.25 3C2.25 4.65703 3.59297 6 5.25 6ZM5.25 1.125C6.28383 1.125 7.125 1.96617 7.125 3C7.125 4.03383 6.28383 4.875 5.25 4.875C4.21617 4.875 3.375 4.03359 3.375 3C3.375 1.96617 4.21641 1.125 5.25 1.125Z" fill="#A0A0A0"/>
         </svg>
         <div>{{ getEvent.extendedProps.props['Personnel'] }}</div>
       </div>
-      <div class="SidebarEventPersonal">
+      <div class="SidebarEventPersonal" v-if="getEvent.extendedProps.location">
         <Icon name="ic:baseline-location-on" />
         <div>{{ getEvent.extendedProps.location }}</div>
       </div>
