@@ -1,9 +1,9 @@
 <template>
   <div class="CalendarHeader">
-    <slot />
-    <div class="CalendarHeaderHours">
-      <slot name="hours" />
-    </div>
+
+
+      <slot />
+
   </div>
 </template>
 
@@ -22,8 +22,7 @@ export default {
   top: 0;
   z-index: 150;
   background: var(--bg-color);
-  //grid-template-columns: 0.5fr repeat(6, minmax(0, 1fr));
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 
   //display: flex;
   flex-direction: row;

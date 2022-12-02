@@ -1,12 +1,15 @@
 <template>
   <div class="CalendarEvent" :class="[isBlacklisted, isSpecial, isOutdated, isSelected]"
        :style="{top: getTop, bottom: getBottom, background: getColor, borderColor: getColor}">
-    <div class="CalendarEventNow" v-if="isNow">EN COURS</div>
+    <div class="CalendarEventNow" v-if="isNow && (!isMobile || isMobile && view === 'day')">EN COURS</div>
     <div class="CalendarEventContent">
-      <div class="CalendarEventBody">
+      <div class="CalendarEventBody" v-if="!isMobile || isMobile && view === 'day'">
         {{ formatEventTitle(event.title) }}
         <br/>
         ({{ formatHour(event.start) }} - {{ formatHour(event.end) }})
+      </div>
+      <div class="CalendarEventBody" v-else style="font-size: 10px">
+        {{ formatEventTitle(event.title, true) }}
       </div>
     </div>
   </div>
@@ -21,6 +24,7 @@ import {EVENT_BLACKLIST_WORDS, EVENT_SPECIAL_WORDS} from "~/global.config";
 import {mapState} from "pinia";
 import {useCalendarStore} from "~/store/calendarStore";
 import {useThemeStore} from "~/store/themeStore";
+import {useIsMobile} from "~/composables/useIsMobile";
 
 export default {
   name: 'CalendarEvent',
@@ -28,6 +32,11 @@ export default {
     event: {
       type: Object as PropType<IEvent>,
       required: true
+    },
+    view: {
+      type: String,
+      required: false,
+      default: 'none'
     }
   },
   data() {
@@ -110,7 +119,11 @@ export default {
     formatHour(timestamp: Date | Moment | string): string {
       return moment(timestamp).format('HH:mm')
     },
-    formatEventTitle(title: string): string {
+    formatEventTitle(title: string, isMobile: boolean = false): string {
+      if (isMobile) {
+        return title.length > 30 ? title.substring(0, 20) + '...' : title;
+      }
+
       const STR_LENGTH = 70;
       if (title.length > STR_LENGTH) {
         return title.substring(0, STR_LENGTH) + '...';
@@ -125,7 +138,10 @@ export default {
       return theme.getEventColor;
     });
 
+    const isMobile = useIsMobile();
+
     return {
+      isMobile,
       getColor
     }
 
@@ -166,6 +182,8 @@ export default {
 
   &Content {
     position: relative;
+    width: 100%;
+    word-break: break-all;
   }
 
   &Body {

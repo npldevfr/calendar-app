@@ -1,11 +1,11 @@
 <template>
-  <div class="CalendarDayHeader" :class="[isToday, isNotADay]">
+  <div class="CalendarDayHeader" :class="[isToday, isNotADay, {'CalendarDayHeaderFW': view === 'day'}]">
     <slot v-if="$slots.default"/>
     <span class="CalendarDayHeaderDayName" v-if="dayNumber">
-      {{ formatDayName }}
+      {{ isMobile ? formatDayName.slice(0, 3) : formatDayName }}
     </span>
     <span class="CalendarDayHeaderDayNumber" v-if="dayNumber">
-      {{ formatDay }} <span class="CalendarDayHeaderSmall">{{ formatMonthAndYear }}</span>
+      {{ formatDay }} <span class="CalendarDayHeaderSmall" v-if="!isMobile">{{ formatMonthAndYear }}</span>
     </span>
   </div>
 </template>
@@ -14,6 +14,7 @@
 
 import moment from "moment";
 import {useThemeStore} from "~/store/themeStore";
+import  { useIsMobile } from "~/composables/useIsMobile";
 
 export default {
   name: 'CalendarDayHeader',
@@ -26,6 +27,11 @@ export default {
       type: Boolean,
       required: false,
       default: true,
+    },
+    view: {
+      type: String,
+      required: true,
+      default: 'day'
     }
   },
   computed: {
@@ -67,7 +73,10 @@ export default {
       return convertColorToRGB(getColor.value, '0.5');
     })
 
+    const isMobile = useIsMobile();
+
     return {
+      isMobile,
       getColor,
       getColorRBGA
     }
@@ -76,9 +85,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.CalendarHeaderHours .CalendarDayHeader {
-  width: 100%;
-}
+
+
+
+
 
 .CalendarDayHeader {
   user-select: none;
@@ -87,11 +97,15 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  //padding: 0 10px;
   gap: 10px;
   height: 100%;
   //width: 150px;
   grid-column: span 1 / span 1;
+
+  &FW {
+    grid-column: span 5 / span 5;
+  }
 
   &:hover {
       cursor: pointer;
