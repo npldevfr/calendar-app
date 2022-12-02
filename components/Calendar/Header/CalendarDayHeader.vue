@@ -5,7 +5,7 @@
       {{ isMobile ? formatDayName.slice(0, 3) : formatDayName }}
     </span>
     <span class="CalendarDayHeaderDayNumber" v-if="dayNumber">
-      {{ formatDay }} <span class="CalendarDayHeaderSmall" v-if="!isMobile">{{ formatMonthAndYear }}</span>
+      {{ formatDay }} <span class="CalendarDayHeaderSmall" >{{ formatMonthAndYear }}</span>
     </span>
   </div>
 </template>
