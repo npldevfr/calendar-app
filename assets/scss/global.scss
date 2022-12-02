@@ -106,11 +106,6 @@ html {
     border-width: 0 0 1px 0 !important;
   }
 
-  .CalendarEvent {
-    right: 15px !important;
-    left: 15px !important;
-  }
-
 
   .MainHeader {
     padding: 10px !important;
@@ -125,7 +120,8 @@ html {
   }
 
   .CalendarHeader:first-child .CalendarDayHeaderNot {
-    display: none;
+    width: 1px;
+    color: transparent;
   }
 
   .CalendarHeaderHours {

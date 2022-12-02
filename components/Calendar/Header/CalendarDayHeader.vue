@@ -2,10 +2,10 @@
   <div class="CalendarDayHeader" :class="[isToday, isNotADay]">
     <slot v-if="$slots.default"/>
     <span class="CalendarDayHeaderDayName" v-if="dayNumber">
-      {{ formatDayName }}
+      {{ isMobile ? formatDayName.slice(0, 3) : formatDayName }}
     </span>
     <span class="CalendarDayHeaderDayNumber" v-if="dayNumber">
-      {{ formatDay }} <span class="CalendarDayHeaderSmall">{{ formatMonthAndYear }}</span>
+      {{ formatDay }} <span class="CalendarDayHeaderSmall" v-if="!isMobile">{{ formatMonthAndYear }}</span>
     </span>
   </div>
 </template>
@@ -14,6 +14,7 @@
 
 import moment from "moment";
 import {useThemeStore} from "~/store/themeStore";
+import  { useIsMobile } from "~/composables/useIsMobile";
 
 export default {
   name: 'CalendarDayHeader',
@@ -67,7 +68,10 @@ export default {
       return convertColorToRGB(getColor.value, '0.5');
     })
 
+    const isMobile = useIsMobile();
+
     return {
+      isMobile,
       getColor,
       getColorRBGA
     }
@@ -87,7 +91,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  //padding: 0 10px;
   gap: 10px;
   height: 100%;
   //width: 150px;

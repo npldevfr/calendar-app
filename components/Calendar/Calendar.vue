@@ -26,11 +26,11 @@
       </template>
       <template v-slot:body>
         <ModalContainer alignement="column">
-          <SelectionTheme />
+          <SelectionTheme/>
         </ModalContainer>
-        <ModalSeparator />
+        <ModalSeparator/>
         <ModalContainer alignement="row">
-          <SelectionEventTheme />
+          <SelectionEventTheme/>
         </ModalContainer>
       </template>
       <template v-slot:footer>
@@ -78,8 +78,10 @@
       <template #left>
         <SmallButton type="Secondary" :label="currentPersona" dropdown
                      @click="modalPersonaState = !modalPersonaState"/>
+
       </template>
       <template #right>
+        <SmallButton type="Transparent" :label="formatViewMode  " @click="changeViewMode"/>
 
         <SmallButton type="Transparent" label="Paramètres" dropdown @click="modalSettingsState = !modalSettingsState">
           <Icon name="ph:sliders-bold"/>
@@ -124,12 +126,12 @@
         <CalendarDayHeader :is-a-day="false">
           {{ getTotalHoursForWeek }}
         </CalendarDayHeader>
-        <template #hours>
-          <CalendarDayHeader v-for="date in limitShowDaysCpt"
-                             :key="date"
-                             :day-number="date"
-          />
-        </template>
+
+        <CalendarDayHeader v-for="date in limitShowDaysCpt"
+                           :key="date"
+                           :day-number="date"
+        />
+
       </CalendarHeader>
 
       <CalendarBody>
@@ -137,18 +139,17 @@
           <CalendarCell v-for="hour in getCalendarHours" :key="hour">
             {{ hour }}h
           </CalendarCell>
-          <CalendarLiveBar />
+          <CalendarLiveBar/>
         </CalendarColumn>
 
-        <template #events>
-          <CalendarColumn v-for="(day, idx) in limitShowDaysEvents" :key="idx">
-            <TransitionGroup :name="computedTransition" mode="out-in">
-              <CalendarEvent v-for="event in day.events" :key="event.id" :event="event"
-                             @click="sidebarEventState = true; SET_SELECTED_EVENT(event)"/>
-            </TransitionGroup>
-            <CalendarCell v-for="hour in getCalendarHours" :key="hour"/>
-          </CalendarColumn>
-        </template>
+
+        <CalendarColumn v-for="(day, idx) in limitShowDaysEvents" :key="idx">
+          <TransitionGroup :name="computedTransition" mode="out-in">
+            <CalendarEvent v-for="event in day.events" :key="event.id" :event="event"
+                           @click="sidebarEventState = true; SET_SELECTED_EVENT(event)"/>
+          </TransitionGroup>
+          <CalendarCell v-for="hour in getCalendarHours" :key="hour"/>
+        </CalendarColumn>
       </CalendarBody>
 
       <!--    <div class="CalendarBottomActions">-->
@@ -178,7 +179,7 @@ import {IGroupe} from "~/types/Group.interface";
 import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
 import {IPersona} from "~/types/Persona.interface";
 import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
-import {defineComponent} from "#imports";
+import {defineComponent, useIsMobile} from "#imports";
 import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
 import {useQRCode} from '@vueuse/integrations/useQRCode'
 import SelectionTheme from "~/components/Theme/SelectionTheme.vue";
@@ -194,6 +195,7 @@ export default defineComponent({
       modalShareState: false,
 
       mobileView: false,
+      view: 'week' as 'week' | 'day',
       limitShowDays: 1,
       showDayIndex: 0,
 
@@ -214,8 +216,10 @@ export default defineComponent({
     const windowUrl = window.location.href
     const qrcode = useQRCode(windowUrl)
 
+    const isMobile = useIsMobile();
 
     return {
+      isMobile,
       qrcode,
       hasFavorites,
       getFavorites,
@@ -231,14 +235,22 @@ export default defineComponent({
     isTodayIsInInterval(): any {
       return this.getDatesInWeek.includes(new Date().toISOString().split('T')[0]);
     },
+    formatViewMode() {
+      const translations = {
+        week: 'Semaine',
+        day: 'Jour',
+      }
+
+      return translations[this.view]
+    },
     limitShowDaysCpt(): any[] {
-      if (!this.mobileView) {
+      if (this.view === 'week') {
         return this.getDatesInWeek.slice(0, 5);
       }
       return this.getDatesInWeek.slice(this.showDayIndex, this.showDayIndex + 1);
     },
     limitShowDaysEvents(): any {
-      if (!this.mobileView) {
+      if (!this.view === 'week') {
         return this.getFormatEventByWeek.slice(0, 5);
       }
       return this.getFormatEventByWeek.slice(this.showDayIndex, this.showDayIndex + 1);
@@ -284,6 +296,9 @@ export default defineComponent({
     if (typeof window !== 'undefined') window.removeEventListener('resize', this.handleResize);
   },
   methods: {
+    changeViewMode() {
+      this.view = this.view === 'week' ? 'day' : 'week'
+    },
     setCurrentPersona(persona: IPersona): void {
       this.currentPersona = persona.name;
       this.modalPersonaState = false;
