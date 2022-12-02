@@ -28,7 +28,15 @@ export default defineComponent({
   padding: 10px;
   gap: 10px;
   width: 100%;
-  border-bottom: 1px solid #2C2D3C;
+  border-bottom: 1px solid var(--secondary-border);
+
+  &Side {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
 }
 
 @media screen and (min-width: 800px) {

@@ -75,6 +75,7 @@ export default defineComponent({
       }
 
       if (this.keyboardKey && event.ctrlKey && event.key === this.keyboardKey) {
+        event.preventDefault();
         this.forceShow ? this.close() : this.forceShow = true;
       }
     },
@@ -106,11 +107,9 @@ export default defineComponent({
   }
 
   &Content {
-    overflow-y: auto;
+    overflow: auto;
     max-height: 500px;
     margin: 15px 0;
-
-
   }
 
 

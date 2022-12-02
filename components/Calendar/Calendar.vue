@@ -3,6 +3,42 @@
     <Title>EDT ({{ currentPersona }})</Title>
   </Head>
   <ClientOnly>
+
+    <!-- Partage -->
+    <Modal title="Partager" :show="modalShareState" @close="modalShareState = false">
+      <template v-slot:header>
+        <ModalTitle label="Partager"/>
+      </template>
+      <template v-slot:body>
+        <ModalContainer>
+          <img :src="qrcode" alt="qrcode" style="border-radius: 10px;"/>
+        </ModalContainer>
+      </template>
+      <template v-slot:footer>
+        <Button type="Secondary" label="Fermer" @click="modalShareState = false"/>
+      </template>
+    </Modal>
+
+    <!-- Paramètres -->
+    <Modal title="Paramètres" :show="modalSettingsState" @close="modalSettingsState = false">
+      <template v-slot:header>
+        <ModalTitle label="Paramètres de l'application"/>
+      </template>
+      <template v-slot:body>
+        <ModalContainer alignement="column">
+          <SelectionTheme />
+        </ModalContainer>
+        <ModalSeparator />
+        <ModalContainer alignement="row">
+          <SelectionEventTheme />
+        </ModalContainer>
+      </template>
+      <template v-slot:footer>
+        <Button type="Secondary" label="Fermer" @click="modalSettingsState = false"/>
+      </template>
+    </Modal>
+
+    <!-- Personnes -->
     <Modal :show="modalPersonaState"
            keyboard-key="k"
            title="title"
@@ -12,6 +48,13 @@
       </template>
 
       <template v-slot:body>
+        <ModalGroup v-if="hasFavorites">
+          <ModalCategory label="Favoris"/>
+          <ModalItem v-for="(persona, idx) in getFavorites" :key="idx"
+                     :persona="persona"
+                     :label="persona.name"
+                     @click="setCurrentPersona(persona)"/>
+        </ModalGroup>
         <ModalGroup v-for="(list, idx) in getSearchResults" :key="idx" v-if="getSearchResults.length">
           <ModalCategory :label="list.category" v-if="list.data.length > 0"/>
           <ModalItem v-for="(item, idx) in list.data.slice(0, 5)"
@@ -33,26 +76,27 @@
     </Modal>
     <MobileHeader>
       <template #left>
-        <SmallButton type="Transparent" :label="currentPersona" dropdown
+        <SmallButton type="Secondary" :label="currentPersona" dropdown
                      @click="modalPersonaState = !modalPersonaState"/>
       </template>
       <template #right>
-        <!--        <SmallButton label="Paramètres">-->
-        <!--          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-        <!--            <path-->
-        <!--                d="M0.0820232 7.9626L1.30773 10.0386C1.3891 10.1763 1.523 10.2767 1.67999 10.3178C1.83698 10.3589 2.0042 10.3372 2.14488 10.2576L3.00042 9.774C3.35587 10.0482 3.74871 10.2732 4.16177 10.4412V11.4C4.16177 11.5591 4.22634 11.7117 4.34127 11.8243C4.45621 11.9368 4.61209 12 4.77463 12H7.22603C7.38857 12 7.54445 11.9368 7.65938 11.8243C7.77431 11.7117 7.83888 11.5591 7.83888 11.4V10.4412C8.25518 10.2715 8.64589 10.047 9.00023 9.774L9.85577 10.2576C10.1481 10.4226 10.5244 10.3236 10.6929 10.0386L11.9186 7.9626C11.9993 7.82472 12.021 7.66122 11.9791 7.50771C11.9372 7.3542 11.8351 7.22312 11.6949 7.143L10.8541 6.6672C10.9198 6.2247 10.9194 5.77519 10.8529 5.3328L11.6937 4.857C11.9854 4.692 12.0866 4.323 11.9174 4.0374L10.6917 1.9614C10.6103 1.8237 10.4764 1.72327 10.3194 1.6822C10.1625 1.64114 9.99524 1.66279 9.85455 1.7424L8.99901 2.226C8.64512 1.95263 8.25455 1.72813 7.83827 1.5588V0.6C7.83827 0.44087 7.7737 0.288258 7.65877 0.175736C7.54384 0.0632141 7.38796 0 7.22542 0H4.77401C4.61147 0 4.45559 0.0632141 4.34066 0.175736C4.22573 0.288258 4.16116 0.44087 4.16116 0.6V1.5588C3.74487 1.72849 3.35415 1.95295 2.99981 2.226L2.14488 1.7424C2.07524 1.7029 1.99833 1.67723 1.91855 1.66686C1.83877 1.65649 1.75768 1.66162 1.67992 1.68196C1.60217 1.7023 1.52927 1.73745 1.46541 1.7854C1.40154 1.83335 1.34796 1.89316 1.30773 1.9614L0.0820232 4.0374C0.00136453 4.17528 -0.0203846 4.33878 0.0215119 4.49229C0.0634085 4.6458 0.165557 4.77688 0.305714 4.857L1.14655 5.3328C1.08044 5.77525 1.08044 6.22475 1.14655 6.6672L0.305714 7.143C0.0139967 7.308 -0.0871238 7.677 0.0820232 7.9626ZM5.99971 3.6C7.35166 3.6 8.45112 4.6764 8.45112 6C8.45112 7.3236 7.35166 8.4 5.99971 8.4C4.64776 8.4 3.54831 7.3236 3.54831 6C3.54831 4.6764 4.64776 3.6 5.99971 3.6Z"-->
-        <!--                fill="#858699"/>-->
-        <!--          </svg>-->
-        <!--        </SmallButton>-->
+
+        <SmallButton type="Transparent" label="Paramètres" dropdown @click="modalSettingsState = !modalSettingsState">
+          <Icon name="ph:sliders-bold"/>
+        </SmallButton>
+
+        <SmallButton type="Transparent" @click="modalShareState = !modalShareState">
+          <Icon name="ri:share-fill"/>
+        </SmallButton>
 
       </template>
     </MobileHeader>
     <MainHeader>
       <template #left>
-        <Button @click="PREVIOUS_WEEK(); this.showDayIndex = 0" label="Semaine précédente"/>
+        <Button @click="PREVIOUS_WEEK(); this.showDayIndex = 0" type="Secondary" label="Semaine précédente"/>
         <Button @click="GO_BACK_TO_TODAY(); this.initDayIndex()" v-if="!isTodayIsInInterval" type="Secondary"
                 label="Semaine actuelle"/>
-        <Button @click="NEXT_WEEK(); this.showDayIndex = 0" label="Semaine suivante"/>
+        <Button @click="NEXT_WEEK(); this.showDayIndex = 0" type="Secondary" label="Semaine suivante"/>
       </template>
 
       <template #right>
@@ -65,38 +109,14 @@
           </svg>
 
         </SmallButton>
-        <!--          <Dropdown :state="dropdownState">-->
 
-        <!--            <DropdownContent>-->
-        <!--              <Input ref="input" v-model:model-value="searchEngine" placeholder="Chercher par personne, groupe"/>-->
-        <!--              <DropdownHeader title="Favoris"/>-->
-        <!--              <template v-for="(list, idx) in getSearchResults" :key="idx">-->
-        <!--                <DropdownHeader :title="list.category" v-if="list.data.length > 0"/>-->
-        <!--                <DropdownItem v-for="(item, idx) in list.data.slice(0, 5)" :match-value="searchEngine" :key="idx"-->
-        <!--                              :persona="item"-->
-        <!--                              @click="setCurrentPersona(item)"-->
-        <!--                              :label="item.name"/>-->
-        <!--              </template>-->
-        <!--            </DropdownContent>-->
+        <SmallButton type="Transparent" label="Paramètres" dropdown @click="modalSettingsState = !modalSettingsState">
+          <Icon name="ph:sliders-bold"/>
+        </SmallButton>
 
-
-        <!--            <DropdownSeparator/>-->
-        <!--            <DropdownContent>-->
-        <!--              <KbdList>-->
-        <!--                <KbdGroup>-->
-        <!--                  <Kbd label="⇧"/>-->
-        <!--                  <Kbd label="⇩"/>-->
-        <!--                  Selection-->
-        <!--                </KbdGroup>-->
-
-        <!--                <KbdGroup>-->
-        <!--                  <Kbd label="ESC"/>-->
-        <!--                  Quitter-->
-        <!--                </KbdGroup>-->
-        <!--              </KbdList>-->
-        <!--            </DropdownContent>-->
-        <!--          </Dropdown>-->
-        <!--        </DropdownContainer>-->
+        <SmallButton type="Transparent" @click="modalShareState = !modalShareState">
+          <Icon name="ri:share-fill"/>
+        </SmallButton>
       </template>
     </MainHeader>
     <div class="Calendar" v-touch:swipe.left="SHOW_NEXT_DAY" v-touch:swipe.right="SHOW_PREVIOUS_DAY">
@@ -117,6 +137,7 @@
           <CalendarCell v-for="hour in getCalendarHours" :key="hour">
             {{ hour }}h
           </CalendarCell>
+          <CalendarLiveBar />
         </CalendarColumn>
 
         <template #events>
@@ -158,14 +179,19 @@ import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
 import {IPersona} from "~/types/Persona.interface";
 import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
 import {defineComponent} from "#imports";
+import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
+import {useQRCode} from '@vueuse/integrations/useQRCode'
+import SelectionTheme from "~/components/Theme/SelectionTheme.vue";
+import SelectionEventTheme from "~/components/Theme/SelectionEventTheme.vue";
 
 export default defineComponent({
   name: 'Calendar',
-  components: {SidebarBackdrop, Button, MainHeader, SmallButton, Sidebar},
+  components: {SelectionEventTheme, SelectionTheme, SidebarBackdrop, Button, MainHeader, SmallButton, Sidebar},
   data() {
     return {
-      dropdownState: false,
+      modalSettingsState: false,
       modalPersonaState: false,
+      modalShareState: false,
 
       mobileView: false,
       limitShowDays: 1,
@@ -176,6 +202,23 @@ export default defineComponent({
       currentEventShowing: {},
 
       currentPersona: useCurrentPersona('get').name || 'Aucune',
+    }
+  },
+  setup() {
+    const favoritesPersonas = useFavoritePersonaStore()
+
+    const hasFavorites = computed(() => favoritesPersonas.getFavoritePersona.length > 0)
+    const getFavorites = computed(() => favoritesPersonas.getFavoritePersona)
+
+
+    const windowUrl = window.location.href
+    const qrcode = useQRCode(windowUrl)
+
+
+    return {
+      qrcode,
+      hasFavorites,
+      getFavorites,
     }
   },
   computed: {
@@ -212,7 +255,7 @@ export default defineComponent({
       })
     },
     getSearchResults() {
-      let personas = this.getPersonas;
+      let personas: IGroupe[] = this.getPersonas;
 
       return personas.map((category: IGroupe) => {
         return {
@@ -245,7 +288,7 @@ export default defineComponent({
       this.currentPersona = persona.name;
       this.modalPersonaState = false;
       useCurrentPersona('set', persona);
-      this.FETCH_CALENDAR();
+      this.$router.push({name: '@-groupId', params: {groupId: persona.group_id}});
     },
     SHOW_NEXT_DAY(): void {
       if (this.showDayIndex < 4) {
@@ -279,14 +322,14 @@ export default defineComponent({
      * Handle keyboard events (arrow keys) to navigate in @
      * **/
     handleKeyDown(event: KeyboardEvent): void {
-      if (event.ctrlKey) {
-        switch (event.key) {
-          case KEY.LETTER_K:
-            event.preventDefault();
-            this.dropdownState = !this.dropdownState;
-            break;
-        }
-      }
+      // if (event.ctrlKey) {
+      //   switch (event.key) {
+      //     case KEY.LETTER_K:
+      //       event.preventDefault();
+      //       this.dropdownState = !this.dropdownState;
+      //       break;
+      //   }
+      // }
       switch (event.key) {
         case KEY.ARROW_LEFT:
           if (this.mobileView) {

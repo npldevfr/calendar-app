@@ -14,7 +14,6 @@ const useCurrentPersona = (action: 'get' | 'reset' | 'set' | 'initialize', perso
 
     const initializeCurrentPersona = () => {
         const currentPersona = JSON.parse(localStorage.getItem('edtCurrentPersona') || '{}');
-        console.log('initializeCurrentPersona', currentPersona);
         return currentPersona.id ? currentPersona : {};
     }
 

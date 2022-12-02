@@ -34,7 +34,7 @@ export default defineComponent({
   gap: 10px;
   width: 100%;
   min-height: 60px;
-  border-bottom: 1px solid #2C2D3C;
+  border-bottom: 1px solid var(--secondary-border);
 
   &Content {
     display: flex;

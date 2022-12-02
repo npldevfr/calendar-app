@@ -9,13 +9,52 @@
 
 html {
   background: var(--bg-color);
-  transition: background 0.5s ease;
+  transition: background, color, background-color .3s linear;
 }
 
 @media screen and (min-width: 800px) {
   .CalendarBottomActions {
     display: none;
   }
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+
+  width: 14px;
+  transition: all 0.5s;
+  border-radius: 50px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  box-shadow: inset 0 0 10px 10px rgba(227, 227, 227, 0.10);
+  border: solid 5px transparent;
+  border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  transition: all 0.5s;
+  background: var(--bg-primary);
+  box-shadow: inset 0 0 10px 10px rgba(255, 255, 255, 0.5);
+  border: solid 5px transparent;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+  background: var(--bg-primary);
+  box-shadow: inset 0 0 10px 10px var(--primary);
+  border: solid 5px transparent;
+  border-radius: 50px;
+
 }
 
 
@@ -28,7 +67,19 @@ html {
   //  display: none;
   //}
 
+  .CardThemeContainer {
+    width: 100% !important;
+  }
+
+  .Login {
+    align-items: flex-start !important;
+  }
+
+
   .ModalBackdrop {
+
+    position: fixed;
+    inset: 0;
     padding: 0 !important;
 
 
@@ -40,6 +91,7 @@ html {
         max-height: 80% !important;
 
       }
+
       .ModalFooter {
         background: var(--bg-color);
         position: absolute;

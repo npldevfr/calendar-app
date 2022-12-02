@@ -13,6 +13,7 @@
 <script lang="ts">
 
 import moment from "moment";
+import {useThemeStore} from "~/store/themeStore";
 
 export default {
   name: 'CalendarDayHeader',
@@ -46,6 +47,30 @@ export default {
       const frenchAbbreviateMonth = abbreviateMonth.replace('Jan', 'Janv').replace('Feb', 'Févr').replace('Mar', 'Mars').replace('Apr', 'Avr').replace('May', 'Mai').replace('Jun', 'Juin').replace('Jul', 'Juil').replace('Aug', 'Août').replace('Sep', 'Sept').replace('Oct', 'Oct').replace('Nov', 'Nov').replace('Dec', 'Déc')
       return frenchAbbreviateMonth + ' ' + moment(this.dayNumber, 'YYYY-MM-DD').format('YYYY')
     }
+  },
+  setup(){
+    const themeStore = useThemeStore();
+
+    const getColor = computed(() => {
+      return themeStore.getEventColor;
+    })
+
+    const convertColorToRGB =(color: string, opacity: string) => {
+      const hex = color.replace('#', '');
+      const r = parseInt(hex.substring(0, 2), 16);
+      const g = parseInt(hex.substring(2, 4), 16);
+      const b = parseInt(hex.substring(4, 6), 16);
+      return 'rgba(' + r + ',' + g + ',' + b + ',' + opacity + ')';
+    }
+
+    const getColorRBGA = computed(() => {
+      return convertColorToRGB(getColor.value, '0.5');
+    })
+
+    return {
+      getColor,
+      getColorRBGA
+    }
   }
 }
 </script>
@@ -73,13 +98,13 @@ export default {
   }
 
   &Active {
-    border-bottom: 1px solid #0593c0;
-    box-shadow: 0px 15px 10px -15px rgba(5, 147, 192, 0.50);
+    border-bottom: 1px solid v-bind(getColor);
+    box-shadow: 0 15px 10px -15px v-bind(getColorRBGA);
   }
 
   &Today > span,
   &Today > span > span {
-    color: #0593c0;
+    color: v-bind(getColor);
   }
 
   &Day {

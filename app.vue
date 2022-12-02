@@ -6,13 +6,6 @@
         <title></title>
       </Head>
 
-      <!--      <ColorScheme placeholder="..." tag="span">-->
-      <!--        <select v-model="$colorMode.preference" style="position: fixed; z-index: 9999">-->
-      <!--          <option value="light">Light</option>-->
-      <!--          <option value="dark">Dark</option>-->
-      <!--          <option value="system">System</option>-->
-      <!--        </select>-->
-      <!--      </ColorScheme>-->
       <NuxtPage/>
       <NotificationGroup v-if="getNotifications.length">
         <Notification v-for="(notification, idx) in getNotifications" :key="idx" :label="notification"/>
@@ -30,6 +23,9 @@ import Notification from "~/components/Notifications/Notification.vue";
 import {usePersonaStore} from "~/store/personaStore";
 import useFavoritesPersonas from "~/composables/Personas/useFavoritesPersonas";
 import useCurrentPersona from "~/composables/Personas/useCurrentPersona";
+import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
+import {IPersona} from "~/types/Persona.interface";
+import {useThemeStore} from "~/store/themeStore";
 
 export default {
   name: "app",
@@ -38,15 +34,21 @@ export default {
     ...mapState(useNotificationStore, ['getNotifications'])
   },
   mounted() {
-    this.FETCH_PERSONAS();
     useFavoritesPersonas('initialize')
     useCurrentPersona('initialize')
 
-    const persona = useCurrentPersona('get');
-    if (persona) this.$router.push({name: '@'});
+    const persona: IPersona = useCurrentPersona('get');
+    if (persona.group_id) this.$router.push({name: '@-groupId', params: {groupId: persona.group_id}})
   },
-  methods: {
-    ...mapActions(usePersonaStore, ['FETCH_PERSONAS'])
+  setup() {
+    const favoritePersonaStore = useFavoritePersonaStore();
+    const personaStore = usePersonaStore();
+    const theme = useThemeStore();
+    onMounted(() => {
+      favoritePersonaStore.REFRESH_FAVORITE_PERSONAS();
+      personaStore.FETCH_PERSONAS();
+      theme.REFRESH_EVENT_COLOR();
+    });
   }
 }
 </script>

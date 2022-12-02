@@ -79,14 +79,14 @@ export default defineComponent({
   justify-content: space-between;
   width: 100%;
   background: var(--secondary-border);
-  color: #D2D3E0;
+  color: var(--secondary-text);
   border: 1px solid transparent;
   border-radius: 4px;
   padding: 0 10px 0 0;
 
 
   input {
-    color: #D2D3E0;
+    color: var(--secondary-text);
 
     background: var(--secondary-border);
     transition: all 0.2s ease-in-out;
@@ -96,7 +96,7 @@ export default defineComponent({
     padding: 10px;
     width: 100%;
     &::placeholder {
-      color: #D2D3E0;
+      color: var(--secondary-text);
     }
 
     &:focus {

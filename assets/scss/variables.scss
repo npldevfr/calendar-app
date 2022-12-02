@@ -2,7 +2,27 @@
     //--primary: #0F7173;
     --primary: #076583;
     --primary-hover: #0a7ca1;
+    //light mode colors
     --primary-color: white;
+
+    --secondary: #eae9ed;
+    --secondary-hover: #e1dfe3;
+    --secondary-border: #dcdde2;
+    --secondary-color: black;
+    --secondary-text: #484747;
+
+
+    --text-heading-color: black;
+    --text-subtitle-color: #2a2a2a;
+
+    --bg-color: #fffdff;
+
+}
+
+.dark-mode {
+    --primary-color: white;
+
+    --secondary-text: #D2D3E0;
 
     --secondary: #292A35;
     --secondary-hover: #1f202a;
@@ -14,16 +34,4 @@
     --text-subtitle-color: #9d9d9d;
 
     --bg-color: #181922;
-
 }
-
-//.dark-mode {
-//    --primary: #076583;
-//    --primary-hover: #0a7ca1;
-//    --primary-color: white;
-//
-//    --text-heading-color: white;
-//    --text-subtitle-color: #9d9d9d;
-//
-//    --bg-color: #181922;
-//}

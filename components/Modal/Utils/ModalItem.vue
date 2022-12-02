@@ -1,12 +1,23 @@
 <template>
   <div class="ModalItem" @mouseover="isMouseOver = true" @mouseleave="isMouseOver = false">
     <div class="ModalItemTitle" v-html="isNameMatchingValue"/>
+    <div class="ModalItemTitleFavorite" @click.stop>
+      <template v-if="isFavorite">
+        <Icon name="material-symbols:favorite" class="ModalItemTitleFavoriteIcon" @click="removeFavorite"/>
+      </template>
+      <template v-else>
+        <Icon name="material-symbols:favorite-outline" @click="addFavorite"/>
+      </template>
+
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import {defineComponent} from "vue";
 import {IPersona} from "~/types/Persona.interface";
+import {useFavoritePersonaStore} from "~/store/favoritePersonaStore";
+import {computed} from "#imports";
 
 export default defineComponent({
   name: "ModalItem",
@@ -42,6 +53,29 @@ export default defineComponent({
       //   return this.label;
       // }
     },
+  },
+  setup(props){
+    const favoritePersonaStore = useFavoritePersonaStore();
+
+    const addFavorite = () => {
+      favoritePersonaStore.ADD_FAVORITE_PERSONA(props.persona);
+    }
+
+    const removeFavorite = () => {
+      favoritePersonaStore.REMOVE_FAVORITE_PERSONA(props.persona);
+    }
+
+    const isFavorite = computed(() => {
+      return favoritePersonaStore.getIsFavorite(props.persona);
+    });
+
+    return {
+      isFavorite,
+      addFavorite,
+      removeFavorite
+    }
+
+
   }
 })
 </script>
@@ -56,7 +90,7 @@ export default defineComponent({
   transition: all 0.2s ease-in-out;
   background: var(--secondary-hover);
   border: 1px solid var(--secondary-hover);
-  color: #D2D3E0;
+  color: var(--secondary-text);
   border-radius: 4px;
   padding: 12px 10px;
   width: 100%;
@@ -73,7 +107,21 @@ export default defineComponent({
     font-size: 15px;
     font-weight: 500;
     letter-spacing: -0.10px;
-    color: #D2D3E0;
+    color: var(--secondary-text);
+
+    &Favorite {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+
+      &Icon {
+        color: #b92323;
+        transition: all 0.2s ease-in-out;
+      }
+    }
 
     img {
       margin-right: 10px;

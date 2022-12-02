@@ -23,7 +23,7 @@ export default {
   components: {TimeSpanText},
   props: {
     event: {
-      type: Object as PropType<IEvent>,
+      type: Object as () => IEvent,
       required: true
     }
   },
