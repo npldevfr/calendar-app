@@ -137,7 +137,7 @@ export const useCalendarStore = defineStore('calendar', {
                 return groupedEventsByDates.map((day: IDay) => {
                     const mergedEvents = day.events.reduce((acc: IEvent[], event: IEvent) => {
                         const lastEvent = acc[acc.length - 1];
-                        if (lastEvent && lastEvent.title === event.title && moment(event.start).diff(moment(lastEvent.end), 'hours') < 1) {
+                        if (lastEvent && lastEvent.title === event.title && lastEvent.extendedProps.location === event.extendedProps.location && moment(event.start).diff(moment(lastEvent.end), 'hours') < 1) {
                             lastEvent.end = event.end;
                             return acc;
                         }

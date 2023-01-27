@@ -95,10 +95,18 @@
     </MobileHeader>
     <MainHeader>
       <template #left>
-        <Button @click="PREVIOUS_WEEK(); this.showDayIndex = 0" type="Secondary" label="Semaine précédente"/>
-        <Button @click="GO_BACK_TO_TODAY(); this.initDayIndex()" v-if="!isTodayIsInInterval" type="Secondary"
-                label="Semaine actuelle"/>
-        <Button @click="NEXT_WEEK(); this.showDayIndex = 0" type="Secondary" label="Semaine suivante"/>
+        <template v-if="isMobile">
+          <Button @click="PREVIOUS_WEEK(); this.showDayIndex = 0" type="Secondary" label="Semaine précédente"/>
+          <Button @click="GO_BACK_TO_TODAY(); this.initDayIndex()" v-if="!isTodayIsInInterval" type="Secondary"
+                  label="Semaine actuelle"/>
+          <Button @click="NEXT_WEEK(); this.showDayIndex = 0" type="Secondary" label="Semaine suivante"/>
+        </template>
+        <template v-else>
+          <Button @click="PREVIOUS_WEEK(); this.showDayIndex = 0" type="Secondary" label="Semaine précédente"/>
+          <Button @click="NEXT_WEEK(); this.showDayIndex = 0" type="Secondary" label="Semaine suivante"/>
+          <Button @click="GO_BACK_TO_TODAY(); this.initDayIndex()" v-if="!isTodayIsInInterval" type="Secondary"
+                  label="Semaine actuelle"/>
+        </template>
       </template>
 
       <template #right>
@@ -379,6 +387,9 @@ export default defineComponent({
     },
     handleResize(): void {
       this.mobileView = window.innerWidth < 800;
+      if (this.mobileView) {
+        this.view = 'day';
+      }
     },
   },
 });
